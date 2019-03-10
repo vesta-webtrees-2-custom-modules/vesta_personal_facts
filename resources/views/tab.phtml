@@ -1,0 +1,79 @@
+<?php use Fisharebest\Webtrees\Functions\FunctionsPrint; ?>
+<?php use Fisharebest\Webtrees\I18N; ?>
+<?php use Fisharebest\Webtrees\View; ?>
+
+<?php
+	echo $outputBeforeTab->getMain();
+	View::push('javascript');
+	echo $outputBeforeTab->getScript();
+	View::endpush();
+?>
+
+<div class="wt-facts-tab py-4">
+	<table class="table wt-facts-table">
+		<tbody>
+			<tr>
+				<td colspan="2">
+					<?php foreach ($toggleableFactsCategories as $toggleableFactsCategory): ?>
+						<label>
+							<input id="<?= $toggleableFactsCategory->getId() ?>" type="checkbox" data-toggle="collapse" data-target="<?= $toggleableFactsCategory->getTarget() ?>">
+							<?= $toggleableFactsCategory->getLabel() ?>
+						</label>
+					<?php endforeach ?>
+					<?php
+						//[RC] PATCHED
+						echo $outputInDescriptionbox->getMain();
+						View::push('javascript');
+						echo $outputInDescriptionbox->getScript();
+						View::endpush();
+					?>
+				</td>
+			</tr>
+			<?php
+				//[RC] PATCHED
+				echo $outputAfterDescriptionbox->getMain();
+				View::push('javascript');
+				echo $outputAfterDescriptionbox->getScript();
+				View::endpush();
+			?>
+			
+			<?php foreach ($facts as $fact): ?>
+				<?php 
+					$script = $printFactFunction($fact);
+					View::push('javascript');
+					echo $script;
+					View::endpush();
+				?>
+			<?php endforeach ?>
+
+			<?php if (empty($facts)): ?>
+				<tr>
+					<td colspan="2">
+						<?= I18N::translate('There are no facts for this individual.') ?>
+					</td>
+				</tr>
+			<?php endif ?>
+
+			<?php if ($individual->canEdit()): ?>
+				<?php FunctionsPrint::printAddNewFact($individual, $facts, 'INDI') ?>
+			<?php endif ?>
+		</tbody>
+	</table>
+</div>
+
+<?php
+	echo $outputAfterTab->getMain();
+	View::push('javascript');
+	echo $outputAfterTab->getScript();
+	View::endpush();
+?>
+
+<?php View::push('javascript') ?>
+<script>
+  'use strict';
+	
+	<?php foreach ($toggleableFactsCategories as $toggleableFactsCategory): ?>
+		persistent_toggle("<?= $toggleableFactsCategory->getId() ?>", "was_tr.rela_or_tr.histo_apparently_irrelevant");
+	<?php endforeach ?>
+</script>
+<?php View::endpush() ?>

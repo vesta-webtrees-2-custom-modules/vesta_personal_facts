@@ -1,0 +1,53 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: webtrees 1.0\n"
+"Report-Msgid-Bugs-To: i18n@webtrees.net\n"
+"POT-Creation-Date: 2015-08-17 09:49+0100\n"
+"PO-Revision-Date: 2017-10-03 11:31+0200\n"
+"Language-Team: German <http://translate.webtrees.net/projects/webtrees/"
+"webtrees/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.6\n"
+
+msgid	"Facts and events of inverse associates"
+msgstr "Ereignisse von invers assoziierten Personen"
+	
+msgid "Best man at a marriage"
+msgstr "Trauzeuge bei einer Hochzeit"
+
+msgid "Bridesmaid at a marriage"
+msgstr "Brautjungfer bei einer Hochzeit"
+
+msgid "Witness at a marriage"
+msgstr "Trauzeuge/Trauzeugin bei einer Hochzeit"
+
+msgctxt "MALE"
+msgid "Witness at a marriage"
+msgstr "Trauzeuge bei einer Hochzeit"
+
+msgctxt "FEMALE"
+msgid "Witness at a marriage"
+msgstr "Trauzeugin bei einer Hochzeit"
+
+msgid "Baptism of a godson"
+msgstr "Taufe eines Patensohnes"
+
+msgid "Baptism of a goddaughter"
+msgstr "Taufe einer Patentochter"
+
+msgid "Baptism of a godchild"
+msgstr "Taufe eines Patenkindes"
+
+msgid "Christening of a godson"
+msgstr "Kindstaufe eines Patensohnes"
+
+msgid "Christening of a goddaughter"
+msgstr "Kindstaufe einer Patentochter"
+
+msgid "Christening of a godchild"
+msgstr "Kindstaufe eines Patenkindes"

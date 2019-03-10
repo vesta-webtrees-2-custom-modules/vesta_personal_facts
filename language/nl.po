@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: webtrees 1.0\n"
+"Report-Msgid-Bugs-To: i18n@webtrees.net\n"
+"POT-Creation-Date: 2015-08-17 09:49+0100\n"
+"PO-Revision-Date: 2017-11-27 16:15+0100\n"
+"Language-Team: German <http://translate.webtrees.net/projects/webtrees/webtrees/de/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.4\n"
+"Last-Translator: \n"
+"Language: nl\n"
+
+msgid "Best man at a marriage"
+msgstr "Getuige bij huwelijk"
+
+msgid "Bridesmaid at a marriage"
+msgstr "Getuige bij huwelijk"
+
+msgid "Witness at a marriage"
+msgstr "Getuige bij huwelijk"
+
+msgctxt "MALE"
+msgid "Witness at a marriage"
+msgstr "Getuige bij huwelijk"
+
+msgctxt "FEMALE"
+msgid "Witness at a marriage"
+msgstr "Getuige bij huwelijk"
+
+msgid "Baptism of a godson"
+msgstr "Doop peetzoon"
+
+msgid "Baptism of a goddaughter"
+msgstr "Doop peetdochter"
+
+msgid "Baptism of a godchild"
+msgstr "Doop petekind"
+
+msgid "Christening of a godson"
+msgstr "Doop peetzoon"
+
+msgid "Christening of a goddaughter"
+msgstr "Doop peetdochter"
+
+msgid "Christening of a godchild"
+msgstr "Doop petekind"
