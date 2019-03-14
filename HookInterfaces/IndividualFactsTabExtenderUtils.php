@@ -11,50 +11,50 @@ use Illuminate\Support\Collection;
 use Symfony\Component\HttpFoundation\Request;
 use function app;
 
-
 class IndividualFactsTabExtenderUtils {
-	
-	public static function updateOrder(ModuleInterface $moduleForPrefsOrder, Request $request) {		
-		$order = (array)$request->get('order');		
-		//set als preference
-		$pref = implode(',',$order);
-		$moduleForPrefsOrder->setPreference('ORDER', $pref);
+
+  public static function updateOrder(ModuleInterface $moduleForPrefsOrder, Request $request) {
+    $order = (array) $request->get('order');
+    //set als preference
+    $pref = implode(',', $order);
+    $moduleForPrefsOrder->setPreference('ORDER', $pref);
   }
-	
+
   public static function accessibleModules(ModuleInterface $moduleForPrefsOrder, Tree $tree, UserInterface $user): Collection {
     return self::sort($moduleForPrefsOrder, app()
-						->make(ModuleService::class)
-						->findByComponent(IndividualFactsTabExtenderInterface::class, $tree, $user));
+                            ->make(ModuleService::class)
+                            ->findByComponent(IndividualFactsTabExtenderInterface::class, $tree, $user));
   }
-  
-	public static function modules(ModuleInterface $moduleForPrefsOrder, $include_disabled = false): Collection {
-		return self::sort($moduleForPrefsOrder, app()
-						->make(ModuleService::class)
-						->findByInterface(IndividualFactsTabExtenderInterface::class, $include_disabled));
-	}
-	
+
+  public static function modules(ModuleInterface $moduleForPrefsOrder, $include_disabled = false): Collection {
+    return self::sort($moduleForPrefsOrder, app()
+                            ->make(ModuleService::class)
+                            ->findByInterface(IndividualFactsTabExtenderInterface::class, $include_disabled));
+  }
+
   private static function sort(ModuleInterface $moduleForPrefsOrder, Collection $coll): Collection {
     $pref = $moduleForPrefsOrder->getPreference('ORDER');
-		if ($pref === null) {
-			$pref = '';
-		}
-		$order = explode(',',$pref);
-		$order = array_flip($order);
-						
-		return $coll
-						->map(function (IndividualFactsTabExtenderInterface $module) use ($order) {
-							if (array_key_exists($module->name(), $order)) {
-								$rank = $order[$module->name()];
-								$module->setFactsTabUIElementOrder($rank);
-							}							
-							return $module;
-						})
-						->sort(IndividualFactsTabExtenderUtils::sorter());
+    if ($pref === null) {
+      $pref = '';
+    }
+    $order = explode(',', $pref);
+    $order = array_flip($order);
+
+    return $coll
+                    ->map(function (IndividualFactsTabExtenderInterface $module) use ($order) {
+                      if (array_key_exists($module->name(), $order)) {
+                        $rank = $order[$module->name()];
+                        $module->setFactsTabUIElementOrder($rank);
+                      }
+                      return $module;
+                    })
+                    ->sort(IndividualFactsTabExtenderUtils::sorter());
   }
-  
-	public static function sorter(): Closure {
-		return function (IndividualFactsTabExtenderInterface $x, IndividualFactsTabExtenderInterface $y): int {
-			return $x->getFactsTabUIElementOrder() <=> $y->getFactsTabUIElementOrder();
-		};
-	}
+
+  public static function sorter(): Closure {
+    return function (IndividualFactsTabExtenderInterface $x, IndividualFactsTabExtenderInterface $y): int {
+      return $x->getFactsTabUIElementOrder() <=> $y->getFactsTabUIElementOrder();
+    };
+  }
+
 }
