@@ -17,7 +17,6 @@ use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleTabInterface;
 use Fisharebest\Webtrees\Services\ClipboardService;
 use Fisharebest\Webtrees\Services\ModuleService;
-use Fisharebest\Webtrees\Webtrees;
 use ReflectionObject;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -25,7 +24,6 @@ use Symfony\Component\HttpFoundation\Response;
 use Vesta\Model\GenericViewElement;
 use Vesta\VestaAdminController;
 use Vesta\VestaModuleTrait;
-use function app;
 use function route;
 use function view;
 
@@ -34,12 +32,14 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   use VestaModuleTrait;
   use IndividualFactsTabModuleTrait;
 
-  public function __construct(ModuleService $module_service, ClipboardService $clipboard_service, $directory) {
-    parent::__construct($module_service, $clipboard_service, $directory);
+  public function __construct(ModuleService $module_service, ClipboardService $clipboard_service) {
+    parent::__construct($module_service, $clipboard_service);
     $this->setFunctionsPrintFacts(new FunctionsPrintFactsWithHooks(new FunctionsPrintWithHooks($this), $this));
+  }
 
-    //we do not want to use the original name 'modules/personal_facts/tab' here
-    $this->setViewName('tab');
+  protected function onBoot(): void {
+    //we do not want to use the original name 'modules/personal_facts/tab' here, so we use our own namespace
+    $this->setViewName($this->name() . '::tab');
   }
 
   public function customModuleAuthorName(): string {
@@ -71,24 +71,12 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     return __DIR__ . '/resources/';
   }
 
-  /**
-   * Additional/updated translations.
-   *
-   * @param string $language
-   *
-   * @return string[]
-   */
-  public function customTranslations(string $language): array {
-    //TODO
-    return [];
-  }
-
   public function tabTitle(): string {
     return $this->getTabTitle(I18N::translate('Facts and events'));
   }
 
   protected function getOutputBeforeTab(Individual $person) {
-    $pre = '<link href="' . Webtrees::MODULES_PATH . basename($this->directory) . '/style.css" type="text/css" rel="stylesheet" />';
+    $pre = '<link href="' . $this->assetUrl('css/style.css') . '" type="text/css" rel="stylesheet" />';
 
     $a1 = array(new GenericViewElement($pre, ''));
 
@@ -142,7 +130,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
       $categories[] = new ToggleableFactsCategory(
               'show-associate-facts-pfh', //cf FunctionsPrintFactsWithHooks.additionalStyleadds()!
               '.wt-associate-fact-pfh',
-              I18N::translate('Events of inverse associates'));
+              I18N::translate('Facts and events of inverse associates'));
     } //if setting for separate checkbox isn't set: toggles via show-relatives-facts-pfh!
 
     if ($has_historical_facts) {
@@ -238,7 +226,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   public function postProvidersAction(Request $request): Response {
     $modules = IndividualFactsTabExtenderUtils::modules($this, true);
 
-    $controller1 = new ModuleController(app()->make(ModuleService::class));
+    $controller1 = new ModuleController($this->module_service);
     $reflector = new ReflectionObject($controller1);
 
     //private!

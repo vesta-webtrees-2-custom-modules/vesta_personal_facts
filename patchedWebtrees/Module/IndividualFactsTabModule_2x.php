@@ -2,7 +2,6 @@
 
 namespace Cissee\WebtreesExt\Module;
 
-use Cissee\WebtreesExt\ModuleView;
 use Cissee\WebtreesExt\ToggleableFactsCategory;
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\Date;
@@ -30,15 +29,12 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
   use ModuleTabTrait;
 
   /** @var ModuleService */
-  private $module_service;
+  protected $module_service;
 
   /** @var ClipboardService */
-  private $clipboard_service;
+  protected $clipboard_service;
   protected $functionsPrintFacts;
   protected $viewName = 'modules/personal_facts/tab';
-
-  /** @var string The directory where the module is installed */
-  protected $directory;
 
   public function setFunctionsPrintFacts($functionsPrintFacts) {
     $this->functionsPrintFacts = $functionsPrintFacts;
@@ -48,12 +44,9 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
     $this->viewName = $viewName;
   }
 
-  public function __construct(ModuleService $module_service, ClipboardService $clipboard_service, $directory/* , $functionsPrintFacts */) {
+  public function __construct(ModuleService $module_service, ClipboardService $clipboard_service) {
     $this->module_service = $module_service;
     $this->clipboard_service = $clipboard_service;
-
-    $this->directory = $directory;
-    //$this->functionsPrintFacts = $functionsPrintFacts;
   }
 
   /** {@inheritdoc} */
@@ -147,7 +140,7 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
     $outputInDescriptionbox = $this->getOutputInDescriptionbox($individual);
     $outputAfterDescriptionbox = $this->getOutputAfterDescriptionbox($individual);
 
-    $view = ModuleView::make($this->directory, $this->viewName, [
+    $view = view($this->viewName, [
                 'can_edit' => $individual->canEdit(),
                 'clipboard_facts' => $this->clipboard_service->pastableFacts($individual, $exclude_facts),
                 'has_historical_facts' => !empty($historical_facts),

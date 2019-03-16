@@ -2,8 +2,6 @@
 
 namespace Cissee\Webtrees\Module\PersonalFacts;
 
-use Fisharebest\Webtrees\Services\ModuleService;
-use Fisharebest\Webtrees\Services\ClipboardService;
 use Fisharebest\Webtrees\Webtrees;
 
 //webtrees major version switch
@@ -23,4 +21,7 @@ foreach (glob(WT_ROOT . $modulesPath . '*/autoload.php') as $autoloadFile) {
   require_once $autoloadFile;
 }
 
-return new IndividualFactsTabModuleExtended(app(ModuleService::class), app(ClipboardService::class), __DIR__);
+//app/Application/Container isn't so much about IoC (we're calling 'app', after all, that's no inversion!)
+//but about autowiring dependencies (here: ModuleService and ClipboardService)
+return app(IndividualFactsTabModuleExtended::class);
+//return new IndividualFactsTabModuleExtended(app(ModuleService::class), app(ClipboardService::class));
