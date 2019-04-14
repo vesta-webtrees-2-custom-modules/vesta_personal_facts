@@ -18,9 +18,8 @@ use Fisharebest\Webtrees\Module\ModuleTabInterface;
 use Fisharebest\Webtrees\Services\ClipboardService;
 use Fisharebest\Webtrees\Services\ModuleService;
 use ReflectionObject;
-use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
 use Vesta\Model\GenericViewElement;
 use Vesta\VestaAdminController;
 use Vesta\VestaModuleTrait;
@@ -210,7 +209,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   //////////////////////////////////////////////////////////////////////////////
   //hook management - generalize?
   //adapted from ModuleController (e.g. listFooters)
-  public function getProvidersAction(): Response {
+  public function getProvidersAction(): ResponseInterface {
     $modules = IndividualFactsTabExtenderUtils::modules($this, true);
 
     $controller = new VestaAdminController($this->name());
@@ -223,7 +222,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
                     true);
   }
 
-  public function postProvidersAction(Request $request): Response {
+  public function postProvidersAction(ServerRequestInterface $request): ResponseInterface {
     $modules = IndividualFactsTabExtenderUtils::modules($this, true);
 
     $controller1 = new ModuleController($this->module_service);
@@ -250,7 +249,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
         'action' => 'Providers'
     ]);
 
-    return new RedirectResponse($url);
+    return redirect($url);
   }
 
   protected function editConfigBeforeFaq() {
