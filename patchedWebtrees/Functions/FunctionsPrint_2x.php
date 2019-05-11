@@ -20,7 +20,6 @@ use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\Note;
 use Fisharebest\Webtrees\Place;
 use Fisharebest\Webtrees\Session;
-use Fisharebest\Webtrees\Theme;
 use Ramsey\Uuid\Uuid;
 use Vesta\Model\GenericViewElement;
 use Vesta\Model\PlaceStructure;
@@ -30,21 +29,6 @@ use Vesta\Model\PlaceStructure;
  * Class FunctionsPrint - common functions
  */
 class FunctionsPrint_2x {
-
-  /**
-   * print the information for an individual chart box
-   *
-   * find and print a given individuals information for a pedigree chart
-   *
-   * @param Individual $person The person to print
-   */
-  public static function printPedigreePerson(Individual $person = null) {
-    if ($person) {
-      echo Theme::theme()->individualBox($person);
-    } else {
-      echo Theme::theme()->individualBoxEmpty();
-    }
-  }
 
   /**
    * print a note record

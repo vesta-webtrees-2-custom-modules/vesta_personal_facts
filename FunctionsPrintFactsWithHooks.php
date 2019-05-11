@@ -63,7 +63,6 @@ class FunctionsPrintFactsWithHooks extends FunctionsPrintFacts_2x {
     }
 
     // Event of close associates
-
     if ($fact->id() == 'asso') {
       if ($this->module->getPreference('ASSO_SEPARATE', '0')) {
         $styleadd = trim($styleadd . ' wt-associate-fact-pfh collapse');

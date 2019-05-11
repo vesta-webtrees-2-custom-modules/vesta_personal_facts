@@ -79,7 +79,7 @@ View::endpush();
   'use strict';
 
 <?php foreach ($toggleableFactsCategories as $toggleableFactsCategory): ?>
-    persistent_toggle("<?= $toggleableFactsCategory->getId() ?>", "was_tr.rela_or_tr.histo_apparently_irrelevant");
+    persistent_toggle("<?= $toggleableFactsCategory->getId() ?>");
 <?php endforeach ?>
 </script>
 <?php View::endpush() ?>

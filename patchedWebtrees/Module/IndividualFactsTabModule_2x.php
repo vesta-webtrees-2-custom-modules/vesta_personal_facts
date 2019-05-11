@@ -480,25 +480,32 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
   protected function associateFacts(Individual $person) {
     $facts = [];
 
-    $associates = array_merge(
-            $person->linkedIndividuals('ASSO'),
-            $person->linkedIndividuals('_ASSO'),
-            $person->linkedFamilies('ASSO'),
-            $person->linkedFamilies('_ASSO')
-    );
-    foreach ($associates as $associate) {
+    /** @var Individual[] $associates */
+    $asso1 = $person->linkedIndividuals('ASSO');
+    $asso2 = $person->linkedIndividuals('_ASSO');
+    $asso3 = $person->linkedFamilies('ASSO');
+    $asso4 = $person->linkedFamilies('_ASSO');
+
+    $associates = $asso1->merge($asso2)->merge($asso3)->merge($asso4);
+    
+    foreach ($associates as $associate) {      
       foreach ($associate->facts() as $fact) {
         //[RC] addded
         if (!$this->filterAssociateFact($fact)) {
           continue;
         }
-
-        //[RC] PATCHED: FIX FOR ISSUE #1192
+        
+        //webtrees 2.x fix for #1192
+        //we cannot use it because we require the per-asso relas!
+        /*
+        if (preg_match('/\n\d _?ASSO @' . $person->xref() . '@/', $fact->gedcom())) {
+            
+        }
+        */
+                
+        //[RC] PATCHED: fix for #1192
         //plus extension for RELA
-        preg_match_all('/\n2 _ASSO @(.*)@((\n[3].*)*)/', $fact->gedcom(), $arecs1, PREG_SET_ORDER);
-        preg_match_all('/\n2 ASSO @(.*)@((\n[3].*)*)/', $fact->gedcom(), $arecs2, PREG_SET_ORDER);
-
-        $arecs = array_merge($arecs1, $arecs2);
+        preg_match_all('/\n2 _?ASSO @(.*)@((\n[3].*)*)/', $fact->gedcom(), $arecs, PREG_SET_ORDER);
 
         foreach ($arecs as $arec) {
           $xref = $arec[1];
@@ -516,9 +523,10 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
             if ($associate instanceof Family) {
               foreach ($associate->spouses() as $spouse) {
                 $factrec .= "\n2 _ASSO @" . $spouse->xref() . '@';
-
+                
+                //[RC] extension for RELA
                 // Is there a "RELA" tag (code adjusted from elsewhere - note though that strictly according to the Gedcom spec, RELA is mandatory!)
-                if (preg_match('/\n3 RELA (.+)/', $rela, $rmatch)) {
+                if (preg_match('/\n3 RELA (.+)/', $rela)) {
                   //preserve RELA
                   $factrec .= $rela;
                 } else {
@@ -528,8 +536,9 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
             } else {
               $factrec .= "\n2 _ASSO @" . $associate->xref() . '@';
 
+              //[RC] extension for RELA
               // Is there a "RELA" tag (code adjusted from elsewhere - note though that strictly according to the Gedcom spec, RELA is mandatory!)
-              if (preg_match('/\n3 RELA (.+)/', $rela, $rmatch)) {
+              if (preg_match('/\n3 RELA (.+)/', $rela)) {
                 //preserve RELA
                 $factrec .= $rela;
               } else {
@@ -544,7 +553,20 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
 
     return $facts;
   }
-
+  
+  /**
+   * This module handles the following facts - so don't show them on the "Facts and events" tab.
+   *
+   * @return Collection
+   * @return string[]
+   */
+  public function supportedFacts(): Collection
+  {
+     // We don't actually displaye these facts, but they are displayed
+     // outside the tabs/sidebar systems. This just forces them to be excluded here.
+     return new Collection(['NAME', 'SEX']);
+  }
+    
   //[RC] added
   //OverrideHook
   protected function additionalFacts(Individual $person) {
