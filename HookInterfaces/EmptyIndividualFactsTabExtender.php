@@ -68,4 +68,9 @@ trait EmptyIndividualFactsTabExtender {
     return new GenericViewElement('', '');
   }
 
+  public function hFactsTabGetAdditionalEditControls(
+          Fact $event): GenericViewElement {
+
+    return new GenericViewElement('', '');
+  }
 }

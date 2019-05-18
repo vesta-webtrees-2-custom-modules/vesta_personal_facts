@@ -91,4 +91,13 @@ interface IndividualFactsTabExtenderInterface {
           $relationship_name,
           $relationship_suffix,
           $inverse);
+  
+  /**
+   * called even if fact itself isn't editable!
+   * 
+   * @param Fact $event
+   * @return GenericViewElement
+   */
+  public function hFactsTabGetAdditionalEditControls(
+          Fact $event): GenericViewElement;
 }

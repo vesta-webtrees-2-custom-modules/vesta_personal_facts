@@ -8,6 +8,7 @@ use Cissee\WebtreesExt\Functions\FunctionsPrintFacts_2x;
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\Fact;
 use Fisharebest\Webtrees\Individual;
+use Vesta\Model\GenericViewElement;
 
 class FunctionsPrintFactsWithHooks extends FunctionsPrintFacts_2x {
 
@@ -92,4 +93,13 @@ class FunctionsPrintFactsWithHooks extends FunctionsPrintFacts_2x {
     return $styleadd;
   }
 
+  protected function printAdditionalEditControls(Fact $fact): GenericViewElement {
+    $additions = IndividualFactsTabExtenderUtils::accessibleModules($this->module, $fact->record()->tree(), Auth::user())
+            ->map(function (IndividualFactsTabExtenderInterface $module) use ($fact) {
+              return $module->hFactsTabGetAdditionalEditControls($fact);
+            })
+            ->toArray();
+            
+    return GenericViewElement::implode($additions);
+  }
 }

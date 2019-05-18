@@ -198,18 +198,28 @@ class FunctionsPrintFacts_2x {
     if ($fact->id() !== 'asso') {
       echo $label;
     } //else echo later, we want to handle a few special cases
+
+    //[RC] added additional edit controls, even if fact itself is not editable
+    $additionalControls = $this->printAdditionalEditControls($fact);
+    $main = $additionalControls->getMain();
+    $script .= $additionalControls->getScript();
+
     //[RC] meh - why not just use a non-editable Fact subclass for histo? (see VirtualFact)
     //rather hacky to have the special check here!
     //[RC] adjusted - should be webtrees issue:
     //asso facts may be editable per se, but not like this (i.e. via the 'asso' fact id)
-    if (($fact->id() != 'histo') && ($fact->id() !== 'asso') && $fact->canEdit()) {
+    if (($main !== '') || (($fact->id() != 'histo') && ($fact->id() !== 'asso') && $fact->canEdit())) {
       echo '<div class="editfacts">';
-      echo view('edit/icon-fact-edit', ['fact' => $fact]);
-      echo view('edit/icon-fact-copy', ['fact' => $fact]);
-      echo view('edit/icon-fact-delete', ['fact' => $fact]);
+      
+      if (($fact->id() != 'histo') && ($fact->id() !== 'asso') && $fact->canEdit()) {
+        echo view('edit/icon-fact-edit', ['fact' => $fact]);
+        echo view('edit/icon-fact-copy', ['fact' => $fact]);
+        echo view('edit/icon-fact-delete', ['fact' => $fact]);
+      }
+      echo $main;
       echo '</div>';
     }
-
+    
     //[RC] added, this could be in main webtrees
     if ($fact->id() === 'asso') {
       if ($record instanceof Individual) { //check: anything else actually possible here?
@@ -679,5 +689,10 @@ class FunctionsPrintFacts_2x {
     $main = '<a href="' . e(route('relationships', ['xref1' => $associate->xref(), 'xref2' => $person->xref(), 'ged' => $person->tree()->name()])) . '" rel="nofollow">' . $relationship_name_prefix . $relationship_name . $relationship_name_suffix . '</a>';
     return new GenericViewElement($main, '');
   }
-
+  
+  //[RC] added
+  //override hook
+  protected function printAdditionalEditControls(Fact $event): GenericViewElement {
+    return new GenericViewElement('', '');
+  }
 }
