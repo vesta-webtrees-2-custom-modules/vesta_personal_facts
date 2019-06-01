@@ -2,6 +2,7 @@
 
 namespace Cissee\Webtrees\Hook\HookInterfaces;
 
+use Cissee\WebtreesExt\FactPlaceAdditions;
 use Cissee\WebtreesExt\FormatPlaceAdditions;
 use Fisharebest\Webtrees\Fact;
 use Fisharebest\Webtrees\Individual;
@@ -68,7 +69,10 @@ interface IndividualFactsTabExtenderInterface {
    *
    * @return FormatPlaceAdditions
    */
+  //deprecated
   public function hFactsTabGetFormatPlaceAdditions(PlaceStructure $place);
+  
+  public function factPlaceAdditions(PlaceStructure $place): ?FactPlaceAdditions;
 
   /**
    * first hook subscriber to return non-empty or null wins! 

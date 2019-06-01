@@ -182,7 +182,9 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
 
   /** {@inheritdoc} */
   public function canLoadAjax(): bool {
-    return false;
+    //load async (function name is somewhat misleading: apparently all tabs 'can' be loaded async out of the box,
+    //this is more of a preference whether a tab 'should' be loaded async)
+    return true;
   }
 
   /**

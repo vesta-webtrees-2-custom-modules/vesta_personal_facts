@@ -84,7 +84,12 @@ trait IndividualFactsTabModuleTrait {
                 /* I18N: Configuration option */I18N::translate('Open links in new browser tab'),
                 null,
                 'TARGETS_BLANK',
-                '1')));
+                '1'),
+        new ControlPanelCheckbox(
+                /* I18N: Configuration option */I18N::translate('Show additional info for map links'),
+                /* I18N: Configuration option */I18N::translate('Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging.'),
+                'DEBUG_MAP_LINKS',
+                '0')));
     $placeSub[] = new ControlPanelSubsection(
             /* I18N: Configuration option */I18N::translate('Google Maps'),
             array(new ControlPanelCheckbox(

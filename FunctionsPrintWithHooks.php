@@ -7,8 +7,10 @@ use Cissee\Webtrees\Hook\HookInterfaces\IndividualFactsTabExtenderUtils;
 use Cissee\WebtreesExt\Functions\FunctionsPrint_2x;
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\I18N;
+use Vesta\Hook\HookInterfaces\FunctionsPlaceUtils;
 use Vesta\Model\GenericViewElement;
 use Vesta\Model\PlaceStructure;
+use function view;
 
 class FunctionsPrintWithHooks extends FunctionsPrint_2x {
 
@@ -19,23 +21,60 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
   }
 
   protected function formatPlaceSubRecords(PlaceStructure $ps): GenericViewElement {
-    $additions = IndividualFactsTabExtenderUtils::accessibleModules($this->module, $ps->getTree(), Auth::user())
-            ->map(function (IndividualFactsTabExtenderInterface $module) use ($ps) {
-              return $module->hFactsTabGetFormatPlaceAdditions($ps);
-            })
-            ->toArray();
-
-    //$additions = HookProvider2::getInstance()->get('hFactsTabGetFormatPlaceAdditions')->execute($ps);
-
     $html = '';
     $script = '';
 
     $html .= $this->formatPlaceHebRomn($ps);
     $html .= $this->formatPlaceCustomFieldsAfterNames($ps);
 
-    $hideCoordinates = $this->module->getPreference('LINKS_AFTER_PLAC', '0');
+    //modernized (for now, expected to be fast enough without ajax)
+    $mapCoordinates = FunctionsPlaceUtils::plac2Map($this->module, $ps, true);
+    if ($mapCoordinates !== null) {
+      $hideCoordinates = $this->module->getPreference('LINKS_AFTER_PLAC', '0');
+      if ($hideCoordinates) {
+        $html .= $this->getMapLinks($mapCoordinates->getLati(), $mapCoordinates->getLong());
+      } else {
+        $html .= $this->formatPlaceLatiLong($mapCoordinates->getLati(), $mapCoordinates->getLong(), $mapCoordinates->getTrace()->getAll());
+      }
+      
+      //debug
+      $debugMapLinks = $this->module->getPreference('DEBUG_MAP_LINKS', '1');
+      if ($debugMapLinks) {
+        $html .= '<i class="fas fa-question-circle fa-fw wt-icon-help" aria-hidden="true" title ="' . $mapCoordinates->getTrace()->getAll() . '"></i>';
+      }      
+    }
+    
+    $factPlaceAdditions = IndividualFactsTabExtenderUtils::accessibleModules($this->module, $ps->getTree(), Auth::user())
+            ->map(function (IndividualFactsTabExtenderInterface $module) use ($ps) {
+              return $module->factPlaceAdditions($ps);
+            })
+            ->filter() //filter null values
+            ->toArray();
+    
+    $html .= $this->formatPlaceCustomFieldsAfterLatiLong($ps);
+    foreach ($factPlaceAdditions as $factPlaceAddition) {
+      $html .= $factPlaceAddition->getAfterMap()->getMain();
+      $script .= $factPlaceAddition->getAfterMap()->getScript();
+    }
+    $html .= $this->formatPlaceNotes($ps);
+    $html .= $this->formatPlaceCustomFieldsAfterNotes($ps);
+    foreach ($factPlaceAdditions as $factPlaceAddition) {
+      $html .= $factPlaceAddition->getAfterNotes()->getMain();
+      $script .= $factPlaceAddition->getAfterNotes()->getScript();
+    }
+    
+    /*
+    //legacy stuff
+    $html .= '<br/>--LEGACY--<br/>';
 
-    if ($ps->getLati() || $ps->getLong()) {
+    $additions = IndividualFactsTabExtenderUtils::accessibleModules($this->module, $ps->getTree(), Auth::user())
+            ->map(function (IndividualFactsTabExtenderInterface $module) use ($ps) {
+              return $module->hFactsTabGetFormatPlaceAdditions($ps);
+            })            
+            ->toArray();
+    
+    $hideCoordinates = $this->module->getPreference('LINKS_AFTER_PLAC', '0');
+    if ($ps->getLati() && $ps->getLong()) {
       //use direct lati/long, if set
       if ($hideCoordinates) {
         $html .= $this->getMapLinks($ps->getLati(), $ps->getLong());
@@ -81,7 +120,8 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
     foreach ($additions as $addition) {
       $script .= $addition->getScript();
     }
-
+    */
+    
     return new GenericViewElement($html, $script);
   }
 

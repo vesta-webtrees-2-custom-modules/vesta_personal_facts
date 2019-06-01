@@ -17,12 +17,15 @@ use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleTabInterface;
 use Fisharebest\Webtrees\Services\ClipboardService;
 use Fisharebest\Webtrees\Services\ModuleService;
-use ReflectionObject;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use ReflectionObject;
+use Vesta\Hook\HookInterfaces\FunctionsPlaceInterface;
+use Vesta\Hook\HookInterfaces\FunctionsPlaceUtils;
 use Vesta\Model\GenericViewElement;
 use Vesta\VestaAdminController;
 use Vesta\VestaModuleTrait;
+use function redirect;
 use function route;
 use function view;
 
@@ -46,7 +49,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   }
 
   public function customModuleVersion(): string {
-    return '2.0.0-beta.2.1';
+    return '2.0.0-beta.2.2';
   }
 
   public function customModuleLatestVersionUrl(): string {
@@ -207,22 +210,82 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   }
 
   //////////////////////////////////////////////////////////////////////////////
+  
+  private function title1(): string {
+    return I18N::translate('Facts and Events Tab Location Data Providers');
+  }
+  
+  private function description1(): string {
+    return I18N::translate('Modules listed here are used (in the configured order) to determine map coordinates of places.');
+  }
+  
+  private function title2(): string {
+    return I18N::translate('Facts and Events Tab UI Element Providers');
+  }
+  
+  private function description2(): string {
+    return I18N::translate('Modules listed here may provide additional data for facts and events (displayed in the configured order).');
+  }
+  
   //hook management - generalize?
   //adapted from ModuleController (e.g. listFooters)
-  public function getProvidersAction(): ResponseInterface {
+  public function getProviders1Action(): ResponseInterface {
+    $modules = FunctionsPlaceUtils::modules($this, true);
+
+    $controller = new VestaAdminController($this->name());
+    return $controller->listHooks(
+                    $modules,
+                    FunctionsPlaceInterface::class,
+                    $this->title1(),
+                    $this->description1(),
+                    true,
+                    true);
+  }
+  
+  public function getProviders2Action(): ResponseInterface {
     $modules = IndividualFactsTabExtenderUtils::modules($this, true);
 
     $controller = new VestaAdminController($this->name());
     return $controller->listHooks(
                     $modules,
                     IndividualFactsTabExtenderInterface::class,
-                    I18N::translate('Facts and Events Tab UI Element Providers'),
-                    '',
+                    $this->title2(),
+                    $this->description2(),
                     true,
                     true);
   }
 
-  public function postProvidersAction(ServerRequestInterface $request): ResponseInterface {
+  public function postProviders1Action(ServerRequestInterface $request): ResponseInterface {
+    $modules = FunctionsPlaceUtils::modules($this, true);
+
+    $controller1 = new ModuleController($this->module_service);
+    $reflector = new ReflectionObject($controller1);
+
+    //private!
+    //$controller1->updateStatus($modules, $request);
+
+    $method = $reflector->getMethod('updateStatus');
+    $method->setAccessible(true);
+    $method->invoke($controller1, $modules, $request);
+
+    FunctionsPlaceUtils::updateOrder($this, $request);
+
+    //private!
+    //$controller1->updateAccessLevel($modules, FunctionsPlaceInterface::class, $request);
+
+    $method = $reflector->getMethod('updateAccessLevel');
+    $method->setAccessible(true);
+    $method->invoke($controller1, $modules, FunctionsPlaceInterface::class, $request);
+
+    $url = route('module', [
+        'module' => $this->name(),
+        'action' => 'Providers1'
+    ]);
+
+    return redirect($url);
+  }
+  
+  public function postProviders2Action(ServerRequestInterface $request): ResponseInterface {
     $modules = IndividualFactsTabExtenderUtils::modules($this, true);
 
     $controller1 = new ModuleController($this->module_service);
@@ -246,32 +309,52 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
 
     $url = route('module', [
         'module' => $this->name(),
-        'action' => 'Providers'
+        'action' => 'Providers2'
     ]);
 
     return redirect($url);
   }
 
   protected function editConfigBeforeFaq() {
-    $modules = IndividualFactsTabExtenderUtils::modules($this, true);
+    $modules1 = FunctionsPlaceUtils::modules($this, true);
 
-    $url = route('module', [
+    $url1 = route('module', [
         'module' => $this->name(),
-        'action' => 'Providers'
+        'action' => 'Providers1'
+    ]);
+    
+    $modules2 = IndividualFactsTabExtenderUtils::modules($this, true);
+
+    $url2 = route('module', [
+        'module' => $this->name(),
+        'action' => 'Providers2'
     ]);
 
     //cf control-panel.phtml
     ?>
     <div class="card-body">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-9">
                 <ul class="fa-ul">
                     <li>
                         <span class="fa-li"><?= view('icons/block') ?></span>
-                        <a href="<?= e($url) ?>">
-                            <?= I18N::translate('Facts and Events Tab UI Element Providers') ?>
+                        <a href="<?= e($url1) ?>">
+                            <?= $this->title1() ?>
                         </a>
-                        <?= view('components/badge', ['count' => $modules->count()]) ?>
+                        <?= view('components/badge', ['count' => $modules1->count()]) ?>
+                        <p class="small text-muted">
+                          <?= $this->description1() ?>
+                        </p>
+                    </li>
+                    <li>
+                        <span class="fa-li"><?= view('icons/block') ?></span>
+                        <a href="<?= e($url2) ?>">
+                            <?= $this->title1() ?>
+                        </a>
+                        <?= view('components/badge', ['count' => $modules2->count()]) ?>
+                        <p class="small text-muted">
+                          <?= $this->description2() ?>
+                        </p>
                     </li>
                 </ul>
             </div>

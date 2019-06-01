@@ -2,6 +2,7 @@
 
 namespace Cissee\Webtrees\Hook\HookInterfaces;
 
+use Cissee\WebtreesExt\FactPlaceAdditions;
 use Cissee\WebtreesExt\FormatPlaceAdditions;
 use Fisharebest\Webtrees\Fact;
 use Fisharebest\Webtrees\Individual;
@@ -55,6 +56,10 @@ trait EmptyIndividualFactsTabExtender {
     return new FormatPlaceAdditions();
   }
 
+  public function factPlaceAdditions(PlaceStructure $place): ?FactPlaceAdditions {
+    return null;
+  }
+  
   public function hFactsTabGetOutputForAssoRel(
           Fact $event,
           Individual $person,
