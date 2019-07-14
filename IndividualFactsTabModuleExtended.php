@@ -349,7 +349,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
                     <li>
                         <span class="fa-li"><?= view('icons/block') ?></span>
                         <a href="<?= e($url2) ?>">
-                            <?= $this->title1() ?>
+                            <?= $this->title2() ?>
                         </a>
                         <?= view('components/badge', ['count' => $modules2->count()]) ?>
                         <p class="small text-muted">
