@@ -55,23 +55,32 @@ class FunctionsPrint_2x {
    */
   //[RC] refactored completely
   public function formatFactPlace(Fact $event, $anchor = false, $sub_records = false, $lds = false): GenericViewElement {
+    if ($anchor || $sub_records) {
+      $placerec = Functions::getSubRecord(2, '2 PLAC', $event->gedcom());
+      if (empty($placerec)) {
+        $placerec = "2 PLAC";
+      }      
+      $ps = PlaceStructure::create($placerec, $event->record()->tree(), $event->getTag(), $event->attribute("DATE"));
+      $gves = $this->formatPlaceNameAndSubRecords($ps);
+    }
+    
+    $html = '';
+    $script = '';
+
     if ($anchor) {
       // Show the full place name, for facts/events tab
-      $html = '<a href="' . $event->place()->url() . '">' . $event->place()->fullName() . '</a>';
+      $gve = $gves[0];
+      $html .= $gve->getMain();
+      $script .= $gve->getScript();
     } else {
       // Abbreviate the place name, for chart boxes
       return GenericViewElement::create($event->place()->getShortName());
     }
 
-    $script = '';
     if ($sub_records) {
-      $placerec = Functions::getSubRecord(2, '2 PLAC', $event->gedcom());
-      if (!empty($placerec)) {
-        $ps = PlaceStructure::create($placerec, $event->record()->tree(), $event->getTag(), $event->attribute("DATE"));
-        $gve = $this->formatPlaceSubRecords($ps);
-        $html .= $gve->getMain();
-        $script .= $gve->getScript();
-      }
+      $gve = $gves[1];
+      $html .= $gve->getMain();
+      $script .= $gve->getScript();
     }
 
     $html .= $this->formatFactLds($event, $lds);
@@ -80,19 +89,29 @@ class FunctionsPrint_2x {
 
   //[RC] added
   //Override point
-  protected function formatPlaceSubRecords(PlaceStructure $ps): GenericViewElement {
-    $html = '';
+  protected function formatPlaceNameAndSubRecords(PlaceStructure $ps) {
+    $html1 = $this->formatPlaceName($ps);
+    
+    $html2 = '';
 
-    $html .= $this->formatPlaceHebRomn($ps);
-    $html .= $this->formatPlaceCustomFieldsAfterNames($ps);
-    $html .= $this->formatPlaceLatiLong($ps->getLati(), $ps->getLong());
-    $html .= $this->formatPlaceCustomFieldsAfterLatiLong($ps);
-    $html .= $this->formatPlaceNotes($ps);
-    $html .= $this->formatPlaceCustomFieldsAfterNotes($ps);
+    $html2 .= $this->formatPlaceHebRomn($ps);
+    $html2 .= $this->formatPlaceCustomFieldsAfterNames($ps);
+    $html2 .= $this->formatPlaceLatiLong($ps->getLati(), $ps->getLong());
+    $html2 .= $this->formatPlaceCustomFieldsAfterLatiLong($ps);
+    $html2 .= $this->formatPlaceNotes($ps);
+    $html2 .= $this->formatPlaceCustomFieldsAfterNotes($ps);
 
-    return GenericViewElement::create($html);
+    return array(
+        GenericViewElement::create($html1), 
+        GenericViewElement::create($html2));
   }
 
+  //[RC] added
+  //Override point
+  protected function formatPlaceName(PlaceStructure $place) {
+    return '<a href="' . $place->getPlace()->url() . '">' . $place->getPlace()->fullName() . '</a>';
+  }
+  
   //[RC] added
   //Override point
   protected function formatPlaceHebRomn(PlaceStructure $place) {

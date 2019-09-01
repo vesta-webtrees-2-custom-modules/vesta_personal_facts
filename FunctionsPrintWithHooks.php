@@ -20,7 +20,10 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
     $this->module = $module;
   }
 
-  protected function formatPlaceSubRecords(PlaceStructure $ps): GenericViewElement {
+  protected function formatPlaceNameAndSubRecords(PlaceStructure $ps) {
+    $html1 = '';
+    $script1 = '';
+    
     $html = '';
     $script = '';
 
@@ -50,6 +53,12 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
             })
             ->filter() //filter null values
             ->toArray();
+    
+    foreach ($factPlaceAdditions as $factPlaceAddition) {
+      $html1 .= $factPlaceAddition->getBeforePlace()->getMain();
+      $script1 .= $factPlaceAddition->getBeforePlace()->getScript();
+    }
+    $html1 .= $this->formatPlaceName($ps);
     
     $html .= $this->formatPlaceCustomFieldsAfterLatiLong($ps);
     foreach ($factPlaceAdditions as $factPlaceAddition) {
@@ -122,7 +131,9 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
     }
     */
     
-    return new GenericViewElement($html, $script);
+    return array(
+        new GenericViewElement($html1, $script1),
+        new GenericViewElement($html, $script));
   }
 
   public function getMapLinks($map_lati, $map_long) {
