@@ -300,7 +300,8 @@ class FunctionsPrintFacts_2x {
           $suffix = ')';
           if ($parent instanceof Family) {
             // For family ASSO records (e.g. MARR), identify the spouse with a sex icon
-            $suffix = $label_person->getSexImage() . ')';
+            $sex = '<small>' . view('icons/sex-' . $label_person->sex()) . '</small>';
+            $suffix = $sex . ')';
           }
           $value = $this->getOutputForRelationship($fact, $label_person, $record, '(', $relationship_name, $suffix, true);
           if ($value != null) {
@@ -640,7 +641,8 @@ class FunctionsPrintFacts_2x {
           $relationship_name_suffix = '';
           if ($parent instanceof Family) {
             // For family ASSO records (e.g. MARR), identify the spouse with a sex icon
-            $relationship_name_suffix = $associate->getSexImage();
+            $sex = '<small>' . view('icons/sex-' . $associate->sex()) . '</small>';
+            $relationship_name_suffix = $sex;
           }
 
           //[RC] adjusted
@@ -652,7 +654,8 @@ class FunctionsPrintFacts_2x {
 
           //if ($parent instanceof Family) {
           //	// For family ASSO records (e.g. MARR), identify the spouse with a sex icon
-          //	$relationship_name .= $associate->getSexImage();
+          //	$sex = '<small>' . view('icons/sex-' . $associate->sex()) . '</small>';
+          //$relationship_name .= $sex;
           //}
           //$values[] = '<a href="' . e(route('relationships', ['xref1' => $associate->xref(), 'xref2' => $person->xref(), 'ged' => $person->tree()->name()])) . '" rel="nofollow">' . $relationship_name . '</a>';
         }
