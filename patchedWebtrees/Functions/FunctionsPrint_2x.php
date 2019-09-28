@@ -4,7 +4,6 @@ namespace Cissee\WebtreesExt\Functions;
 
 use Fisharebest\Webtrees\Date;
 use Fisharebest\Webtrees\Fact;
-use Fisharebest\Webtrees\Functions\Functions;
 use Fisharebest\Webtrees\Functions\FunctionsPrint;
 use Fisharebest\Webtrees\GedcomCode\GedcomCodeStat;
 use Fisharebest\Webtrees\GedcomCode\GedcomCodeTemp;
@@ -56,11 +55,7 @@ class FunctionsPrint_2x {
   //[RC] refactored completely
   public function formatFactPlace(Fact $event, $anchor = false, $sub_records = false, $lds = false): GenericViewElement {
     if ($anchor || $sub_records) {
-      $placerec = Functions::getSubRecord(2, '2 PLAC', $event->gedcom());
-      if (empty($placerec)) {
-        $placerec = "2 PLAC";
-      }      
-      $ps = PlaceStructure::create($placerec, $event->record()->tree(), $event->getTag(), $event->attribute("DATE"));
+      $ps = PlaceStructure::fromFact($event);
       $gves = $this->formatPlaceNameAndSubRecords($ps);
     }
     
