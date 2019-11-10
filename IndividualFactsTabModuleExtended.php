@@ -17,6 +17,7 @@ use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleTabInterface;
 use Fisharebest\Webtrees\Services\ClipboardService;
 use Fisharebest\Webtrees\Services\ModuleService;
+use Fisharebest\Webtrees\Services\TreeService;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use ReflectionObject;
@@ -25,6 +26,7 @@ use Vesta\Hook\HookInterfaces\FunctionsPlaceUtils;
 use Vesta\Model\GenericViewElement;
 use Vesta\VestaAdminController;
 use Vesta\VestaModuleTrait;
+use function app;
 use function redirect;
 use function route;
 use function view;
@@ -49,7 +51,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   }
 
   public function customModuleVersion(): string {
-    return '2.0.0-beta.4.1';
+    return '2.0.0-beta.5.1';
   }
 
   public function customModuleLatestVersionUrl(): string {
@@ -258,7 +260,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   public function postProviders1Action(ServerRequestInterface $request): ResponseInterface {
     $modules = FunctionsPlaceUtils::modules($this, true);
 
-    $controller1 = new ModuleController($this->module_service);
+    $controller1 = new ModuleController($this->module_service, app(TreeService::class));
     $reflector = new ReflectionObject($controller1);
 
     //private!
@@ -288,7 +290,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   public function postProviders2Action(ServerRequestInterface $request): ResponseInterface {
     $modules = IndividualFactsTabExtenderUtils::modules($this, true);
 
-    $controller1 = new ModuleController($this->module_service);
+    $controller1 = new ModuleController($this->module_service, app(TreeService::class));
     $reflector = new ReflectionObject($controller1);
 
     //private!
