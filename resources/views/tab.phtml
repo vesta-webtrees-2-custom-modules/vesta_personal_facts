@@ -35,14 +35,19 @@ View::endpush();
                     ?>
                 </td>
             </tr>
-            <?php
-            //[RC] PATCHED
-            echo $outputAfterDescriptionbox->getMain();
-            View::push('javascript');
-            echo $outputAfterDescriptionbox->getScript();
-            View::endpush();
-            ?>
+        </tbody>
+    </table>
 
+    <?php
+    //[RC] PATCHED
+    echo $outputAfterDescriptionbox->getMain();
+    View::push('javascript');
+    echo $outputAfterDescriptionbox->getScript();
+    View::endpush();
+    ?>
+
+    <table class="table wt-facts-table">
+        <tbody>
             <?php foreach ($facts as $fact): ?>
               <?php
               $script = $printFactFunction($fact);

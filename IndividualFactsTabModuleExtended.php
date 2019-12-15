@@ -41,9 +41,11 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     $this->setFunctionsPrintFacts(new FunctionsPrintFactsWithHooks(new FunctionsPrintWithHooks($this), $this));
   }
 
-  protected function onBoot(): void {
-    //we do not want to use the original name 'modules/personal_facts/tab' here, so we use our own namespace
-    $this->setViewName($this->name() . '::tab');
+  //assumes to get called after setName!
+  //(would be cleaner to set view name e.g. onBoot)
+  protected function getViewName(): string {
+    //we do not want to use the original name 'modules/relatives/tab' here, so we use our own namespace
+    return $this->name() . '::tab';
   }
 
   public function customModuleAuthorName(): string {
@@ -51,7 +53,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   }
 
   public function customModuleVersion(): string {
-    return '2.0.0-beta.5.1';
+    return '2.0.0.1';
   }
 
   public function customModuleLatestVersionUrl(): string {

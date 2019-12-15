@@ -40,8 +40,8 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
     $this->functionsPrintFacts = $functionsPrintFacts;
   }
 
-  public function setViewName($viewName) {
-    $this->viewName = $viewName;
+  protected function getViewName(): string {
+    return $this->viewName;
   }
 
   public function __construct(ModuleService $module_service, ClipboardService $clipboard_service) {
@@ -140,7 +140,7 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
     $outputInDescriptionbox = $this->getOutputInDescriptionbox($individual);
     $outputAfterDescriptionbox = $this->getOutputAfterDescriptionbox($individual);
 
-    $view = view($this->viewName, [
+    $view = view($this->getViewName(), [
                 'can_edit' => $individual->canEdit(),
                 'clipboard_facts' => $this->clipboard_service->pastableFacts($individual, $exclude_facts),
                 'has_historical_facts' => !empty($historical_facts),

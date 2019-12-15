@@ -177,10 +177,6 @@ class FunctionsPrintFacts_2x {
     echo '<tr class="', $styleadd, '">';
     echo '<th scope="row">';
 
-    if ($fact->record()->tree()->getPreference('SHOW_FACT_ICONS')) {
-      echo app(ModuleThemeInterface::class)->icon($fact), ' ';
-    }
-
     switch ($fact->getTag()) {
       case '_BIRT_CHIL':
         $children[$fact->record()->xref()] = true;
@@ -312,8 +308,12 @@ class FunctionsPrintFacts_2x {
         }
       }
     }
+    
     //[RC] added end
-
+    if ($tree->getPreference('SHOW_FACT_ICONS')) {
+      echo '<span class="wt-fact-icon wt-fact-icon-' . $fact->getTag() . '" title="' . strip_tags(GedcomTag::getLabel($fact->getTag())) . '"></span>';
+    }
+        
     echo '</th>';
     echo '<td class="', $styleadd, '">';
 

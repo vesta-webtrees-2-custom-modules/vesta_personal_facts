@@ -58,8 +58,7 @@ interface IndividualFactsTabExtenderInterface {
   /**
    *
    * @param Individual $person
-   * @return GenericViewElement with html to display after the description box, within a two-column table
-   * (i.e. tr/td tags should be used), and script
+   * @return GenericViewElement with html to display after the description box, and script
    */
   public function hFactsTabGetOutputAfterDBox(Individual $person);
 
