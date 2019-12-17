@@ -53,7 +53,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   }
 
   public function customModuleVersion(): string {
-    return '2.0.0.1';
+    return '2.0.0.2';
   }
 
   public function customModuleLatestVersionUrl(): string {

@@ -18,10 +18,8 @@ use Fisharebest\Webtrees\GedcomRecord;
 use Fisharebest\Webtrees\GedcomTag;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Individual;
-use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 use Fisharebest\Webtrees\Services\UserService;
 use Vesta\Model\GenericViewElement;
-use function app;
 use function route;
 
 //[RC] adapted: some methods as non-static for easier extensibility
@@ -126,10 +124,10 @@ class FunctionsPrintFacts_2x {
     // New or deleted facts need different styling
     $styleadd = '';
     if ($fact->isPendingAddition()) {
-      $styleadd = 'new';
+      $styleadd = 'wt-new';
     }
     if ($fact->isPendingDeletion()) {
-      $styleadd = 'old';
+      $styleadd = 'wt-old';
     }
 
     //[RC] added/ refactored
@@ -161,7 +159,7 @@ class FunctionsPrintFacts_2x {
       case 'MARR':
         // This is a hack for a proprietory extension. Is it still used/needed?
         $utype = strtoupper($type);
-        if ($utype == 'CIVIL' || $utype == 'PARTNERS' || $utype == 'RELIGIOUS') {
+        if ($utype === 'CIVIL' || $utype === 'PARTNERS' || $utype === 'RELIGIOUS') {
           $label = GedcomTag::getLabel('MARR_' . $utype, $label_person);
           $type = ''; // Do not print this again
         } else {
@@ -180,13 +178,15 @@ class FunctionsPrintFacts_2x {
     switch ($fact->getTag()) {
       case '_BIRT_CHIL':
         $children[$fact->record()->xref()] = true;
-        $label .= '<br>' . /* I18N: Abbreviation for "number %s" */ I18N::translate('#%s', count($children));
+        /* I18N: Abbreviation for "number %s" */
+        $label .= '<br>' . I18N::translate('#%s', I18N::number(count($children)));
         break;
       case '_BIRT_GCHI':
       case '_BIRT_GCH1':
       case '_BIRT_GCH2':
         $grandchildren[$fact->record()->xref()] = true;
-        $label .= '<br>' . /* I18N: Abbreviation for "number %s" */ I18N::translate('#%s', count($grandchildren));
+        /* I18N: Abbreviation for "number %s" */
+        $label .= '<br>' . I18N::translate('#%s', I18N::number(count($grandchildren)));
         break;
     }
 
@@ -194,7 +194,6 @@ class FunctionsPrintFacts_2x {
     if ($fact->id() !== 'asso') {
       echo $label;
     } //else echo later, we want to handle a few special cases
-
     //[RC] added additional edit controls, even if fact itself is not editable
     $additionalControls = $this->printAdditionalEditControls($fact);
     $main = $additionalControls->getMain();
@@ -206,7 +205,7 @@ class FunctionsPrintFacts_2x {
     //asso facts may be editable per se, but not like this (i.e. via the 'asso' fact id)
     if (($main !== '') || (($fact->id() != 'histo') && ($fact->id() !== 'asso') && $fact->canEdit())) {
       echo '<div class="editfacts">';
-      
+
       if (($fact->id() != 'histo') && ($fact->id() !== 'asso') && $fact->canEdit()) {
         echo view('edit/icon-fact-edit', ['fact' => $fact]);
         echo view('edit/icon-fact-copy', ['fact' => $fact]);
@@ -215,7 +214,7 @@ class FunctionsPrintFacts_2x {
       echo $main;
       echo '</div>';
     }
-    
+
     //[RC] added, this could be in main webtrees
     if ($fact->id() === 'asso') {
       if ($record instanceof Individual) { //check: anything else actually possible here?
@@ -296,7 +295,7 @@ class FunctionsPrintFacts_2x {
           $suffix = ')';
           if ($parent instanceof Family) {
             // For family ASSO records (e.g. MARR), identify the spouse with a sex icon
-            $sex = '<small>' . view('icons/sex-' . $label_person->sex()) . '</small>';
+            $sex = '<small>' . view('icons/sex', ['sex' => $label_person->sex()]) . '</small>';
             $suffix = $sex . ')';
           }
           $value = $this->getOutputForRelationship($fact, $label_person, $record, '(', $relationship_name, $suffix, true);
@@ -308,12 +307,12 @@ class FunctionsPrintFacts_2x {
         }
       }
     }
-    
+
     //[RC] added end
     if ($tree->getPreference('SHOW_FACT_ICONS')) {
       echo '<span class="wt-fact-icon wt-fact-icon-' . $fact->getTag() . '" title="' . strip_tags(GedcomTag::getLabel($fact->getTag())) . '"></span>';
     }
-        
+
     echo '</th>';
     echo '<td class="', $styleadd, '">';
 
@@ -347,6 +346,9 @@ class FunctionsPrintFacts_2x {
       case '_EMAIL':
         echo '<div class="field"><a href="mailto:', e($fact->value()), '">', e($fact->value()), '</a></div>';
         break;
+      case 'LANG':
+        echo GedcomCodeLang::getValue($fact->value());
+        break;
       case 'RESN':
         echo '<div class="field">';
         switch ($fact->value()) {
@@ -375,8 +377,16 @@ class FunctionsPrintFacts_2x {
         break;
       case 'REPO':
         $repository = $fact->target();
-        if ($repository !== null) {
+        if ($repository instanceof Repository) {
           echo '<div><a class="field" href="', e($repository->url()), '">', $repository->fullName(), '</a></div>';
+        } else {
+          echo '<div class="error">', e($fact->value()), '</div>';
+        }
+        break;
+      case 'SUBM':
+        $submitter = $fact->target();
+        if ($submitter instanceof Submitter) {
+          echo '<div><a class="field" href="', e($submitter->url()), '">', $submitter->fullName(), '</a></div>';
         } else {
           echo '<div class="error">', e($fact->value()), '</div>';
         }
@@ -422,7 +432,7 @@ class FunctionsPrintFacts_2x {
     if ($type) {
       $utype = strtoupper($type);
       // Events of close relatives, e.g. _MARR_CHIL
-      if (substr($fact->getTag(), 0, 6) == '_MARR_' && ($utype == 'CIVIL' || $utype == 'PARTNERS' || $utype == 'RELIGIOUS')) {
+      if (substr($fact->getTag(), 0, 6) === '_MARR_' && ($utype === 'CIVIL' || $utype === 'PARTNERS' || $utype === 'RELIGIOUS')) {
         // Translate MARR/TYPE using the code that supports MARR_CIVIL, etc. tags
         $type = GedcomTag::getLabel('MARR_' . $utype);
       } else {
@@ -520,7 +530,7 @@ class FunctionsPrintFacts_2x {
         case '_WT_USER':
           $user = (new UserService())->findByIdentifier($match[2]); // may not exist
           if ($user) {
-            echo GedcomTag::getLabelValue('_WT_USER', $user->realName());
+            echo GedcomTag::getLabelValue('_WT_USER', '<span dir="auto">' . e($user->realName()) . '</span>');
           } else {
             echo GedcomTag::getLabelValue('_WT_USER', e($match[2]));
           }
@@ -641,7 +651,7 @@ class FunctionsPrintFacts_2x {
           $relationship_name_suffix = '';
           if ($parent instanceof Family) {
             // For family ASSO records (e.g. MARR), identify the spouse with a sex icon
-            $sex = '<small>' . view('icons/sex-' . $associate->sex()) . '</small>';
+            $sex = '<small>' . view('icons/sex', ['sex' => $associate->sex()]) . '</small>';
             $relationship_name_suffix = $sex;
           }
 
@@ -654,7 +664,7 @@ class FunctionsPrintFacts_2x {
 
           //if ($parent instanceof Family) {
           //	// For family ASSO records (e.g. MARR), identify the spouse with a sex icon
-          //	$sex = '<small>' . view('icons/sex-' . $associate->sex()) . '</small>';
+          //	$sex = '<small>' . view('icons/sex', ['sex' => $associate->sex()]) . '</small>';
           //$relationship_name .= $sex;
           //}
           //$values[] = '<a href="' . e(route('relationships', ['xref1' => $associate->xref(), 'xref2' => $person->xref(), 'ged' => $person->tree()->name()])) . '" rel="nofollow">' . $relationship_name . '</a>';
@@ -692,10 +702,11 @@ class FunctionsPrintFacts_2x {
     $main = '<a href="' . e(route('relationships', ['xref1' => $associate->xref(), 'xref2' => $person->xref(), 'ged' => $person->tree()->name()])) . '" rel="nofollow">' . $relationship_name_prefix . $relationship_name . $relationship_name_suffix . '</a>';
     return new GenericViewElement($main, '');
   }
-  
+
   //[RC] added
   //override hook
   protected function printAdditionalEditControls(Fact $event): GenericViewElement {
     return new GenericViewElement('', '');
   }
+
 }
