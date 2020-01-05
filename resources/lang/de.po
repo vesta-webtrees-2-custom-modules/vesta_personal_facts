@@ -1,12 +1,10 @@
-
 msgid ""
 msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
-"Report-Msgid-Bugs-To: i18n@webtrees.net\n"
-"POT-Creation-Date: 2015-08-17 09:49+0100\n"
+"Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
+"POT-Creation-Date: 2020-01-03 12:59+0100\n"
 "PO-Revision-Date: 2017-10-03 11:31+0200\n"
-"Language-Team: German <http://translate.webtrees.net/projects/webtrees/"
-"webtrees/de/>\n"
+"Language-Team: German <http://translate.webtrees.net/projects/webtrees/webtrees/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,40 +12,306 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 1.8.6\n"
 
-msgid	"Facts and events of inverse associates"
-msgstr "Ereignisse von invers assoziierten Personen"
-	
+#: IndividualFactsTabModuleTrait.php:21
+msgid "A tab showing the facts and events of an individual."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:54
+msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:27
+msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:41
+msgid "Associate at a marriage"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:39
+msgctxt "FEMALE"
+msgid "Associate at a marriage"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:37
+msgctxt "MALE"
+msgid "Associate at a marriage"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:67
+msgid "Baptism of a godchild"
+msgstr "Taufe eines Patenkindes"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:59
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:65
+msgid "Baptism of a goddaughter"
+msgstr "Taufe einer Patentochter"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:56
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:63
+msgid "Baptism of a godson"
+msgstr "Taufe eines Patensohnes"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
 msgid "Best man at a marriage"
 msgstr "Trauzeuge bei einer Hochzeit"
 
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:157 IndividualFactsTabModuleTrait.php:113
+msgid "Bing Maps"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:24
 msgid "Bridesmaid at a marriage"
 msgstr "Brautjungfer bei einer Hochzeit"
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:95
+msgid "Christening of a godchild"
+msgstr "Kindstaufe eines Patenkindes"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:87
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:93
+msgid "Christening of a goddaughter"
+msgstr "Kindstaufe einer Patentochter"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:84
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:91
+msgid "Christening of a godson"
+msgstr "Kindstaufe eines Patensohnes"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:44
+msgid "Deselect in order to have the tab appear exactly as the original tab."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:90
+msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:36
+msgid "Displayed title"
+msgstr ""
+
+#: IndividualFactsTabModuleExtended.php:131
+msgid "Events of close relatives"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:163
+msgid "Facts and Events List"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleExtended.php:218
+msgid "Facts and Events Tab Location Data Providers"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleExtended.php:226
+msgid "Facts and Events Tab UI Element Providers"
+msgstr ""
+
+#: IndividualFactsTabModuleExtended.php:80
+msgid "Facts and events"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleExtended.php:138
+#: IndividualFactsTabModuleTrait.php:50
+msgid "Facts and events of inverse associates"
+msgstr "Ereignisse von invers assoziierten Personen"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:159
+msgid "General"
+msgstr ""
+
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:146 IndividualFactsTabModuleTrait.php:94
+msgid "Google Maps"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:79
+msgid "Hide coordinates, show map links after place name"
+msgstr ""
+
+#: IndividualFactsTabModuleExtended.php:145
+msgid "Historical facts"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:60
+msgid "If this option is checked, additional facts and events of inverse associates are limited to the following facts and events."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:61
+msgid "In particular if both lists are empty, no additional facts and events of this kind will be shown."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:80
+msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:53
+msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:101 IndividualFactsTabModuleTrait.php:120
+#: IndividualFactsTabModuleTrait.php:140
+msgid "Include 'TM' in tooltip"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:146
+msgid "Include a marker in the linked map."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:145
+msgid "Include marker"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:38
+#, php-format
+msgid "Include the %1$s symbol in the module title"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:43
+#, php-format
+msgid "Include the %1$s symbol in the tab title"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:28
+msgid "Intended as a replacement for the original 'Facts and events' module."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:77
+msgid "Latitude/Longitude"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleExtended.php:222
+msgid "Modules listed here are used (in the configured order) to determine map coordinates of places."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleExtended.php:230
+msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:59
+msgid "Only show specific facts and events"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:84
+msgid "Open links in new browser tab"
+msgstr ""
+
+#: FunctionsPrintWithHooks.php:163
+msgid "OpenStreetMap"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:133
+msgid "OpenStreetMaps"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:167
+msgid "Place Settings"
+msgstr ""
+
+#: IndividualFactsTabModuleTrait.php:22
+msgid "Replacement for the original 'Facts and events' module."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:29
+#, php-format
+msgid "Requires the '%1$s Vesta Common' module."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:71
+msgid "Restrict to this list of GEDCOM family facts and events. You can modify this list by removing or adding fact and event names, even custom ones, as necessary."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:66
+msgid "Restrict to this list of GEDCOM individual facts and events. You can modify this list by removing or adding fact and event names, even custom ones, as necessary."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:89
+msgid "Show additional info for map links"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:115
+msgid "Show links to Bing Maps"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:96
+msgid "Show links to Google Maps"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:135
+msgid "Show links to OpenStreetMaps"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:55
+msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:102 IndividualFactsTabModuleTrait.php:121
+#: IndividualFactsTabModuleTrait.php:141
+msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:52
+msgid "Use separate toggle checkbox"
+msgstr ""
+
+#: IndividualFactsTabModuleTrait.php:16
+msgid "Vesta Facts and events"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:32
 msgid "Witness at a marriage"
 msgstr "Trauzeuge/Trauzeugin bei einer Hochzeit"
 
-msgctxt "MALE"
-msgid "Witness at a marriage"
-msgstr "Trauzeuge bei einer Hochzeit"
-
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:30
 msgctxt "FEMALE"
 msgid "Witness at a marriage"
 msgstr "Trauzeugin bei einer Hochzeit"
 
-msgid "Baptism of a godson"
-msgstr "Taufe eines Patensohnes"
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:28
+msgctxt "MALE"
+msgid "Witness at a marriage"
+msgstr "Trauzeuge bei einer Hochzeit"
 
-msgid "Baptism of a goddaughter"
-msgstr "Taufe einer Patentochter"
-
-msgid "Baptism of a godchild"
-msgstr "Taufe eines Patenkindes"
-
-msgid "Christening of a godson"
-msgstr "Kindstaufe eines Patensohnes"
-
-msgid "Christening of a goddaughter"
-msgstr "Kindstaufe einer Patentochter"
-
-msgid "Christening of a godchild"
-msgstr "Kindstaufe eines Patenkindes"
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:106 IndividualFactsTabModuleTrait.php:125
+#: IndividualFactsTabModuleTrait.php:150
+msgid "Zoom level of linked map"
+msgstr ""

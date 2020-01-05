@@ -42,7 +42,6 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   }
 
   //assumes to get called after setName!
-  //(would be cleaner to set view name e.g. onBoot)
   protected function getViewName(): string {
     //we do not want to use the original name 'modules/relatives/tab' here, so we use our own namespace
     return $this->name() . '::tab';
@@ -53,7 +52,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   }
 
   public function customModuleVersion(): string {
-    return '2.0.0.2';
+    return '2.0.1.1';
   }
 
   public function customModuleLatestVersionUrl(): string {
@@ -216,19 +215,19 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   //////////////////////////////////////////////////////////////////////////////
   
   private function title1(): string {
-    return I18N::translate('Facts and Events Tab Location Data Providers');
+    return /* I18N: Module Configuration */I18N::translate('Facts and Events Tab Location Data Providers');
   }
   
   private function description1(): string {
-    return I18N::translate('Modules listed here are used (in the configured order) to determine map coordinates of places.');
+    return /* I18N: Module Configuration */I18N::translate('Modules listed here are used (in the configured order) to determine map coordinates of places.');
   }
   
   private function title2(): string {
-    return I18N::translate('Facts and Events Tab UI Element Providers');
+    return /* I18N: Module Configuration */I18N::translate('Facts and Events Tab UI Element Providers');
   }
   
   private function description2(): string {
-    return I18N::translate('Modules listed here may provide additional data for facts and events (displayed in the configured order).');
+    return /* I18N: Module Configuration */I18N::translate('Modules listed here may provide additional data for facts and events (displayed in the configured order).');
   }
   
   //hook management - generalize?

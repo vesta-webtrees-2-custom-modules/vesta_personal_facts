@@ -452,9 +452,11 @@ class FunctionsPrintFacts_2x {
     $gve = $this->functionsPrint->formatFactPlace($fact, true, true, true);
     $script .= $gve->getScript();
     echo '<div class="place">', $gve->getMain(), '</div>';
+    //[RC] adjusted: unnecessary if there isn't anything to follow!
     // A blank line between the primary attributes (value, date, place) and the secondary ones
-    echo '<br>';
-
+    //echo '<br>';
+    ob_start();    
+    
     $addr = $fact->attribute('ADDR');
     if ($addr !== '') {
       echo GedcomTag::getLabelValue('ADDR', $addr);
@@ -593,8 +595,16 @@ class FunctionsPrintFacts_2x {
     echo FunctionsPrintFacts::printFactSources($tree, $fact->gedcom(), 2);
     echo FunctionsPrint::printFactNotes($tree, $fact->gedcom(), 2);
     FunctionsPrintFacts::printMediaLinks($tree, $fact->gedcom(), 2);
-    echo '</td></tr>';
 
+    //[RC] adjusted
+    $html = ob_get_clean();    
+    if ($html !== '') {
+      // A blank line between the primary attributes (value, date, place) and the secondary ones
+      echo '<br>';
+      echo $html;
+    }
+    
+    echo '</td></tr>';
     return $script;
   }
 

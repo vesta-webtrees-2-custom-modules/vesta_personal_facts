@@ -1,12 +1,10 @@
-<?php
+<?php 
 
-use Fisharebest\Webtrees\Functions\FunctionsPrint; ?>
-<?php
+use Cissee\WebtreesExt\MoreI18N;
+use Fisharebest\Webtrees\Functions\FunctionsPrint;
+use Fisharebest\Webtrees\View;
 
-use Fisharebest\Webtrees\I18N; ?>
-<?php
-
-use Fisharebest\Webtrees\View; ?>
+?>
 
 <?php
 echo $outputBeforeTab->getMain();
@@ -60,7 +58,7 @@ View::endpush();
             <?php if (empty($facts)): ?>
               <tr>
                   <td colspan="2">
-                      <?= I18N::translate('There are no facts for this individual.') ?>
+                      <?= MoreI18N::xlate('There are no facts for this individual.') ?>
                   </td>
               </tr>
             <?php endif ?>
