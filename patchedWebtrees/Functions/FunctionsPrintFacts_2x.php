@@ -3,6 +3,7 @@
 namespace Cissee\WebtreesExt\Functions;
 
 use Cissee\WebtreesExt\GedcomCode\GedcomCodeRela_Ext;
+use Cissee\WebtreesExt\MoreI18N;
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\Date;
 use Fisharebest\Webtrees\Fact;
@@ -194,6 +195,7 @@ class FunctionsPrintFacts_2x {
     if ($fact->id() !== 'asso') {
       echo $label;
     } //else echo later, we want to handle a few special cases
+    
     //[RC] added additional edit controls, even if fact itself is not editable
     $additionalControls = $this->printAdditionalEditControls($fact);
     $main = $additionalControls->getMain();
@@ -203,8 +205,8 @@ class FunctionsPrintFacts_2x {
     //rather hacky to have the special check here!
     //[RC] adjusted - should be webtrees issue:
     //asso facts may be editable per se, but not like this (i.e. via the 'asso' fact id)
-    if (($main !== '') || (($fact->id() != 'histo') && ($fact->id() !== 'asso') && $fact->canEdit())) {
-      echo '<div class="editfacts">';
+    if (($fact->id() != 'histo') && ($fact->id() !== 'asso') && $fact->canEdit()) {
+      echo '<div class="editfacts nowrap">';
 
       if (($fact->id() != 'histo') && ($fact->id() !== 'asso') && $fact->canEdit()) {
         echo view('edit/icon-fact-edit', ['fact' => $fact]);
@@ -281,6 +283,8 @@ class FunctionsPrintFacts_2x {
           echo $label;
           if ($label2) {
             echo ": " . $label2;
+          } else {
+            echo ": " . MoreI18N::xlate('Associate');
           }
         }
 
@@ -306,9 +310,15 @@ class FunctionsPrintFacts_2x {
           }
         }
       }
+      
+      if ($main !== '') {
+        echo '<div class="editfacts nowrap">';
+        echo $main;
+        echo '</div>';
+      }
     }
-
     //[RC] added end
+    
     if ($tree->getPreference('SHOW_FACT_ICONS')) {
       echo '<span class="wt-fact-icon wt-fact-icon-' . $fact->getTag() . '" title="' . strip_tags(GedcomTag::getLabel($fact->getTag())) . '"></span>';
     }

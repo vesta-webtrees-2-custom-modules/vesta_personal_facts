@@ -142,7 +142,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
       $categories[] = new ToggleableFactsCategory(
               'show-historical-facts-pfh', //cf FunctionsPrintFactsWithHooks.additionalStyleadds()!
               '.wt-historic-fact-pfh',
-              I18N::translate('Historical facts'));
+              I18N::translate('Historic events'));
     }
 
     return $categories;

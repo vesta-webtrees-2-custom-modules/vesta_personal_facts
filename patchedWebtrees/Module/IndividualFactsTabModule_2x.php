@@ -592,7 +592,7 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
       $categories[] = new ToggleableFactsCategory(
               'show-historical-facts',
               '.wt-historic-fact',
-              I18N::translate('Historical facts'));
+              I18N::translate('Historic events'));
     }
 
     return $categories;
