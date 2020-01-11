@@ -19,6 +19,9 @@ Mainly intended as a base for other custom modules. Some features are available 
 
 * Links to external maps (Google, Bing, OpenStreetMap) are configurable via module administration.
 
+* Additional map services may be integrated on request. Currently we have:
+    * [Mapire.eu](https://mapire.eu), providing a historical map of Europe in the XIX. century.
+
 * The respective location data is obtained directly from GEDCOM, and may also be provided by other custom modules. 
 
 * If you have collected non-GEDCOM location data via webtrees itself, activate the 'Vesta Webtrees Location Data Provider' custom module to make this data available.
@@ -31,7 +34,7 @@ Mainly intended as a base for other custom modules. Some features are available 
 
 ### Download<a name="download"/>
 
-* Current version: 2.0.1.1
+* Current version: 2.0.1.2
 * Based on and tested with webtrees 2.0.1. Cannot be used with webtrees 1.x. May not work with earlier 2.x versions!
 * Requires the ⚶ Vesta Common module ('vesta_common').
 * Download the zipped module, including all related modules, [here](https://cissee.de/vesta.latest.zip).

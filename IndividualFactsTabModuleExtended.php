@@ -12,6 +12,7 @@ use Fisharebest\Webtrees\Family;
 use Fisharebest\Webtrees\Http\Controllers\Admin\ModuleController;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Individual;
+use Fisharebest\Webtrees\Session;
 use Fisharebest\Webtrees\Module\ModuleConfigInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleTabInterface;
@@ -52,7 +53,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   }
 
   public function customModuleVersion(): string {
-    return '2.0.1.1';
+    return '2.0.1.2';
   }
 
   public function customModuleLatestVersionUrl(): string {
@@ -80,9 +81,30 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     return $this->getTabTitle(I18N::translate('Facts and events'));
   }
 
+  public function assetsViaViews(): array {
+    return [
+        'css/webtrees.css' => 'css/webtrees',
+        'css/minimal.css' => 'css/minimal'];
+  }
+  
   protected function getOutputBeforeTab(Individual $person) {
     $pre = '<link href="' . $this->assetUrl('css/style.css') . '" type="text/css" rel="stylesheet" />';
 
+    //align with current theme (supporting - for now - the default webtrees themes)
+    $themeName = Session::get('theme');
+    if ('minimal' !== $themeName) {
+      if ('fab' === $themeName) {
+        //fab also uses font awesome icons
+        $themeName = 'minimal';
+      } else {
+        //default
+        $themeName = 'webtrees';
+      }      
+    }
+    
+    //note: content actually served via <theme>.phtml!
+    $pre .= '<link href="' . $this->assetUrl('css/'.$themeName.'.css') . '" type="text/css" rel="stylesheet" />';
+    
     $a1 = array(new GenericViewElement($pre, ''));
 
     $a2 = IndividualFactsTabExtenderUtils::accessibleModules($this, $person->tree(), Auth::user())

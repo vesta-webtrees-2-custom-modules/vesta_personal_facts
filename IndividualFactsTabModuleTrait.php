@@ -90,6 +90,7 @@ trait IndividualFactsTabModuleTrait {
                 /* I18N: Module Configuration */I18N::translate('Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging.'),
                 'DEBUG_MAP_LINKS',
                 '0')));
+    
     $placeSub[] = new ControlPanelSubsection(
             /* I18N: Module Configuration */I18N::translate('Google Maps'),
             array(new ControlPanelCheckbox(
@@ -109,6 +110,7 @@ trait IndividualFactsTabModuleTrait {
                 20,
                 'GOOGLE_ZOOM',
                 17)));
+    
     $placeSub[] = new ControlPanelSubsection(
             /* I18N: Module Configuration */I18N::translate('Bing Maps'),
             array(new ControlPanelCheckbox(
@@ -152,6 +154,21 @@ trait IndividualFactsTabModuleTrait {
                 1,
                 20,
                 'OSM_ZOOM',
+                15)));
+
+    $placeSub[] = new ControlPanelSubsection(
+            /* I18N: Module Configuration */I18N::translate('Europe in the XIX. century | Mapire'),
+            array(new ControlPanelCheckbox(
+                /* I18N: Module Configuration */I18N::translate('Show links to a historic map of Europe'),
+                null,
+                'MAPIRE_SHOW',
+                '1'),
+        new ControlPanelRange(
+                /* I18N: Module Configuration */I18N::translate('Zoom level of linked map'),
+                null,
+                1,
+                20,
+                'MAPIRE_ZOOM',
                 15)));
 
     $sections = array();

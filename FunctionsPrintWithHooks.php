@@ -165,12 +165,82 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
         $html .= $this->linkIcon('icons/openstreetmap', $title, 'https://www.openstreetmap.org/?mlat=' . $map_lati . '&mlon=' . $map_long . '#map=' . $zoom . '/' . $map_lati . '/' . $map_long);
       } else {
         $html .= $this->linkIcon('icons/openstreetmap', $title, 'https://www.openstreetmap.org/#map=' . $zoom . '/' . $map_lati . '/' . $map_long);
-      }
+      }      
     }
 
+    if (boolval($this->module->getPreference('MAPIRE_SHOW', '1'))) {
+      $zoom = intval($this->module->getPreference('MAPIRE_ZOOM', '15'));
+      $title = I18N::translate("Europe in the XIX. century | Mapire");
+      
+      list($lon_s,$lat_s,$lon_e,$lat_e) = FunctionsPrintWithHooks::latLonToBBox($map_lati, $map_long, $zoom, 2, 2, 1);
+      
+      //https://github.com/Gasillo/geo-tools
+      require_once("thirdparty/GeoProjectionMercator.php");
+      $proj = new \GeoProjectionMercator();
+      
+      $s = $proj->LatLonToMeters($lat_s,$lon_s);
+      $e = $proj->LatLonToMeters($lat_e,$lon_e);
+      $xs = $s["xm"];
+      $ys = $s["ym"];
+      $xe = $e["xm"];
+      $ye = $e["ym"];
+      
+      if ($xe < $xs) {
+        list($xe, $xs) = array($xs, $xe);
+      }
+      if ($ye < $ys) {
+        list($ye, $ys) = array($ys, $ye);
+      }      
+      
+      $html .= $this->linkIcon($this->module->name() . '::icons/mapire-eu-maps', $title, 'https://mapire.eu/en/map/europe-19century-secondsurvey/embed/?bbox=' . $xs . ',' . $ys . ',' . $xe . ',' . $ye . '&map-list=0&layers=158');
+    }
+    
     return $html;
   }
 
+  //cf https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Lon..2Flat._to_bbox
+  public static function latLonToTiles(string $map_lati, string $map_long, int $zoom) {
+    $lon = (float)$map_long;
+    $lat = (float)$map_lati;
+    
+    //we don't need the actual tiles numbers - it's more precise not to floor() these!
+    $xtile = (($lon + 180) / 360) * pow(2, $zoom);
+    $ytile = (1 - log(tan(deg2rad($lat)) + 1 / cos(deg2rad($lat))) / pi()) /2 * pow(2, $zoom);
+    
+    return array($xtile, $ytile);
+  }
+  
+  //cf https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames
+  public static function tileToLatLon($xtile, $ytile, int $zoom) {
+    $n = pow(2, $zoom);
+    $lon_deg = $xtile / $n * 360.0 - 180.0;
+    $lat_deg = rad2deg(atan(sinh(pi() * (1 - 2 * $ytile / $n))));
+    return array($lat_deg, $lon_deg);
+  }
+  
+  //cf https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames
+  //http://www.openstreetmap.org/export/embed.html?bbox=15.7444,43.708,15.8431,43.7541&layer=mapnik
+  public static function latLonToBBox(
+          string $map_lati, 
+          string $map_long, 
+          int $zoom,
+          int $width,
+          int $height,
+          int $tile_size) {
+
+    list($xtile, $ytile) = FunctionsPrintWithHooks::latLonToTiles($map_lati, $map_long, $zoom);
+
+    $xtile_s = ($xtile * $tile_size - $width/2) / $tile_size;
+    $ytile_s = ($ytile * $tile_size - $height/2) / $tile_size;
+    $xtile_e = ($xtile * $tile_size + $width/2) / $tile_size;
+    $ytile_e = ($ytile * $tile_size + $height/2) / $tile_size;
+
+    list($lat_s, $lon_s) = FunctionsPrintWithHooks::tileToLatLon($xtile_s, $ytile_s, $zoom);
+    list($lat_e, $lon_e) = FunctionsPrintWithHooks::tileToLatLon($xtile_e, $ytile_e, $zoom);
+
+    return array($lon_s,$lat_s,$lon_e,$lat_e);
+  }
+  
   public function linkIcon($view, $title, $url) {
     return '<a href="' . $url . '" rel="nofollow" title="' . $title . '">' .
             view($view) .
