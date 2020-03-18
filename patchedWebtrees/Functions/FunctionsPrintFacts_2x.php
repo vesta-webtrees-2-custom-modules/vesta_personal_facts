@@ -205,7 +205,7 @@ class FunctionsPrintFacts_2x {
     //rather hacky to have the special check here!
     //[RC] adjusted - should be webtrees issue:
     //asso facts may be editable per se, but not like this (i.e. via the 'asso' fact id)
-    if (($fact->id() != 'histo') && ($fact->id() !== 'asso') && $fact->canEdit()) {
+    if (($fact->id() != 'histo') && ($fact->id() !== 'asso') && ($fact->canEdit() || ($additionalControls->getMain() != ''))) {
       echo '<div class="editfacts nowrap">';
 
       if (($fact->id() != 'histo') && ($fact->id() !== 'asso') && $fact->canEdit()) {
