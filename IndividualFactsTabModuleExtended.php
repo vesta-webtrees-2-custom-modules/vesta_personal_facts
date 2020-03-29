@@ -40,7 +40,9 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   ModuleConfigInterface, 
   ModuleTabInterface {
 
-  use ModuleCustomTrait, ModuleConfigTrait, ModuleTabTrait, VestaModuleTrait {
+  //must not use ModuleTabTrait here - already used in superclass IndividualFactsTabModule_2x,
+  //and - more importantly - partially implemented there! (supportedFacts)
+  use ModuleCustomTrait, ModuleConfigTrait, VestaModuleTrait {
     VestaModuleTrait::customTranslations insteadof ModuleCustomTrait;
     VestaModuleTrait::customModuleLatestVersion insteadof ModuleCustomTrait;
     VestaModuleTrait::getAssetAction insteadof ModuleCustomTrait;
