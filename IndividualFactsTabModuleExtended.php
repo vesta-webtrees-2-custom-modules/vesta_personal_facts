@@ -16,8 +16,9 @@ use Fisharebest\Webtrees\Module\ModuleConfigInterface;
 use Fisharebest\Webtrees\Module\ModuleConfigTrait;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomTrait;
+use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
+use Fisharebest\Webtrees\Module\ModuleGlobalTrait;
 use Fisharebest\Webtrees\Module\ModuleTabInterface;
-use Fisharebest\Webtrees\Module\ModuleTabTrait;
 use Fisharebest\Webtrees\Services\ClipboardService;
 use Fisharebest\Webtrees\Services\ModuleService;
 use Fisharebest\Webtrees\Services\TreeService;
@@ -38,11 +39,12 @@ use function view;
 class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x implements 
   ModuleCustomInterface, 
   ModuleConfigInterface, 
+  ModuleGlobalInterface, 
   ModuleTabInterface {
 
   //must not use ModuleTabTrait here - already used in superclass IndividualFactsTabModule_2x,
   //and - more importantly - partially implemented there! (supportedFacts)
-  use ModuleCustomTrait, ModuleConfigTrait, VestaModuleTrait {
+  use ModuleCustomTrait, ModuleConfigTrait, ModuleGlobalTrait, VestaModuleTrait {
     VestaModuleTrait::customTranslations insteadof ModuleCustomTrait;
     VestaModuleTrait::customModuleLatestVersion insteadof ModuleCustomTrait;
     VestaModuleTrait::getAssetAction insteadof ModuleCustomTrait;
@@ -97,13 +99,14 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     return $this->getTabTitle(I18N::translate('Facts and events'));
   }
 
-  public function assetsViaViews(): array {
-    return [
-        'css/webtrees.css' => 'css/webtrees',
-        'css/minimal.css' => 'css/minimal'];
-  }
+  //no longer required - css is static now
+  //public function assetsViaViews(): array {
+  //  return [
+  //      'css/webtrees.css' => 'css/webtrees',
+  //      'css/minimal.css' => 'css/minimal'];
+  //}
   
-  protected function getOutputBeforeTab(Individual $person) {
+  public function headContent(): string {
     $pre = '<link href="' . $this->assetUrl('css/style.css') . '" type="text/css" rel="stylesheet" />';
 
     //align with current theme (supporting - for now - the default webtrees themes)
@@ -118,18 +121,19 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
       }      
     }
     
-    //note: content actually served via <theme>.phtml!
     $pre .= '<link href="' . $this->assetUrl('css/'.$themeName.'.css') . '" type="text/css" rel="stylesheet" />';
     
-    $a1 = array(new GenericViewElement($pre, ''));
-
+    return $pre;
+  }
+  
+  protected function getOutputBeforeTab(Individual $person) {
     $a2 = IndividualFactsTabExtenderUtils::accessibleModules($this, $person->tree(), Auth::user())
             ->map(function (IndividualFactsTabExtenderInterface $module) use ($person) {
               return $module->hFactsTabGetOutputBeforeTab($person);
             })
             ->toArray();
 
-    return GenericViewElement::implode(array_merge($a1, $a2));
+    return GenericViewElement::implode($a2);
   }
 
   protected function getOutputAfterTab(Individual $person) {
