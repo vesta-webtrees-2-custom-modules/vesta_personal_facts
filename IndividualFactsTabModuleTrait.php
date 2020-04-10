@@ -4,8 +4,11 @@ namespace Cissee\Webtrees\Module\PersonalFacts;
 
 use Fisharebest\Webtrees\I18N;
 use Vesta\ControlPanel\Model\ControlPanelCheckbox;
+use Vesta\ControlPanel\Model\ControlPanelCheckboxInverted;
 use Vesta\ControlPanel\Model\ControlPanelFactRestriction;
 use Vesta\ControlPanel\Model\ControlPanelPreferences;
+use Vesta\ControlPanel\Model\ControlPanelRadioButton;
+use Vesta\ControlPanel\Model\ControlPanelRadioButtons;
 use Vesta\ControlPanel\Model\ControlPanelRange;
 use Vesta\ControlPanel\Model\ControlPanelSection;
 use Vesta\ControlPanel\Model\ControlPanelSubsection;
@@ -169,7 +172,20 @@ trait IndividualFactsTabModuleTrait {
                 1,
                 20,
                 'MAPIRE_ZOOM',
-                15)));
+                15),
+        new ControlPanelCheckboxInverted(
+                /* I18N: Module Configuration */I18N::translate('Show linked map with additional options'),
+                /* I18N: Module Configuration */I18N::translate('When checked, links to the main Mapire page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:'),
+                'MAPIRE_EMBED',
+                '1'),
+        new ControlPanelRadioButtons(
+                true,
+                array(
+            new ControlPanelRadioButton(/* I18N: Module Configuration */I18N::translate('OSM Base Map'), null, 'osm'),
+            new ControlPanelRadioButton(/* I18N: Module Configuration */I18N::translate('Aerial Base Map'), null, 'here-aerial')),
+                null,
+                'MAPIRE_BASE',
+                'here-aerial')));
 
     $sections = array();
     $sections[] = new ControlPanelSection(

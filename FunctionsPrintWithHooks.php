@@ -170,6 +170,9 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
 
     if (boolval($this->module->getPreference('MAPIRE_SHOW', '1'))) {
       $zoom = intval($this->module->getPreference('MAPIRE_ZOOM', '15'));
+      $embed = boolval($this->module->getPreference('MAPIRE_EMBED', '1'));
+      $baseLayer = $this->module->getPreference('MAPIRE_BASE', 'here-aerial');
+      
       $title = I18N::translate("Europe in the XIX. century | Mapire");
       
       list($lon_s,$lat_s,$lon_e,$lat_e) = FunctionsPrintWithHooks::latLonToBBox($map_lati, $map_long, $zoom, 2, 2, 1);
@@ -192,7 +195,16 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
         list($ye, $ys) = array($ys, $ye);
       }      
       
-      $html .= $this->linkIcon($this->module->name() . '::icons/mapire-eu-maps', $title, 'https://mapire.eu/en/map/europe-19century-secondsurvey/embed/?bbox=' . $xs . ',' . $ys . ',' . $xe . ',' . $ye . '&map-list=0&layers=158');
+      $url = 'https://mapire.eu/en/map/europe-19century-secondsurvey/';
+      if ($embed) {
+        $url .= "embed/";
+      }
+      $url .= '?bbox=' . $xs . ',' . $ys . ',' . $xe . ',' . $ye . '&map-list=0&layers=158';
+      if (!$embed) {
+        $url .= "%2C" . $baseLayer;
+      }
+      
+      $html .= $this->linkIcon($this->module->name() . '::icons/mapire-eu-maps', $title, $url);
     }
     
     return $html;
