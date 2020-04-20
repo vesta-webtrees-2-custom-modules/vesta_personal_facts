@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 use Cissee\WebtreesExt\MoreI18N;
 use Fisharebest\Webtrees\Functions\FunctionsPrint;
@@ -55,16 +55,18 @@ View::endpush();
               ?>
             <?php endforeach ?>
 
-            <?php if (empty($facts)): ?>
-              <tr>
-                  <td colspan="2">
-                      <?= MoreI18N::xlate('There are no facts for this individual.') ?>
-                  </td>
-              </tr>
+            <?php if ($facts->isEmpty()) : ?>
+                <tr>
+                    <td colspan="2">
+                        <?= MoreI18N::xlate('There are no facts for this individual.') ?>
+                    </td>
+                </tr>
             <?php endif ?>
 
-            <?php if ($individual->canEdit()): ?>
-              <?php FunctionsPrint::printAddNewFact($individual, $facts, 'INDI') ?>
+            <?php if ($individual->canEdit()) : ?>
+                <?= view('edit/paste-fact-row', ['record' => $individual, 'facts' => $clipboard_facts]) ?>
+
+                <?php FunctionsPrint::printAddNewFact($individual, $facts, 'INDI') ?>
             <?php endif ?>
         </tbody>
     </table>
