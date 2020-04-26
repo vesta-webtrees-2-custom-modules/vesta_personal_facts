@@ -21,7 +21,7 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
     $this->module = $module;
   }
 
-  protected function formatPlaceNameAndSubRecords(PlaceStructure $ps) {
+  public function formatPlaceNameAndSubRecords(PlaceStructure $ps) {
     $html1 = '';
     $script1 = '';
     

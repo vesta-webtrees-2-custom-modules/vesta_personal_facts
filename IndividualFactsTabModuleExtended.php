@@ -26,9 +26,12 @@ use Fisharebest\Webtrees\Session;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use ReflectionObject;
+use Vesta\Hook\HookInterfaces\EmptyFunctionsPlace;
 use Vesta\Hook\HookInterfaces\FunctionsPlaceInterface;
 use Vesta\Hook\HookInterfaces\FunctionsPlaceUtils;
 use Vesta\Model\GenericViewElement;
+use Vesta\Model\MapCoordinates;
+use Vesta\Model\PlaceStructure;
 use Vesta\VestaAdminController;
 use Vesta\VestaModuleTrait;
 use function app;
@@ -40,7 +43,8 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   ModuleCustomInterface, 
   ModuleConfigInterface, 
   ModuleGlobalInterface, 
-  ModuleTabInterface {
+  ModuleTabInterface, 
+  FunctionsPlaceInterface {
 
   //must not use ModuleTabTrait here - already used in superclass IndividualFactsTabModule_2x,
   //and - more importantly - partially implemented there! (supportedFacts)
@@ -54,6 +58,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   }
   
   use IndividualFactsTabModuleTrait;
+  use EmptyFunctionsPlace;
 
   public function __construct(ModuleService $module_service, ClipboardService $clipboard_service) {
     parent::__construct($module_service, $clipboard_service);
@@ -254,6 +259,18 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     return true;
   }
 
+  //////////////////////////////////////////////////////////////////////////////
+  
+  public function plac2html(PlaceStructure $ps): ?GenericViewElement {
+    $fp = new FunctionsPrintWithHooks($this);
+    return GenericViewElement::implode($fp->formatPlaceNameAndSubRecords($ps));
+  }
+
+  public function map2html(MapCoordinates $map): ?GenericViewElement {
+    $fp = new FunctionsPrintWithHooks($this);
+    return GenericViewElement::create($fp->getMapLinks($map->getLati(), $map->getLong()));
+  }
+  
   //////////////////////////////////////////////////////////////////////////////
   
   private function title1(): string {

@@ -84,7 +84,7 @@ class FunctionsPrint_2x {
 
   //[RC] added
   //Override point
-  protected function formatPlaceNameAndSubRecords(PlaceStructure $ps) {
+  public function formatPlaceNameAndSubRecords(PlaceStructure $ps) {
     $html1 = $this->formatPlaceName($ps);
     
     $html2 = '';
