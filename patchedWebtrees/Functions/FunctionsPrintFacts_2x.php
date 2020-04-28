@@ -156,6 +156,7 @@ class FunctionsPrintFacts_2x {
           // An unspecified fact/event
           $label = $fact->label();
         }
+        
         break;
       case 'MARR':
         // This is a hack for a proprietory extension. Is it still used/needed?

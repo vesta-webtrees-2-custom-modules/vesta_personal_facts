@@ -236,7 +236,49 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
       return array();
     }
 
-    return parent::associateFacts($person);
+    //Issue #7: adjust parent code: we want to display type of custom fact/event
+    //return parent::associateFacts($person);
+    
+    $facts = [];
+
+    /** @var Individual[] $associates */
+    $asso1 = $person->linkedIndividuals('ASSO');
+    $asso2 = $person->linkedIndividuals('_ASSO');
+    $asso3 = $person->linkedFamilies('ASSO');
+    $asso4 = $person->linkedFamilies('_ASSO');
+
+    $associates = $asso1->merge($asso2)->merge($asso3)->merge($asso4);
+
+    foreach ($associates as $associate) {
+        foreach ($associate->facts() as $fact) {
+            if (preg_match('/\n\d _?ASSO @' . $person->xref() . '@/', $fact->gedcom())) {
+                // Extract the important details from the fact
+                $factrec = '1 ' . $fact->getTag();
+                if (preg_match('/\n2 DATE .*/', $fact->gedcom(), $match)) {
+                    $factrec .= $match[0];
+                }
+                if (preg_match('/\n2 PLAC .*/', $fact->gedcom(), $match)) {
+                    $factrec .= $match[0];
+                }
+                
+                //[RC] adjusted for Issue #7
+                if (preg_match('/\n2 TYPE .*/', $fact->gedcom(), $match)) {
+                    $factrec .= $match[0];
+                }
+                
+                if ($associate instanceof Family) {
+                    foreach ($associate->spouses() as $spouse) {
+                        $factrec .= "\n2 _ASSO @" . $spouse->xref() . '@';
+                    }
+                } else {
+                    $factrec .= "\n2 _ASSO @" . $associate->xref() . '@';
+                }
+                $facts[] = new Fact($factrec, $associate, 'asso');
+            }
+        }
+    }
+
+    return $facts;
   }
 
   protected function filterAssociateFact(Fact $fact) {

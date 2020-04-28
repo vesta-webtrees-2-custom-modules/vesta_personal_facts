@@ -74,65 +74,6 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
       $script .= $factPlaceAddition->getAfterNotes()->getScript();
     }
     
-    /*
-    //legacy stuff
-    $html .= '<br/>--LEGACY--<br/>';
-
-    $additions = IndividualFactsTabExtenderUtils::accessibleModules($this->module, $ps->getTree(), Auth::user())
-            ->map(function (IndividualFactsTabExtenderInterface $module) use ($ps) {
-              return $module->hFactsTabGetFormatPlaceAdditions($ps);
-            })            
-            ->toArray();
-    
-    $hideCoordinates = $this->module->getPreference('LINKS_AFTER_PLAC', '0');
-    if ($ps->getLati() && $ps->getLong()) {
-      //use direct lati/long, if set
-      if ($hideCoordinates) {
-        $html .= $this->getMapLinks($ps->getLati(), $ps->getLong());
-      } else {
-        $html .= $this->formatPlaceLatiLong($ps->getLati(), $ps->getLong());
-      }
-    } else {
-      //use first provided lati/long
-      foreach ($additions as $addition) {
-        $ll = $addition->getLatiLong();
-        if (($ll !== null) && (count($ll) >= 2)) {
-          $long = array_pop($ll);
-          $lati = array_pop($ll);
-          if ($hideCoordinates) {
-            $html .= $this->getMapLinks($lati, $long);
-
-            foreach ($additions as $addition) {
-              $html .= $addition->getHtmlAfterNames();
-            }
-          } else {
-            foreach ($additions as $addition) {
-              $html .= $addition->getHtmlAfterNames();
-            }
-
-            $tooltip = $addition->getLatiLongTooltip();
-            $html .= $this->formatPlaceLatiLong($lati, $long, $tooltip);
-          }
-          break;
-        }
-      }
-    }
-
-    $html .= $this->formatPlaceCustomFieldsAfterLatiLong($ps);
-    foreach ($additions as $addition) {
-      $html .= $addition->getHtmlAfterLatiLong();
-    }
-    $html .= $this->formatPlaceNotes($ps);
-    $html .= $this->formatPlaceCustomFieldsAfterNotes($ps);
-    foreach ($additions as $addition) {
-      $html .= $addition->getHtmlAfterNotes();
-    }
-
-    foreach ($additions as $addition) {
-      $script .= $addition->getScript();
-    }
-    */
-    
     return array(
         new GenericViewElement($html1, $script1),
         new GenericViewElement($html, $script));
