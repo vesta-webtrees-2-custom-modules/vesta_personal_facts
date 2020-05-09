@@ -132,13 +132,31 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   }
   
   protected function getOutputBeforeTab(Individual $person) {
-    $a2 = IndividualFactsTabExtenderUtils::accessibleModules($this, $person->tree(), Auth::user())
+    $tree = $person->tree();
+    $a1 = IndividualFactsTabExtenderUtils::accessibleModules($this, $tree, Auth::user())
+            ->map(function (IndividualFactsTabExtenderInterface $module) use ($tree) {
+              return $module->hFactsTabRequiresModalVesta($tree);
+            })
+            ->toArray();
+    
+    $gve1 = GenericViewElement::createEmpty();
+    if (!empty($a1)) {
+      $script = implode($a1);
+      $html = view(VestaAdminController::vestaViewsNamespace() . '::modals/ajax-modal-vesta', [
+                'ajax' => true, //tab is loaded via ajax!
+                'select2Initializers' => [$script]
+      ]);
+    
+      $gve1 = GenericViewElement::create($html);
+    }        
+    
+    $a2 = IndividualFactsTabExtenderUtils::accessibleModules($this, $tree, Auth::user())
             ->map(function (IndividualFactsTabExtenderInterface $module) use ($person) {
               return $module->hFactsTabGetOutputBeforeTab($person);
             })
             ->toArray();
 
-    return GenericViewElement::implode($a2);
+    return GenericViewElement::implode([$gve1, GenericViewElement::implode($a2)]);
   }
 
   protected function getOutputAfterTab(Individual $person) {

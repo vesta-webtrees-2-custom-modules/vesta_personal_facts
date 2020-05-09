@@ -6,6 +6,7 @@ use Cissee\WebtreesExt\FactPlaceAdditions;
 use Cissee\WebtreesExt\FormatPlaceAdditions;
 use Fisharebest\Webtrees\Fact;
 use Fisharebest\Webtrees\Individual;
+use Fisharebest\Webtrees\Tree;
 use Vesta\Model\GenericViewElement;
 use Vesta\Model\PlaceStructure;
 
@@ -20,6 +21,14 @@ interface IndividualFactsTabExtenderInterface {
 
   public function defaultFactsTabUIElementOrder(): int;
 
+  /**
+   * if ajax-modal-vesta placeholder is required, return the respective select2 initializer javascript snippet here!
+   * the modal placeholder itself is added by the vesta_personal_facts module itself if required.
+   * 
+   * @return string|null
+   */
+  public function hFactsTabRequiresModalVesta(Tree $tree): ?string;
+  
   /**
    *
    * @param Individual $person

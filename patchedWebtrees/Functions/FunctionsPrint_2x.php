@@ -56,6 +56,9 @@ class FunctionsPrint_2x {
   public function formatFactPlace(Fact $event, $anchor = false, $sub_records = false, $lds = false): GenericViewElement {
     if ($anchor || $sub_records) {
       $ps = PlaceStructure::fromFact($event);
+      if ($ps === null) {
+        return GenericViewElement::createEmpty();
+      }
       $gves = $this->formatPlaceNameAndSubRecords($ps);
     }
     

@@ -32,7 +32,7 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
     $html .= $this->formatPlaceCustomFieldsAfterNames($ps);
 
     //modernized (for now, expected to be fast enough without ajax)
-    $mapCoordinates = FunctionsPlaceUtils::plac2Map($this->module, $ps, true);
+    $mapCoordinates = FunctionsPlaceUtils::plac2map($this->module, $ps, true);
     if ($mapCoordinates !== null) {
       $hideCoordinates = $this->module->getPreference('LINKS_AFTER_PLAC', '0');
       if ($hideCoordinates) {

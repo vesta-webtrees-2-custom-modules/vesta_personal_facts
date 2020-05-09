@@ -6,6 +6,7 @@ use Cissee\WebtreesExt\FactPlaceAdditions;
 use Cissee\WebtreesExt\FormatPlaceAdditions;
 use Fisharebest\Webtrees\Fact;
 use Fisharebest\Webtrees\Individual;
+use Fisharebest\Webtrees\Tree;
 use Vesta\Model\GenericViewElement;
 use Vesta\Model\PlaceStructure;
 
@@ -28,6 +29,10 @@ trait EmptyIndividualFactsTabExtender {
     return 9999;
   }
 
+  public function hFactsTabRequiresModalVesta(Tree $tree): ?string {
+    return null;
+  }
+  
   public function hFactsTabGetAdditionalFacts(Individual $person) {
     return array();
   }
