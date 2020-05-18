@@ -7,6 +7,7 @@ use Cissee\WebtreesExt\MoreI18N;
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\Date;
 use Fisharebest\Webtrees\Fact;
+use Fisharebest\Webtrees\Factory;
 use Fisharebest\Webtrees\Family;
 use Fisharebest\Webtrees\Filter;
 use Fisharebest\Webtrees\Functions\Functions;
@@ -14,14 +15,18 @@ use Fisharebest\Webtrees\Functions\FunctionsPrint;
 use Fisharebest\Webtrees\Functions\FunctionsPrintFacts;
 use Fisharebest\Webtrees\Gedcom;
 use Fisharebest\Webtrees\GedcomCode\GedcomCodeAdop;
+use Fisharebest\Webtrees\GedcomCode\GedcomCodeLang;
 use Fisharebest\Webtrees\GedcomCode\GedcomCodeRela;
 use Fisharebest\Webtrees\GedcomRecord;
 use Fisharebest\Webtrees\GedcomTag;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Individual;
+use Fisharebest\Webtrees\Repository;
 use Fisharebest\Webtrees\Services\UserService;
+use Fisharebest\Webtrees\Submitter;
 use Vesta\Model\GenericViewElement;
 use function route;
+use function view;
 
 //[RC] adapted: some methods as non-static for easier extensibility
 //and other improvements
@@ -425,7 +430,7 @@ class FunctionsPrintFacts_2x {
             break;
           default:
             if (preg_match('/^@(' . Gedcom::REGEX_XREF . ')@$/', $fact->value(), $match)) {
-              $target = GedcomRecord::getInstance($match[1], $fact->record()->tree());
+              $target = Factory::gedcomRecord()->make($match[1], $fact->record()->tree());
               if ($target) {
                 echo '<div><a href="', e($target->url()), '">', $target->fullName(), '</a></div>';
               } else {
@@ -530,7 +535,7 @@ class FunctionsPrintFacts_2x {
           }
           break;
         case 'FAMC': // 0 INDI / 1 ADOP / 2 FAMC / 3 ADOP
-          $family = Family::getInstance(str_replace('@', '', $match[2]), $fact->record()->tree());
+          $family = Factory::family()->make(str_replace('@', '', $match[2]), $fact->record()->tree());
           if ($family) {
             echo GedcomTag::getLabelValue('FAM', '<a href="' . e($family->url()) . '">' . $family->fullName() . '</a>');
             if (preg_match('/\n3 ADOP (HUSB|WIFE|BOTH)/', $fact->gedcom(), $match)) {
@@ -588,7 +593,7 @@ class FunctionsPrintFacts_2x {
           if ($fact->record()->tree()->getPreference('HIDE_GEDCOM_ERRORS') === '1' || GedcomTag::isTag($match[1])) {
             if (preg_match('/^@(' . Gedcom::REGEX_XREF . ')@$/', $match[2], $xmatch)) {
               // Links
-              $linked_record = GedcomRecord::getInstance($xmatch[1], $fact->record()->tree());
+              $linked_record = Factory::gedcomRecord()->make($xmatch[1], $fact->record()->tree());
               if ($linked_record) {
                 $link = '<a href="' . e($linked_record->url()) . '">' . $linked_record->fullName() . '</a>';
                 echo GedcomTag::getLabelValue($fact->getTag() . ':' . $match[1], $link);
@@ -648,7 +653,7 @@ class FunctionsPrintFacts_2x {
 
     // For each ASSO record
     foreach (array_merge($amatches1, $amatches2) as $amatch) {
-      $person = Individual::getInstance($amatch[1], $event->record()->tree());
+      $person = Factory::individual()->make($amatch[1], $event->record()->tree());
       if ($person && $person->canShowName()) {
         // Is there a "RELA" tag
         if (preg_match('/\n[23] RELA (.+)/', $amatch[2], $rmatch)) {
