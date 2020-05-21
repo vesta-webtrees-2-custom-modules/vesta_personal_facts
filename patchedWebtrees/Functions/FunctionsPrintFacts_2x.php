@@ -184,16 +184,17 @@ class FunctionsPrintFacts_2x {
 
     switch ($fact->getTag()) {
       case '_BIRT_CHIL':
-        $children[$fact->record()->xref()] = true;
+        //[RC] adjusted
+        $this->children[$fact->record()->xref()] = true;
         /* I18N: Abbreviation for "number %s" */
-        $label .= '<br>' . I18N::translate('#%s', I18N::number(count($children)));
+        $label .= '<br>' . I18N::translate('#%s', I18N::number(count($this->children)));
         break;
       case '_BIRT_GCHI':
       case '_BIRT_GCH1':
       case '_BIRT_GCH2':
-        $grandchildren[$fact->record()->xref()] = true;
+        $this->grandchildren[$fact->record()->xref()] = true;
         /* I18N: Abbreviation for "number %s" */
-        $label .= '<br>' . I18N::translate('#%s', I18N::number(count($grandchildren)));
+        $label .= '<br>' . I18N::translate('#%s', I18N::number(count($this->grandchildren)));
         break;
     }
 
