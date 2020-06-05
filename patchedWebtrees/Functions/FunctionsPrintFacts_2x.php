@@ -48,7 +48,7 @@ class FunctionsPrintFacts_2x {
   //[RC] added
   protected function additionalStyleadds(Fact $fact, $styleadd) {
     // Event of close relative
-    if (preg_match('/^_[A-Z_]{3,5}_[A-Z0-9]{4}$/', $fact->getTag())) {
+    if (preg_match('/^_[A-Z_]{3,5}_[A-Z0-9]{4}$/', $fact->tag())) {
       $styleadd = trim($styleadd . ' wt-relation-fact collapse');
     }
 
@@ -67,7 +67,6 @@ class FunctionsPrintFacts_2x {
 
   /**
    * Print a fact record, for the individual/family/source/repository/etc. pages.
-   *
    * Although a Fact has a parent object, we also need to know
    * the GedcomRecord for which we are printing it. For example,
    * we can show the death of X on the page of Y, or the marriage
@@ -85,9 +84,14 @@ class FunctionsPrintFacts_2x {
 
     $parent = $fact->record();
     $tree = $parent->tree();
+    $tag = $fact->tag();
+    $label = $fact->label();
+    $value = $fact->value();
+    $type = $fact->attribute('TYPE');
+    $id = $fact->id();
 
     // Some facts don't get printed here ...
-    switch ($fact->getTag()) {
+    switch ($tag) {
       case 'NOTE':
         FunctionsPrintFacts::printMainNotes($fact, 1);
 
@@ -112,7 +116,7 @@ class FunctionsPrintFacts_2x {
         return;
       default:
         // Hide unrecognized/custom tags?
-        if ($fact->record()->tree()->getPreference('HIDE_GEDCOM_ERRORS') === '0' && !GedcomTag::isTag($fact->getTag())) {
+        if ($tree->getPreference('HIDE_GEDCOM_ERRORS') === '0' && !GedcomTag::isTag($tag)) {
           return;
         }
         break;
@@ -146,7 +150,7 @@ class FunctionsPrintFacts_2x {
       $type = '';
     }
 
-    switch ($fact->getTag()) {
+    switch ($fact->tag()) {
       case 'EVEN':
       case 'FACT':
         if (GedcomTag::isTag($type)) {
@@ -161,7 +165,7 @@ class FunctionsPrintFacts_2x {
           // An unspecified fact/event
           $label = $fact->label();
         }
-        
+
         break;
       case 'MARR':
         // This is a hack for a proprietory extension. Is it still used/needed?
@@ -182,7 +186,7 @@ class FunctionsPrintFacts_2x {
     echo '<tr class="', $styleadd, '">';
     echo '<th scope="row">';
 
-    switch ($fact->getTag()) {
+    switch ($fact->tag()) {
       case '_BIRT_CHIL':
         //[RC] adjusted
         $this->children[$fact->record()->xref()] = true;
@@ -202,7 +206,6 @@ class FunctionsPrintFacts_2x {
     if ($fact->id() !== 'asso') {
       echo $label;
     } //else echo later, we want to handle a few special cases
-    
     //[RC] added additional edit controls, even if fact itself is not editable
     $additionalControls = $this->printAdditionalEditControls($fact);
     $main = $additionalControls->getMain();
@@ -242,6 +245,7 @@ class FunctionsPrintFacts_2x {
         $rela = null;
         $inverted = null;
         $label2 = null;
+        
         // Is there a "RELA" tag (code adjusted from elsewhere - note though that strictly according to the Gedcom spec, RELA is mandatory!)
         //(note: this requires adjustment in IndividualFactsTabModule*, where this 'virtual' fact is created)
         if (preg_match('/\n[23] RELA (.+)/', $fact->gedcom(), $rmatch)) {
@@ -266,7 +270,7 @@ class FunctionsPrintFacts_2x {
 
         //handle common cases with explicit translations
         $finalLabel = null;
-        switch ($fact->getTag()) {
+        switch ($fact->tag()) {
           case 'MARR':
             $finalLabel = GedcomCodeRela_Ext::getValueOrNullForMARR($rela, $label_person);
             break;
@@ -309,15 +313,15 @@ class FunctionsPrintFacts_2x {
             $sex = '<small>' . view('icons/sex', ['sex' => $label_person->sex()]) . '</small>';
             $suffix = $sex . ')';
           }
-          $value = $this->getOutputForRelationship($fact, $label_person, $record, '(', $relationship_name, $suffix, true);
-          if ($value != null) {
+          $val = $this->getOutputForRelationship($fact, $label_person, $record, '(', $relationship_name, $suffix, true);
+          if ($val != null) {
             echo "<br/>";
-            echo $value->getMain();
-            $script .= $value->getScript();
+            echo $val->getMain();
+            $script .= $val->getScript();
           }
         }
       }
-      
+
       if ($main !== '') {
         echo '<div class="editfacts nowrap">';
         echo $main;
@@ -325,9 +329,9 @@ class FunctionsPrintFacts_2x {
       }
     }
     //[RC] added end
-    
+
     if ($tree->getPreference('SHOW_FACT_ICONS')) {
-      echo '<span class="wt-fact-icon wt-fact-icon-' . $fact->getTag() . '" title="' . strip_tags(GedcomTag::getLabel($fact->getTag())) . '"></span>';
+      echo '<span class="wt-fact-icon wt-fact-icon-' . $fact->tag() . '" title="' . strip_tags(GedcomTag::getLabel($fact->tag())) . '"></span>';
     }
 
     echo '</th>';
@@ -348,12 +352,12 @@ class FunctionsPrintFacts_2x {
     }
 
     // Print the value of this fact/event
-    switch ($fact->getTag()) {
+    switch ($tag) {
       case 'ADDR':
-        echo $fact->value();
+        echo e($value);
         break;
       case 'AFN':
-        echo '<div class="field"><a href="https://familysearch.org/search/tree/results#count=20&query=afn:', rawurlencode($fact->value()), '">', e($fact->value()), '</a></div>';
+        echo '<div class="field"><a href="https://familysearch.org/search/tree/results#count=20&query=afn:', rawurlencode($value), '">', e($value), '</a></div>';
         break;
       case 'ASSO':
         // we handle this later, in format_asso_rela_record()
@@ -361,14 +365,14 @@ class FunctionsPrintFacts_2x {
       case 'EMAIL':
       case 'EMAI':
       case '_EMAIL':
-        echo '<div class="field"><a href="mailto:', e($fact->value()), '">', e($fact->value()), '</a></div>';
+        echo '<div class="field"><a href="mailto:', e($value), '">', e($value), '</a></div>';
         break;
       case 'LANG':
-        echo GedcomCodeLang::getValue($fact->value());
+        echo GedcomCodeLang::getValue($value);
         break;
       case 'RESN':
         echo '<div class="field">';
-        switch ($fact->value()) {
+        switch ($value) {
           case 'none':
             // Note: "1 RESN none" is not valid gedcom.
             // However, webtrees privacy rules will interpret it as "show an otherwise private record to public".
@@ -384,20 +388,20 @@ class FunctionsPrintFacts_2x {
             echo '<i class="icon-locked-none"></i> ', I18N::translate('Only managers can edit');
             break;
           default:
-            echo e($fact->value());
+            echo e($value);
             break;
         }
         echo '</div>';
         break;
       case 'PUBL': // Publication details might contain URLs.
-        echo '<div class="field">', Filter::expandUrls($fact->value(), $record->tree()), '</div>';
+        echo '<div class="field">', Filter::expandUrls($value, $tree), '</div>';
         break;
       case 'REPO':
         $repository = $fact->target();
         if ($repository instanceof Repository) {
           echo '<div><a class="field" href="', e($repository->url()), '">', $repository->fullName(), '</a></div>';
         } else {
-          echo '<div class="error">', e($fact->value()), '</div>';
+          echo '<div class="error">', e($value), '</div>';
         }
         break;
       case 'SUBM':
@@ -405,21 +409,33 @@ class FunctionsPrintFacts_2x {
         if ($submitter instanceof Submitter) {
           echo '<div><a class="field" href="', e($submitter->url()), '">', $submitter->fullName(), '</a></div>';
         } else {
-          echo '<div class="error">', e($fact->value()), '</div>';
+          echo '<div class="error">', e($value), '</div>';
+        }
+        break;
+      case 'SUBN':
+        $submission = $fact->target();
+        if ($submission instanceof Submission) {
+          echo '<div><a class="field" href="', e($submission->url()), '">', $submission->fullName(), '</a></div>';
+        } else {
+          echo '<div class="error">', e($value), '</div>';
         }
         break;
       case 'URL':
       case '_URL':
       case 'WWW':
-        echo '<div class="field"><a href="', e($fact->value()), '">', e($fact->value()), '</a></div>';
+        echo '<div class="field"><a href="', e($value), '">', e($value), '</a></div>';
         break;
       case 'TEXT': // 0 SOUR / 1 TEXT
-        echo '<div class="field">', nl2br(e($fact->value()), false), '</div>';
+        echo Filter::formatText($value, $tree);
+        break;
+      case '_GOV':
+        echo '<div class="field"><a href="https://gov.genealogy.net/item/show/', e($value), '">', e($value), '</a></div>';
         break;
       default:
         // Display the value for all other facts/events
-        switch ($fact->value()) {
+        switch ($value) {
           case '':
+          case 'CLOSE_RELATIVE':
             // Nothing to display
             break;
           case 'N':
@@ -430,15 +446,15 @@ class FunctionsPrintFacts_2x {
             // Do not display "Yes".
             break;
           default:
-            if (preg_match('/^@(' . Gedcom::REGEX_XREF . ')@$/', $fact->value(), $match)) {
-              $target = Factory::gedcomRecord()->make($match[1], $fact->record()->tree());
-              if ($target) {
+            if (preg_match('/^@(' . Gedcom::REGEX_XREF . ')@$/', $value, $match)) {
+              $target = $fact->target();
+              if ($target instanceof GedcomRecord) {
                 echo '<div><a href="', e($target->url()), '">', $target->fullName(), '</a></div>';
               } else {
-                echo '<div class="error">', e($fact->value()), '</div>';
+                echo '<div class="error">', e($value), '</div>';
               }
             } else {
-              echo '<div class="field"><span dir="auto">', e($fact->value()), '</span></div>';
+              echo '<div class="field"><span dir="auto">', e($value), '</span></div>';
             }
             break;
         }
@@ -446,16 +462,9 @@ class FunctionsPrintFacts_2x {
     }
 
     // Print the type of this fact/event
-    if ($type) {
-      $utype = strtoupper($type);
-      // Events of close relatives, e.g. _MARR_CHIL
-      if (substr($fact->getTag(), 0, 6) === '_MARR_' && ($utype === 'CIVIL' || $utype === 'PARTNERS' || $utype === 'RELIGIOUS')) {
-        // Translate MARR/TYPE using the code that supports MARR_CIVIL, etc. tags
-        $type = GedcomTag::getLabel('MARR_' . $utype);
-      } else {
-        // Allow (custom) translations for other types
-        $type = I18N::translate($type);
-      }
+    if ($type !== '' && $tag !== 'EVEN' && $tag !== 'FACT') {
+      // Allow (custom) translations for other types
+      $type = I18N::translate($type);
       echo GedcomTag::getLabelValue('TYPE', e($type));
     }
 
@@ -472,8 +481,8 @@ class FunctionsPrintFacts_2x {
     //[RC] adjusted: unnecessary if there isn't anything to follow!
     // A blank line between the primary attributes (value, date, place) and the secondary ones
     //echo '<br>';
-    ob_start();    
-    
+    ob_start();
+
     $addr = $fact->attribute('ADDR');
     if ($addr !== '') {
       echo GedcomTag::getLabelValue('ADDR', $addr);
@@ -522,36 +531,37 @@ class FunctionsPrintFacts_2x {
           foreach (preg_split('/ *, */', $match[2]) as $event) {
             $events[] = GedcomTag::getLabel($event);
           }
-          if (count($events) == 1) {
-            echo GedcomTag::getLabelValue('EVEN', $event);
-          } else {
-            echo GedcomTag::getLabelValue('EVEN', implode(I18N::$list_separator, $events));
-          }
-          if (preg_match('/\n3 DATE (.+)/', $fact->gedcom(), $date_match)) {
+          echo GedcomTag::getLabelValue('EVEN', implode(I18N::$list_separator, $events));
+
+          if (preg_match('/\n3 DATE (.+)/', $evenMatches[$currentEvenMatch][0], $date_match)) {
             $date = new Date($date_match[1]);
             echo GedcomTag::getLabelValue('DATE', $date->display());
           }
-          if (preg_match('/\n3 PLAC (.+)/', $fact->gedcom(), $plac_match)) {
+          if (preg_match('/\n3 PLAC (.+)/', $evenMatches[$currentEvenMatch][0], $plac_match)) {
             echo GedcomTag::getLabelValue('PLAC', $plac_match[1]);
           }
+          $currentEvenMatch++;
+
           break;
         case 'FAMC': // 0 INDI / 1 ADOP / 2 FAMC / 3 ADOP
-          $family = Factory::family()->make(str_replace('@', '', $match[2]), $fact->record()->tree());
-          if ($family) {
+          $family = Factory::family()->make(str_replace('@', '', $match[2]), $tree);
+          if ($family instanceof Family) {
             echo GedcomTag::getLabelValue('FAM', '<a href="' . e($family->url()) . '">' . $family->fullName() . '</a>');
-            if (preg_match('/\n3 ADOP (HUSB|WIFE|BOTH)/', $fact->gedcom(), $match)) {
-              echo GedcomTag::getLabelValue('ADOP', GedcomCodeAdop::getValue($match[1], $label_person));
+            if (preg_match('/\n3 ADOP (HUSB|WIFE|BOTH)/', $fact->gedcom(), $adop_match)) {
+              echo GedcomTag::getLabelValue('ADOP', GedcomCodeAdop::getValue($adop_match[1]));
             }
           } else {
             echo GedcomTag::getLabelValue('FAM', '<span class="error">' . $match[2] . '</span>');
           }
           break;
         case '_WT_USER':
-          $user = (new UserService())->findByIdentifier($match[2]); // may not exist
-          if ($user) {
-            echo GedcomTag::getLabelValue('_WT_USER', '<span dir="auto">' . e($user->realName()) . '</span>');
-          } else {
-            echo GedcomTag::getLabelValue('_WT_USER', e($match[2]));
+          if (Auth::check()) {
+            $user = (new UserService())->findByIdentifier($match[2]); // may not exist
+            if ($user instanceof UserInterface) {
+              echo GedcomTag::getLabelValue('_WT_USER', '<span dir="auto">' . e($user->realName()) . '</span>');
+            } else {
+              echo GedcomTag::getLabelValue('_WT_USER', e($match[2]));
+            }
           }
           break;
         case 'RESN':
@@ -576,7 +586,7 @@ class FunctionsPrintFacts_2x {
           }
           break;
         case 'CALN':
-          echo GedcomTag::getLabelValue('CALN', Filter::expandUrls($match[2], $record->tree()));
+          echo GedcomTag::getLabelValue('CALN', Filter::expandUrls($match[2], $tree));
           break;
         case 'FORM': // 0 OBJE / 1 FILE / 2 FORM / 3 TYPE
           echo GedcomTag::getLabelValue('FORM', $match[2]);
@@ -588,22 +598,22 @@ class FunctionsPrintFacts_2x {
         case '_URL':
         case 'WWW':
           $link = '<a href="' . e($match[2]) . '">' . e($match[2]) . '</a>';
-          echo GedcomTag::getLabelValue($fact->getTag() . ':' . $match[1], $link);
+          echo GedcomTag::getLabelValue($tag . ':' . $match[1], $link);
           break;
         default:
-          if ($fact->record()->tree()->getPreference('HIDE_GEDCOM_ERRORS') === '1' || GedcomTag::isTag($match[1])) {
+          if ($tree->getPreference('HIDE_GEDCOM_ERRORS') === '1' || GedcomTag::isTag($match[1])) {
             if (preg_match('/^@(' . Gedcom::REGEX_XREF . ')@$/', $match[2], $xmatch)) {
               // Links
-              $linked_record = Factory::gedcomRecord()->make($xmatch[1], $fact->record()->tree());
+              $linked_record = Factory::gedcomRecord()->make($xmatch[1], $tree);
               if ($linked_record) {
                 $link = '<a href="' . e($linked_record->url()) . '">' . $linked_record->fullName() . '</a>';
-                echo GedcomTag::getLabelValue($fact->getTag() . ':' . $match[1], $link);
+                echo GedcomTag::getLabelValue($tag . ':' . $match[1], $link);
               } else {
-                echo GedcomTag::getLabelValue($fact->getTag() . ':' . $match[1], e($match[2]));
+                echo GedcomTag::getLabelValue($tag . ':' . $match[1], e($match[2]));
               }
             } else {
               // Non links
-              echo GedcomTag::getLabelValue($fact->getTag() . ':' . $match[1], e($match[2]));
+              echo GedcomTag::getLabelValue($tag . ':' . $match[1], e($match[2]));
             }
           }
           break;
@@ -614,13 +624,13 @@ class FunctionsPrintFacts_2x {
     FunctionsPrintFacts::printMediaLinks($tree, $fact->gedcom(), 2);
 
     //[RC] adjusted
-    $html = ob_get_clean();    
+    $html = ob_get_clean();
     if ($html !== '') {
       // A blank line between the primary attributes (value, date, place) and the secondary ones
       echo '<br>';
       echo $html;
     }
-    
+
     echo '</td></tr>';
     return $script;
   }
@@ -662,7 +672,7 @@ class FunctionsPrintFacts_2x {
           $label = GedcomCodeRela::getValue($rmatch[1], $person);
         } else {
           // Use a default label
-          $label = GedcomTag::getLabel('ASSO', $person);
+          $label = GedcomTag::getLabel('ASSO');
         }
 
         $values = ['<a href="' . e($person->url()) . '">' . $person->fullName() . '</a>'];

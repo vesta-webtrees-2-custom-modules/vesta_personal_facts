@@ -3,57 +3,57 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2020-01-03 12:59+0100\n"
-"PO-Revision-Date: 2017-11-27 16:15+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2020-06-05 07:38+0200\n"
+"Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
 "Language-Team: German <http://translate.webtrees.net/projects/webtrees/webtrees/de/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.3.1\n"
 
 #: IndividualFactsTabModuleTrait.php:21
 msgid "A tab showing the facts and events of an individual."
-msgstr ""
+msgstr "Een tabblad met de feiten en gebeurtenissen van een individu."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:54
 msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
-msgstr ""
+msgstr "Werkelijke gebeurtenissen van naaste verwanten, en feiten en gebeurtenissen waarbij het huidige individu wordt vermeld als medewerker."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:27
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
-msgstr ""
+msgstr "Een uitgebreid tabblad 'Feiten en gebeurtenissen', met aansluitmogelijkheden voor andere aangepaste modules."
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:41
 msgid "Associate at a marriage"
-msgstr ""
+msgstr "Medewerker bij huwelijk"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:39
 msgctxt "FEMALE"
 msgid "Associate at a marriage"
-msgstr ""
+msgstr "Medewerkster bij huwelijk"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:37
 msgctxt "MALE"
 msgid "Associate at a marriage"
-msgstr ""
+msgstr "Medewerker bij huwelijk"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:67
 msgid "Baptism of a godchild"
-msgstr "Doop petekind"
+msgstr "Doop van petekind"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:59
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:65
 msgid "Baptism of a goddaughter"
-msgstr "Doop peetdochter"
+msgstr "Doop van peetdochter"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:56
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:63
 msgid "Baptism of a godson"
-msgstr "Doop peetzoon"
+msgstr "Doop van peetzoon"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
 msgid "Best man at a marriage"
@@ -62,7 +62,7 @@ msgstr "Getuige bij huwelijk"
 #. I18N: Module Configuration
 #: FunctionsPrintWithHooks.php:157 IndividualFactsTabModuleTrait.php:113
 msgid "Bing Maps"
-msgstr ""
+msgstr "Bing Maps"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:24
 msgid "Bridesmaid at a marriage"
@@ -70,232 +70,232 @@ msgstr "Getuige bij huwelijk"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:95
 msgid "Christening of a godchild"
-msgstr "Doop petekind"
+msgstr "Doop van petekind"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:87
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:93
 msgid "Christening of a goddaughter"
-msgstr "Doop peetdochter"
+msgstr "Doop van peetdochter"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:84
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:91
 msgid "Christening of a godson"
-msgstr "Doop peetzoon"
+msgstr "Doop van peetzoon"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:44
 msgid "Deselect in order to have the tab appear exactly as the original tab."
-msgstr ""
+msgstr "Schakel de selectie uit om het tabblad exact als het oorspronkelijke tabblad te laten verschijnen."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:90
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
-msgstr ""
+msgstr "Geef een pictogram weer met een tooltip die de bron van de kaartkoppelingen aangeeft. Dit is vooral bedoeld voor debugging."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:36
 msgid "Displayed title"
-msgstr ""
+msgstr "Weergegeven titel"
 
 #: IndividualFactsTabModuleExtended.php:131
 msgid "Events of close relatives"
-msgstr ""
+msgstr "Gebeurtenissen van naaste verwanten"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:163
 msgid "Facts and Events List"
-msgstr ""
+msgstr "Lijst met feiten en gebeurtenissen"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:218
 msgid "Facts and Events Tab Location Data Providers"
-msgstr ""
+msgstr "Aanbieders van locatiegegevens voor het tabblad Feiten en gebeurtenissen"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:226
 msgid "Facts and Events Tab UI Element Providers"
-msgstr ""
+msgstr "Aanbieders van UI-elementen voor het tabblad Feiten en gebeurtenissen"
 
 #: IndividualFactsTabModuleExtended.php:80
 msgid "Facts and events"
-msgstr ""
+msgstr "Feiten en gebeurtenissen"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:138
 #: IndividualFactsTabModuleTrait.php:50
 msgid "Facts and events of inverse associates"
-msgstr ""
+msgstr "Feiten en gebeurtenissen als medewerker"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:159
 msgid "General"
-msgstr ""
+msgstr "Algemeen"
 
 #. I18N: Module Configuration
 #: FunctionsPrintWithHooks.php:146 IndividualFactsTabModuleTrait.php:94
 msgid "Google Maps"
-msgstr ""
+msgstr "Google Maps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:79
 msgid "Hide coordinates, show map links after place name"
-msgstr ""
+msgstr "Coördinaten verbergen, kaartkoppelingen naar plaatsnaam weergeven"
 
 #: IndividualFactsTabModuleExtended.php:145
 msgid "Historical facts"
-msgstr ""
+msgstr "Historische feiten"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:60
 msgid "If this option is checked, additional facts and events of inverse associates are limited to the following facts and events."
-msgstr ""
+msgstr "Als deze optie is aangevinkt, zijn aanvullende feiten en gebeurtenissen waarbij de persoon als medewerker wordt genoemd beperkt tot de volgende feiten en gebeurtenissen."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:61
 msgid "In particular if both lists are empty, no additional facts and events of this kind will be shown."
-msgstr ""
+msgstr "Als beide lijsten leeg zijn, zullen geen aanvullende feiten en gebeurtenissen van deze aard worden getoond."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:80
 msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
-msgstr ""
+msgstr "Op het oorspronkelijke tabblad worden coördinaten weergegeven (met kaartkoppelingen). Dit heeft de neiging om de plaatsweergave te vertroebelen, met name als er extra modules zijn die coördinaten geven."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:53
 msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
-msgstr ""
+msgstr "In het oorspronkelijke tabblad worden twee soorten aanvullende feiten en gebeurtenissen weergegeven wanneer 'Gebeurtenissen van naaste verwanten' op het tabblad worden geselecteerd:"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:101 IndividualFactsTabModuleTrait.php:120
 #: IndividualFactsTabModuleTrait.php:140
 msgid "Include 'TM' in tooltip"
-msgstr ""
+msgstr "'TM' opnemen in tooltip"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:146
 msgid "Include a marker in the linked map."
-msgstr ""
+msgstr "Neem een markering op in de gekoppelde kaart."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:145
 msgid "Include marker"
-msgstr ""
+msgstr "Markering opnemen"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:38
 #, php-format
 msgid "Include the %1$s symbol in the module title"
-msgstr ""
+msgstr "Het symbool %1$s opnemen in de moduletitel"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:43
 #, php-format
 msgid "Include the %1$s symbol in the tab title"
-msgstr ""
+msgstr "Het symbool %1$s opnemen in de titel van het tabblad"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:28
 msgid "Intended as a replacement for the original 'Facts and events' module."
-msgstr ""
+msgstr "Bedoeld als vervanging van de originele module 'Feiten en gebeurtenissen'."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:77
 msgid "Latitude/Longitude"
-msgstr ""
+msgstr "Breedtegraad/lengtegraad"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:222
 msgid "Modules listed here are used (in the configured order) to determine map coordinates of places."
-msgstr ""
+msgstr "Modules die hier worden vermeld, worden (in de geconfigureerde volgorde) gebruikt om kaartcoördinaten van plaatsen te bepalen."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:230
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
-msgstr ""
+msgstr "De hier vermelde modules kunnen aanvullende gegevens bevatten voor feiten en gebeurtenissen (weergegeven in de geconfigureerde volgorde)."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:59
 msgid "Only show specific facts and events"
-msgstr ""
+msgstr "Toon alleen specifieke feiten en gebeurtenissen"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:84
 msgid "Open links in new browser tab"
-msgstr ""
+msgstr "Koppelingen openen in nieuw browsertabblad"
 
 #: FunctionsPrintWithHooks.php:163
 msgid "OpenStreetMap"
-msgstr ""
+msgstr "OpenStreetMap"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:133
 msgid "OpenStreetMaps"
-msgstr ""
+msgstr "OpenStreetMaps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:167
 msgid "Place Settings"
-msgstr ""
+msgstr "Plaatsinstellingen"
 
 #: IndividualFactsTabModuleTrait.php:22
 msgid "Replacement for the original 'Facts and events' module."
-msgstr ""
+msgstr "Vervanging van de originele module 'Feiten en gebeurtenissen'."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:29
 #, php-format
 msgid "Requires the '%1$s Vesta Common' module."
-msgstr ""
+msgstr "Vereist de '%1$s Vesta Common' module."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:71
 msgid "Restrict to this list of GEDCOM family facts and events. You can modify this list by removing or adding fact and event names, even custom ones, as necessary."
-msgstr ""
+msgstr "Beperken tot deze lijst van GEDCOM gezinsfeiten en -gebeurtenissen. Indien nodig kunt u deze lijst wijzigen door namen van feiten en gebeurtenissen, zelfs aangepaste namen, te verwijderen of toe te voegen."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:66
 msgid "Restrict to this list of GEDCOM individual facts and events. You can modify this list by removing or adding fact and event names, even custom ones, as necessary."
-msgstr ""
+msgstr "Beperken tot deze lijst van GEDCOM individuele feiten en gebeurtenissen. Indien nodig kunt u deze lijst wijzigen door namen van feiten en gebeurtenissen, zelfs aangepaste namen, te verwijderen of toe te voegen."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:89
 msgid "Show additional info for map links"
-msgstr ""
+msgstr "Aanvullende informatie voor kaartkoppelingen weergeven"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:115
 msgid "Show links to Bing Maps"
-msgstr ""
+msgstr "Koppelingen naar Bing Maps weergeven"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:96
 msgid "Show links to Google Maps"
-msgstr ""
+msgstr "Koppelingen naar Google Maps weergeven"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:135
 msgid "Show links to OpenStreetMaps"
-msgstr ""
+msgstr "Koppelingen naar OpenStreetMaps weergeven"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:55
 msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
-msgstr ""
+msgstr "Deze laatste zijn niet echt beperkt tot naaste familieleden, en daarom kan het minder verwarrend zijn om een apart schakelvakje voor hen aan te bieden."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:102 IndividualFactsTabModuleTrait.php:121
 #: IndividualFactsTabModuleTrait.php:141
 msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
-msgstr ""
+msgstr "Het oorspronkelijke tabblad had het handelsmerkteken - bewaar het als je wilt, of als je je er wettelijk aan gebonden voelt."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:52
 msgid "Use separate toggle checkbox"
-msgstr ""
+msgstr "Apart schakelvak gebruiken"
 
 #: IndividualFactsTabModuleTrait.php:16
 msgid "Vesta Facts and events"
-msgstr ""
+msgstr "Vesta Feiten en gebeurtenissen"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:32
 msgid "Witness at a marriage"
@@ -315,4 +315,4 @@ msgstr "Getuige bij huwelijk"
 #: IndividualFactsTabModuleTrait.php:106 IndividualFactsTabModuleTrait.php:125
 #: IndividualFactsTabModuleTrait.php:150
 msgid "Zoom level of linked map"
-msgstr ""
+msgstr "Zoomniveau van gekoppelde kaart"

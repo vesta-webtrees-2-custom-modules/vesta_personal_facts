@@ -59,7 +59,7 @@ class FunctionsPrintFactsWithHooks extends FunctionsPrintFacts_2x {
 
   protected function additionalStyleadds(Fact $fact, $styleadd) {
     // Event of close relative
-    if (preg_match('/^_[A-Z_]{3,5}_[A-Z0-9]{4}$/', $fact->getTag())) {
+    if (preg_match('/^_[A-Z_]{3,5}_[A-Z0-9]{4}$/', $fact->tag())) {
       $styleadd = trim($styleadd . ' wt-relation-fact-pfh collapse');
     }
 

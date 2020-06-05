@@ -122,8 +122,8 @@ msgstr ""
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:138
 #: IndividualFactsTabModuleTrait.php:50
-msgid "Facts and events of inverse associates"
-msgstr "Ereignisse von invers assoziierten Personen"
+msgid "Associated facts and events"
+msgstr "Assoziierte Ereignisse"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:159

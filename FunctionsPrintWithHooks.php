@@ -195,7 +195,14 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
   }
   
   public function linkIcon($view, $title, $url) {
-    return '<a href="' . $url . '" rel="nofollow" title="' . $title . '">' .
+    $targetBlank = boolval($this->module->getPreference('TARGETS_BLANK', '0'));
+    
+    $t = '';
+    if ($targetBlank) {
+      $t = ' target="_blank"';
+    }
+    
+    return '<a href="' . $url . '" rel="nofollow" title="' . $title . '"'.$t.'>' .
             view($view) .
             '<span class="sr-only">' . $title . '</span>' .
             '</a>';

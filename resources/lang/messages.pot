@@ -42,7 +42,7 @@ msgstr ""
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:138
 #: IndividualFactsTabModuleTrait.php:50
-msgid "Facts and events of inverse associates"
+msgid "Associated facts and events"
 msgstr ""
 
 #: IndividualFactsTabModuleExtended.php:145

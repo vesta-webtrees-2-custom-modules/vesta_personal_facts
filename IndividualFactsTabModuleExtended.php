@@ -143,7 +143,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     if (!empty($a1)) {
       $script = implode($a1);
       $html = view(VestaAdminController::vestaViewsNamespace() . '::modals/ajax-modal-vesta', [
-                'ajax' => true, //tab is loaded via ajax!
+                'ajax' => false, //tab is NOT loaded via ajax!
                 'select2Initializers' => [$script]
       ]);
     
@@ -200,7 +200,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
       $categories[] = new ToggleableFactsCategory(
               'show-associate-facts-pfh', //cf FunctionsPrintFactsWithHooks.additionalStyleadds()!
               '.wt-associate-fact-pfh',
-              I18N::translate('Facts and events of inverse associates'));
+              I18N::translate('Associated facts and events'));
     } //if setting for separate checkbox isn't set: toggles via show-relatives-facts-pfh!
 
     if ($has_historical_facts) {
@@ -248,55 +248,14 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     return true;
   }
 
-  protected function associateFacts(Individual $person) {
+  protected function associateFacts(Individual $person): array {
     //shortcut?
     if (!$this->showAssociateFacts()) {
       return array();
     }
 
     //Issue #7: adjust parent code: we want to display type of custom fact/event
-    //return parent::associateFacts($person);
-    
-    $facts = [];
-
-    /** @var Individual[] $associates */
-    $asso1 = $person->linkedIndividuals('ASSO');
-    $asso2 = $person->linkedIndividuals('_ASSO');
-    $asso3 = $person->linkedFamilies('ASSO');
-    $asso4 = $person->linkedFamilies('_ASSO');
-
-    $associates = $asso1->merge($asso2)->merge($asso3)->merge($asso4);
-
-    foreach ($associates as $associate) {
-        foreach ($associate->facts() as $fact) {
-            if (preg_match('/\n\d _?ASSO @' . $person->xref() . '@/', $fact->gedcom())) {
-                // Extract the important details from the fact
-                $factrec = '1 ' . $fact->getTag();
-                if (preg_match('/\n2 DATE .*/', $fact->gedcom(), $match)) {
-                    $factrec .= $match[0];
-                }
-                if (preg_match('/\n2 PLAC .*/', $fact->gedcom(), $match)) {
-                    $factrec .= $match[0];
-                }
-                
-                //[RC] adjusted for Issue #7
-                if (preg_match('/\n2 TYPE .*/', $fact->gedcom(), $match)) {
-                    $factrec .= $match[0];
-                }
-                
-                if ($associate instanceof Family) {
-                    foreach ($associate->spouses() as $spouse) {
-                        $factrec .= "\n2 _ASSO @" . $spouse->xref() . '@';
-                    }
-                } else {
-                    $factrec .= "\n2 _ASSO @" . $associate->xref() . '@';
-                }
-                $facts[] = new Fact($factrec, $associate, 'asso');
-            }
-        }
-    }
-
-    return $facts;
+    return parent::associateFacts($person);
   }
 
   protected function filterAssociateFact(Fact $fact) {
@@ -305,12 +264,12 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
       $parent = $fact->record();
       if ($parent instanceof Family) {
         $restrictedTo = preg_split("/[, ;:]+/", $this->getPreference('ASSO_RESTRICTED_FAM', 'MARR'), -1, PREG_SPLIT_NO_EMPTY);
-        if (!in_array($fact->getTag(), $restrictedTo, true)) {
+        if (!in_array($fact->tag(), $restrictedTo, true)) {
           return false;
         }
       } else {
         $restrictedTo = preg_split("/[, ;:]+/", $this->getPreference('ASSO_RESTRICTED_INDI', 'CHR,BAPM'), -1, PREG_SPLIT_NO_EMPTY);
-        if (!in_array($fact->getTag(), $restrictedTo, true)) {
+        if (!in_array($fact->tag(), $restrictedTo, true)) {
           return false;
         }
       }

@@ -50,7 +50,7 @@ trait IndividualFactsTabModuleTrait {
 
     $factsAndEventsSub = array();
     $factsAndEventsSub[] = new ControlPanelSubsection(
-            /* I18N: Module Configuration */I18N::translate('Facts and events of inverse associates'),
+            /* I18N: Module Configuration */I18N::translate('Associated facts and events'),
             array(new ControlPanelCheckbox(
                 /* I18N: Module Configuration */I18N::translate('Use separate toggle checkbox'),
                 /* I18N: Module Configuration */I18N::translate('In the original tab, two kinds of additional facts and events are displayed when \'Events of close relatives\' is selected on the tab:') . ' ' .
@@ -60,7 +60,7 @@ trait IndividualFactsTabModuleTrait {
                 '0'),
         new ControlPanelCheckbox(
                 /* I18N: Module Configuration */I18N::translate('Only show specific facts and events'),
-                /* I18N: Module Configuration */I18N::translate('If this option is checked, additional facts and events of inverse associates are limited to the following facts and events.') . ' ' .
+                /* I18N: Module Configuration */I18N::translate('If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events.') . ' ' .
                 /* I18N: Module Configuration */I18N::translate('In particular if both lists are empty, no additional facts and events of this kind will be shown.'),
                 'ASSO_RESTRICTED',
                 '0'),
