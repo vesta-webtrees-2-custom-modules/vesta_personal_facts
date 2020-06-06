@@ -48,7 +48,7 @@ class FunctionsPrintFacts_2x {
   //[RC] added
   protected function additionalStyleadds(Fact $fact, $styleadd) {
     // Event of close relative
-    if (preg_match('/^_[A-Z_]{3,5}_[A-Z0-9]{4}$/', $fact->tag())) {
+    if ($fact->tag() === 'EVEN' && $fact->value() === 'CLOSE_RELATIVE') {
       $styleadd = trim($styleadd . ' wt-relation-fact collapse');
     }
 
