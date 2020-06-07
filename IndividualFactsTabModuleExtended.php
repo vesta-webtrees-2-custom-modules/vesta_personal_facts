@@ -87,15 +87,6 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     return 'https://cissee.de';
   }
 
-  public function description(): string {
-    return $this->getShortDescription();
-  }
-
-  /**
-   * Where does this module store its resources
-   *
-   * @return string
-   */
   public function resourcesFolder(): string {
     return __DIR__ . '/resources/';
   }
@@ -114,11 +105,14 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   public function headContent(): string {
     $pre = '<link href="' . $this->assetUrl('css/style.css') . '" type="text/css" rel="stylesheet" />';
 
-    //align with current theme (supporting - for now - the default webtrees themes)
+    //align with current theme (supporting the default webtrees themes, and specific custom themes)
     $themeName = Session::get('theme');
     if ('minimal' !== $themeName) {
       if ('fab' === $themeName) {
         //fab also uses font awesome icons
+        $themeName = 'minimal';
+      } else if ('_myartjaub_ruraltheme_' === $themeName) {
+        //and the custom 'rural' theme
         $themeName = 'minimal';
       } else {
         //default
