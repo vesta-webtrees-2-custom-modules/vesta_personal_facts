@@ -258,12 +258,12 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
       $parent = $fact->record();
       if ($parent instanceof Family) {
         $restrictedTo = preg_split("/[, ;:]+/", $this->getPreference('ASSO_RESTRICTED_FAM', 'MARR'), -1, PREG_SPLIT_NO_EMPTY);
-        if (!in_array($fact->tag(), $restrictedTo, true)) {
+        if (!in_array($fact->getTag(), $restrictedTo, true)) {
           return false;
         }
       } else {
         $restrictedTo = preg_split("/[, ;:]+/", $this->getPreference('ASSO_RESTRICTED_INDI', 'CHR,BAPM'), -1, PREG_SPLIT_NO_EMPTY);
-        if (!in_array($fact->tag(), $restrictedTo, true)) {
+        if (!in_array($fact->getTag(), $restrictedTo, true)) {
           return false;
         }
       }

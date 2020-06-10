@@ -59,7 +59,7 @@ class FunctionsPrintFactsWithHooks extends FunctionsPrintFacts_2x {
 
   protected function additionalStyleadds(Fact $fact, $styleadd) {
     // Event of close relative
-    if ($fact->tag() === 'EVEN' && $fact->value() === 'CLOSE_RELATIVE') {
+    if ($fact->getTag() === 'EVEN' && $fact->value() === 'CLOSE_RELATIVE') {
       $styleadd = trim($styleadd . ' wt-relation-fact-pfh collapse');
     }
 

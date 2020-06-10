@@ -48,7 +48,7 @@ class FunctionsPrintFacts_2x {
   //[RC] added
   protected function additionalStyleadds(Fact $fact, $styleadd) {
     // Event of close relative
-    if ($fact->tag() === 'EVEN' && $fact->value() === 'CLOSE_RELATIVE') {
+    if ($fact->getTag() === 'EVEN' && $fact->value() === 'CLOSE_RELATIVE') {
       $styleadd = trim($styleadd . ' wt-relation-fact collapse');
     }
 
@@ -84,7 +84,7 @@ class FunctionsPrintFacts_2x {
 
     $parent = $fact->record();
     $tree = $parent->tree();
-    $tag = $fact->tag();
+    $tag = $fact->getTag();
     $label = $fact->label();
     $value = $fact->value();
     $type = $fact->attribute('TYPE');
@@ -150,7 +150,7 @@ class FunctionsPrintFacts_2x {
       $type = '';
     }
 
-    switch ($fact->tag()) {
+    switch ($fact->getTag()) {
       case 'EVEN':
       case 'FACT':
         if (GedcomTag::isTag($type)) {
@@ -186,7 +186,7 @@ class FunctionsPrintFacts_2x {
     echo '<tr class="', $styleadd, '">';
     echo '<th scope="row">';
 
-    switch ($fact->tag()) {
+    switch ($fact->getTag()) {
       case '_BIRT_CHIL':
         //[RC] adjusted
         $this->children[$fact->record()->xref()] = true;
@@ -270,7 +270,7 @@ class FunctionsPrintFacts_2x {
 
         //handle common cases with explicit translations
         $finalLabel = null;
-        switch ($fact->tag()) {
+        switch ($fact->getTag()) {
           case 'MARR':
             $finalLabel = GedcomCodeRela_Ext::getValueOrNullForMARR($rela, $label_person);
             break;
@@ -331,7 +331,7 @@ class FunctionsPrintFacts_2x {
     //[RC] added end
 
     if ($tree->getPreference('SHOW_FACT_ICONS')) {
-      echo '<span class="wt-fact-icon wt-fact-icon-' . $fact->tag() . '" title="' . strip_tags(GedcomTag::getLabel($fact->tag())) . '"></span>';
+      echo '<span class="wt-fact-icon wt-fact-icon-' . $fact->getTag() . '" title="' . strip_tags(GedcomTag::getLabel($fact->getTag())) . '"></span>';
     }
 
     echo '</th>';
