@@ -114,8 +114,6 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
       $embed = boolval($this->module->getPreference('MAPIRE_EMBED', '1'));
       $baseLayer = $this->module->getPreference('MAPIRE_BASE', 'here-aerial');
       
-      $title = I18N::translate("Europe in the XIX. century | Mapire");
-      
       list($lon_s,$lat_s,$lon_e,$lat_e) = FunctionsPrintWithHooks::latLonToBBox($map_lati, $map_long, $zoom, 2, 2, 1);
       
       //https://github.com/Gasillo/geo-tools
@@ -135,12 +133,28 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
       if ($ye < $ys) {
         list($ye, $ys) = array($ys, $ye);
       }      
+
+      //issue #10: no point in providing the link icon outside Europe!
+      //except there is also a US map available now
+      $isInEurope = (35 < $map_lati) && ($map_lati < 66) && (-10 < $map_long) && ($map_long < 45);  
+      $isInUS = (25 < $map_lati) && ($map_lati < 50) && (-125 < $map_long) && ($map_long < -65);  
+
+      if ($isInEurope) {
+        $title = I18N::translate("Europe in the XIX. century | Mapire");
+        $url = 'https://mapire.eu/en/map/europe-19century-secondsurvey/';
+        $layer='158';
+      } else if ($isInUS) {
+        $title = I18N::translate("United States of America (1880-1926) | Mapire");
+        $url = 'https://mapire.eu/en/map/usa-1880-1926/';
+        $layer='169';
+      } else {
+        return '';
+      }
       
-      $url = 'https://mapire.eu/en/map/europe-19century-secondsurvey/';
       if ($embed) {
         $url .= "embed/";
       }
-      $url .= '?bbox=' . $xs . ',' . $ys . ',' . $xe . ',' . $ye . '&map-list=0&layers=158';
+      $url .= '?bbox=' . $xs . ',' . $ys . ',' . $xe . ',' . $ye . '&map-list=0&layers=' . $layer;
       if (!$embed) {
         $url .= "%2C" . $baseLayer;
       }

@@ -162,10 +162,10 @@ trait IndividualFactsTabModuleTrait {
                 15)));
 
     $placeSub[] = new ControlPanelSubsection(
-            /* I18N: Module Configuration */I18N::translate('Europe in the XIX. century | Mapire'),
+            /* I18N: Module Configuration */I18N::translate('Mapire (historic maps)'),
             array(new ControlPanelCheckbox(
-                /* I18N: Module Configuration */I18N::translate('Show links to a historic map of Europe'),
-                null,
+                /* I18N: Module Configuration */I18N::translate('Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable'),
+                /* I18N: Module Configuration */I18N::translate('The link item will not be shown for locations outside the respective boundaries of Europe and the US.'),
                 'MAPIRE_SHOW',
                 '1'),
         new ControlPanelRange(
