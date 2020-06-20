@@ -5,6 +5,7 @@ namespace Cissee\WebtreesExt\Functions;
 use Cissee\WebtreesExt\GedcomCode\GedcomCodeRela_Ext;
 use Cissee\WebtreesExt\MoreI18N;
 use Fisharebest\Webtrees\Auth;
+use Fisharebest\Webtrees\Contracts\UserInterface;
 use Fisharebest\Webtrees\Date;
 use Fisharebest\Webtrees\Fact;
 use Fisharebest\Webtrees\Factory;
@@ -21,11 +22,16 @@ use Fisharebest\Webtrees\GedcomRecord;
 use Fisharebest\Webtrees\GedcomTag;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Individual;
+use Fisharebest\Webtrees\Module\ModuleChartInterface;
+use Fisharebest\Webtrees\Module\ModuleInterface;
+use Fisharebest\Webtrees\Module\RelationshipsChartModule;
 use Fisharebest\Webtrees\Repository;
+use Fisharebest\Webtrees\Services\ModuleService;
 use Fisharebest\Webtrees\Services\UserService;
+use Fisharebest\Webtrees\Submission;
 use Fisharebest\Webtrees\Submitter;
 use Vesta\Model\GenericViewElement;
-use function route;
+use function app;
 use function view;
 
 //[RC] adapted: some methods as non-static for easier extensibility
@@ -736,7 +742,18 @@ class FunctionsPrintFacts_2x {
           $inverse) {
 
     //TODO use $inverse here?
-    $main = '<a href="' . e(route('relationships', ['xref1' => $associate->xref(), 'xref2' => $person->xref(), 'ged' => $person->tree()->name()])) . '" rel="nofollow">' . $relationship_name_prefix . $relationship_name . $relationship_name_suffix . '</a>';
+    $main = "";
+    
+    $module = app(ModuleService::class)->findByComponent(ModuleChartInterface::class, $person->tree(), Auth::user())->first(static function (ModuleInterface $module) {
+      return $module instanceof RelationshipsChartModule;
+    });
+        
+    if ($module instanceof RelationshipsChartModule) {
+      $main = '<a href="' . $module->chartUrl($associate, ['xref2' => $person->xref()]) . '" rel="nofollow">' . $relationship_name_prefix . $relationship_name . $relationship_name_suffix . '</a>';
+    }
+    
+    //$main = '<a href="' . e(route('relationships', ['xref1' => $associate->xref(), 'xref2' => $person->xref(), 'ged' => $person->tree()->name()])) . '" rel="nofollow">' . $relationship_name_prefix . $relationship_name . $relationship_name_suffix . '</a>';
+    
     return new GenericViewElement($main, '');
   }
 

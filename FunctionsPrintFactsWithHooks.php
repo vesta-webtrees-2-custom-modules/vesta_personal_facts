@@ -46,7 +46,6 @@ class FunctionsPrintFactsWithHooks extends FunctionsPrintFacts_2x {
     }
 
     //nothing hooked or only empty string(s) returned: fallback!
-    //TODO: should check whether default relationship chart is available!
     return parent::getOutputForRelationship(
                     $event,
                     $person,
