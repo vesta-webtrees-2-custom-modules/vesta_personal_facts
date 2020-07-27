@@ -2,6 +2,7 @@
 
 use Cissee\WebtreesExt\MoreI18N;
 use Fisharebest\Webtrees\Functions\FunctionsPrint;
+use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\View;
 
 ?>
@@ -66,7 +67,7 @@ View::endpush();
             <?php if ($individual->canEdit()) : ?>
                 <?= view('edit/paste-fact-row', ['record' => $individual, 'facts' => $clipboard_facts]) ?>
 
-                <?php FunctionsPrint::printAddNewFact($individual, $facts, 'INDI') ?>
+                <?php FunctionsPrint::printAddNewFact($individual, $facts, Individual::RECORD_TYPE) ?>
             <?php endif ?>
         </tbody>
     </table>
@@ -84,7 +85,7 @@ View::endpush();
   'use strict';
 
 <?php foreach ($toggleableFactsCategories as $toggleableFactsCategory): ?>
-    persistent_toggle("<?= $toggleableFactsCategory->getId() ?>");
+    webtrees.persistentToggle('<?= $toggleableFactsCategory->getId() ?>');
 <?php endforeach ?>
 </script>
 <?php View::endpush() ?>

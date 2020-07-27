@@ -95,6 +95,11 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     return $this->getTabTitle(I18N::translate('Facts and events'));
   }
 
+  //there may be further ajax calls from this tab so we suggest to load tab itself via ajax
+  public function canLoadAjax(): bool {
+    return true; //must align with ajax-modal-vesta in getOutputBeforeTab()
+  }
+  
   //no longer required - css is static now
   //public function assetsViaViews(): array {
   //  return [
@@ -137,7 +142,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     if (!empty($a1)) {
       $script = implode($a1);
       $html = view(VestaAdminController::vestaViewsNamespace() . '::modals/ajax-modal-vesta', [
-                'ajax' => false, //tab is NOT loaded via ajax!
+                'ajax' => true, //tab is NOW loaded via ajax!
                 'select2Initializers' => [$script]
       ]);
     

@@ -22,7 +22,7 @@ class ToggleableFactsCategory {
 
   /**
    *
-   * @param string $id (for persistent_toggle)
+   * @param string $id (for webtrees.persistentToggle)
    * @param string $target (styleadd in respective facts)
    * @param string $label
    */
