@@ -26,9 +26,10 @@ use Fisharebest\Webtrees\Session;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use ReflectionObject;
-use Vesta\Hook\HookInterfaces\EmptyFunctionsPlace;
+use Vesta\Hook\HookInterfaces\EmptyPrintFunctionsPlace;
 use Vesta\Hook\HookInterfaces\FunctionsPlaceInterface;
 use Vesta\Hook\HookInterfaces\FunctionsPlaceUtils;
+use Vesta\Hook\HookInterfaces\PrintFunctionsPlaceInterface;
 use Vesta\Model\GenericViewElement;
 use Vesta\Model\MapCoordinates;
 use Vesta\Model\PlaceStructure;
@@ -44,7 +45,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   ModuleConfigInterface, 
   ModuleGlobalInterface, 
   ModuleTabInterface, 
-  FunctionsPlaceInterface {
+  PrintFunctionsPlaceInterface {
 
   //must not use ModuleTabTrait here - already used in superclass IndividualFactsTabModule_2x,
   //and - more importantly - partially implemented there! (supportedFacts)
@@ -58,7 +59,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   }
   
   use IndividualFactsTabModuleTrait;
-  use EmptyFunctionsPlace;
+  use EmptyPrintFunctionsPlace;
 
   public function __construct(ModuleService $module_service, ClipboardService $clipboard_service) {
     parent::__construct($module_service, $clipboard_service);
