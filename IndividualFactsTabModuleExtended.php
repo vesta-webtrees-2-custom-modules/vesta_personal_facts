@@ -120,6 +120,9 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
       } else if ('_myartjaub_ruraltheme_' === $themeName) {
         //and the custom 'rural' theme
         $themeName = 'minimal';
+      } else if ('_jc-theme-justlight_' === $themeName) {
+        //and the custom 'JustLight' theme
+        $themeName = 'minimal';
       } else {
         //default
         $themeName = 'webtrees';
