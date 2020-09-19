@@ -26,6 +26,7 @@ use Fisharebest\Webtrees\Session;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use ReflectionObject;
+use Vesta\CommonI18N;
 use Vesta\Hook\HookInterfaces\EmptyPrintFunctionsPlace;
 use Vesta\Hook\HookInterfaces\FunctionsPlaceInterface;
 use Vesta\Hook\HookInterfaces\FunctionsPlaceUtils;
@@ -203,7 +204,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
       $categories[] = new ToggleableFactsCategory(
               'show-associate-facts-pfh', //cf FunctionsPrintFactsWithHooks.additionalStyleadds()!
               '.wt-associate-fact-pfh',
-              I18N::translate('Associated facts and events'));
+              CommonI18N::associatedFactsAndEvents());
     } //if setting for separate checkbox isn't set: toggles via show-relatives-facts-pfh!
 
     if ($has_historical_facts) {
@@ -296,11 +297,11 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   //////////////////////////////////////////////////////////////////////////////
   
   private function title1(): string {
-    return /* I18N: Module Configuration */I18N::translate('Facts and Events Tab Location Data Providers');
+    return CommonI18N::locationDataProviders();
   }
   
   private function description1(): string {
-    return /* I18N: Module Configuration */I18N::translate('Modules listed here are used (in the configured order) to determine map coordinates of places.');
+    return CommonI18N::mapCoordinates();
   }
   
   private function title2(): string {

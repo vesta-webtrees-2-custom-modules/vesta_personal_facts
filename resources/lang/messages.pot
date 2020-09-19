@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2020-06-07 17:24+0200\n"
+"POT-Creation-Date: 2020-09-19 15:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:87 IndividualFactsTabModuleTrait.php:96
+#: FunctionsPrintWithHooks.php:87 IndividualFactsTabModuleTrait.php:101
 msgid "Google Maps"
 msgstr ""
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:98 IndividualFactsTabModuleTrait.php:116
+#: FunctionsPrintWithHooks.php:98 IndividualFactsTabModuleTrait.php:121
 msgid "Bing Maps"
 msgstr ""
 
@@ -31,253 +31,200 @@ msgstr ""
 msgid "OpenStreetMap"
 msgstr ""
 
-#. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:117 IndividualFactsTabModuleTrait.php:161
+#: FunctionsPrintWithHooks.php:143
 msgid "Europe in the XIX. century | Mapire"
 msgstr ""
 
-#: IndividualFactsTabModuleExtended.php:104
+#: FunctionsPrintWithHooks.php:147
+msgid "United States of America (1880-1926) | Mapire"
+msgstr ""
+
+#: IndividualFactsTabModuleExtended.php:97
 msgid "Facts and events"
 msgstr ""
 
-#: IndividualFactsTabModuleExtended.php:199
+#: IndividualFactsTabModuleExtended.php:200
 msgid "Events of close relatives"
 msgstr ""
 
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:206
-#: IndividualFactsTabModuleTrait.php:53
-msgid "Associated facts and events"
-msgstr ""
-
-#: IndividualFactsTabModuleExtended.php:213
+#: IndividualFactsTabModuleExtended.php:214
 msgid "Historic events"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:299
-msgid "Facts and Events Tab Location Data Providers"
-msgstr ""
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:303
-msgid "Modules listed here are used (in the configured order) to determine map coordinates of places."
-msgstr ""
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:307
+#: IndividualFactsTabModuleExtended.php:308
 msgid "Facts and Events Tab UI Element Providers"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:311
+#: IndividualFactsTabModuleExtended.php:312
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr ""
 
-#: IndividualFactsTabModuleTrait.php:19
-msgid "Vesta Facts and events"
-msgstr ""
-
-#: IndividualFactsTabModuleTrait.php:24
-msgid "A tab showing the facts and events of an individual."
-msgstr ""
-
-#: IndividualFactsTabModuleTrait.php:25
+#: IndividualFactsTabModuleTrait.php:26
 msgid "Replacement for the original 'Facts and events' module."
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:30
+#: IndividualFactsTabModuleTrait.php:35
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:31
+#: IndividualFactsTabModuleTrait.php:36
 msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:32
-#, php-format
-msgid "Requires the '%1$s Vesta Common' module."
-msgstr ""
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:39
-msgid "Displayed title"
-msgstr ""
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:46
-#, php-format
-msgid "Include the %1$s symbol in the tab title"
-msgstr ""
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:47
-msgid "Deselect in order to have the tab appear exactly as the original tab."
-msgstr ""
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:55
+#: IndividualFactsTabModuleTrait.php:60
 msgid "Use separate toggle checkbox"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:56
+#: IndividualFactsTabModuleTrait.php:61
 msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:57
+#: IndividualFactsTabModuleTrait.php:62
 msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:58
+#: IndividualFactsTabModuleTrait.php:63
 msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:62
+#: IndividualFactsTabModuleTrait.php:67
 msgid "Only show specific facts and events"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:63
+#: IndividualFactsTabModuleTrait.php:68
 msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:64
-msgid "In particular if both lists are empty, no additional facts and events of this kind will be shown."
-msgstr ""
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:68
-msgid "Restrict to this list of GEDCOM individual facts and events. You can modify this list by removing or adding fact and event names, even custom ones, as necessary."
-msgstr ""
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:72
-msgid "Restrict to this list of GEDCOM family facts and events. You can modify this list by removing or adding fact and event names, even custom ones, as necessary."
-msgstr ""
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:78
+#: IndividualFactsTabModuleTrait.php:83
 msgid "Latitude/Longitude"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:80
+#: IndividualFactsTabModuleTrait.php:85
 msgid "Hide coordinates, show map links after place name"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:81
+#: IndividualFactsTabModuleTrait.php:86
 msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:85
+#: IndividualFactsTabModuleTrait.php:90
 msgid "Open links in new browser tab"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:90
+#: IndividualFactsTabModuleTrait.php:95
 msgid "Show additional info for map links"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:91
+#: IndividualFactsTabModuleTrait.php:96
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:98
+#: IndividualFactsTabModuleTrait.php:103
 msgid "Show links to Google Maps"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:103 IndividualFactsTabModuleTrait.php:123
-#: IndividualFactsTabModuleTrait.php:143
+#: IndividualFactsTabModuleTrait.php:108 IndividualFactsTabModuleTrait.php:128
+#: IndividualFactsTabModuleTrait.php:148
 msgid "Include 'TM' in tooltip"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:104 IndividualFactsTabModuleTrait.php:124
-#: IndividualFactsTabModuleTrait.php:144
+#: IndividualFactsTabModuleTrait.php:109 IndividualFactsTabModuleTrait.php:129
+#: IndividualFactsTabModuleTrait.php:149
 msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:108 IndividualFactsTabModuleTrait.php:128
-#: IndividualFactsTabModuleTrait.php:153 IndividualFactsTabModuleTrait.php:168
+#: IndividualFactsTabModuleTrait.php:113 IndividualFactsTabModuleTrait.php:133
+#: IndividualFactsTabModuleTrait.php:158 IndividualFactsTabModuleTrait.php:173
 msgid "Zoom level of linked map"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:118
+#: IndividualFactsTabModuleTrait.php:123
 msgid "Show links to Bing Maps"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:136
+#: IndividualFactsTabModuleTrait.php:141
 msgid "OpenStreetMaps"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:138
+#: IndividualFactsTabModuleTrait.php:143
 msgid "Show links to OpenStreetMaps"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:148
+#: IndividualFactsTabModuleTrait.php:153
 msgid "Include marker"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:149
+#: IndividualFactsTabModuleTrait.php:154
 msgid "Include a marker in the linked map."
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:163
-msgid "Show links to a historic map of Europe"
+#: IndividualFactsTabModuleTrait.php:166
+msgid "Mapire (historic maps)"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:175
+#: IndividualFactsTabModuleTrait.php:168
+msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:169
+msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:180
 msgid "Show linked map with additional options"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:176
+#: IndividualFactsTabModuleTrait.php:181
 msgid "When checked, links to the main Mapire page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:182
+#: IndividualFactsTabModuleTrait.php:187
 msgid "OSM Base Map"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:183
+#: IndividualFactsTabModuleTrait.php:188
 msgid "Aerial Base Map"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:190
-msgid "General"
-msgstr ""
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:194
+#: IndividualFactsTabModuleTrait.php:199
 msgid "Facts and Events List"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:198
+#: IndividualFactsTabModuleTrait.php:203
 msgid "Place Settings"
 msgstr ""
 
