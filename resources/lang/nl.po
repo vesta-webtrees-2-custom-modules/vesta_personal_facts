@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2020-09-19 15:42+0200\n"
-"PO-Revision-Date: 2020-09-12 20:36+0000\n"
-"Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
+"PO-Revision-Date: 2020-09-19 17:42+0000\n"
+"Last-Translator: Richard Cissée <ric@richard-cissee.de>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -168,7 +169,7 @@ msgstr "Breedtegraad/lengtegraad"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:166
 msgid "Mapire (historic maps)"
-msgstr ""
+msgstr "Mapire (historische kaarten)"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:312
@@ -237,6 +238,8 @@ msgstr "Toon koppelingen naar OpenStreetMaps"
 #: IndividualFactsTabModuleTrait.php:168
 msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
 msgstr ""
+"Toon links naar een historische kaart van Europa in de XIX eeuw, of de "
+"Verenigde Staten van Amerika (1880-1926), indien van toepassing"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:63
@@ -247,6 +250,8 @@ msgstr "Deze laatste zijn niet echt beperkt tot naaste familieleden, en daarom k
 #: IndividualFactsTabModuleTrait.php:169
 msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
 msgstr ""
+"Het linkitem wordt niet weergegeven voor locaties buiten de grenzen van "
+"Europa en de VS."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:109 IndividualFactsTabModuleTrait.php:129
@@ -256,7 +261,7 @@ msgstr "Het oorspronkelijke tabblad had het handelsmerkteken - bewaar het als je
 
 #: FunctionsPrintWithHooks.php:147
 msgid "United States of America (1880-1926) | Mapire"
-msgstr ""
+msgstr "Verenigde Staten van Amerika (1880-1926) | Mapire"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:60
