@@ -951,6 +951,9 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
     $asso4 = $person->linkedFamilies('_ASSO');
 
     $associates = $asso1->merge($asso2)->merge($asso3)->merge($asso4);
+    
+    //#17: remove duplicates
+    $associates = $associates->unique();
 
     foreach ($associates as $associate) {
       foreach ($associate->facts() as $fact) {
@@ -969,8 +972,13 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
 
         //[RC] PATCHED: fix for #1192
         //plus extension for RELA
-        preg_match_all('/\n2 _?ASSO @(.*)@((\n[3].*)*)/', $fact->gedcom(), $arecs, PREG_SET_ORDER);
-
+        
+        //#17: also handle 1 ASSO
+        preg_match_all('/^1 ASSO @(' . Gedcom::REGEX_XREF . ')@((\n[2-9].*)*)/', $fact->gedcom(), $arecs1, PREG_SET_ORDER);
+        
+        preg_match_all('/\n2 _?ASSO @(.*)@((\n[3].*)*)/', $fact->gedcom(), $arecs2, PREG_SET_ORDER);
+        $arecs = array_merge($arecs1, $arecs2);
+        
         foreach ($arecs as $arec) {
           $xref = $arec[1];
           $rela = $arec[2];
@@ -1006,7 +1014,7 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
 
               //[RC] extension for RELA
               // Is there a "RELA" tag (code adjusted from elsewhere - note though that strictly according to the Gedcom spec, RELA is mandatory!)
-              if (preg_match('/\n3 RELA (.+)/', $rela)) {
+              if (preg_match('/\n\d RELA (.+)/', $rela)) {
                 //preserve RELA
                 $factrec .= $rela;
               } else {

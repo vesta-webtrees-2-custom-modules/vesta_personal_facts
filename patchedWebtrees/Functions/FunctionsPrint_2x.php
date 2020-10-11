@@ -2,13 +2,18 @@
 
 namespace Cissee\WebtreesExt\Functions;
 
+use Fisharebest\Webtrees\Age;
 use Fisharebest\Webtrees\Date;
 use Fisharebest\Webtrees\Fact;
+use Fisharebest\Webtrees\Family;
 use Fisharebest\Webtrees\Functions\FunctionsPrint;
+use Fisharebest\Webtrees\Gedcom;
 use Fisharebest\Webtrees\GedcomCode\GedcomCodeStat;
 use Fisharebest\Webtrees\GedcomCode\GedcomCodeTemp;
+use Fisharebest\Webtrees\GedcomRecord;
 use Fisharebest\Webtrees\GedcomTag;
 use Fisharebest\Webtrees\I18N;
+use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\Place;
 use Vesta\Model\GenericViewElement;
 use Vesta\Model\PlaceStructure;
@@ -193,4 +198,102 @@ class FunctionsPrint_2x {
     return $html;
   }
 
+  //[RC] quick fix for webtrees #3532
+  public static function formatFactDate(
+          Fact $event, 
+          GedcomRecord $record, 
+          $anchor, 
+          $time,
+          bool $asso): string
+    {
+        $factrec = $event->gedcom();
+        $html    = '';
+        // Recorded age
+        if (preg_match('/\n2 AGE (.+)/', $factrec, $match)) {
+            $fact_age = FunctionsPrint::formatGedcomAge($match[1]);
+        } else {
+            $fact_age = '';
+        }
+        if (preg_match('/\n2 HUSB\n3 AGE (.+)/', $factrec, $match)) {
+            $husb_age = FunctionsPrint::formatGedcomAge($match[1]);
+        } else {
+            $husb_age = '';
+        }
+        if (preg_match('/\n2 WIFE\n3 AGE (.+)/', $factrec, $match)) {
+            $wife_age = FunctionsPrint::formatGedcomAge($match[1]);
+        } else {
+            $wife_age = '';
+        }
+
+        // Calculated age
+        $fact = $event->getTag();
+        if (preg_match('/\n2 DATE (.+)/', $factrec, $match)) {
+            $date = new Date($match[1]);
+            $html .= ' ' . $date->display($anchor);
+            // time
+            if ($time && preg_match('/\n3 TIME (.+)/', $factrec, $match)) {
+                $html .= ' – <span class="date">' . $match[1] . '</span>';
+            }
+            if ($record instanceof Individual) {
+                //[RC] quick fix for webtrees #3532
+                if (!$asso && in_array($fact, Gedcom::BIRTH_EVENTS, true) && $record->tree()->getPreference('SHOW_PARENTS_AGE')) {
+                    // age of parents at child birth
+                    $html .= FunctionsPrint::formatParentsAges($record, $date);
+                }
+                if ($fact !== 'BIRT' && $fact !== 'CHAN' && $fact !== '_TODO') {
+                    // age at event
+                    $birth_date = $record->getBirthDate();
+                    // Can't use getDeathDate(), as this also gives BURI/CREM events, which
+                    // wouldn't give the correct "days after death" result for people with
+                    // no DEAT.
+                    $death_event = $record->facts(['DEAT'])->first();
+                    if ($death_event instanceof Fact) {
+                        $death_date = $death_event->date();
+                    } else {
+                        $death_date = new Date('');
+                    }
+                    $ageText = '';
+                    if ($fact === 'DEAT' || Date::compare($date, $death_date) <= 0 || !$record->isDead()) {
+                        // Before death, print age
+                        $age = (new Age($birth_date, $date))->ageAtEvent(false);
+                        // Only show calculated age if it differs from recorded age
+                        if ($age !== '') {
+                            if ($fact_age !== '' && $fact_age !== $age) {
+                                $ageText = $age;
+                            } elseif ($fact_age === '' && $husb_age === '' && $wife_age === '') {
+                                $ageText = $age;
+                            } elseif ($husb_age !== '' && $husb_age !== $age && $record->sex() === 'M') {
+                                $ageText = $age;
+                            } elseif ($wife_age !== '' && $wife_age !== $age && $record->sex() === 'F') {
+                                $ageText = $age;
+                            }
+                        }
+                    }
+                    if ($fact !== 'DEAT' && $death_date->isOK() && Date::compare($death_date, $date) < 0) {
+                        // After death, print time since death
+                        $ageText = (new Age($death_date, $date))->timeAfterDeath();
+                        // Family events which occur after death are probably errors
+                        if ($event->record() instanceof Family) {
+                            $ageText .= view('icons/warning');
+                        }
+                    }
+                    if ($ageText !== '') {
+                        $html .= ' <span class="age">' . $ageText . '</span>';
+                    }
+                }
+            }
+        }
+        // print gedcom ages
+        $age_labels = [
+            I18N::translate('Age')     => $fact_age,
+            I18N::translate('Husband') => $husb_age,
+            I18N::translate('Wife')    => $wife_age,
+        ];
+
+        foreach (array_filter($age_labels) as $label => $age) {
+            $html .= ' <span class="label">' . $label . ':</span> <span class="age">' . $age . '</span>';
+        }
+
+        return $html;
+    }
 }
