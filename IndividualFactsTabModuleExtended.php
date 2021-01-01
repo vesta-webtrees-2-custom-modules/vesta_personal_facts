@@ -186,6 +186,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
         $facts[] = $rr;
       }
     }
+            
     return $facts;
   }
 
