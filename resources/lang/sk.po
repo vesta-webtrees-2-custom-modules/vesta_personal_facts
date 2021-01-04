@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2020-09-19 15:42+0200\n"
-"PO-Revision-Date: 2021-01-04 14:29+0000\n"
+"PO-Revision-Date: 2021-01-04 18:29+0000\n"
 "Last-Translator: ro-la <lacoros@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/"
 "vesta-webtrees-custom-modules/vesta-facts-and-events/sk/>\n"
@@ -115,6 +115,7 @@ msgstr "Zoznam faktov a udalostí"
 #: IndividualFactsTabModuleExtended.php:308
 msgid "Facts and Events Tab UI Element Providers"
 msgstr ""
+"Poskytovatelia prvkov užívateľského rozhrania pre záložku Fakty a udalosti"
 
 #: IndividualFactsTabModuleExtended.php:97
 msgid "Facts and events"
@@ -123,12 +124,12 @@ msgstr "Fakty a udalosti"
 #. I18N: Module Configuration
 #: FunctionsPrintWithHooks.php:87 IndividualFactsTabModuleTrait.php:101
 msgid "Google Maps"
-msgstr ""
+msgstr "Google Maps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:85
 msgid "Hide coordinates, show map links after place name"
-msgstr ""
+msgstr "Skryť súradnice, zobraziť ikonu mapy za názvom miesta"
 
 #: IndividualFactsTabModuleExtended.php:214
 msgid "Historic events"
@@ -138,11 +139,17 @@ msgstr "Historické udalosti"
 #: IndividualFactsTabModuleTrait.php:68
 msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
 msgstr ""
+"Ak je zvolená táto možnosť, zobrazia sa iba tie dodatočné fakty a údaje, kde "
+"je osoba uvedená ako pridružená osoba, ktoré sú uvedené v nasledujúcom "
+"zozname."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:86
 msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
 msgstr ""
+"V originálnej záložke sú zobrazené súradnice (včítane odkazov na mapy). To "
+"môže viesť k preplneniu miesta, zvlášť ak súradnice poskytované dodatočnými "
+"modulmi."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:61
