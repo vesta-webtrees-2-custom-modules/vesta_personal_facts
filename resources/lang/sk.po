@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2020-09-19 15:42+0200\n"
-"PO-Revision-Date: 2021-01-04 18:29+0000\n"
+"PO-Revision-Date: 2021-01-04 22:29+0000\n"
 "Last-Translator: ro-la <lacoros@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/"
 "vesta-webtrees-custom-modules/vesta-facts-and-events/sk/>\n"
@@ -155,27 +155,29 @@ msgstr ""
 #: IndividualFactsTabModuleTrait.php:61
 msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
 msgstr ""
+"Na originálnej záložke sa po zapnutí „Udalosti blízkych príbuzných“ "
+"zobrazujú dva druhy dodatočných faktov a udalostí:"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:108 IndividualFactsTabModuleTrait.php:128
 #: IndividualFactsTabModuleTrait.php:148
 msgid "Include 'TM' in tooltip"
-msgstr ""
+msgstr "Zobrazovať „TM“ v tooltipe"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:154
 msgid "Include a marker in the linked map."
-msgstr ""
+msgstr "Zobraziť na mape značku pozície."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:153
 msgid "Include marker"
-msgstr ""
+msgstr "Zobraziť značku pozície"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:36
 msgid "Intended as a replacement for the original 'Facts and events' module."
-msgstr ""
+msgstr "Plánované ako náhrada za originálny modul „Fakty a udalosti“."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:83
@@ -185,41 +187,43 @@ msgstr "Zemepisná šírka/dĺžka"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:166
 msgid "Mapire (historic maps)"
-msgstr ""
+msgstr "Mapire (historické mapy)"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:312
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr ""
+"Moduly v tomto zozname poskytujú dodatočné údaje pre fakty a údaje ("
+"zobrazované v konfigurovanom poradí)."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:187
 msgid "OSM Base Map"
-msgstr ""
+msgstr "HERE základná mapa"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:67
 msgid "Only show specific facts and events"
-msgstr ""
+msgstr "Zobraziť len určité fakty a udalosti"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:90
 msgid "Open links in new browser tab"
-msgstr ""
+msgstr "Otvárať odkazy v novom liste prehliadača"
 
 #: FunctionsPrintWithHooks.php:104
 msgid "OpenStreetMap"
-msgstr ""
+msgstr "OpenStreetMap"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:141
 msgid "OpenStreetMaps"
-msgstr ""
+msgstr "OpenStreetMaps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:203
 msgid "Place Settings"
-msgstr ""
+msgstr "Nastavenia miesta"
 
 #: IndividualFactsTabModuleTrait.php:26
 msgid "Replacement for the original 'Facts and events' module."
@@ -228,32 +232,34 @@ msgstr "Náhrada za pôvodný modul „Fakty a udalosti“."
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:95
 msgid "Show additional info for map links"
-msgstr ""
+msgstr "Zobraziť dodatočné informácie k odkazom na mapy"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:180
 msgid "Show linked map with additional options"
-msgstr ""
+msgstr "Zobraziť mapu s ďalšími možnosťami"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:123
 msgid "Show links to Bing Maps"
-msgstr ""
+msgstr "Zobraziť odkaz na Bing Maps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:103
 msgid "Show links to Google Maps"
-msgstr ""
+msgstr "Zobraziť odkaz na Google Maps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:143
 msgid "Show links to OpenStreetMaps"
-msgstr ""
+msgstr "Zobraziť odkazy na OpenStreetMaps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:168
 msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
 msgstr ""
+"Zobraziť odkaz na historickú mapu Európy z XIX. storočia, alebo USA "
+"(1880-1926), ak pre danú lokalitu existuje príslušný mapový podklad"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:63
