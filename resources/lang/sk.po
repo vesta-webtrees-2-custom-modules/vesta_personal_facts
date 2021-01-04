@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2020-09-19 15:42+0200\n"
-"PO-Revision-Date: 2020-12-28 14:29+0000\n"
+"PO-Revision-Date: 2021-01-04 14:29+0000\n"
 "Last-Translator: ro-la <lacoros@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/"
 "vesta-webtrees-custom-modules/vesta-facts-and-events/sk/>\n"
@@ -23,16 +23,18 @@ msgstr ""
 #: IndividualFactsTabModuleTrait.php:62
 msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
 msgstr ""
+"Aktuálne udalosti blízkych príbuzných a fakty a udalosti, pri ktorých je "
+"zobrazovaná osoba uvedená ako pridružená osoba."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:188
 msgid "Aerial Base Map"
-msgstr ""
+msgstr "HERE mapa (letecká)"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:35
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
-msgstr ""
+msgstr "Rozšírená záložka „Fakty a udalost“ s háčikmi pre ďalšie moduly."
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:41
 msgid "Associate at a marriage"
@@ -69,7 +71,7 @@ msgstr "Družba pri svadbe"
 #. I18N: Module Configuration
 #: FunctionsPrintWithHooks.php:98 IndividualFactsTabModuleTrait.php:121
 msgid "Bing Maps"
-msgstr ""
+msgstr "Bing Maps"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:24
 msgid "Bridesmaid at a marriage"
@@ -93,6 +95,8 @@ msgstr "Krst krstného syna"
 #: IndividualFactsTabModuleTrait.php:96
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr ""
+"Zobraziť ikonu s tooltipom, dávajúcim informáciu o zdroji mapových odkazov. "
+"Toto je určené hlavne pre debugovanie."
 
 #: FunctionsPrintWithHooks.php:143
 msgid "Europe in the XIX. century | Mapire"
@@ -105,7 +109,7 @@ msgstr "Udalosti blízkych príbuzných"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:199
 msgid "Facts and Events List"
-msgstr ""
+msgstr "Zoznam faktov a udalostí"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:308
