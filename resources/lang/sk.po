@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2020-09-19 15:42+0200\n"
-"PO-Revision-Date: 2021-01-04 22:29+0000\n"
+"PO-Revision-Date: 2021-01-09 11:32+0000\n"
 "Last-Translator: ro-la <lacoros@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/"
 "vesta-webtrees-custom-modules/vesta-facts-and-events/sk/>\n"
@@ -265,17 +265,21 @@ msgstr ""
 #: IndividualFactsTabModuleTrait.php:63
 msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
 msgstr ""
+"Tie druhé sa nevzťahujú nutne na blízkych príbuzných, preto môže byť "
+"vhodnejšie poskytnúť samostatné prepínače."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:169
 msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
-msgstr ""
+msgstr "Odkaz sa nezobrazí pre lokality mimo hraníc Európy a USA."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:109 IndividualFactsTabModuleTrait.php:129
 #: IndividualFactsTabModuleTrait.php:149
 msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
 msgstr ""
+"Originálna záložka mala označenie obchodnej značky (trade mark) - ponechajte "
+"jej zobrazenie, ak máte povinnosť ho zobrazovať."
 
 #: FunctionsPrintWithHooks.php:147
 msgid "United States of America (1880-1926) | Mapire"
@@ -284,12 +288,15 @@ msgstr "United States of America (1880-1926) | Mapire"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:60
 msgid "Use separate toggle checkbox"
-msgstr ""
+msgstr "Použiť samostatný prepínač"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:181
 msgid "When checked, links to the main Mapire page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
 msgstr ""
+"Ak je zvolené, odkazuje na úplnu stránku Mapire, kde môžete prepínať medzi "
+"rôznymi historickými vrstvami, ktoré sú k dispozícii pre príslušnú lokalitu. "
+"Taktiež môžete meniť priehľadnosť k podkladovej mape, ktorú si nastavíte tu:"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:32
 msgid "Witness at a marriage"
@@ -309,7 +316,7 @@ msgstr "Svedkyňa pri sobáši"
 #: IndividualFactsTabModuleTrait.php:113 IndividualFactsTabModuleTrait.php:133
 #: IndividualFactsTabModuleTrait.php:158 IndividualFactsTabModuleTrait.php:173
 msgid "Zoom level of linked map"
-msgstr ""
+msgstr "Zoom odkazovanej mapy"
 
 #~ msgid "Associated facts and events"
 #~ msgstr "Fakty a udalosti pridružených osôb"
