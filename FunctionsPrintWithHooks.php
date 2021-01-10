@@ -2,8 +2,8 @@
 
 namespace Cissee\Webtrees\Module\PersonalFacts;
 
-use Cissee\Webtrees\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
-use Cissee\Webtrees\Hook\HookInterfaces\IndividualFactsTabExtenderUtils;
+use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
+use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderUtils;
 use Cissee\WebtreesExt\Functions\FunctionsPrint_2x;
 use Cissee\WebtreesExt\MoreI18N;
 use Fisharebest\Webtrees\Auth;
