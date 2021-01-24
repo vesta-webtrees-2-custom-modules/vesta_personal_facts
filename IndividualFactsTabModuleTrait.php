@@ -14,6 +14,7 @@ use Vesta\ControlPanelUtils\Model\ControlPanelRadioButtons;
 use Vesta\ControlPanelUtils\Model\ControlPanelRange;
 use Vesta\ControlPanelUtils\Model\ControlPanelSection;
 use Vesta\ControlPanelUtils\Model\ControlPanelSubsection;
+use Vesta\ControlPanelUtils\Model\ControlPanelTextbox;
 use Vesta\ModuleI18N;
 
 trait IndividualFactsTabModuleTrait {
@@ -189,6 +190,35 @@ trait IndividualFactsTabModuleTrait {
                 null,
                 'MAPIRE_BASE',
                 'here-aerial')));
+
+    $link = '<a href="https://dopiaza.org/tools/datauri/index.php">https://dopiaza.org/tools/datauri/index.php</a>';
+    $link2 = '<a href="https://en.mapy.cz/img/favicon/favicon.ico">https://en.mapy.cz/img/favicon/favicon.ico</a>';
+    
+    $placeSub[] = new ControlPanelSubsection(
+            /* I18N: Module Configuration */I18N::translate('Custom Map Provider'),
+            array(new ControlPanelTextbox(
+                /* I18N: Module Configuration */I18N::translate('Name'),
+                /* I18N: Module Configuration */I18N::translate('You can also configure a custom map provider. Enter its name here.'),
+                'CMP_1_TITLE',
+                '', 
+                false,
+                31),
+        new ControlPanelTextbox(
+                /* I18N: Module Configuration */I18N::translate('URI template'),
+                /* I18N: Module Configuration */I18N::translate('The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s','\'lati\'','\'long\'','https://en.mapy.cz/zakladni?x={long}&y={lati}&z=11'),
+                'CMP_1_LINK_URI',
+                '',
+                false,
+                -1,
+                null),
+        new ControlPanelTextbox(
+                /* I18N: Module Configuration */I18N::translate('Link icon as data URI'),
+                /* I18N: Module Configuration */I18N::translate('Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider\'s favicon image, such as %3$s. It will be displayed properly resized.',$link,'\'data:image/x-icon;base64\'',$link2),
+                'CMP_1_ICON_DATA_URI',
+                '',
+                false,
+                -1,
+                "[a-zA-z0-9\-:/;,+=]*")));
 
     $sections = array();
     $sections[] = new ControlPanelSection(

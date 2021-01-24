@@ -2,11 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2020-09-19 15:42+0200\n"
+"POT-Creation-Date: 2021-01-24 13:36+0100\n"
 "PO-Revision-Date: 2020-09-19 17:42+0000\n"
 "Last-Translator: Richard Cissée <ric@richard-cissee.de>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/"
-"vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,17 +14,17 @@ msgstr ""
 "X-Generator: Weblate 4.3-dev\n"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:62
+#: IndividualFactsTabModuleTrait.php:63
 msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
 msgstr "Werkelijke gebeurtenissen van naaste verwanten, en feiten en gebeurtenissen waarbij de huidige persoon wordt vermeld als medewerker."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:188
+#: IndividualFactsTabModuleTrait.php:189
 msgid "Aerial Base Map"
 msgstr "Luchtfotokaart"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:35
+#: IndividualFactsTabModuleTrait.php:36
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr "Een uitgebreid tabblad 'Feiten en gebeurtenissen', met 'hooks' voor andere aangepaste modules."
 
@@ -57,12 +56,18 @@ msgstr "Doop van peetdochter"
 msgid "Baptism of a godson"
 msgstr "Doop van peetzoon"
 
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:216
+#, php-format
+msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
+msgstr ""
+
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
 msgid "Best man at a marriage"
 msgstr "Getuige bij huwelijk"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:98 IndividualFactsTabModuleTrait.php:121
+#: FunctionsPrintWithHooks.php:100 IndividualFactsTabModuleTrait.php:122
 msgid "Bing Maps"
 msgstr "Bing Maps"
 
@@ -85,191 +90,213 @@ msgid "Christening of a godson"
 msgstr "Doop van peetzoon"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:96
+#: FunctionsPrintWithHooks.php:168 IndividualFactsTabModuleTrait.php:198
+msgid "Custom Map Provider"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:97
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Geef een pictogram weer met een tooltip die de bron van de kaartkoppelingen aangeeft. Dit is vooral bedoeld voor debugging."
 
-#: FunctionsPrintWithHooks.php:143
+#: FunctionsPrintWithHooks.php:145
 msgid "Europe in the XIX. century | Mapire"
 msgstr "Europa in de XIX-eeuw | Mapire"
 
-#: IndividualFactsTabModuleExtended.php:200
+#: IndividualFactsTabModuleExtended.php:206
 msgid "Events of close relatives"
 msgstr "Gebeurtenissen van naaste verwanten"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:199
+#: IndividualFactsTabModuleTrait.php:229
 msgid "Facts and Events List"
 msgstr "Lijst met feiten en gebeurtenissen"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:308
+#: IndividualFactsTabModuleExtended.php:314
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Aanbieders van UI-elementen voor tabblad Feiten en gebeurtenissen"
 
-#: IndividualFactsTabModuleExtended.php:97
+#: IndividualFactsTabModuleExtended.php:98
 msgid "Facts and events"
 msgstr "Feiten en gebeurtenissen"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:87 IndividualFactsTabModuleTrait.php:101
+#: FunctionsPrintWithHooks.php:89 IndividualFactsTabModuleTrait.php:102
 msgid "Google Maps"
 msgstr "Google Maps"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:85
+#: IndividualFactsTabModuleTrait.php:86
 msgid "Hide coordinates, show map links after place name"
 msgstr "Coördinaten verbergen, toon kaartkoppelingen na plaatsnaam"
 
-#: IndividualFactsTabModuleExtended.php:214
+#: IndividualFactsTabModuleExtended.php:220
 msgid "Historic events"
 msgstr "Historische gebeurtenissen"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:68
+#: IndividualFactsTabModuleTrait.php:69
 msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
 msgstr "Als deze optie is aangevinkt, worden aanvullende feiten en gebeurtenissen waarbij de persoon als medewerker wordt vermeld, beperkt tot de volgende feiten en gebeurtenissen."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:86
+#: IndividualFactsTabModuleTrait.php:87
 msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
 msgstr "Op het oorspronkelijke tabblad worden coördinaten getoond (met kaartkoppelingen). Dit heeft de neiging om de plaatsweergave te vertroebelen, met name als er extra modules zijn die coördinaten geven."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:61
+#: IndividualFactsTabModuleTrait.php:62
 msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
 msgstr "In het oorspronkelijke tabblad worden twee soorten aanvullende feiten en gebeurtenissen weergegeven wanneer 'Gebeurtenissen van naaste verwanten' op het tabblad worden geselecteerd:"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:108 IndividualFactsTabModuleTrait.php:128
-#: IndividualFactsTabModuleTrait.php:148
+#: IndividualFactsTabModuleTrait.php:109 IndividualFactsTabModuleTrait.php:129
+#: IndividualFactsTabModuleTrait.php:149
 msgid "Include 'TM' in tooltip"
 msgstr "'TM' opnemen in tooltip"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:154
+#: IndividualFactsTabModuleTrait.php:155
 msgid "Include a marker in the linked map."
 msgstr "Neem een markering op in de gekoppelde kaart."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:153
+#: IndividualFactsTabModuleTrait.php:154
 msgid "Include marker"
 msgstr "Markering opnemen"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:36
+#: IndividualFactsTabModuleTrait.php:37
 msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr "Bedoeld als vervanging van de originele module 'Feiten en gebeurtenissen'."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:83
+#: IndividualFactsTabModuleTrait.php:84
 msgid "Latitude/Longitude"
 msgstr "Breedtegraad/lengtegraad"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:166
+#: IndividualFactsTabModuleTrait.php:215
+msgid "Link icon as data URI"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:167
 msgid "Mapire (historic maps)"
 msgstr "Mapire (historische kaarten)"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:312
+#: IndividualFactsTabModuleExtended.php:318
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr "De hier vermelde modules kunnen aanvullende gegevens bevatten voor feiten en gebeurtenissen (weergegeven in de geconfigureerde volgorde)."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:187
+#: IndividualFactsTabModuleTrait.php:200
+msgid "Name"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:188
 msgid "OSM Base Map"
 msgstr "OSM-basiskaart"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:67
+#: IndividualFactsTabModuleTrait.php:68
 msgid "Only show specific facts and events"
 msgstr "Toon alleen specifieke feiten en gebeurtenissen"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:90
+#: IndividualFactsTabModuleTrait.php:91
 msgid "Open links in new browser tab"
 msgstr "Koppelingen openen in nieuw browsertabblad"
 
-#: FunctionsPrintWithHooks.php:104
+#: FunctionsPrintWithHooks.php:106
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:141
+#: IndividualFactsTabModuleTrait.php:142
 msgid "OpenStreetMaps"
 msgstr "OpenStreetMaps"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:203
+#: IndividualFactsTabModuleTrait.php:233
 msgid "Place Settings"
 msgstr "Plaatsinstellingen"
 
-#: IndividualFactsTabModuleTrait.php:26
+#: IndividualFactsTabModuleTrait.php:27
 msgid "Replacement for the original 'Facts and events' module."
 msgstr "Vervanging van de originele module 'Feiten en gebeurtenissen'."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:95
+#: IndividualFactsTabModuleTrait.php:96
 msgid "Show additional info for map links"
 msgstr "Toon aanvullende informatie voor kaartkoppelingen"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:180
+#: IndividualFactsTabModuleTrait.php:181
 msgid "Show linked map with additional options"
 msgstr "Toon gekoppelde kaart met extra opties"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:123
+#: IndividualFactsTabModuleTrait.php:124
 msgid "Show links to Bing Maps"
 msgstr "Toon koppelingen naar Bing Maps"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:103
+#: IndividualFactsTabModuleTrait.php:104
 msgid "Show links to Google Maps"
 msgstr "Toon koppelingen naar Google Maps"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:143
+#: IndividualFactsTabModuleTrait.php:144
 msgid "Show links to OpenStreetMaps"
 msgstr "Toon koppelingen naar OpenStreetMaps"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:168
+#: IndividualFactsTabModuleTrait.php:169
 msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
-msgstr ""
-"Toon links naar een historische kaart van Europa in de XIX eeuw, of de "
-"Verenigde Staten van Amerika (1880-1926), indien van toepassing"
+msgstr "Toon links naar een historische kaart van Europa in de XIX eeuw, of de Verenigde Staten van Amerika (1880-1926), indien van toepassing"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:63
+#: IndividualFactsTabModuleTrait.php:64
 msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
 msgstr "Deze laatste zijn niet echt beperkt tot naaste familieleden, en daarom kan het minder verwarrend zijn om een apart schakelvakje voor hen aan te bieden."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:169
+#: IndividualFactsTabModuleTrait.php:170
 msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
-msgstr ""
-"Het linkitem wordt niet weergegeven voor locaties buiten de grenzen van "
-"Europa en de VS."
+msgstr "Het linkitem wordt niet weergegeven voor locaties buiten de grenzen van Europa en de VS."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:109 IndividualFactsTabModuleTrait.php:129
-#: IndividualFactsTabModuleTrait.php:149
+#: IndividualFactsTabModuleTrait.php:110 IndividualFactsTabModuleTrait.php:130
+#: IndividualFactsTabModuleTrait.php:150
 msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
 msgstr "Het oorspronkelijke tabblad had het handelsmerkteken - bewaar het als je wilt, of als je je er wettelijk aan gebonden voelt."
 
-#: FunctionsPrintWithHooks.php:147
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:208
+#, php-format
+msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:207
+msgid "URI template"
+msgstr ""
+
+#: FunctionsPrintWithHooks.php:149
 msgid "United States of America (1880-1926) | Mapire"
 msgstr "Verenigde Staten van Amerika (1880-1926) | Mapire"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:60
+#: IndividualFactsTabModuleTrait.php:61
 msgid "Use separate toggle checkbox"
 msgstr "Apart schakelvak gebruiken"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:181
+#: IndividualFactsTabModuleTrait.php:182
 msgid "When checked, links to the main Mapire page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
 msgstr "Indien aangevinkt, worden koppelingen geplaatst naar de hoofdpagina van Mapire, waar u kunt schakelen tussen verschillende historische lagen die beschikbaar zijn voor de desbetreffende locatie, en in- en uitzoomen op een moderne kaart, die hier bovendien kan worden geconfigureerd:"
 
@@ -288,8 +315,13 @@ msgid "Witness at a marriage"
 msgstr "Getuige bij huwelijk"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:113 IndividualFactsTabModuleTrait.php:133
-#: IndividualFactsTabModuleTrait.php:158 IndividualFactsTabModuleTrait.php:173
+#: IndividualFactsTabModuleTrait.php:201
+msgid "You can also configure a custom map provider. Enter its name here."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:114 IndividualFactsTabModuleTrait.php:134
+#: IndividualFactsTabModuleTrait.php:159 IndividualFactsTabModuleTrait.php:174
 msgid "Zoom level of linked map"
 msgstr "Zoomniveau van gekoppelde kaart"
 

@@ -2,13 +2,15 @@
 
 namespace Cissee\Webtrees\Module\PersonalFacts;
 
-use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
-use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderUtils;
+use Aura\Router\RouterContainer;
 use Cissee\WebtreesExt\Functions\FunctionsPrint_2x;
 use Cissee\WebtreesExt\MoreI18N;
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\I18N;
+use GeoProjectionMercator;
 use Vesta\Hook\HookInterfaces\FunctionsPlaceUtils;
+use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
+use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderUtils;
 use Vesta\Model\GenericViewElement;
 use Vesta\Model\PlaceStructure;
 use function view;
@@ -118,7 +120,7 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
       
       //https://github.com/Gasillo/geo-tools
       require_once("thirdparty/GeoProjectionMercator.php");
-      $proj = new \GeoProjectionMercator();
+      $proj = new GeoProjectionMercator();
       
       $s = $proj->LatLonToMeters($lat_s,$lon_s);
       $e = $proj->LatLonToMeters($lat_e,$lon_e);
@@ -160,6 +162,25 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
       }
       
       $html .= $this->linkIcon($this->module->name() . '::icons/mapire-eu-maps', $title, $url);
+    }
+    
+    if (boolval($this->module->getPreference('CMP_1_LINK_URI', ''))) {
+      $title = I18N::translate('Custom Map Provider');
+      if (boolval($this->module->getPreference('CMP_1_TITLE', ''))) {
+        //non-translated!
+        $title = $this->module->getPreference('CMP_1_TITLE', '');
+      }
+      $uriTemplate = $this->module->getPreference('CMP_1_LINK_URI', '');
+      
+      //reuse Aura router for uri template functionality
+      $router_container = new RouterContainer();
+      $router = $router_container->getMap();
+      $router->get('CMP_1', $uriTemplate);
+      $url = $router_container->getGenerator()->generate('CMP_1', [
+          'lati' => $map_lati,
+          'long' => $map_long]);      
+      
+      $html .= $this->linkIcon($this->module->name() . '::icons/custom-map-provider-1', $title, $url);
     }
     
     return $html;

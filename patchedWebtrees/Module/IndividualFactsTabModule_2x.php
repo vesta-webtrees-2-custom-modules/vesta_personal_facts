@@ -864,9 +864,10 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
 
     foreach ($person->childFamilies() as $family) {
       foreach ($family->spouses() as $parent) {
-        if (strpos($SHOW_RELATIVES_EVENTS, '_DEAT' . ($sosa === 1 ? '_PARE' : '_GPAR')) !== false) {
+        if (str_contains($SHOW_RELATIVES_EVENTS, '_DEAT' . ($sosa === 1 ? '_PARE' : '_GPAR'))) {
           foreach ($parent->facts(['DEAT', 'BURI', 'CREM']) as $fact) {
-            if ($this->includeFact($fact, $min_date, $max_date)) {
+            // Show death of parent when it happened prior to birth
+            if ($sosa === 1 && Date::compare($fact->date(), $min_date) < 0 || $this->includeFact($fact, $min_date, $max_date)) {
               switch ($sosa) {
                 case 1:
                   $facts[] = $this->convertEvent($fact, $death_of_a_parent[$fact->getTag()][$fact->record()->sex()]);

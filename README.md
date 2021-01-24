@@ -34,7 +34,7 @@ Mainly intended as a base for other custom modules. Some features are available 
 
 ### Download<a name="download"/>
 
-* Current version: 2.0.11.0.0
+* Current version: 2.0.11.1.0
 * Based on and tested with webtrees 2.0.11. Requires webtrees 2.0.9 or later.
 * Requires the ⚶ Vesta Common module ('vesta_common').
 * Download the zipped module, including all related modules, [here](https://cissee.de/vesta.latest.zip).
@@ -52,7 +52,7 @@ Mainly intended as a base for other custom modules. Some features are available 
 
 * **vesta_personal_facts: a webtrees custom module**
 * Copyright (C) 2019 – 2021 Richard Cissée
-* Derived from **webtrees** - Copyright 2020 webtrees development team.
+* Derived from **webtrees** - Copyright 2021 webtrees development team.
 * French translations provided by Ghezibde.
 * Dutch translations provided by TheDutchJewel.
 * Slovak translations provided by Ladislav Rosival.

@@ -2,14 +2,13 @@
 
 namespace Cissee\Webtrees\Module\PersonalFacts;
 
-use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
-use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderUtils;
+use Cissee\WebtreesExt\Http\RequestHandlers\FunctionsPlaceProvidersAction;
+use Cissee\WebtreesExt\Http\RequestHandlers\IndividualFactsTabExtenderProvidersAction;
 use Cissee\WebtreesExt\Module\IndividualFactsTabModule_2x;
 use Cissee\WebtreesExt\ToggleableFactsCategory;
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\Fact;
 use Fisharebest\Webtrees\Family;
-use Fisharebest\Webtrees\Http\Controllers\Admin\ModuleController;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\Module\ModuleConfigInterface;
@@ -21,23 +20,21 @@ use Fisharebest\Webtrees\Module\ModuleGlobalTrait;
 use Fisharebest\Webtrees\Module\ModuleTabInterface;
 use Fisharebest\Webtrees\Services\ClipboardService;
 use Fisharebest\Webtrees\Services\ModuleService;
-use Fisharebest\Webtrees\Services\TreeService;
 use Fisharebest\Webtrees\Session;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use ReflectionObject;
 use Vesta\CommonI18N;
 use Vesta\Hook\HookInterfaces\EmptyPrintFunctionsPlace;
 use Vesta\Hook\HookInterfaces\FunctionsPlaceInterface;
 use Vesta\Hook\HookInterfaces\FunctionsPlaceUtils;
+use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
+use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderUtils;
 use Vesta\Hook\HookInterfaces\PrintFunctionsPlaceInterface;
 use Vesta\Model\GenericViewElement;
 use Vesta\Model\MapCoordinates;
 use Vesta\Model\PlaceStructure;
 use Vesta\VestaAdminController;
 use Vesta\VestaModuleTrait;
-use function app;
-use function redirect;
 use function route;
 use function view;
 
@@ -93,6 +90,10 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     return __DIR__ . '/resources/';
   }
 
+  public function onBoot(): void {
+    $this->flashWhatsNew('\Cissee\Webtrees\Module\PersonalFacts\WhatsNew', 1);
+  }
+  
   public function tabTitle(): string {
     return $this->getTabTitle(I18N::translate('Facts and events'));
   }
@@ -102,12 +103,16 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     return true; //must align with ajax-modal-vesta in getOutputBeforeTab()
   }
   
-  //no longer required - css is static now
-  //public function assetsViaViews(): array {
-  //  return [
-  //      'css/webtrees.css' => 'css/webtrees',
-  //      'css/minimal.css' => 'css/minimal'];
-  //}
+  public function assetsViaViews(): array {
+    return [
+        'css/webtrees.css' => 'css/webtrees'];
+  }
+  
+  public function assetAdditionalHash(string $asset): string {
+    //view is dynamic - we have to hash properly!
+    $dataUri = $this->getPreference('CMP_1_ICON_DATA_URI', '');    
+    return "CMP_1_ICON_DATA_URI:" . $dataUri . ";";
+  }
   
   public function headContent(): string {
     $pre = '<link href="' . $this->assetUrl('css/style.css') . '" type="text/css" rel="stylesheet" />';
@@ -315,7 +320,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   
   //hook management - generalize?
   //adapted from ModuleController (e.g. listFooters)
-  public function getProviders1Action(): ResponseInterface {
+  public function getFunctionsPlaceProvidersAction(): ResponseInterface {
     $modules = FunctionsPlaceUtils::modules($this, true);
 
     $controller = new VestaAdminController($this->name());
@@ -328,7 +333,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
                     true);
   }
   
-  public function getProviders2Action(): ResponseInterface {
+  public function getIndividualFactsTabExtenderProvidersAction(): ResponseInterface {
     $modules = IndividualFactsTabExtenderUtils::modules($this, true);
 
     $controller = new VestaAdminController($this->name());
@@ -341,64 +346,14 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
                     true);
   }
 
-  public function postProviders1Action(ServerRequestInterface $request): ResponseInterface {
-    $modules = FunctionsPlaceUtils::modules($this, true);
-
-    $controller1 = new ModuleController($this->module_service, app(TreeService::class));
-    $reflector = new ReflectionObject($controller1);
-
-    //private!
-    //$controller1->updateStatus($modules, $request);
-
-    $method = $reflector->getMethod('updateStatus');
-    $method->setAccessible(true);
-    $method->invoke($controller1, $modules, $request);
-
-    FunctionsPlaceUtils::updateOrder($this, $request);
-
-    //private!
-    //$controller1->updateAccessLevel($modules, FunctionsPlaceInterface::class, $request);
-
-    $method = $reflector->getMethod('updateAccessLevel');
-    $method->setAccessible(true);
-    $method->invoke($controller1, $modules, FunctionsPlaceInterface::class, $request);
-
-    $url = route('module', [
-        'module' => $this->name(),
-        'action' => 'Providers1'
-    ]);
-
-    return redirect($url);
+  public function postFunctionsPlaceProvidersAction(ServerRequestInterface $request): ResponseInterface {
+    $controller = new FunctionsPlaceProvidersAction($this);
+    return $controller->handle($request);
   }
   
-  public function postProviders2Action(ServerRequestInterface $request): ResponseInterface {
-    $modules = IndividualFactsTabExtenderUtils::modules($this, true);
-
-    $controller1 = new ModuleController($this->module_service, app(TreeService::class));
-    $reflector = new ReflectionObject($controller1);
-
-    //private!
-    //$controller1->updateStatus($modules, $request);
-
-    $method = $reflector->getMethod('updateStatus');
-    $method->setAccessible(true);
-    $method->invoke($controller1, $modules, $request);
-
-    IndividualFactsTabExtenderUtils::updateOrder($this, $request);
-
-    //private!
-    //$controller1->updateAccessLevel($modules, IndividualFactsTabExtenderInterface::class, $request);
-
-    $method = $reflector->getMethod('updateAccessLevel');
-    $method->setAccessible(true);
-    $method->invoke($controller1, $modules, IndividualFactsTabExtenderInterface::class, $request);
-
-    $url = route('module', [
-        'module' => $this->name(),
-        'action' => 'Providers2'
-    ]);
-
-    return redirect($url);
+  public function postIndividualFactsTabExtenderProvidersAction(ServerRequestInterface $request): ResponseInterface {
+    $controller = new IndividualFactsTabExtenderProvidersAction($this);
+    return $controller->handle($request);
   }
 
   protected function editConfigBeforeFaq() {
@@ -406,14 +361,14 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
 
     $url1 = route('module', [
         'module' => $this->name(),
-        'action' => 'Providers1'
+        'action' => 'FunctionsPlaceProviders'
     ]);
     
     $modules2 = IndividualFactsTabExtenderUtils::modules($this, true);
 
     $url2 = route('module', [
         'module' => $this->name(),
-        'action' => 'Providers2'
+        'action' => 'IndividualFactsTabExtenderProviders'
     ]);
 
     //cf control-panel.phtml
