@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2020-09-19 15:42+0200\n"
-"PO-Revision-Date: 2021-01-31 09:41+0000\n"
+"PO-Revision-Date: 2021-02-02 00:42+0000\n"
 "Last-Translator: Bernd Schwendinger <b0ernie@gmx.net>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/"
 "vesta-webtrees-custom-modules/vesta-facts-and-events/de/>\n"
@@ -45,7 +45,7 @@ msgstr "Partnerin einer Ehe"
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:37
 msgctxt "MALE"
 msgid "Associate at a marriage"
-msgstr ""
+msgstr "Partner einer Ehe"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:67
 msgid "Baptism of a godchild"
@@ -66,6 +66,11 @@ msgstr "Taufe eines Patensohnes"
 #, php-format
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr ""
+"Base64-kodierte Daten-URI für das Link-Symbol. Konvertieren Sie das Symbol "
+"in einen Daten-URI z. B. über %1$s. Das Ergebnis sollte mit etwas wie %2$s "
+"beginnen. Eine gute Quelle für das Icon-Bild ist normalerweise das Favicon-"
+"Bild des Kartenanbieters, z. B. %3$s. Es wird dann in der richtigen Größe "
+"angezeigt."
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
 msgid "Best man at a marriage"
@@ -74,7 +79,7 @@ msgstr "Trauzeuge bei einer Hochzeit"
 #. I18N: Module Configuration
 #: FunctionsPrintWithHooks.php:100 IndividualFactsTabModuleTrait.php:122
 msgid "Bing Maps"
-msgstr ""
+msgstr "Bing Maps"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:24
 msgid "Bridesmaid at a marriage"
@@ -97,213 +102,243 @@ msgstr "Kindstaufe eines Patensohnes"
 #. I18N: Module Configuration
 #: FunctionsPrintWithHooks.php:168 IndividualFactsTabModuleTrait.php:198
 msgid "Custom Map Provider"
-msgstr ""
+msgstr "Benutzerdefinierte Kartenanbieter"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:97
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr ""
+"Zeigt ein Symbol mit einem Tooltip an, der die Quelle der Kartenlinks "
+"angibt. Dies ist im Wesentlichen für die Fehlersuche gedacht."
 
 #: FunctionsPrintWithHooks.php:145
 msgid "Europe in the XIX. century | Mapire"
-msgstr ""
+msgstr "Europa im 19. Jahrhundert | Mapire"
 
 #: IndividualFactsTabModuleExtended.php:206
 msgid "Events of close relatives"
-msgstr ""
+msgstr "Ereignisse von nahen Verwandten"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:229
 msgid "Facts and Events List"
-msgstr ""
+msgstr "Liste der Tatsachen und Ereignisse"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:314
 msgid "Facts and Events Tab UI Element Providers"
-msgstr ""
+msgstr "Tatsachen und Ereignisse Registerkarte UI Element Provider"
 
 #: IndividualFactsTabModuleExtended.php:98
 msgid "Facts and events"
-msgstr ""
+msgstr "Tatsachen und Ereignisse"
 
 #. I18N: Module Configuration
 #: FunctionsPrintWithHooks.php:89 IndividualFactsTabModuleTrait.php:102
 msgid "Google Maps"
-msgstr ""
+msgstr "Google Maps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:86
 msgid "Hide coordinates, show map links after place name"
-msgstr ""
+msgstr "Koordinaten ausblenden, Kartenlinks nach dem Ortsnamen anzeigen"
 
 #: IndividualFactsTabModuleExtended.php:220
 msgid "Historic events"
-msgstr ""
+msgstr "Historische Ereignisse"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:69
 msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
 msgstr ""
+"Wenn diese Einstellung aktiviert ist, werden zusätzliche Tatsachen und "
+"Ereignisse, bei denen die Person als Beteiligte aufgeführt ist, auf die "
+"folgenden Tatsachen und Ereignisse beschränkt."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:87
 msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
 msgstr ""
+"In der ursprünglichen Registerkarte werden Koordinaten (mit Kartenlinks) "
+"angezeigt. Dies trägt dazu bei die Ortsanzeige unübersichtlich zu machen, "
+"insbesondere wenn es zusätzliche Module gibt, die Koordinaten liefern."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:62
 msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
 msgstr ""
+"In der ursprünglichen Registerkarte werden zwei Arten von zusätzlichen "
+"Tatsachen und Ereignissen angezeigt, wenn \"Ereignisse naher Verwandter\" "
+"auf der Registerkarte ausgewählt ist:"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:109 IndividualFactsTabModuleTrait.php:129
 #: IndividualFactsTabModuleTrait.php:149
 msgid "Include 'TM' in tooltip"
-msgstr ""
+msgstr "'TM' im Tooltip anzeigen"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:155
 msgid "Include a marker in the linked map."
-msgstr ""
+msgstr "Eine Markierung in die verknüpfte Karte einfügen."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:154
 msgid "Include marker"
-msgstr ""
+msgstr "Marker einfügen"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:37
 msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr ""
+"Ist als Ersatz für das ursprüngliche Modul \"Tatsachen und Ereignisse\" "
+"gedacht."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:84
 msgid "Latitude/Longitude"
-msgstr ""
+msgstr "Breitengrad/Längengrad (Lat/Lon)"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:215
 msgid "Link icon as data URI"
-msgstr ""
+msgstr "Link-Symbol als Daten-URI"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:167
 msgid "Mapire (historic maps)"
-msgstr ""
+msgstr "Mapire (historische Karten)"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:318
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr ""
+"Die hier aufgeführten Module können zusätzliche Daten für Tatsachen und "
+"Ereignisse bereitstellen (Anzeige in der konfigurierten Reihenfolge)."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:200
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:188
 msgid "OSM Base Map"
-msgstr ""
+msgstr "OSM Grundkarte"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:68
 msgid "Only show specific facts and events"
-msgstr ""
+msgstr "Nur bestimmte Tatsachen und Ereignisse anzeigen"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:91
 msgid "Open links in new browser tab"
-msgstr ""
+msgstr "Links im neuen Browser-Tab öffnen"
 
 #: FunctionsPrintWithHooks.php:106
 msgid "OpenStreetMap"
-msgstr ""
+msgstr "OpenStreetMap"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:142
 msgid "OpenStreetMaps"
-msgstr ""
+msgstr "OpenStreetMaps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:233
 msgid "Place Settings"
-msgstr ""
+msgstr "Orts-Einstellungen"
 
 #: IndividualFactsTabModuleTrait.php:27
 msgid "Replacement for the original 'Facts and events' module."
-msgstr ""
+msgstr "Ersatz für das ursprüngliche Modul 'Tatsachen und Ereignisse'."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:96
 msgid "Show additional info for map links"
-msgstr ""
+msgstr "Zusätzliche Informationen für Kartenlinks anzeigen"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:181
 msgid "Show linked map with additional options"
-msgstr ""
+msgstr "Verknüpfte Karte mit zusätzlichen Optionen anzeigen"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:124
 msgid "Show links to Bing Maps"
-msgstr ""
+msgstr "Links zu Bing Maps anzeigen"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:104
 msgid "Show links to Google Maps"
-msgstr ""
+msgstr "Links zu Google Maps anzeigen"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:144
 msgid "Show links to OpenStreetMaps"
-msgstr ""
+msgstr "Links zu OpenStreetMaps anzeigen"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:169
 msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
 msgstr ""
+"Links zu historischen Karten von Europa aus dem 19. Jahrhundert oder den USA "
+"(1880-1926) anzeigen - falls zutreffend"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:64
 msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
 msgstr ""
+"Letztere sind nicht wirklich auf nahe Verwandte beschränkt, und daher ist es "
+"vielleicht weniger verwirrend, ein separates Umschaltkästchen für sie "
+"anzubieten."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:170
 msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
 msgstr ""
+"Für Standorte außerhalb der jeweiligen Grenzen von Europa und den USA wird "
+"der Link-Eintrag nicht angezeigt."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:110 IndividualFactsTabModuleTrait.php:130
 #: IndividualFactsTabModuleTrait.php:150
 msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
 msgstr ""
+"Die ursprüngliche Registerkarte hatte das 'TM'-Markenzeichen - behalte es, "
+"wenn Du möchtest oder Dich rechtlich dazu verpflichtet fühlst."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:208
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
 msgstr ""
+"Die URI für Kartenlinks mit Platzhaltern (%1$s und %2$s) für "
+"Kartenkoordinaten. Die Zoomstufe sollte Teil der URI sein. Beispiel: %3$s"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:207
 msgid "URI template"
-msgstr ""
+msgstr "URI-Vorlage"
 
 #: FunctionsPrintWithHooks.php:149
 msgid "United States of America (1880-1926) | Mapire"
-msgstr ""
+msgstr "Vereinigte Staaten von Amerika (1880-1926) | Mapire"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:61
 msgid "Use separate toggle checkbox"
-msgstr ""
+msgstr "Separates Umschaltkästchen verwenden"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:182
 msgid "When checked, links to the main Mapire page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
 msgstr ""
+"Wenn diese Option aktiviert ist, verweist sie auf die Mapire-Hauptseite, auf "
+"der Du zwischen verschiedenen für den jeweiligen Standort verfügbaren "
+"historischen Layern wechseln und eine moderne Karte ein- und ausblenden "
+"kannst, die hier zusätzlich konfiguriert werden kann:"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:32
 msgid "Witness at a marriage"
@@ -323,12 +358,14 @@ msgstr "Trauzeuge bei einer Hochzeit"
 #: IndividualFactsTabModuleTrait.php:201
 msgid "You can also configure a custom map provider. Enter its name here."
 msgstr ""
+"Du kannst auch einen benutzerdefinierten Kartenanbieter konfigurieren. Gib "
+"hier den Namen ein."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:114 IndividualFactsTabModuleTrait.php:134
 #: IndividualFactsTabModuleTrait.php:159 IndividualFactsTabModuleTrait.php:174
 msgid "Zoom level of linked map"
-msgstr ""
+msgstr "Zoom-Stufe der verknüpften Karte"
 
 #~ msgid "Associated facts and events"
 #~ msgstr "Assoziierte Ereignisse"
