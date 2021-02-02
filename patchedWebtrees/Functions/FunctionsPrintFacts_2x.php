@@ -235,6 +235,7 @@ class FunctionsPrintFacts_2x {
 
     //[RC] added, this could be in main webtrees
     if ($fact->id() === 'asso') {
+      
       if ($record instanceof Individual) { //check: anything else actually possible here?
         $label_persons = array();
         if ($parent instanceof Family) {
@@ -278,16 +279,16 @@ class FunctionsPrintFacts_2x {
         $finalLabel = null;
         switch ($fact->getTag()) {
           case 'MARR':
-            $finalLabel = GedcomCodeRela_Ext::getValueOrNullForMARR($rela, $label_person);
+            $finalLabel = GedcomCodeRela_Ext::getValueOrNullForMARR($rela, $record);
             break;
           case 'CHR':
             if ($inverted !== null) {
-              $finalLabel = GedcomCodeRela_Ext::getValueOrNullForCHR($inverted, $label_person);
+              $finalLabel = GedcomCodeRela_Ext::getValueOrNullForCHR($inverted, $record);
             }
             break;
           case 'BAPM':
             if ($inverted !== null) {
-              $finalLabel = GedcomCodeRela_Ext::getValueOrNullForBAPM($inverted, $label_person);
+              $finalLabel = GedcomCodeRela_Ext::getValueOrNullForBAPM($inverted, $record);
             }
             break;
           default:
