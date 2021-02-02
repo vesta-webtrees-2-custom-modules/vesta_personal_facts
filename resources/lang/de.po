@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2020-09-19 15:42+0200\n"
-"PO-Revision-Date: 2021-02-02 17:41+0000\n"
+"PO-Revision-Date: 2021-02-02 19:41+0000\n"
 "Last-Translator: mpwt <der@bauschaffen.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/"
 "vesta-webtrees-custom-modules/vesta-facts-and-events/de/>\n"
@@ -35,17 +35,17 @@ msgstr ""
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:41
 msgid "Associate at a marriage"
-msgstr "Partner einer Ehe"
+msgstr "Verbundene Person bei einer Hochzeit"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:39
 msgctxt "FEMALE"
 msgid "Associate at a marriage"
-msgstr "Partnerin einer Ehe"
+msgstr "Verbundene Person bei einer Hochzeit"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:37
 msgctxt "MALE"
 msgid "Associate at a marriage"
-msgstr "Partner einer Ehe"
+msgstr "Verbundene Person bei einer Hochzeit"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:67
 msgid "Baptism of a godchild"
@@ -342,17 +342,17 @@ msgstr ""
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:32
 msgid "Witness at a marriage"
-msgstr "Trauzeuge/Trauzeugin bei einer Hochzeit"
+msgstr "Trauzeuge/Trauzeugin"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:30
 msgctxt "FEMALE"
 msgid "Witness at a marriage"
-msgstr "Trauzeugin bei einer Hochzeit"
+msgstr "Trauzeugin"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:28
 msgctxt "MALE"
 msgid "Witness at a marriage"
-msgstr "Trauzeuge bei einer Hochzeit"
+msgstr "Trauzeuge"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:201
