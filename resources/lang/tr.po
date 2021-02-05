@@ -1,0 +1,367 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the vesta package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vesta 1.0\n"
+"Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
+"POT-Creation-Date: 2021-01-24 13:36+0100\n"
+"PO-Revision-Date: 2021-02-05 17:41+0000\n"
+"Last-Translator: Osman Öz <osmanoz05@hotmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/tr/>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.5-dev\n"
+
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:89 IndividualFactsTabModuleTrait.php:102
+msgid "Google Maps"
+msgstr "Google Haritalar"
+
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:100 IndividualFactsTabModuleTrait.php:122
+msgid "Bing Maps"
+msgstr "Bing Haritalar"
+
+#: FunctionsPrintWithHooks.php:106
+msgid "OpenStreetMap"
+msgstr "OpenStreetMap"
+
+#: FunctionsPrintWithHooks.php:145
+msgid "Europe in the XIX. century | Mapire"
+msgstr "XIX. yüzyılda Avrupa | Mapire"
+
+#: FunctionsPrintWithHooks.php:149
+msgid "United States of America (1880-1926) | Mapire"
+msgstr "Amerika Birleşik Devletleri (1880-1926) | Mapire"
+
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:168 IndividualFactsTabModuleTrait.php:198
+msgid "Custom Map Provider"
+msgstr "Özel Harita Sağlayıcısı"
+
+#: IndividualFactsTabModuleExtended.php:98
+msgid "Facts and events"
+msgstr "Gerçekler ve olaylar"
+
+#: IndividualFactsTabModuleExtended.php:206
+msgid "Events of close relatives"
+msgstr "Yakın akrabaların olayları"
+
+#: IndividualFactsTabModuleExtended.php:220
+msgid "Historic events"
+msgstr "Tarihi olaylar"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleExtended.php:314
+msgid "Facts and Events Tab UI Element Providers"
+msgstr "Gerçekler ve Olaylar Sekmesi UI Öğe Sağlayıcıları"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleExtended.php:318
+msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
+msgstr ""
+"Burada listelenen modüller, gerçekler ve olaylar için ek veriler "
+"sağlayabilir (yapılandırılmış sırayla görüntülenir)."
+
+#: IndividualFactsTabModuleTrait.php:27
+msgid "Replacement for the original 'Facts and events' module."
+msgstr "Orijinal 'Gerçekler ve olaylar' modülünün değiştirilmesi."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:36
+msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
+msgstr ""
+"Diğer özel modüller için kancalar içeren genişletilmiş bir 'Gerçekler ve "
+"Olaylar' sekmesi."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:37
+msgid "Intended as a replacement for the original 'Facts and events' module."
+msgstr "Orijinal 'Gerçekler ve olaylar' modülünün yerine geçmesi amaçlanmıştır."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:61
+msgid "Use separate toggle checkbox"
+msgstr "Ayrı geçiş onay kutusu kullanın"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:62
+msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
+msgstr ""
+"Orijinal sekmede, 'Yakın akrabaların olayları' sekmesi seçildiğinde iki tür "
+"ek bilgi ve olay görüntülenir:"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:63
+msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
+msgstr ""
+"Yakın akrabaların gerçek olayları ve mevcut bireyin ortak olarak "
+"listelendiği gerçekler ve olaylar."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:64
+msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
+msgstr ""
+"İkincisi aslında yakın akrabalarla sınırlı değildir ve bu nedenle onlar için "
+"ayrı bir geçiş onay kutusu sunmak daha az kafa karıştırıcı olabilir."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:68
+msgid "Only show specific facts and events"
+msgstr "Sadece belirli gerçekleri ve olayları göster"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:69
+msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
+msgstr ""
+"Bu seçenek işaretlenirse, bir kişinin bir ortak olarak listelendiği ek "
+"gerçekler ve olaylar aşağıdaki gerçekler ve olaylarla sınırlıdır."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:84
+msgid "Latitude/Longitude"
+msgstr "Enlem/Boylam"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:86
+msgid "Hide coordinates, show map links after place name"
+msgstr "Koordinatları gizle, yer adından sonra harita bağlantılarını göster"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:87
+msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
+msgstr ""
+"Orijinal sekmesinde, koordinatlar gösterilir (harita bağlantıları ile). Bu, "
+"özellikle koordinatları sağlayan ek modüller varsa, yer ekranını "
+"karmaşıklaştırma eğilimindedir."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:91
+msgid "Open links in new browser tab"
+msgstr "Bağlantıları yeni tarayıcı sekmesinde aç"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:96
+msgid "Show additional info for map links"
+msgstr "Harita bağlantıları için ek bilgileri göster"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:97
+msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
+msgstr ""
+"Harita bağlantılarının kaynağını gösteren bir araç ipucu içeren bir simge "
+"görüntüler. Bu esas olarak hata ayıklama için tasarlanmıştır."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:104
+msgid "Show links to Google Maps"
+msgstr "Google Haritalar'a bağlantıları göster"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:109 IndividualFactsTabModuleTrait.php:129
+#: IndividualFactsTabModuleTrait.php:149
+msgid "Include 'TM' in tooltip"
+msgstr "Araç ipucuna 'TM' i dahil et"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:110 IndividualFactsTabModuleTrait.php:130
+#: IndividualFactsTabModuleTrait.php:150
+msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
+msgstr ""
+"Orijinal sekmede bir ticari marka işareti vardı - isterseniz veya yasal "
+"olarak bağlı hissediyorsanız saklayın."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:114 IndividualFactsTabModuleTrait.php:134
+#: IndividualFactsTabModuleTrait.php:159 IndividualFactsTabModuleTrait.php:174
+msgid "Zoom level of linked map"
+msgstr "Bağlantılı haritanın yakınlaştırma seviyesi"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:124
+msgid "Show links to Bing Maps"
+msgstr "Bing Haritalarına bağlantıları göster"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:142
+msgid "OpenStreetMaps"
+msgstr "OpenStreetMaps"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:144
+msgid "Show links to OpenStreetMaps"
+msgstr "OpenStreetMaps bağlantılarını göster"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:154
+msgid "Include marker"
+msgstr "İşaretleyiciyi dahil et"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:155
+msgid "Include a marker in the linked map."
+msgstr "Bağlantılı haritaya bir işaretleyici ekleyin."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:167
+msgid "Mapire (historic maps)"
+msgstr "Mapire (tarihi haritalar)"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:169
+msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
+msgstr ""
+"XIX. yüzyılda Avrupa'nın tarihi haritasına veya varsa Amerika Birleşik "
+"Devletleri'ne (1880-1926) bağlantılar göster"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:170
+msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
+msgstr ""
+"Bağlantı öğesi, Avrupa ve ABD'nin ilgili sınırları dışındaki yerler için "
+"gösterilmeyecektir."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:181
+msgid "Show linked map with additional options"
+msgstr "Bağlantılı haritayı ek seçeneklerle göster"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:182
+msgid "When checked, links to the main Mapire page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
+msgstr ""
+"İşaretlendiğinde, ilgili konum için mevcut olan farklı tarihsel katmanlar "
+"arasında geçiş yapabileceğiniz ve ek olarak burada yapılandırılabilen modern "
+"bir haritaya girip çıkabileceğiniz ana Mapire sayfasına bağlantılar:"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:188
+msgid "OSM Base Map"
+msgstr "OSM Temel Haritası"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:189
+msgid "Aerial Base Map"
+msgstr "Hava Üssü Haritası"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:200
+msgid "Name"
+msgstr "Ad"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:201
+msgid "You can also configure a custom map provider. Enter its name here."
+msgstr ""
+"Ayrıca özel bir harita sağlayıcısı da yapılandırabilirsiniz. Adını buraya "
+"girin."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:207
+msgid "URI template"
+msgstr "URI şablonu"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:208
+#, php-format
+msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
+msgstr ""
+"Harita bağlantıları için URI, harita koordinatları için yer tutucularla (%1$"
+"s ve %2$s). Yakınlaştırma düzeyi urı'nin bir parçası olmalıdır. Örnek: %3$s"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:215
+msgid "Link icon as data URI"
+msgstr "Veri URI'si olarak bağlantı simgesi"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:216
+#, php-format
+msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
+msgstr ""
+"Bağlantı simgesi için Base64 olarak kodlanmış veri URI'si. Simgeyi bir veri "
+"URI'sine dönüştürün, örneğin %1$s üzerinden. Sonuç %2$s gibi bir şeyle "
+"başlamalıdır. Simge görüntüsünün iyi bir kaynağı genellikle %3$s gibi harita "
+"sağlayıcısının ikon görüntüsüdür. Uygun şekilde yeniden boyutlandırılmış "
+"olarak görüntülenecektir."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:229
+msgid "Facts and Events List"
+msgstr "Gerçekler ve Olaylar Listesi"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:233
+msgid "Place Settings"
+msgstr "Yer Ayarları"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
+msgid "Best man at a marriage"
+msgstr "Bir evlilikte sağdıç"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:24
+msgid "Bridesmaid at a marriage"
+msgstr "Bir evlilikte nedime"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:28
+msgctxt "MALE"
+msgid "Witness at a marriage"
+msgstr "Bir evlilikte tanık"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:30
+msgctxt "FEMALE"
+msgid "Witness at a marriage"
+msgstr "Bir evlilikte tanık"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:32
+msgid "Witness at a marriage"
+msgstr "Bir evlilikte tanık"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:37
+msgctxt "MALE"
+msgid "Associate at a marriage"
+msgstr "Bir evlilikte ilişki"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:39
+msgctxt "FEMALE"
+msgid "Associate at a marriage"
+msgstr "Bir evlilikte ilişki"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:41
+msgid "Associate at a marriage"
+msgstr "Bir evlilikte ilişki"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:56
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:63
+msgid "Baptism of a godson"
+msgstr "Bir vaftiz oğlunun vaftizi"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:59
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:65
+msgid "Baptism of a goddaughter"
+msgstr "Bir vaftiz kızının vaftizi"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:67
+msgid "Baptism of a godchild"
+msgstr "Bir vaftiz çocuğunun vaftizi"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:84
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:91
+msgid "Christening of a godson"
+msgstr "Bir vaftiz oğlunun vaftiz edilmesi"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:87
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:93
+msgid "Christening of a goddaughter"
+msgstr "Bir vaftiz kızının vaftiz edilmesi"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:95
+msgid "Christening of a godchild"
+msgstr "Bir vaftiz çocuğunun vaftiz edilmesi"
