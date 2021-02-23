@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2021-01-24 13:36+0100\n"
+"POT-Creation-Date: 2021-02-23 20:33+0100\n"
 "PO-Revision-Date: 2020-11-17 13:28+0000\n"
 "Last-Translator: Vincent DENIS <vincent.denis06@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/fr/>\n"
@@ -191,7 +191,7 @@ msgstr "Mapire (cartes historiques)"
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr "Les modules répertoriés ici peuvent fournir des données supplémentaires sur les faits et les événements (affichés dans l'ordre configuré)."
 
-#. I18N: Module Configuration
+#. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:200
 msgid "Name"
 msgstr ""

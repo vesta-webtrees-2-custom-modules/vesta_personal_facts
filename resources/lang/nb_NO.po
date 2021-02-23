@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2021-01-24 13:36+0100\n"
+"POT-Creation-Date: 2021-02-23 20:33+0100\n"
 "PO-Revision-Date: 2020-12-09 12:03+0000\n"
 "Last-Translator: Thomas Rindal <thomas@rindal.net>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/nb_NO/>\n"
@@ -196,7 +196,7 @@ msgstr "Mapire (historiske kart)"
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr "Moduler som er oppført her, kan gi ytterligere data for fakta og hendelser (vises i den konfigurerte rekkefølgen)."
 
-#. I18N: Module Configuration
+#. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:200
 msgid "Name"
 msgstr ""

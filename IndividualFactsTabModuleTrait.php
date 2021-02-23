@@ -197,7 +197,7 @@ trait IndividualFactsTabModuleTrait {
     $placeSub[] = new ControlPanelSubsection(
             /* I18N: Module Configuration */I18N::translate('Custom Map Provider'),
             array(new ControlPanelTextbox(
-                /* I18N: Module Configuration */I18N::translate('Name'),
+                /* I18N: Module Configuration: Name of a custom map provider */I18N::translate('Name'),
                 /* I18N: Module Configuration */I18N::translate('You can also configure a custom map provider. Enter its name here.'),
                 'CMP_1_TITLE',
                 '', 

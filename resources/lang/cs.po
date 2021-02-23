@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2021-01-24 13:36+0100\n"
+"POT-Creation-Date: 2021-02-23 20:33+0100\n"
 "PO-Revision-Date: 2021-01-18 18:32+0000\n"
 "Last-Translator: Josef Prause <josef.prause@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/cs/>\n"
@@ -196,7 +196,7 @@ msgstr "Mapire (historické mapy)"
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr "Moduly v tomto seznamu mohou poskytovat přídavné údaje o faktech a událostech (zobrazené v nastaveném pořadí)."
 
-#. I18N: Module Configuration
+#. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:200
 msgid "Name"
 msgstr ""
