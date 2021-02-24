@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2021-02-23 20:33+0100\n"
-"PO-Revision-Date: 2021-02-20 11:50+0000\n"
+"PO-Revision-Date: 2021-02-24 09:42+0000\n"
 "Last-Translator: Richard Cissée <ric@richard-cissee.de>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -61,6 +62,11 @@ msgstr "Doop van peetzoon"
 #, php-format
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr ""
+"Base64-gecodeerde gegevens-URI voor het koppelingspictogram. Converteer het "
+"pictogram naar een gegevens-URI, bijvoorbeeld via %1$s. Het resultaat moet "
+"beginnen met iets als %2$s. Een goede bron voor de pictogramafbeelding is "
+"meestal de favicon-afbeelding van de kaartprovider, zoals %3$s. Het zal "
+"worden weergegeven in de juiste aangepaste grootte."
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
 msgid "Best man at a marriage"
@@ -179,7 +185,7 @@ msgstr "Breedtegraad/lengtegraad"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:215
 msgid "Link icon as data URI"
-msgstr ""
+msgstr "Koppelingspictogram als gegevens-URI"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:167
@@ -280,11 +286,14 @@ msgstr "Het oorspronkelijke tabblad had het handelsmerkteken - bewaar het als je
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
 msgstr ""
+"De URI voor kaartkoppelingen, met tijdelijke aanduidingen (%1$s en %2$s) "
+"voor kaartcoördinaten. Het zoomniveau moet deel uitmaken van de uri. "
+"Voorbeeld: %3$s"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:207
 msgid "URI template"
-msgstr ""
+msgstr "URI-sjabloon"
 
 #: FunctionsPrintWithHooks.php:149
 msgid "United States of America (1880-1926) | Mapire"
@@ -318,6 +327,7 @@ msgstr "Getuige bij huwelijk"
 #: IndividualFactsTabModuleTrait.php:201
 msgid "You can also configure a custom map provider. Enter its name here."
 msgstr ""
+"U kunt ook een aangepaste kaartprovider configureren. Voer hier de naam in."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:114 IndividualFactsTabModuleTrait.php:134
