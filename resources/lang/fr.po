@@ -3,15 +3,16 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2021-02-23 20:33+0100\n"
-"PO-Revision-Date: 2020-11-17 13:28+0000\n"
+"PO-Revision-Date: 2021-02-28 19:50+0000\n"
 "Last-Translator: Vincent DENIS <vincent.denis06@gmail.com>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Weblate 4.4-dev\n"
+"X-Generator: Weblate 4.5\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:63
@@ -61,6 +62,11 @@ msgstr "Baptême d'un filleul"
 #, php-format
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr ""
+"URI de données encodé en base64 pour l'icône de lien. Convertissez l'icône "
+"en URI de données, par exemple via %1$s. Le résultat devrait commencer par "
+"quelque chose comme %2$s. Une bonne source d'image d'icône est généralement "
+"l'image favicon du fournisseur de carte, telle que %3$s. Il sera affiché "
+"correctement redimensionné."
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
 msgid "Best man at a marriage"
@@ -92,7 +98,7 @@ msgstr "Baptême d'un filleul"
 #. I18N: Module Configuration
 #: FunctionsPrintWithHooks.php:168 IndividualFactsTabModuleTrait.php:198
 msgid "Custom Map Provider"
-msgstr ""
+msgstr "Fournisseur de carte personnalisée"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:97
@@ -124,7 +130,7 @@ msgstr "Faits et événements"
 #. I18N: Module Configuration
 #: FunctionsPrintWithHooks.php:89 IndividualFactsTabModuleTrait.php:102
 msgid "Google Maps"
-msgstr "Google Maps"
+msgstr "Cartes Google"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:86
@@ -179,7 +185,7 @@ msgstr "Latitude/Longitude"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:215
 msgid "Link icon as data URI"
-msgstr ""
+msgstr "Icône de lien comme URI de données"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:167
@@ -194,7 +200,7 @@ msgstr "Les modules répertoriés ici peuvent fournir des données supplémentai
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:200
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:188
@@ -280,11 +286,14 @@ msgstr "L'onglet d'origine avait le signe de la marque - conservez-le si vous le
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
 msgstr ""
+"L'URI des liens de carte, avec des espaces réservés (%1$s et %2$s) pour les "
+"coordonnées de la carte. Le niveau de zoom doit faire partie de l'URI. "
+"Exemple : %3$s"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:207
 msgid "URI template"
-msgstr ""
+msgstr "Modèle d'URI"
 
 #: FunctionsPrintWithHooks.php:149
 msgid "United States of America (1880-1926) | Mapire"
@@ -318,6 +327,8 @@ msgstr "Témoin au mariage"
 #: IndividualFactsTabModuleTrait.php:201
 msgid "You can also configure a custom map provider. Enter its name here."
 msgstr ""
+"Vous pouvez également configurer un fournisseur de carte personnalisé. "
+"Entrez son nom ici."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:114 IndividualFactsTabModuleTrait.php:134
