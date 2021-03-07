@@ -21,9 +21,9 @@ Mainly intended as a base for other custom modules. Some features are available 
 
 * Links to external maps (Google, Bing, OpenStreetMap) are configurable via module administration.
 
-* Additional map services may be integrated on request. Currently we have:
-    * [Mapire.eu](https://mapire.eu), providing a historical map of Europe in the XIX. century, and of the United States of America (1880-1926).
-    * An option to configure an additional custom map provider.
+* Additional map services:
+  * [Mapire.eu](https://mapire.eu), providing a historical map of Europe in the XIX. century, and of the United States of America (1880-1926).
+  * The option to configure an additional custom map provider via the control panel.
 
 * The respective location data is obtained directly from GEDCOM, and may also be provided by other custom modules. 
 
@@ -49,7 +49,7 @@ Mainly intended as a base for other custom modules. Some features are available 
 * Unzip the files and copy the contents of the modules_v4 folder to the respective folder of your webtrees installation. All related modules are included in the zip file. It's safe to overwrite the respective directories if they already exist (they are bundled with other custom modules as well), as long as other custom models using these dependencies are also upgraded to their respective latest versions.
 * Enable the extended 'Facts and Events' module via Control Panel -> Modules -> All modules -> ⚶ Vesta Facts and Events.
 * Configure the visibility of the old and the extended 'Facts and Events' tab via Control Panel -> Modules -> Tabs (usually, you'll want to use only one of them. You may just disable the original 'Facts and Events' module altogether).
-* Similarly configure the visibility of the old and the extended 'Extra information' sidebar via Control Panel -> Modules -> Sidebar.
+* Similarly configure the visibility of the old and the extended 'Extra information' sidebar via Control Panel -> Modules -> Sidebars.
 * Translations may be contributed via weblate: <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/>
 
 ### License<a name="license"/>
