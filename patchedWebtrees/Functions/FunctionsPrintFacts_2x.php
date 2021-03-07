@@ -30,6 +30,7 @@ use Fisharebest\Webtrees\Services\ModuleService;
 use Fisharebest\Webtrees\Services\UserService;
 use Fisharebest\Webtrees\Submission;
 use Fisharebest\Webtrees\Submitter;
+use Fisharebest\Webtrees\View;
 use Vesta\Model\GenericViewElement;
 use function app;
 use function view;
@@ -70,6 +71,15 @@ class FunctionsPrintFacts_2x {
 
     return $styleadd;
   }
+
+  public function printFact(Fact $fact, GedcomRecord $record): void {
+    $script = $this->printFactAndReturnScript($fact, $record);
+    View::push('javascript');
+    echo $script;
+    View::endpush();
+  }
+  
+  
 
   /**
    * Print a fact record, for the individual/family/source/repository/etc. pages.
@@ -364,8 +374,22 @@ class FunctionsPrintFacts_2x {
         echo e($value);
         break;
       case 'AFN':
+        //TEST ONLY
+        //echo '<div class="field"><a href="https://www.familysearch.org/tree/person/details/', rawurlencode($value), '">', e($value), '</a></div>';
         echo '<div class="field"><a href="https://familysearch.org/search/tree/results#count=20&query=afn:', rawurlencode($value), '">', e($value), '</a></div>';
         break;
+      
+      //[RC] added, see also https://github.com/fisharebest/webtrees/issues/2829, and own issue #38
+      //note that apparently some third-part programs also use AFN for this, which is strictly wrong:
+      //https://www.familysearch.org/search/family-trees/results?q.afnId=LR5C-WYH
+      //doesn't find the individual from
+      //https://www.familysearch.org/tree/person/details/LR5C-WYH
+      //but this search does:
+      //https://www.familysearch.org/tree/find/id?id=LR5C-WYH
+      case '_FSFTID':
+        echo '<div class="field"><a href="https://www.familysearch.org/tree/person/details/', rawurlencode($value), '">', e($value), '</a></div>';
+        break;
+
       case 'ASSO':
         // we handle this later, in format_asso_rela_record()
         break;

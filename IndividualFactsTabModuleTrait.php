@@ -25,6 +25,8 @@ trait IndividualFactsTabModuleTrait {
 
   public function getShortDescription() {
     $part2 = I18N::translate('Replacement for the original \'Facts and events\' module.');
+    $part2 .= ' ';
+    $part2 .= I18N::translate('Also replaces the original \'Extra information\' module.');
     if (!$this->isEnabled()) {
       $part2 = ModuleI18N::translate($this, $part2);
     }
@@ -35,6 +37,7 @@ trait IndividualFactsTabModuleTrait {
     $description = array();
     $description[] = /* I18N: Module Configuration */I18N::translate('An extended \'Facts and Events\' tab, with hooks for other custom modules.');
     $description[] = /* I18N: Module Configuration */I18N::translate('Intended as a replacement for the original \'Facts and events\' module.');
+    $description[] = /* I18N: Module Configuration */I18N::translate('Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar.');
     $description[] = CommonI18N::requires1(CommonI18N::titleVestaCommon());
     return $description;
   }
@@ -52,6 +55,11 @@ trait IndividualFactsTabModuleTrait {
                 CommonI18N::vestaSymbolInTabTitle(),
                 CommonI18N::vestaSymbolInTitle2(),
                 'VESTA_TAB',
+                '1'),
+        new ControlPanelCheckbox(
+                CommonI18N::vestaSymbolInSidebarTitle(),
+                CommonI18N::vestaSymbolInTitle2(),
+                'VESTA_SIDEBAR',
                 '1')));
 
     $factsAndEventsSub = array();

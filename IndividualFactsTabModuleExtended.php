@@ -5,6 +5,7 @@ namespace Cissee\Webtrees\Module\PersonalFacts;
 use Cissee\WebtreesExt\Http\RequestHandlers\FunctionsPlaceProvidersAction;
 use Cissee\WebtreesExt\Http\RequestHandlers\IndividualFactsTabExtenderProvidersAction;
 use Cissee\WebtreesExt\Module\IndividualFactsTabModule_2x;
+use Cissee\WebtreesExt\MoreI18N;
 use Cissee\WebtreesExt\ToggleableFactsCategory;
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\Fact;
@@ -17,10 +18,13 @@ use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomTrait;
 use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
 use Fisharebest\Webtrees\Module\ModuleGlobalTrait;
+use Fisharebest\Webtrees\Module\ModuleSidebarInterface;
+use Fisharebest\Webtrees\Module\ModuleSidebarTrait;
 use Fisharebest\Webtrees\Module\ModuleTabInterface;
 use Fisharebest\Webtrees\Services\ClipboardService;
 use Fisharebest\Webtrees\Services\ModuleService;
 use Fisharebest\Webtrees\Session;
+use Illuminate\Support\Collection;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Vesta\CommonI18N;
@@ -43,11 +47,12 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   ModuleConfigInterface, 
   ModuleGlobalInterface, 
   ModuleTabInterface, 
+  ModuleSidebarInterface,
   PrintFunctionsPlaceInterface {
 
   //must not use ModuleTabTrait here - already used in superclass IndividualFactsTabModule_2x,
   //and - more importantly - partially implemented there! (supportedFacts)
-  use ModuleCustomTrait, ModuleConfigTrait, ModuleGlobalTrait, VestaModuleTrait {
+  use ModuleCustomTrait, ModuleConfigTrait, ModuleGlobalTrait, ModuleSidebarTrait, VestaModuleTrait {
     VestaModuleTrait::customTranslations insteadof ModuleCustomTrait;
     VestaModuleTrait::customModuleLatestVersion insteadof ModuleCustomTrait;
     VestaModuleTrait::getAssetAction insteadof ModuleCustomTrait;
@@ -91,7 +96,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   }
 
   public function onBoot(): void {
-    $this->flashWhatsNew('\Cissee\Webtrees\Module\PersonalFacts\WhatsNew', 1);
+    $this->flashWhatsNew('\Cissee\Webtrees\Module\PersonalFacts\WhatsNew', 2);
   }
   
   public function tabTitle(): string {
@@ -405,4 +410,84 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     <?php
   }
 
+  //////////////////////////////////////////////////////////////////////////////
+  //ModuleSidebarInterface, cf IndividualMetadataModule
+  
+  // A list of facts that are handled by this module.
+  protected const HANDLED_FACTS = [
+      'AFN',
+      'CHAN',
+      'IDNO',
+      'REFN',
+      'RESN',
+      'RFN',
+      'RIN',
+      'SSN',
+      '_UID',
+      
+      //[RC] added
+      '_FSFTID'
+  ];
+
+  /**
+   * How should this module be identified in the control panel, etc.?
+   *
+   * @return string
+   */
+  public function sidebarTitle(): string
+  {
+      /* I18N: Name of a module/sidebar */
+      return $this->getSidebarTitle(MoreI18N::xlate('Extra information'));
+  }
+
+  /**
+   * The default position for this sidebar.  It can be changed in the control panel.
+   *
+   * @return int
+   */
+  public function defaultSidebarOrder(): int
+  {
+      return 1;
+  }
+
+  /**
+   * @param Individual $individual
+   *
+   * @return bool
+   */
+  public function hasSidebarContent(Individual $individual): bool
+  {
+      return $individual->facts(static::HANDLED_FACTS)->isNotEmpty();
+  }
+
+  /**
+   * Load this sidebar synchronously.
+   *
+   * @param Individual $individual
+   *
+   * @return string
+   */
+  public function getSidebarContent(Individual $individual): string
+  {
+      ob_start();
+
+      foreach ($individual->facts(static::HANDLED_FACTS) as $fact) {
+          $this->functionsPrintFacts->printFact($fact, $individual);
+      }
+
+      $html = ob_get_clean();
+
+      return strip_tags($html, '<a><div><span>');
+  }
+
+  /**
+   * This module handles the following facts - so don't show them on the "Facts and events" tab.
+   *
+   * @return Collection<string>
+   */
+  public function supportedFacts(): Collection
+  {
+      $ret = new Collection(static::HANDLED_FACTS);
+      return $ret->merge(parent::supportedFacts());
+  }
 }
