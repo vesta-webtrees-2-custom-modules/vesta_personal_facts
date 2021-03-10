@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2021-03-07 12:44+0100\n"
-"PO-Revision-Date: 2021-02-05 17:41+0000\n"
-"Last-Translator: Osman Öz <osmanoz05@hotmail.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/tr/>\n"
+"PO-Revision-Date: 2021-03-10 17:02+0000\n"
+"Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5-dev\n"
+"X-Generator: Weblate 4.5.2-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:71
@@ -30,7 +31,7 @@ msgstr "Hava Üssü Haritası"
 
 #: IndividualFactsTabModuleTrait.php:29
 msgid "Also replaces the original 'Extra information' module."
-msgstr ""
+msgstr "Ayrıca orijinal 'Ek bilgiler' modülünün yerini alır."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:38
@@ -272,6 +273,8 @@ msgstr "XIX. yüzyılda Avrupa'nın tarihi haritasına veya varsa Amerika Birle�
 #: IndividualFactsTabModuleTrait.php:40
 msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar."
 msgstr ""
+"Standart olmayan Gedcom _FSFTID (FamilySearch kimliği) etiketini sekmede ve "
+"kenar çubuğunda destekler."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:72
