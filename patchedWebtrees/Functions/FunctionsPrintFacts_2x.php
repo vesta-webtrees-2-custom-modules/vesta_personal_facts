@@ -380,7 +380,7 @@ class FunctionsPrintFacts_2x {
         break;
       
       //[RC] added, see also https://github.com/fisharebest/webtrees/issues/2829, and own issue #38
-      //note that apparently some third-part programs also use AFN for this, which is strictly wrong:
+      //note that apparently some third-party programs also use AFN for this, which is strictly wrong:
       //https://www.familysearch.org/search/family-trees/results?q.afnId=LR5C-WYH
       //doesn't find the individual from
       //https://www.familysearch.org/tree/person/details/LR5C-WYH
