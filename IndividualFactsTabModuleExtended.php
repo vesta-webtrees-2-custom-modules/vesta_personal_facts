@@ -5,6 +5,8 @@ namespace Cissee\Webtrees\Module\PersonalFacts;
 use Cissee\WebtreesExt\Http\RequestHandlers\FunctionsPlaceProvidersAction;
 use Cissee\WebtreesExt\Http\RequestHandlers\IndividualFactsTabExtenderProvidersAction;
 use Cissee\WebtreesExt\Module\IndividualFactsTabModule_2x;
+use Cissee\WebtreesExt\Module\ModuleMetaInterface;
+use Cissee\WebtreesExt\Module\ModuleMetaTrait;
 use Cissee\WebtreesExt\MoreI18N;
 use Cissee\WebtreesExt\ToggleableFactsCategory;
 use Fisharebest\Webtrees\Auth;
@@ -44,6 +46,7 @@ use function view;
 
 class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x implements 
   ModuleCustomInterface, 
+  ModuleMetaInterface, 
   ModuleConfigInterface, 
   ModuleGlobalInterface, 
   ModuleTabInterface, 
@@ -52,13 +55,13 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
 
   //must not use ModuleTabTrait here - already used in superclass IndividualFactsTabModule_2x,
   //and - more importantly - partially implemented there! (supportedFacts)
-  use ModuleCustomTrait, ModuleConfigTrait, ModuleGlobalTrait, ModuleSidebarTrait, VestaModuleTrait {
+  use ModuleCustomTrait, ModuleMetaTrait, ModuleConfigTrait, ModuleGlobalTrait, ModuleSidebarTrait, VestaModuleTrait {
     VestaModuleTrait::customTranslations insteadof ModuleCustomTrait;
-    VestaModuleTrait::customModuleLatestVersion insteadof ModuleCustomTrait;
     VestaModuleTrait::getAssetAction insteadof ModuleCustomTrait;
-    VestaModuleTrait::assetUrl insteadof ModuleCustomTrait;
-    
+    VestaModuleTrait::assetUrl insteadof ModuleCustomTrait;    
     VestaModuleTrait::getConfigLink insteadof ModuleConfigTrait;
+    ModuleMetaTrait::customModuleVersion insteadof ModuleCustomTrait;
+    ModuleMetaTrait::customModuleLatestVersion insteadof ModuleCustomTrait;
   }
   
   use IndividualFactsTabModuleTrait;
@@ -79,12 +82,12 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     return 'Richard Cissée';
   }
 
-  public function customModuleVersion(): string {
-    return file_get_contents(__DIR__ . '/latest-version.txt');
-  }
-
-  public function customModuleLatestVersionUrl(): string {
-    return 'https://raw.githubusercontent.com/vesta-webtrees-2-custom-modules/vesta_personal_facts/master/latest-version.txt';
+  public function customModuleMetaDatasJson(): string {
+    return file_get_contents(__DIR__ . '/metadata.json');
+  } 
+  
+  public function customModuleLatestMetaDatasJsonUrl(): string {
+    return 'https://raw.githubusercontent.com/vesta-webtrees-2-custom-modules/vesta_personal_facts/master/metadata.json';
   }
 
   public function customModuleSupportUrl(): string {
