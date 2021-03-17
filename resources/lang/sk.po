@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2021-03-07 12:44+0100\n"
-"PO-Revision-Date: 2021-01-09 11:32+0000\n"
+"PO-Revision-Date: 2021-03-17 11:18+0000\n"
 "Last-Translator: ro-la <lacoros@gmail.com>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/sk/>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.4.1-dev\n"
+"X-Generator: Weblate 4.5.2-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:71
@@ -30,7 +31,7 @@ msgstr "HERE mapa (letecká)"
 
 #: IndividualFactsTabModuleTrait.php:29
 msgid "Also replaces the original 'Extra information' module."
-msgstr ""
+msgstr "Taktiež nahrádza originálny modul „Osobitné údaje“."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:38
@@ -70,6 +71,10 @@ msgstr "Krst krstného syna"
 #, php-format
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr ""
+"Base64 kódované dátové URI pre ikonu odkazu. Skonvertujete ikonu na dátové "
+"URI napr. pomocou %1$s. Výsledok by mal začínať niečím ako %2$s. Dobrý zdroj "
+"pre ikonu je poväčšine favicon poskytovateľa mapy, ako napr. %3$s. Bude "
+"zobrazené v správnej veľkosti."
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
 msgid "Best man at a marriage"
@@ -101,7 +106,7 @@ msgstr "Krst krstného syna"
 #. I18N: Module Configuration
 #: FunctionsPrintWithHooks.php:168 IndividualFactsTabModuleTrait.php:206
 msgid "Custom Map Provider"
-msgstr ""
+msgstr "Užívateľom definovaný poskytovateľ mapy"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:105
@@ -188,7 +193,7 @@ msgstr "Zemepisná šírka/dĺžka"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:223
 msgid "Link icon as data URI"
-msgstr ""
+msgstr "Ikona odkazu ako dátové URI"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:175
@@ -203,7 +208,7 @@ msgstr "Moduly v tomto zozname poskytujú dodatočné údaje pre fakty a údaje 
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:208
 msgid "Name"
-msgstr ""
+msgstr "Meno"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:196
@@ -272,6 +277,8 @@ msgstr "Zobraziť odkaz na historickú mapu Európy z XIX. storočia, alebo USA 
 #: IndividualFactsTabModuleTrait.php:40
 msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar."
 msgstr ""
+"Podporuje neštandardný GEDCOM tag _FSFTID (FamilySearch id) v záložke a v "
+"bočnom paneli."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:72
@@ -294,11 +301,13 @@ msgstr "Originálna záložka mala označenie obchodnej značky (trade mark) - p
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
 msgstr ""
+"URI pre odkaz na mapu so zástupným i symbolmi (%1$s a%2$s) pre súradnice. "
+"Úroveň priblíženia by mala byť súčasťou URI. Príklad: %3$s"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:215
 msgid "URI template"
-msgstr ""
+msgstr "URI vzor"
 
 #: FunctionsPrintWithHooks.php:149
 msgid "United States of America (1880-1926) | Mapire"
@@ -332,6 +341,7 @@ msgstr "Svedkyňa pri sobáši"
 #: IndividualFactsTabModuleTrait.php:209
 msgid "You can also configure a custom map provider. Enter its name here."
 msgstr ""
+"Môžete nakonfigurovať vlastného poskytovateľa mapy. Zadajte sem jeho názov."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:122 IndividualFactsTabModuleTrait.php:142
