@@ -3,15 +3,16 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2021-03-07 12:44+0100\n"
-"PO-Revision-Date: 2021-02-28 19:50+0000\n"
+"PO-Revision-Date: 2021-03-19 19:18+0000\n"
 "Last-Translator: Vincent DENIS <vincent.denis06@gmail.com>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Weblate 4.5\n"
+"X-Generator: Weblate 4.5.2-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:71
@@ -25,7 +26,7 @@ msgstr "Carte de vue aérienne"
 
 #: IndividualFactsTabModuleTrait.php:29
 msgid "Also replaces the original 'Extra information' module."
-msgstr ""
+msgstr "Remplace également le module original «Informations supplémentaires»."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:38
@@ -267,6 +268,8 @@ msgstr "Afficher les liens vers une carte historique de l'Europe au XIX. siècle
 #: IndividualFactsTabModuleTrait.php:40
 msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar."
 msgstr ""
+"Prend en charge la balise non standard Gedcom _FSFTID (FamilySearch id), "
+"dans l'onglet et dans la barre latérale."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:72
