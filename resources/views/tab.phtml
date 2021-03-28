@@ -66,8 +66,10 @@ View::endpush();
 
             <?php if ($individual->canEdit()) : ?>
                 <?= view('edit/paste-fact-row', ['record' => $individual, 'facts' => $clipboard_facts]) ?>
-
-                <?php FunctionsPrint::printAddNewFact($individual, $facts, Individual::RECORD_TYPE) ?>
+                <?php
+                //[RC] PATCHED, fix #3807
+                ?>
+                <?php FunctionsPrint::printAddNewFact($individual, $usedFacts, Individual::RECORD_TYPE) ?>
             <?php endif ?>
         </tbody>
     </table>

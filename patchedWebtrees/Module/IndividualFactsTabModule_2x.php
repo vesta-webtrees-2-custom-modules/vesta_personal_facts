@@ -130,7 +130,7 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
             ->filter(static function (Fact $fact) use ($exclude_facts): bool {
       return !$exclude_facts->contains($fact->getTag());
     });
-
+    
     // Add spouse-family facts
     foreach ($individual->spouseFamilies() as $family) {
       foreach ($family->facts() as $fact) {
@@ -175,6 +175,10 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
     $outputInDescriptionbox = $this->getOutputInDescriptionbox($individual);
     $outputAfterDescriptionbox = $this->getOutputAfterDescriptionbox($individual);
 
+    //[RC added]
+    //fix #3807
+    $usedFacts = $individual->facts();
+        
     $view = view($this->getViewName(), [
         'can_edit' => $individual->canEdit(),
         'clipboard_facts' => $this->clipboard_service->pastableFacts($individual, $exclude_facts),
@@ -182,6 +186,8 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
         'individual' => $individual,
         'facts' => $indifacts,
         //[RC] additions
+        'usedFacts' => $usedFacts,
+        
         'toggleableFactsCategories' => $toggleableFactsCategories,
         'printFactFunction' => function (Fact $fact) use ($individual) {
           return $this->functionsPrintFacts->printFactAndReturnScript($fact, $individual);

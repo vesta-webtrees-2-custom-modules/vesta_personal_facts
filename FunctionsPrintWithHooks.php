@@ -37,6 +37,7 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
     $mapCoordinates = FunctionsPlaceUtils::plac2map($this->module, $ps, true);
     if ($mapCoordinates !== null) {
       $hideCoordinates = $this->module->getPreference('LINKS_AFTER_PLAC', '0');
+      
       if ($hideCoordinates) {
         $html .= $this->getMapLinks($mapCoordinates->getLati(), $mapCoordinates->getLong());
       } else {
@@ -83,7 +84,6 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
 
   public function getMapLinks($map_lati, $map_long) {
     $html = '';
-
     if (boolval($this->module->getPreference('GOOGLE_SHOW', '1'))) {
       $zoom = intval($this->module->getPreference('GOOGLE_ZOOM', '17'));
       $title = boolval($this->module->getPreference('GOOGLE_TM', '1')) ? MoreI18N::xlate('Google Maps™') : I18N::translate('Google Maps');
@@ -108,9 +108,36 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
         $html .= $this->linkIcon('icons/openstreetmap', $title, 'https://www.openstreetmap.org/?mlat=' . $map_lati . '&mlon=' . $map_long . '#map=' . $zoom . '/' . $map_lati . '/' . $map_long);
       } else {
         $html .= $this->linkIcon('icons/openstreetmap', $title, 'https://www.openstreetmap.org/#map=' . $zoom . '/' . $map_lati . '/' . $map_long);
-      }      
+      }
     }
 
+    $html .= $this->getMapLinksMapire($map_lati, $map_long);
+    
+    if (boolval($this->module->getPreference('CMP_1_LINK_URI', ''))) {
+      $title = I18N::translate('Custom Map Provider');
+      if (boolval($this->module->getPreference('CMP_1_TITLE', ''))) {
+        //non-translated!
+        $title = $this->module->getPreference('CMP_1_TITLE', '');
+      }
+      $uriTemplate = $this->module->getPreference('CMP_1_LINK_URI', '');
+      
+      //reuse Aura router for uri template functionality
+      $router_container = new RouterContainer();
+      $router = $router_container->getMap();
+      $router->get('CMP_1', $uriTemplate);
+      $url = $router_container->getGenerator()->generate('CMP_1', [
+          'lati' => $map_lati,
+          'long' => $map_long]);      
+      
+      $html .= $this->linkIcon($this->module->name() . '::icons/custom-map-provider-1', $title, $url);
+    }
+    
+    return $html;
+  }
+
+  public function getMapLinksMapire($map_lati, $map_long) {
+    $html = '';
+    
     if (boolval($this->module->getPreference('MAPIRE_SHOW', '1'))) {
       $zoom = intval($this->module->getPreference('MAPIRE_ZOOM', '15'));
       $embed = boolval($this->module->getPreference('MAPIRE_EMBED', '1'));
@@ -164,28 +191,9 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
       $html .= $this->linkIcon($this->module->name() . '::icons/mapire-eu-maps', $title, $url);
     }
     
-    if (boolval($this->module->getPreference('CMP_1_LINK_URI', ''))) {
-      $title = I18N::translate('Custom Map Provider');
-      if (boolval($this->module->getPreference('CMP_1_TITLE', ''))) {
-        //non-translated!
-        $title = $this->module->getPreference('CMP_1_TITLE', '');
-      }
-      $uriTemplate = $this->module->getPreference('CMP_1_LINK_URI', '');
-      
-      //reuse Aura router for uri template functionality
-      $router_container = new RouterContainer();
-      $router = $router_container->getMap();
-      $router->get('CMP_1', $uriTemplate);
-      $url = $router_container->getGenerator()->generate('CMP_1', [
-          'lati' => $map_lati,
-          'long' => $map_long]);      
-      
-      $html .= $this->linkIcon($this->module->name() . '::icons/custom-map-provider-1', $title, $url);
-    }
-    
     return $html;
-  }
-
+  }  
+    
   //cf https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames#Lon..2Flat._to_bbox
   public static function latLonToTiles(string $map_lati, string $map_long, int $zoom) {
     $lon = (float)$map_long;

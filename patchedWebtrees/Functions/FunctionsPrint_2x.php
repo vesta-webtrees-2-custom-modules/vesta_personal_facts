@@ -152,7 +152,9 @@ class FunctionsPrint_2x {
       $map_lati = trim(strtr($map_lati, "NSEW,�", " - -. ")); // S5,6789 ==> -5.6789
       $map_long = trim(strtr($map_long, "NSEW,�", " - -. ")); // E3.456� ==> 3.456
       //[RC] adjusted - made extensible
-      $html .= $this->getMapLinks($map_lati, $map_long);
+      
+      $mapLinks = $this->getMapLinks($map_lati, $map_long);
+      $html .= $mapLinks;
     }
     return $html;
   }
