@@ -13,6 +13,6 @@
 		"version": "2.0.13.1.1",
 		"from": "2.0.12",
 		"to": "2.1",
-		"changelog":"Bugfix for mapire map links, and bugfix for webtrees #3807."
+		"changelog":["Bugfix for mapire map links.","Bugfix for webtrees #3807."]
 	}
 ]
