@@ -14,5 +14,10 @@
 		"from": "2.0.12",
 		"to": "2.1",
 		"changelog":["Bugfix for mapire map links.","Bugfix for webtrees #3807."]
+	},
+	{
+		"version": "2.0.15.0.0",
+		"from": "2.0.12",
+		"to": "2.1"
 	}
 ]

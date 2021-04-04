@@ -697,16 +697,24 @@ class FunctionsPrintFacts_2x {
     // For each ASSO record
     foreach (array_merge($amatches1, $amatches2) as $amatch) {
       $person = Registry::individualFactory()->make($amatch[1], $event->record()->tree());
-      if ($person && $person->canShowName()) {
+      if ($person && $person->canShowName()) {        
         // Is there a "RELA" tag
-        if (preg_match('/\n[23] RELA (.+)/', $amatch[2], $rmatch)) {
-          // Use the supplied relationship as a label
-          $label = GedcomCodeRela::getValue($rmatch[1], $person);
+        if (preg_match('/\n([23]) RELA (.+)/', $amatch[2], $rmatch)) {
+            if ($rmatch[1] === '2') {
+                $base_tag = $event->record()->tag();
+            } else {
+                $base_tag = $event->tag();
+            }
+            // Use the supplied relationship as a label
+            $label = Registry::elementFactory()->make($base_tag . ':_ASSO:RELA')->value($rmatch[2], $parent->tree());
+        } elseif (preg_match('/^1 _?ASSO/', $event->gedcom())) {
+            // Use a default label
+            $label = Registry::elementFactory()->make($event->tag())->label();
         } else {
-          // Use a default label
-          $label = GedcomTag::getLabel('ASSO');
+            // Use a default label
+            $label = Registry::elementFactory()->make($event->tag() . ':_ASSO')->label();
         }
-
+        
         $values = ['<a href="' . e($person->url()) . '">' . $person->fullName() . '</a>'];
         foreach ($associates as $associate) {
           $relationship_name = Functions::getCloseRelationshipName($associate, $person);
