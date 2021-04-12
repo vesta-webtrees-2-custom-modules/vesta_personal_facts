@@ -489,8 +489,41 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
    * @return Collection<string>
    */
   public function supportedFacts(): Collection
-  {
-      $ret = new Collection(static::HANDLED_FACTS);
-      return $ret->merge(parent::supportedFacts());
+  {      
+      $tabFacts = parent::supportedFacts();
+      $sidebarFacts = new Collection(static::HANDLED_FACTS);
+
+      //fix for #45
+      //this is for both tab and sidebar interface!
+      //it would be better to have different methods here.
+      //if the sidebar isn't visible though (via access level), we must modify the collection
+      //because the method still gets called for ModuleTabInterface (and vice versa, theoretically)
+      //we assume that this method is only ever called in these contexts (i.e. after accessLevel has been called), 
+      //so we re-evaluate our specific visibilities
+      //uargh this is hacky
+      $tree = $this->treeUsedForAccessLevelCheck;
+      
+      if ($tree === null) {
+        //unexpected, moving on ...
+        return $tabFacts->merge($sidebarFacts);
+      }
+      
+      $tabIsVisible = $this->accessLevel($tree, ModuleTabInterface::class) >= Auth::accessLevel($tree, Auth::user());
+      $sidebarIsVisible = $this->accessLevel($tree, ModuleSidebarInterface::class) >= Auth::accessLevel($tree, Auth::user());
+      
+      if ($tabIsVisible && $sidebarIsVisible) {
+        return $tabFacts->merge($sidebarFacts);
+      }
+      
+      if ($tabIsVisible) {
+        return $tabFacts;
+      }
+      
+      if ($sidebarIsVisible) {
+        return $sidebarFacts;
+      }
+      
+      //why are we even here then? anyway:      
+      return new Collection();
   }
 }

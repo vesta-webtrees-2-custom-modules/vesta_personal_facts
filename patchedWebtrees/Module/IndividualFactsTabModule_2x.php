@@ -10,7 +10,7 @@ use Fisharebest\Webtrees\Family;
 use Fisharebest\Webtrees\Gedcom;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Individual;
-use Fisharebest\Webtrees\Module\AbstractModule;
+use Cissee\WebtreesExt\AbstractModule; //required for $treeUsedForAccessLevelCheck hack
 use Fisharebest\Webtrees\Module\ModuleHistoricEventsInterface;
 use Fisharebest\Webtrees\Module\ModuleSidebarInterface;
 use Fisharebest\Webtrees\Module\ModuleTabInterface;
@@ -123,8 +123,7 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
     });
 
     $exclude_facts = $sidebar_facts->merge($tab_facts)->flatten();
-
-
+        
     // The individual’s own facts
     $indifacts = $individual->facts()
             ->filter(static function (Fact $fact) use ($exclude_facts): bool {

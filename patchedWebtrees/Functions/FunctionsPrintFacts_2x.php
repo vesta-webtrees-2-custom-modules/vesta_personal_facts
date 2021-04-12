@@ -15,7 +15,6 @@ use Fisharebest\Webtrees\Functions\FunctionsPrint;
 use Fisharebest\Webtrees\Functions\FunctionsPrintFacts;
 use Fisharebest\Webtrees\Gedcom;
 use Fisharebest\Webtrees\GedcomCode\GedcomCodeAdop;
-use Fisharebest\Webtrees\GedcomCode\GedcomCodeLang;
 use Fisharebest\Webtrees\GedcomCode\GedcomCodeRela;
 use Fisharebest\Webtrees\GedcomRecord;
 use Fisharebest\Webtrees\GedcomTag;
@@ -105,6 +104,8 @@ class FunctionsPrintFacts_2x {
     $value = $fact->value();
     $type = $fact->attribute('TYPE');
     $id = $fact->id();
+
+    $element = Registry::elementFactory()->make($fact->tag());
 
     // Some facts don't get printed here ...
     switch ($tag) {
@@ -371,21 +372,12 @@ class FunctionsPrintFacts_2x {
     // Print the value of this fact/event
     switch ($tag) {
       case 'ADDR':
-        echo e($value);
-        break;
       case 'AFN':
-        //TEST ONLY
-        //echo '<div class="field"><a href="https://www.familysearch.org/tree/person/details/', rawurlencode($value), '">', e($value), '</a></div>';
-        echo '<div class="field"><a href="https://familysearch.org/search/tree/results#count=20&query=afn:', rawurlencode($value), '">', e($value), '</a></div>';
-        break;
-      
-      //[RC] added, see also https://github.com/fisharebest/webtrees/issues/2829, and own issue #38
-      //note that apparently some third-party programs also use AFN for this, which is strictly wrong:
-      //https://www.familysearch.org/search/family-trees/results?q.afnId=LR5C-WYH
-      //doesn't find the individual from
-      //https://www.familysearch.org/tree/person/details/LR5C-WYH
-      //but this search does:
-      //https://www.familysearch.org/tree/find/id?id=LR5C-WYH
+      case 'LANG':
+      case 'PUBL':
+      case 'RESN':
+          echo '<div class="field">' . $element->value($value, $tree) . '</div>';
+          break;
       case '_FSFTID':
         echo '<div class="field"><a href="https://www.familysearch.org/tree/person/details/', rawurlencode($value), '">', e($value), '</a></div>';
         break;
@@ -397,35 +389,6 @@ class FunctionsPrintFacts_2x {
       case 'EMAI':
       case '_EMAIL':
         echo '<div class="field"><a href="mailto:', e($value), '">', e($value), '</a></div>';
-        break;
-      case 'LANG':
-        echo GedcomCodeLang::getValue($value);
-        break;
-      case 'RESN':
-        echo '<div class="field">';
-        switch ($value) {
-          case 'none':
-            // Note: "1 RESN none" is not valid gedcom.
-            // However, webtrees privacy rules will interpret it as "show an otherwise private record to public".
-            echo '<i class="icon-resn-none"></i> ', I18N::translate('Show to visitors');
-            break;
-          case 'privacy':
-            echo '<i class="icon-class-none"></i> ', I18N::translate('Show to members');
-            break;
-          case 'confidential':
-            echo '<i class="icon-confidential-none"></i> ', I18N::translate('Show to managers');
-            break;
-          case 'locked':
-            echo '<i class="icon-locked-none"></i> ', I18N::translate('Only managers can edit');
-            break;
-          default:
-            echo e($value);
-            break;
-        }
-        echo '</div>';
-        break;
-      case 'PUBL': // Publication details might contain URLs.
-        echo '<div class="field">', Filter::expandUrls($value, $tree), '</div>';
         break;
       case 'REPO':
         $repository = $fact->target();
