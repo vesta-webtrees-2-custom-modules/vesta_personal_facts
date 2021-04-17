@@ -7,11 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2021-03-07 12:44+0100\n"
+"POT-Creation-Date: 2021-04-17 15:53+0200\n"
 "PO-Revision-Date: 2021-03-17 11:18+0000\n"
 "Last-Translator: ro-la <lacoros@gmail.com>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/"
-"vesta-webtrees-custom-modules/vesta-facts-and-events/sk/>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -70,11 +69,7 @@ msgstr "Krst krstného syna"
 #: IndividualFactsTabModuleTrait.php:224
 #, php-format
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
-msgstr ""
-"Base64 kódované dátové URI pre ikonu odkazu. Skonvertujete ikonu na dátové "
-"URI napr. pomocou %1$s. Výsledok by mal začínať niečím ako %2$s. Dobrý zdroj "
-"pre ikonu je poväčšine favicon poskytovateľa mapy, ako napr. %3$s. Bude "
-"zobrazené v správnej veľkosti."
+msgstr "Base64 kódované dátové URI pre ikonu odkazu. Skonvertujete ikonu na dátové URI napr. pomocou %1$s. Výsledok by mal začínať niečím ako %2$s. Dobrý zdroj pre ikonu je poväčšine favicon poskytovateľa mapy, ako napr. %3$s. Bude zobrazené v správnej veľkosti."
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
 msgid "Best man at a marriage"
@@ -104,7 +99,7 @@ msgid "Christening of a godson"
 msgstr "Krst krstného syna"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:168 IndividualFactsTabModuleTrait.php:206
+#: FunctionsPrintWithHooks.php:117 IndividualFactsTabModuleTrait.php:206
 msgid "Custom Map Provider"
 msgstr "Užívateľom definovaný poskytovateľ mapy"
 
@@ -113,11 +108,11 @@ msgstr "Užívateľom definovaný poskytovateľ mapy"
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Zobraziť ikonu s tooltipom, dávajúcim informáciu o zdroji mapových odkazov. Toto je určené hlavne pre debugovanie."
 
-#: FunctionsPrintWithHooks.php:145
+#: FunctionsPrintWithHooks.php:172
 msgid "Europe in the XIX. century | Mapire"
 msgstr "Európa v XIX. storočí | Mapire"
 
-#: IndividualFactsTabModuleExtended.php:211
+#: IndividualFactsTabModuleExtended.php:214
 msgid "Events of close relatives"
 msgstr "Udalosti blízkych príbuzných"
 
@@ -127,11 +122,11 @@ msgid "Facts and Events List"
 msgstr "Zoznam faktov a udalostí"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:319
+#: IndividualFactsTabModuleExtended.php:322
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Poskytovatelia prvkov užívateľského rozhrania pre záložku Fakty a udalosti"
 
-#: IndividualFactsTabModuleExtended.php:103
+#: IndividualFactsTabModuleExtended.php:106
 msgid "Facts and events"
 msgstr "Fakty a udalosti"
 
@@ -145,7 +140,7 @@ msgstr "Google Maps"
 msgid "Hide coordinates, show map links after place name"
 msgstr "Skryť súradnice, zobraziť ikonu mapy za názvom miesta"
 
-#: IndividualFactsTabModuleExtended.php:225
+#: IndividualFactsTabModuleExtended.php:228
 msgid "Historic events"
 msgstr "Historické udalosti"
 
@@ -201,7 +196,7 @@ msgid "Mapire (historic maps)"
 msgstr "Mapire (historické mapy)"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:323
+#: IndividualFactsTabModuleExtended.php:326
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr "Moduly v tomto zozname poskytujú dodatočné údaje pre fakty a údaje (zobrazované v konfigurovanom poradí)."
 
@@ -225,14 +220,10 @@ msgstr "Zobraziť len určité fakty a udalosti"
 msgid "Open links in new browser tab"
 msgstr "Otvárať odkazy v novom liste prehliadača"
 
-#: FunctionsPrintWithHooks.php:106
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:106 IndividualFactsTabModuleTrait.php:150
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:150
-msgid "OpenStreetMaps"
-msgstr "OpenStreetMaps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:241
@@ -265,8 +256,8 @@ msgstr "Zobraziť odkaz na Google Maps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:152
-msgid "Show links to OpenStreetMaps"
-msgstr "Zobraziť odkazy na OpenStreetMaps"
+msgid "Show links to OpenStreetMap"
+msgstr "Zobraziť odkazy na OpenStreetMap"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:177
@@ -276,9 +267,7 @@ msgstr "Zobraziť odkaz na historickú mapu Európy z XIX. storočia, alebo USA 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:40
 msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar."
-msgstr ""
-"Podporuje neštandardný GEDCOM tag _FSFTID (FamilySearch id) v záložke a v "
-"bočnom paneli."
+msgstr "Podporuje neštandardný GEDCOM tag _FSFTID (FamilySearch id) v záložke a v bočnom paneli."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:72
@@ -300,16 +289,14 @@ msgstr "Originálna záložka mala označenie obchodnej značky (trade mark) - p
 #: IndividualFactsTabModuleTrait.php:216
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
-msgstr ""
-"URI pre odkaz na mapu so zástupným i symbolmi (%1$s a%2$s) pre súradnice. "
-"Úroveň priblíženia by mala byť súčasťou URI. Príklad: %3$s"
+msgstr "URI pre odkaz na mapu so zástupným i symbolmi (%1$s a%2$s) pre súradnice. Úroveň priblíženia by mala byť súčasťou URI. Príklad: %3$s"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:215
 msgid "URI template"
 msgstr "URI vzor"
 
-#: FunctionsPrintWithHooks.php:149
+#: FunctionsPrintWithHooks.php:176
 msgid "United States of America (1880-1926) | Mapire"
 msgstr "United States of America (1880-1926) | Mapire"
 
@@ -340,8 +327,7 @@ msgstr "Svedkyňa pri sobáši"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:209
 msgid "You can also configure a custom map provider. Enter its name here."
-msgstr ""
-"Môžete nakonfigurovať vlastného poskytovateľa mapy. Zadajte sem jeho názov."
+msgstr "Môžete nakonfigurovať vlastného poskytovateľa mapy. Zadajte sem jeho názov."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:122 IndividualFactsTabModuleTrait.php:142
@@ -354,3 +340,9 @@ msgstr "Zoom odkazovanej mapy"
 
 #~ msgid "Historical facts"
 #~ msgstr "Historické udalosti"
+
+#~ msgid "OpenStreetMaps"
+#~ msgstr "OpenStreetMaps"
+
+#~ msgid "Show links to OpenStreetMaps"
+#~ msgstr "Zobraziť odkazy na OpenStreetMaps"

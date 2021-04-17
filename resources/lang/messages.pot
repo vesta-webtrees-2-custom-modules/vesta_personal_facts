@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2021-03-07 12:44+0100\n"
+"POT-Creation-Date: 2021-04-17 15:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,42 +27,43 @@ msgstr ""
 msgid "Bing Maps"
 msgstr ""
 
-#: FunctionsPrintWithHooks.php:106
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:106 IndividualFactsTabModuleTrait.php:150
 msgid "OpenStreetMap"
 msgstr ""
 
-#: FunctionsPrintWithHooks.php:145
-msgid "Europe in the XIX. century | Mapire"
-msgstr ""
-
-#: FunctionsPrintWithHooks.php:149
-msgid "United States of America (1880-1926) | Mapire"
-msgstr ""
-
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:168 IndividualFactsTabModuleTrait.php:206
+#: FunctionsPrintWithHooks.php:117 IndividualFactsTabModuleTrait.php:206
 msgid "Custom Map Provider"
 msgstr ""
 
-#: IndividualFactsTabModuleExtended.php:103
+#: FunctionsPrintWithHooks.php:172
+msgid "Europe in the XIX. century | Mapire"
+msgstr ""
+
+#: FunctionsPrintWithHooks.php:176
+msgid "United States of America (1880-1926) | Mapire"
+msgstr ""
+
+#: IndividualFactsTabModuleExtended.php:106
 msgid "Facts and events"
 msgstr ""
 
-#: IndividualFactsTabModuleExtended.php:211
+#: IndividualFactsTabModuleExtended.php:214
 msgid "Events of close relatives"
 msgstr ""
 
-#: IndividualFactsTabModuleExtended.php:225
+#: IndividualFactsTabModuleExtended.php:228
 msgid "Historic events"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:319
+#: IndividualFactsTabModuleExtended.php:322
 msgid "Facts and Events Tab UI Element Providers"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:323
+#: IndividualFactsTabModuleExtended.php:326
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr ""
 
@@ -178,13 +179,8 @@ msgid "Show links to Bing Maps"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:150
-msgid "OpenStreetMaps"
-msgstr ""
-
-#. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:152
-msgid "Show links to OpenStreetMaps"
+msgid "Show links to OpenStreetMap"
 msgstr ""
 
 #. I18N: Module Configuration

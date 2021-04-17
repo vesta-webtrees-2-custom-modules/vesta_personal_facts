@@ -147,9 +147,9 @@ trait IndividualFactsTabModuleTrait {
                 15)));
 
     $placeSub[] = new ControlPanelSubsection(
-            /* I18N: Module Configuration */I18N::translate('OpenStreetMaps'),
+            /* I18N: Module Configuration */I18N::translate('OpenStreetMap'),
             array(new ControlPanelCheckbox(
-                /* I18N: Module Configuration */I18N::translate('Show links to OpenStreetMaps'),
+                /* I18N: Module Configuration */I18N::translate('Show links to OpenStreetMap'),
                 null,
                 'OSM_SHOW',
                 '1'),

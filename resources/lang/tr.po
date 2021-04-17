@@ -7,11 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2021-03-07 12:44+0100\n"
+"POT-Creation-Date: 2021-04-17 15:53+0200\n"
 "PO-Revision-Date: 2021-03-10 17:02+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/"
-"vesta-webtrees-custom-modules/vesta-facts-and-events/tr/>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -100,7 +99,7 @@ msgid "Christening of a godson"
 msgstr "Bir vaftiz oğlunun vaftiz edilmesi"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:168 IndividualFactsTabModuleTrait.php:206
+#: FunctionsPrintWithHooks.php:117 IndividualFactsTabModuleTrait.php:206
 msgid "Custom Map Provider"
 msgstr "Özel Harita Sağlayıcısı"
 
@@ -109,11 +108,11 @@ msgstr "Özel Harita Sağlayıcısı"
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Harita bağlantılarının kaynağını gösteren bir araç ipucu içeren bir simge görüntüler. Bu esas olarak hata ayıklama için tasarlanmıştır."
 
-#: FunctionsPrintWithHooks.php:145
+#: FunctionsPrintWithHooks.php:172
 msgid "Europe in the XIX. century | Mapire"
 msgstr "XIX. yüzyılda Avrupa | Mapire"
 
-#: IndividualFactsTabModuleExtended.php:211
+#: IndividualFactsTabModuleExtended.php:214
 msgid "Events of close relatives"
 msgstr "Yakın akrabaların olayları"
 
@@ -123,11 +122,11 @@ msgid "Facts and Events List"
 msgstr "Gerçekler ve Olaylar Listesi"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:319
+#: IndividualFactsTabModuleExtended.php:322
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Gerçekler ve Olaylar Sekmesi UI Öğe Sağlayıcıları"
 
-#: IndividualFactsTabModuleExtended.php:103
+#: IndividualFactsTabModuleExtended.php:106
 msgid "Facts and events"
 msgstr "Gerçekler ve olaylar"
 
@@ -141,7 +140,7 @@ msgstr "Google Haritalar"
 msgid "Hide coordinates, show map links after place name"
 msgstr "Koordinatları gizle, yer adından sonra harita bağlantılarını göster"
 
-#: IndividualFactsTabModuleExtended.php:225
+#: IndividualFactsTabModuleExtended.php:228
 msgid "Historic events"
 msgstr "Tarihi olaylar"
 
@@ -197,7 +196,7 @@ msgid "Mapire (historic maps)"
 msgstr "Mapire (tarihi haritalar)"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:323
+#: IndividualFactsTabModuleExtended.php:326
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr "Burada listelenen modüller, gerçekler ve olaylar için ek veriler sağlayabilir (yapılandırılmış sırayla görüntülenir)."
 
@@ -221,14 +220,10 @@ msgstr "Sadece belirli gerçekleri ve olayları göster"
 msgid "Open links in new browser tab"
 msgstr "Bağlantıları yeni tarayıcı sekmesinde aç"
 
-#: FunctionsPrintWithHooks.php:106
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:106 IndividualFactsTabModuleTrait.php:150
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:150
-msgid "OpenStreetMaps"
-msgstr "OpenStreetMaps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:241
@@ -261,8 +256,8 @@ msgstr "Google Haritalar'a bağlantıları göster"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:152
-msgid "Show links to OpenStreetMaps"
-msgstr "OpenStreetMaps bağlantılarını göster"
+msgid "Show links to OpenStreetMap"
+msgstr "OpenStreetMap bağlantılarını göster"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:177
@@ -272,9 +267,7 @@ msgstr "XIX. yüzyılda Avrupa'nın tarihi haritasına veya varsa Amerika Birle�
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:40
 msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar."
-msgstr ""
-"Standart olmayan Gedcom _FSFTID (FamilySearch kimliği) etiketini sekmede ve "
-"kenar çubuğunda destekler."
+msgstr "Standart olmayan Gedcom _FSFTID (FamilySearch kimliği) etiketini sekmede ve kenar çubuğunda destekler."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:72
@@ -303,7 +296,7 @@ msgstr "Harita bağlantıları için URI, harita koordinatları için yer tutucu
 msgid "URI template"
 msgstr "URI şablonu"
 
-#: FunctionsPrintWithHooks.php:149
+#: FunctionsPrintWithHooks.php:176
 msgid "United States of America (1880-1926) | Mapire"
 msgstr "Amerika Birleşik Devletleri (1880-1926) | Mapire"
 
@@ -341,3 +334,9 @@ msgstr "Ayrıca özel bir harita sağlayıcısı da yapılandırabilirsiniz. Ad�
 #: IndividualFactsTabModuleTrait.php:167 IndividualFactsTabModuleTrait.php:182
 msgid "Zoom level of linked map"
 msgstr "Bağlantılı haritanın yakınlaştırma seviyesi"
+
+#~ msgid "OpenStreetMaps"
+#~ msgstr "OpenStreetMaps"
+
+#~ msgid "Show links to OpenStreetMaps"
+#~ msgstr "OpenStreetMaps bağlantılarını göster"

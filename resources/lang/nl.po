@@ -2,11 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2021-03-07 12:44+0100\n"
+"POT-Creation-Date: 2021-04-17 15:53+0200\n"
 "PO-Revision-Date: 2021-03-08 13:15+0000\n"
 "Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/"
-"vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -95,7 +94,7 @@ msgid "Christening of a godson"
 msgstr "Doop van peetzoon"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:168 IndividualFactsTabModuleTrait.php:206
+#: FunctionsPrintWithHooks.php:117 IndividualFactsTabModuleTrait.php:206
 msgid "Custom Map Provider"
 msgstr "Andere kaartprovider"
 
@@ -104,11 +103,11 @@ msgstr "Andere kaartprovider"
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Geef een pictogram weer met een tooltip die de bron van de kaartkoppelingen aangeeft. Dit is vooral bedoeld voor debugging."
 
-#: FunctionsPrintWithHooks.php:145
+#: FunctionsPrintWithHooks.php:172
 msgid "Europe in the XIX. century | Mapire"
 msgstr "Europa in de XIX-eeuw | Mapire"
 
-#: IndividualFactsTabModuleExtended.php:211
+#: IndividualFactsTabModuleExtended.php:214
 msgid "Events of close relatives"
 msgstr "Gebeurtenissen van naaste verwanten"
 
@@ -118,11 +117,11 @@ msgid "Facts and Events List"
 msgstr "Lijst met feiten en gebeurtenissen"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:319
+#: IndividualFactsTabModuleExtended.php:322
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Aanbieders van UI-elementen voor tabblad Feiten en gebeurtenissen"
 
-#: IndividualFactsTabModuleExtended.php:103
+#: IndividualFactsTabModuleExtended.php:106
 msgid "Facts and events"
 msgstr "Feiten en gebeurtenissen"
 
@@ -136,7 +135,7 @@ msgstr "Google Maps"
 msgid "Hide coordinates, show map links after place name"
 msgstr "Coördinaten verbergen, toon kaartkoppelingen na plaatsnaam"
 
-#: IndividualFactsTabModuleExtended.php:225
+#: IndividualFactsTabModuleExtended.php:228
 msgid "Historic events"
 msgstr "Historische gebeurtenissen"
 
@@ -192,7 +191,7 @@ msgid "Mapire (historic maps)"
 msgstr "Mapire (historische kaarten)"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:323
+#: IndividualFactsTabModuleExtended.php:326
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr "De hier vermelde modules kunnen aanvullende gegevens bevatten voor feiten en gebeurtenissen (weergegeven in de geconfigureerde volgorde)."
 
@@ -216,14 +215,10 @@ msgstr "Toon alleen specifieke feiten en gebeurtenissen"
 msgid "Open links in new browser tab"
 msgstr "Koppelingen openen in nieuw browsertabblad"
 
-#: FunctionsPrintWithHooks.php:106
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:106 IndividualFactsTabModuleTrait.php:150
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:150
-msgid "OpenStreetMaps"
-msgstr "OpenStreetMaps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:241
@@ -256,8 +251,8 @@ msgstr "Toon koppelingen naar Google Maps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:152
-msgid "Show links to OpenStreetMaps"
-msgstr "Toon koppelingen naar OpenStreetMaps"
+msgid "Show links to OpenStreetMap"
+msgstr "Toon koppelingen naar OpenStreetMap"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:177
@@ -267,9 +262,7 @@ msgstr "Toon links naar een historische kaart van Europa in de XIX eeuw, of de V
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:40
 msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar."
-msgstr ""
-"Ondersteunt het niet-standaard GEDCOM-label _FSFTID (FamilySearch-id), in "
-"het tabblad en in de zijbalk."
+msgstr "Ondersteunt het niet-standaard GEDCOM-label _FSFTID (FamilySearch-id), in het tabblad en in de zijbalk."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:72
@@ -298,7 +291,7 @@ msgstr "De URI voor kaartkoppelingen, met tijdelijke aanduidingen (%1$s en %2$s)
 msgid "URI template"
 msgstr "URI-sjabloon"
 
-#: FunctionsPrintWithHooks.php:149
+#: FunctionsPrintWithHooks.php:176
 msgid "United States of America (1880-1926) | Mapire"
 msgstr "Verenigde Staten van Amerika (1880-1926) | Mapire"
 
@@ -376,6 +369,9 @@ msgstr "Zoomniveau van gekoppelde kaart"
 #~ msgid "Modules listed here are used (in the configured order) to determine map coordinates of places."
 #~ msgstr "Modules die hier worden vermeld, worden (in de geconfigureerde volgorde) gebruikt om kaartcoördinaten van plaatsen te bepalen."
 
+#~ msgid "OpenStreetMaps"
+#~ msgstr "OpenStreetMaps"
+
 #~ msgid "Requires the '%1$s Vesta Common' module."
 #~ msgstr "Vereist de module '%1$s Vesta Algemeen'."
 
@@ -384,6 +380,9 @@ msgstr "Zoomniveau van gekoppelde kaart"
 
 #~ msgid "Restrict to this list of GEDCOM individual facts and events. You can modify this list by removing or adding fact and event names, even custom ones, as necessary."
 #~ msgstr "Beperken tot deze lijst van GEDCOM persoonsfeiten en -gebeurtenissen. Indien nodig kunt u deze lijst wijzigen door namen van feiten en gebeurtenissen, zelfs aangepaste namen, te verwijderen of toe te voegen."
+
+#~ msgid "Show links to OpenStreetMaps"
+#~ msgstr "Toon koppelingen naar OpenStreetMaps"
 
 #~ msgid "Show links to a historic map of Europe"
 #~ msgstr "Toon koppelingen naar een historische kaart van Europa"

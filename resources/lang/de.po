@@ -2,11 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2021-03-07 12:44+0100\n"
+"POT-Creation-Date: 2021-04-17 15:53+0200\n"
 "PO-Revision-Date: 2021-03-16 15:02+0000\n"
 "Last-Translator: mpwt <der@bauschaffen.de>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/"
-"vesta-webtrees-custom-modules/vesta-facts-and-events/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -95,7 +94,7 @@ msgid "Christening of a godson"
 msgstr "Kindstaufe eines Patensohnes"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:168 IndividualFactsTabModuleTrait.php:206
+#: FunctionsPrintWithHooks.php:117 IndividualFactsTabModuleTrait.php:206
 msgid "Custom Map Provider"
 msgstr "Benutzerdefinierte Kartenanbieter"
 
@@ -104,11 +103,11 @@ msgstr "Benutzerdefinierte Kartenanbieter"
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Zeigt ein Symbol mit einem Tooltip an, der die Quelle der Kartenlinks angibt. Dies ist im Wesentlichen für die Fehlersuche gedacht."
 
-#: FunctionsPrintWithHooks.php:145
+#: FunctionsPrintWithHooks.php:172
 msgid "Europe in the XIX. century | Mapire"
 msgstr "Europa im 19. Jahrhundert | Mapire"
 
-#: IndividualFactsTabModuleExtended.php:211
+#: IndividualFactsTabModuleExtended.php:214
 msgid "Events of close relatives"
 msgstr "Ereignisse naher Verwandter"
 
@@ -118,11 +117,11 @@ msgid "Facts and Events List"
 msgstr "Liste der Tatsachen und Ereignisse"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:319
+#: IndividualFactsTabModuleExtended.php:322
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Tatsachen und Ereignisse Registerkarte UI Element Provider"
 
-#: IndividualFactsTabModuleExtended.php:103
+#: IndividualFactsTabModuleExtended.php:106
 msgid "Facts and events"
 msgstr "Tatsachen und Ereignisse"
 
@@ -136,7 +135,7 @@ msgstr "Google Maps"
 msgid "Hide coordinates, show map links after place name"
 msgstr "Koordinaten ausblenden, Kartenlinks nach dem Ortsnamen anzeigen"
 
-#: IndividualFactsTabModuleExtended.php:225
+#: IndividualFactsTabModuleExtended.php:228
 msgid "Historic events"
 msgstr "Historische Ereignisse"
 
@@ -192,7 +191,7 @@ msgid "Mapire (historic maps)"
 msgstr "Mapire (historische Karten)"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:323
+#: IndividualFactsTabModuleExtended.php:326
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr "Die hier aufgeführten Module können zusätzliche Daten für Tatsachen und Ereignisse bereitstellen (Anzeige in der konfigurierten Reihenfolge)."
 
@@ -216,14 +215,10 @@ msgstr "Nur bestimmte Tatsachen und Ereignisse anzeigen"
 msgid "Open links in new browser tab"
 msgstr "Links im neuen Browser-Tab öffnen"
 
-#: FunctionsPrintWithHooks.php:106
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:106 IndividualFactsTabModuleTrait.php:150
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:150
-msgid "OpenStreetMaps"
-msgstr "OpenStreetMaps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:241
@@ -256,8 +251,8 @@ msgstr "Links zu Google Maps anzeigen"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:152
-msgid "Show links to OpenStreetMaps"
-msgstr "Links zu OpenStreetMaps anzeigen"
+msgid "Show links to OpenStreetMap"
+msgstr "Links zu OpenStreetMap anzeigen"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:177
@@ -267,9 +262,7 @@ msgstr "Links zu historischen Karten von Europa aus dem 19. Jahrhundert oder den
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:40
 msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar."
-msgstr ""
-"Unterstützt des benutzerdefinierte Gedcom-Kennzeichen _FSFTID (FamilySearch-"
-"ID) in der Registerkarte und der Seitenleiste."
+msgstr "Unterstützt des benutzerdefinierte Gedcom-Kennzeichen _FSFTID (FamilySearch-ID) in der Registerkarte und der Seitenleiste."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:72
@@ -298,7 +291,7 @@ msgstr "Die URI für Kartenlinks mit Platzhaltern (%1$s und %2$s) für Kartenkoo
 msgid "URI template"
 msgstr "URI-Vorlage"
 
-#: FunctionsPrintWithHooks.php:149
+#: FunctionsPrintWithHooks.php:176
 msgid "United States of America (1880-1926) | Mapire"
 msgstr "Vereinigte Staaten von Amerika (1880-1926) | Mapire"
 
@@ -339,3 +332,9 @@ msgstr "Zoom-Stufe der verknüpften Karte"
 
 #~ msgid "Associated facts and events"
 #~ msgstr "Assoziierte Ereignisse"
+
+#~ msgid "OpenStreetMaps"
+#~ msgstr "OpenStreetMaps"
+
+#~ msgid "Show links to OpenStreetMaps"
+#~ msgstr "Links zu OpenStreetMaps anzeigen"

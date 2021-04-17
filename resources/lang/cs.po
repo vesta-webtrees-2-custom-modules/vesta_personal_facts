@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2021-03-07 12:44+0100\n"
+"POT-Creation-Date: 2021-04-17 15:53+0200\n"
 "PO-Revision-Date: 2021-01-18 18:32+0000\n"
 "Last-Translator: Josef Prause <josef.prause@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/cs/>\n"
@@ -99,7 +99,7 @@ msgid "Christening of a godson"
 msgstr "Křest kmotřence"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:168 IndividualFactsTabModuleTrait.php:206
+#: FunctionsPrintWithHooks.php:117 IndividualFactsTabModuleTrait.php:206
 msgid "Custom Map Provider"
 msgstr ""
 
@@ -108,11 +108,11 @@ msgstr ""
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Zobrazit ikonu s tooltipem naznačujícím pramen mapových odkazů. Toto je zamýšleno hlavně pro debugging."
 
-#: FunctionsPrintWithHooks.php:145
+#: FunctionsPrintWithHooks.php:172
 msgid "Europe in the XIX. century | Mapire"
 msgstr "Evropa v XIX. století | Mapire"
 
-#: IndividualFactsTabModuleExtended.php:211
+#: IndividualFactsTabModuleExtended.php:214
 msgid "Events of close relatives"
 msgstr "Události blízkých příbuzných"
 
@@ -122,11 +122,11 @@ msgid "Facts and Events List"
 msgstr "Seznam faktů a událostí"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:319
+#: IndividualFactsTabModuleExtended.php:322
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Poskytovatelé UI elementů pro záložku Fakta a události"
 
-#: IndividualFactsTabModuleExtended.php:103
+#: IndividualFactsTabModuleExtended.php:106
 msgid "Facts and events"
 msgstr "Fakta a události"
 
@@ -140,7 +140,7 @@ msgstr "Google Maps"
 msgid "Hide coordinates, show map links after place name"
 msgstr "Skrýt souřadnice, zobrazit odkazy na mapy za názvem místa"
 
-#: IndividualFactsTabModuleExtended.php:225
+#: IndividualFactsTabModuleExtended.php:228
 msgid "Historic events"
 msgstr "Historické události"
 
@@ -196,7 +196,7 @@ msgid "Mapire (historic maps)"
 msgstr "Mapire (historické mapy)"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:323
+#: IndividualFactsTabModuleExtended.php:326
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr "Moduly v tomto seznamu mohou poskytovat přídavné údaje o faktech a událostech (zobrazené v nastaveném pořadí)."
 
@@ -220,14 +220,10 @@ msgstr "Zobrazit jen určitá fakta a události"
 msgid "Open links in new browser tab"
 msgstr "Odkazy otevírat v nové záložce prohlížeče"
 
-#: FunctionsPrintWithHooks.php:106
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:106 IndividualFactsTabModuleTrait.php:150
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:150
-msgid "OpenStreetMaps"
-msgstr "OpenStreetMaps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:241
@@ -260,8 +256,8 @@ msgstr "Zobrazovat odkaz na Google Maps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:152
-msgid "Show links to OpenStreetMaps"
-msgstr "Zobrazovat odkaz na OpenStreetMaps"
+msgid "Show links to OpenStreetMap"
+msgstr "Zobrazovat odkaz na OpenStreetMap"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:177
@@ -300,7 +296,7 @@ msgstr ""
 msgid "URI template"
 msgstr ""
 
-#: FunctionsPrintWithHooks.php:149
+#: FunctionsPrintWithHooks.php:176
 msgid "United States of America (1880-1926) | Mapire"
 msgstr "Spojené státy americké (1880-1926) | Mapire"
 
@@ -366,6 +362,9 @@ msgstr "Úroveň zvětšení odkazované mapy"
 #~ msgid "Modules listed here are used (in the configured order) to determine map coordinates of places."
 #~ msgstr "Moduly v tomto seznamu slouží (v tom pořadí) k určení mapových souřadnic míst."
 
+#~ msgid "OpenStreetMaps"
+#~ msgstr "OpenStreetMaps"
+
 #~ msgid "Requires the '%1$s Vesta Common' module."
 #~ msgstr "Vyžaduje modul '%1$s Vesta Common'."
 
@@ -374,6 +373,9 @@ msgstr "Úroveň zvětšení odkazované mapy"
 
 #~ msgid "Restrict to this list of GEDCOM individual facts and events. You can modify this list by removing or adding fact and event names, even custom ones, as necessary."
 #~ msgstr "Omezit podle tohoto seznamu faktů a událostí osoby. Seznam je podle potřeby možno upravit odstraněním nebo přidáním názvů faktů a událostí."
+
+#~ msgid "Show links to OpenStreetMaps"
+#~ msgstr "Zobrazovat odkaz na OpenStreetMaps"
 
 #~ msgid "Show links to a historic map of Europe"
 #~ msgstr "Zobrazovat odkaz na historickou mapu Evropy"
