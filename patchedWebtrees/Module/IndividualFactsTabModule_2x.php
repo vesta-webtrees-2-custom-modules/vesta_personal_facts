@@ -1044,7 +1044,7 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
   public function supportedFacts(): Collection {
     // We don't actually displaye these facts, but they are displayed
     // outside the tabs/sidebar systems. This just forces them to be excluded here.
-    return new Collection(['NAME', 'SEX']);
+    return new Collection(['NAME', 'SEX', 'OBJE']);
   }
 
   //[RC] added

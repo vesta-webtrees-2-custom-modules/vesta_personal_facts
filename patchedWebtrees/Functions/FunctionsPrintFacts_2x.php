@@ -290,16 +290,16 @@ class FunctionsPrintFacts_2x {
         $finalLabel = null;
         switch ($fact->getTag()) {
           case 'MARR':
-            $finalLabel = GedcomCodeRela_Ext::getValueOrNullForMARR($rela, $record);
+            $finalLabel = GedcomCodeRela_Ext::getValueOrNullForMARR($rela, $parent);
             break;
           case 'CHR':
             if ($inverted !== null) {
-              $finalLabel = GedcomCodeRela_Ext::getValueOrNullForCHR($inverted, $record);
+              $finalLabel = GedcomCodeRela_Ext::getValueOrNullForCHR($inverted, $parent);
             }
             break;
           case 'BAPM':
             if ($inverted !== null) {
-              $finalLabel = GedcomCodeRela_Ext::getValueOrNullForBAPM($inverted, $record);
+              $finalLabel = GedcomCodeRela_Ext::getValueOrNullForBAPM($inverted, $parent);
             }
             break;
           default:
