@@ -48,7 +48,8 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
       //TODO: use proper modal here? tooltip isn't helpful on tablets etc
       $debugMapLinks = $this->module->getPreference('DEBUG_MAP_LINKS', '1');
       if ($debugMapLinks) {
-        $html .= '<span class="wt-icon-help" title ="' . $mapCoordinates->getTrace()->getAll() . '"><i class="fas fa-question-circle fa-fw" aria-hidden="true"></i></span>';
+        $title = htmlspecialchars($mapCoordinates->getTrace()->getAll());
+        $html .= '<span class="wt-icon-help" title ="' . $title . '"><i class="fas fa-question-circle fa-fw" aria-hidden="true"></i></span>';
       }   
     }
     

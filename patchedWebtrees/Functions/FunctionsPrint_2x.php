@@ -140,7 +140,7 @@ class FunctionsPrint_2x {
     $html = '';
     $title = '';
     if ($tooltip) {
-      $title = ' title="' . $tooltip . '"';
+      $title = ' title="' . htmlspecialchars($tooltip) . '"';
     }
     if ($map_lati) {
       $html .= '<br><span class="label"' . $title . '>' . GedcomTag::getLabel('LATI') . ': </span>' . $map_lati;
@@ -156,6 +156,7 @@ class FunctionsPrint_2x {
       $mapLinks = $this->getMapLinks($map_lati, $map_long);
       $html .= $mapLinks;
     }
+    error_log("html:".$html);
     return $html;
   }
 
