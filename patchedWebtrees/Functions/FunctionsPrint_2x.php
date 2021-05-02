@@ -156,7 +156,6 @@ class FunctionsPrint_2x {
       $mapLinks = $this->getMapLinks($map_lati, $map_long);
       $html .= $mapLinks;
     }
-    error_log("html:".$html);
     return $html;
   }
 
