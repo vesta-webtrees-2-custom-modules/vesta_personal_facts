@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2021-04-17 15:53+0200\n"
-"PO-Revision-Date: 2021-01-18 18:32+0000\n"
+"PO-Revision-Date: 2021-06-08 20:33+0000\n"
 "Last-Translator: Josef Prause <josef.prause@gmail.com>\n"
-"Language-Team: Czech <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/cs/>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.5-dev\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:71
@@ -26,11 +27,11 @@ msgstr "Aktuální události blízkých příbuzných a fakta a události, u nic
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:197
 msgid "Aerial Base Map"
-msgstr "Aerial Base Map"
+msgstr "Letecká mapa"
 
 #: IndividualFactsTabModuleTrait.php:29
 msgid "Also replaces the original 'Extra information' module."
-msgstr ""
+msgstr "Taktéž nahrazuje původní modul 'Dodatečné údaje'."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:38
@@ -70,6 +71,10 @@ msgstr "Křest kmotřence"
 #, php-format
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr ""
+"Base64 kódované datové URI pro ikonu odkazu. Převeďte ikonu na datové URI "
+"např. pomocí %1$s. Výsledek by měl začínat něčím jako %2$s. Dobrým zdrojem "
+"obrázku ikony je obvykle obrázek faviconu poskytovatele mapy, jako např. %3$"
+"s. Zobrazí se ve správné velikosti."
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
 msgid "Best man at a marriage"
@@ -78,7 +83,7 @@ msgstr "Svědek ženicha"
 #. I18N: Module Configuration
 #: FunctionsPrintWithHooks.php:100 IndividualFactsTabModuleTrait.php:130
 msgid "Bing Maps"
-msgstr "Bing Maps"
+msgstr "Mapy Bing"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:24
 msgid "Bridesmaid at a marriage"
@@ -101,7 +106,7 @@ msgstr "Křest kmotřence"
 #. I18N: Module Configuration
 #: FunctionsPrintWithHooks.php:117 IndividualFactsTabModuleTrait.php:206
 msgid "Custom Map Provider"
-msgstr ""
+msgstr "Uživatelem definovaný poskytovatel mapy"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:105
@@ -133,7 +138,7 @@ msgstr "Fakta a události"
 #. I18N: Module Configuration
 #: FunctionsPrintWithHooks.php:89 IndividualFactsTabModuleTrait.php:110
 msgid "Google Maps"
-msgstr "Google Maps"
+msgstr "Mapy Google"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:94
@@ -188,7 +193,7 @@ msgstr "Zeměpisná šířka/délka"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:223
 msgid "Link icon as data URI"
-msgstr ""
+msgstr "Ikona odkazu jako datové URI"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:175
@@ -203,12 +208,12 @@ msgstr "Moduly v tomto seznamu mohou poskytovat přídavné údaje o faktech a u
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:208
 msgid "Name"
-msgstr ""
+msgstr "Jméno"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:196
 msgid "OSM Base Map"
-msgstr "OSM Base Map"
+msgstr "Mapa OSM"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:76
@@ -268,6 +273,8 @@ msgstr "Zobrazit odkazy na historickou mapu Evropy v XIX. století, nebo Spojen�
 #: IndividualFactsTabModuleTrait.php:40
 msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar."
 msgstr ""
+"Podporuje naetsndardní GEDCOM tag _FSFTID (FamilySearch id) v záložce a "
+"postranním panelu."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:72
@@ -290,11 +297,13 @@ msgstr "Na původní záložce byl znak obchodní značky (trade mark) ‒ ponec
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
 msgstr ""
+"URI pro odkazy na mapu se zástupnými symboly (%1$s a %2$s) pro souřadnice. "
+"Úroveň přiblížení by měla být součástí URI. Příklad: %3$s"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:215
 msgid "URI template"
-msgstr ""
+msgstr "Šablona URI"
 
 #: FunctionsPrintWithHooks.php:176
 msgid "United States of America (1880-1926) | Mapire"
@@ -328,6 +337,8 @@ msgstr "Svědek na svatbě"
 #: IndividualFactsTabModuleTrait.php:209
 msgid "You can also configure a custom map provider. Enter its name here."
 msgstr ""
+"Můžete také konfigurovat vlastního poskytovatele mapy. Sem zadejte jeho "
+"jméno."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:122 IndividualFactsTabModuleTrait.php:142
