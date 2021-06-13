@@ -94,7 +94,7 @@ class FunctionsPrintFacts_2x {
   public function printFactAndReturnScript(Fact $fact, GedcomRecord $record) {
     // Keep a track of children and grandchildren, so we can display their birth order "#1", "#2", etc.
     //static $children = [], $grandchildren = [];
-
+    
     $script = '';
 
     $parent = $fact->record();

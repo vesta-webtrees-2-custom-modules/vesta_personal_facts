@@ -26,6 +26,7 @@ use Fisharebest\Webtrees\Module\ModuleTabInterface;
 use Fisharebest\Webtrees\Services\ClipboardService;
 use Fisharebest\Webtrees\Services\ModuleService;
 use Fisharebest\Webtrees\Session;
+use Fisharebest\Webtrees\View;
 use Illuminate\Support\Collection;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -100,6 +101,9 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
 
   public function onBoot(): void {
     $this->flashWhatsNew('\Cissee\Webtrees\Module\PersonalFacts\WhatsNew', 2);
+    
+    // Replace an existing view with our own version.
+    View::registerCustomView('::edit/add-fact-row', $this->name() . '::edit/add-fact-row');      
   }
   
   public function tabTitle(): string {
