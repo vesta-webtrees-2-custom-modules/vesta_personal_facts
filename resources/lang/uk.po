@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2021-04-17 15:53+0200\n"
-"PO-Revision-Date: 2021-06-15 09:33+0000\n"
+"PO-Revision-Date: 2021-06-15 12:32+0000\n"
 "Last-Translator: z-yurets <zaharchenko.yurij@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/"
 "vesta-webtrees-custom-modules/vesta-facts-and-events/uk/>\n"
@@ -283,51 +283,56 @@ msgstr "Шаблон URI"
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
 msgstr ""
-"Uri для посилань на карту із заповнювачами (%1$s та %2$s) для координат "
-"карти. Рівень масштабування повинен бути частиною uri. Приклад: %3$s"
+"URI для посилань на карту із заповнювачами (%1$s та %2$s) для координат "
+"карти. Рівень масштабування повинен бути частиною URI. Приклад: %3$s"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:223
 msgid "Link icon as data URI"
-msgstr "Значок посилання як URI даних"
+msgstr "Значок посилання як data URI"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:224
 #, php-format
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr ""
+"data URI, закодований в Base64, для значка посилання. Перетворіть значок на "
+"data URI, наприклад за допомогою сервісу %1$s. Результат повинен починатися "
+"приблизно як %2$s. Хорошим джерелом зображення піктограми зазвичай є "
+"зображення значка постачальника карт, наприклад %3$s. Його розмір буде "
+"відображено належним чином."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:237
 msgid "Facts and Events List"
-msgstr ""
+msgstr "Перелік фактів та подій"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:241
 msgid "Place Settings"
-msgstr ""
+msgstr "Налаштування місця"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
 msgid "Best man at a marriage"
-msgstr ""
+msgstr "Боярин на весіллі"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:24
 msgid "Bridesmaid at a marriage"
-msgstr ""
+msgstr "Подружка нареченої"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:28
 msgctxt "MALE"
 msgid "Witness at a marriage"
-msgstr ""
+msgstr "Свідок на весіллі"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:30
 msgctxt "FEMALE"
 msgid "Witness at a marriage"
-msgstr ""
+msgstr "Свідок на весіллі"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:32
 msgid "Witness at a marriage"
-msgstr ""
+msgstr "Свідок на весіллі"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:37
 msgctxt "MALE"
