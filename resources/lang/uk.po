@@ -1,0 +1,377 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the vesta package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vesta 1.0\n"
+"Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
+"POT-Creation-Date: 2021-04-17 15:53+0200\n"
+"PO-Revision-Date: 2021-06-15 12:32+0000\n"
+"Last-Translator: z-yurets <zaharchenko.yurij@gmail.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.7-dev\n"
+
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:89 IndividualFactsTabModuleTrait.php:110
+msgid "Google Maps"
+msgstr "Google Maps"
+
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:100 IndividualFactsTabModuleTrait.php:130
+msgid "Bing Maps"
+msgstr "Bing Maps"
+
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:106 IndividualFactsTabModuleTrait.php:150
+msgid "OpenStreetMap"
+msgstr "OpenStreetMap"
+
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:117 IndividualFactsTabModuleTrait.php:206
+msgid "Custom Map Provider"
+msgstr "Сторонній постачальник карт"
+
+#: FunctionsPrintWithHooks.php:172
+msgid "Europe in the XIX. century | Mapire"
+msgstr "Європа в XIX. століття | Mapire"
+
+#: FunctionsPrintWithHooks.php:176
+msgid "United States of America (1880-1926) | Mapire"
+msgstr "Сполучені Штати Америки (1880-1926) | Mapire"
+
+#: IndividualFactsTabModuleExtended.php:106
+msgid "Facts and events"
+msgstr "Факти та події"
+
+#: IndividualFactsTabModuleExtended.php:214
+msgid "Events of close relatives"
+msgstr "Події найближчих родичів"
+
+#: IndividualFactsTabModuleExtended.php:228
+msgid "Historic events"
+msgstr "Історичні події"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleExtended.php:322
+msgid "Facts and Events Tab UI Element Providers"
+msgstr ""
+"Вкладка \"Факти та події\" Постачальники елементів інтерфейсу користувача"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleExtended.php:326
+msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
+msgstr ""
+"Модулі, перераховані тут, можуть надавати додаткові дані про факти та події ("
+"відображаються у налаштованому порядку)."
+
+#: IndividualFactsTabModuleTrait.php:27
+msgid "Replacement for the original 'Facts and events' module."
+msgstr "Заміна оригінального модуля \"Факти та події\"."
+
+#: IndividualFactsTabModuleTrait.php:29
+msgid "Also replaces the original 'Extra information' module."
+msgstr "Також замінює оригінальний модуль \"Додаткова інформація\"."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:38
+msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
+msgstr ""
+"Розширена вкладка \"Факти та події\" з гачками для інших користувацьких "
+"модулів."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:39
+msgid "Intended as a replacement for the original 'Facts and events' module."
+msgstr "Призначений як заміна оригінального модуля \"Факти та події\"."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:40
+msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar."
+msgstr ""
+"Підтримує нестандартний тег Gedcom _FSFTID (ідентифікатор FamilySearch) на "
+"вкладці та на бічній панелі."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:69
+msgid "Use separate toggle checkbox"
+msgstr "Використовуйте окремий перемикач"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:70
+msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
+msgstr ""
+"На початковій вкладці відображаються два типи додаткових фактів та подій, "
+"коли на вкладці вибрано \"Події найближчих родичів\":"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:71
+msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
+msgstr ""
+"Фактичні події близьких родичів, а також факти та події, коли поточна особа "
+"вказана як асоційована особа."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:72
+msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
+msgstr ""
+"Останні фактично не обмежуються для найближчих родичів, і тому може бути "
+"менш заплутаним запропонувати окремий перемикач для них."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:76
+msgid "Only show specific facts and events"
+msgstr "Показувати лише конкретні факти та події"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:77
+msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
+msgstr ""
+"Якщо цей параметр встановлений, а особа значиться як співучасник, додаткові "
+"факти та події обмежуються наступними фактами та подіями."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:92
+msgid "Latitude/Longitude"
+msgstr "Широта/довгота"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:94
+msgid "Hide coordinates, show map links after place name"
+msgstr "Приховати координати, показати посилання на карту після назви місця"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:95
+msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
+msgstr ""
+"На оригінальній вкладці відображаються координати (із посиланнями на карту). "
+"Це, як правило, захаращує відображення місця, зокрема, якщо є додаткові "
+"модулі, що забезпечують координати."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:99
+msgid "Open links in new browser tab"
+msgstr "Відкривати посилання в новій вкладці"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:104
+msgid "Show additional info for map links"
+msgstr "Показати додаткову інформацію для посилань на карту"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:105
+msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
+msgstr ""
+"Відображати піктограму із підказкою із зазначенням джерела посилань на "
+"карту. Це призначено в основному для налагодження."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:112
+msgid "Show links to Google Maps"
+msgstr "Показати посилання на Google Maps"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:117 IndividualFactsTabModuleTrait.php:137
+#: IndividualFactsTabModuleTrait.php:157
+msgid "Include 'TM' in tooltip"
+msgstr "Включати 'TM' у підказку"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:118 IndividualFactsTabModuleTrait.php:138
+#: IndividualFactsTabModuleTrait.php:158
+msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
+msgstr ""
+"На оригінальній вкладці був знак товарного знаку - зберігайте його, якщо "
+"хочете, або якщо ви відчуваєте юридичну прив’язаність."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:122 IndividualFactsTabModuleTrait.php:142
+#: IndividualFactsTabModuleTrait.php:167 IndividualFactsTabModuleTrait.php:182
+msgid "Zoom level of linked map"
+msgstr "Рівень масштабування пов'язаної карти"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:132
+msgid "Show links to Bing Maps"
+msgstr "Показувати посилання на Bing Maps"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:152
+msgid "Show links to OpenStreetMap"
+msgstr "Показувати посилання на OpenStreetMap"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:162
+msgid "Include marker"
+msgstr "Включити маркер"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:163
+msgid "Include a marker in the linked map."
+msgstr "Показувати маркер на пов’язаній карті."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:175
+msgid "Mapire (historic maps)"
+msgstr "Mapire (історичні карти)"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:177
+msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
+msgstr ""
+"Показати посилання на історичну карту Європи XIX. століття, або Сполучені "
+"Штати Америки (1880-1926), якщо потрібно"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:178
+msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
+msgstr ""
+"Елемент посилання не відображатиметься для місць за межами відповідних "
+"кордонів Європи та США."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:189
+msgid "Show linked map with additional options"
+msgstr "Показати пов’язану карту з додатковими опціями"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:190
+msgid "When checked, links to the main Mapire page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
+msgstr ""
+"Якщо встановлено прапорець, посилання веде на головну сторінку Mapire, де ви "
+"можете перемикатися між різними історичними шарами, доступними для "
+"відповідного місця, і порівнювати з сучасною картою, яку можна додатково "
+"налаштувати тут:"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:196
+msgid "OSM Base Map"
+msgstr "Базова карта OSM"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:197
+msgid "Aerial Base Map"
+msgstr "Повітряна базова карта"
+
+#. I18N: Module Configuration: Name of a custom map provider
+#: IndividualFactsTabModuleTrait.php:208
+msgid "Name"
+msgstr "Ім'я"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:209
+msgid "You can also configure a custom map provider. Enter its name here."
+msgstr ""
+"Ви також можете налаштувати власного постачальника карт. Введіть тут його "
+"назву."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:215
+msgid "URI template"
+msgstr "Шаблон URI"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:216
+#, php-format
+msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
+msgstr ""
+"URI для посилань на карту із заповнювачами (%1$s та %2$s) для координат "
+"карти. Рівень масштабування повинен бути частиною URI. Приклад: %3$s"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:223
+msgid "Link icon as data URI"
+msgstr "Значок посилання як data URI"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:224
+#, php-format
+msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
+msgstr ""
+"data URI, закодований в Base64, для значка посилання. Перетворіть значок на "
+"data URI, наприклад за допомогою сервісу %1$s. Результат повинен починатися "
+"приблизно як %2$s. Хорошим джерелом зображення піктограми зазвичай є "
+"зображення значка постачальника карт, наприклад %3$s. Його розмір буде "
+"відображено належним чином."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:237
+msgid "Facts and Events List"
+msgstr "Перелік фактів та подій"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:241
+msgid "Place Settings"
+msgstr "Налаштування місця"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
+msgid "Best man at a marriage"
+msgstr "Боярин на весіллі"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:24
+msgid "Bridesmaid at a marriage"
+msgstr "Подружка нареченої"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:28
+msgctxt "MALE"
+msgid "Witness at a marriage"
+msgstr "Свідок на весіллі"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:30
+msgctxt "FEMALE"
+msgid "Witness at a marriage"
+msgstr "Свідок на весіллі"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:32
+msgid "Witness at a marriage"
+msgstr "Свідок на весіллі"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:37
+msgctxt "MALE"
+msgid "Associate at a marriage"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:39
+msgctxt "FEMALE"
+msgid "Associate at a marriage"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:41
+msgid "Associate at a marriage"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:56
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:63
+msgid "Baptism of a godson"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:59
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:65
+msgid "Baptism of a goddaughter"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:67
+msgid "Baptism of a godchild"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:84
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:91
+msgid "Christening of a godson"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:87
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:93
+msgid "Christening of a goddaughter"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:95
+msgid "Christening of a godchild"
+msgstr ""
