@@ -170,9 +170,10 @@ trait IndividualFactsTabModuleTrait {
                 20,
                 'OSM_ZOOM',
                 15)));
-
-    $placeSub[] = new ControlPanelSubsection(
-            /* I18N: Module Configuration */I18N::translate('Mapire (historic maps)'),
+    
+    $historicMapProvider = I18N::translate("Arcanum Maps");
+    $placeSub[] = new ControlPanelSubsection(            
+            /* I18N: Module Configuration */I18N::translate('%1$s (historic maps)', $historicMapProvider),
             array(new ControlPanelCheckbox(
                 /* I18N: Module Configuration */I18N::translate('Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable'),
                 /* I18N: Module Configuration */I18N::translate('The link item will not be shown for locations outside the respective boundaries of Europe and the US.'),
@@ -187,7 +188,7 @@ trait IndividualFactsTabModuleTrait {
                 15),
         new ControlPanelCheckboxInverted(
                 /* I18N: Module Configuration */I18N::translate('Show linked map with additional options'),
-                /* I18N: Module Configuration */I18N::translate('When checked, links to the main Mapire page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:'),
+                /* I18N: Module Configuration */I18N::translate('When checked, links to the main %1$s page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:', $historicMapProvider),
                 'MAPIRE_EMBED',
                 '1'),
         new ControlPanelRadioButtons(

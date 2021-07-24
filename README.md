@@ -22,7 +22,7 @@ Mainly intended as a base for other custom modules. Some features are available 
 * Links to external maps (Google, Bing, OpenStreetMap) are configurable via module administration.
 
 * Additional map services:
-  * [Mapire.eu](https://mapire.eu), providing a historical map of Europe in the XIX. century, and of the United States of America (1880-1926).
+  * [Arcanum Maps](https://maps.arcanum.com/), providing a historical map of Europe in the XIX. century, and of the United States of America (1880-1926).
   * The option to configure an additional custom map provider via the control panel.
 
 * The respective location data is obtained directly from GEDCOM, and may also be provided by other custom modules. 

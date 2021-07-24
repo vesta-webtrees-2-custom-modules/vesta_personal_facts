@@ -169,13 +169,14 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
       $isInEurope = (35 < $map_lati) && ($map_lati < 66) && (-10 < $map_long) && ($map_long < 45);  
       $isInUS = (25 < $map_lati) && ($map_lati < 50) && (-125 < $map_long) && ($map_long < -65);  
 
+      $historicMapProvider = I18N::translate("Arcanum Maps");
       if ($isInEurope) {
-        $title = I18N::translate("Europe in the XIX. century | Mapire");
-        $url = 'https://mapire.eu/en/map/europe-19century-secondsurvey/';
+        $title = I18N::translate('Europe in the XIX. century | %1$s', $historicMapProvider);
+        $url = 'https://maps.arcanum.com/en/map/europe-19century-secondsurvey/';
         $layer='158';
       } else if ($isInUS) {
-        $title = I18N::translate("United States of America (1880-1926) | Mapire");
-        $url = 'https://mapire.eu/en/map/usa-1880-1926/';
+        $title = I18N::translate('United States of America (1880-1926) | %1$s', $historicMapProvider);
+        $url = 'https://maps.arcanum.com/en/map/usa-1880-1926/';
         $layer='169';
       } else {
         return '';

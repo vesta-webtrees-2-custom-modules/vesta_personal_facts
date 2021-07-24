@@ -7,73 +7,32 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2021-04-17 15:53+0200\n"
-"PO-Revision-Date: 2021-07-21 03:33+0000\n"
+"POT-Creation-Date: 2021-07-24 09:08+0200\n"
+"PO-Revision-Date: 2021-07-24 11:35+0200\n"
 "Last-Translator: ngohuuthuanfc9865b89dde4baf <ngohuuthuan@gmail.com>\n"
-"Language-Team: Vietnamese <https://hosted.weblate.org/projects/"
-"vesta-webtrees-custom-modules/vesta-facts-and-events/vi/>\n"
+"Language-Team: Vietnamese <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/vi/>\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.7.2-dev\n"
+"X-Generator: Poedit 1.8.6\n"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:89 IndividualFactsTabModuleTrait.php:110
-msgid "Google Maps"
-msgstr "Bản đồ Google Maps"
+#: IndividualFactsTabModuleTrait.php:176
+#, php-format
+msgid "%1$s (historic maps)"
+msgstr "%1$s (bản đồ lịch sử)"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:100 IndividualFactsTabModuleTrait.php:130
-msgid "Bing Maps"
-msgstr "Bản đồ Bing Maps"
+#: IndividualFactsTabModuleTrait.php:71
+msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
+msgstr "Các sự kiện thực tế của những người thân ruột thịt, và các sự kiện và sự kiện mà cá nhân hiện tại được liệt kê là một cộng sự."
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:106 IndividualFactsTabModuleTrait.php:150
-msgid "OpenStreetMap"
-msgstr "Bản đồ OpenStreetMap"
-
-#. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:117 IndividualFactsTabModuleTrait.php:206
-msgid "Custom Map Provider"
-msgstr "Nhà cung cấp bản đồ tùy chỉnh"
-
-#: FunctionsPrintWithHooks.php:172
-msgid "Europe in the XIX. century | Mapire"
-msgstr "Châu Âu trong thế kỷ XIX. kỷ | Mapire"
-
-#: FunctionsPrintWithHooks.php:176
-msgid "United States of America (1880-1926) | Mapire"
-msgstr "Hợp chủng quốc Hoa Kỳ (1880-1926) | Mapire"
-
-#: IndividualFactsTabModuleExtended.php:106
-msgid "Facts and events"
-msgstr "Sự kiện và số liệu"
-
-#: IndividualFactsTabModuleExtended.php:214
-msgid "Events of close relatives"
-msgstr "Sự kiện của những người thân"
-
-#: IndividualFactsTabModuleExtended.php:228
-msgid "Historic events"
-msgstr "Sự kiện lịch sử"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:322
-msgid "Facts and Events Tab UI Element Providers"
-msgstr "Tab Sự kiện và Số liệu Nhà cung cấp phần tử giao diện người dùng"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:326
-msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
+#: IndividualFactsTabModuleTrait.php:198
+msgid "Aerial Base Map"
 msgstr ""
-"Các mô-đun được liệt kê ở đây có thể cung cấp dữ liệu bổ sung cho các dữ "
-"kiện và sự kiện (được hiển thị theo thứ tự đã định cấu hình)."
-
-#: IndividualFactsTabModuleTrait.php:27
-msgid "Replacement for the original 'Facts and events' module."
-msgstr "Thay thế cho mô-đun 'Sự kiện và số liệu' ban đầu."
 
 #: IndividualFactsTabModuleTrait.php:29
 msgid "Also replaces the original 'Extra information' module."
@@ -82,257 +41,13 @@ msgstr "Đồng thời thay thế mô-đun 'Thông tin bổ sung' ban đầu."
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:38
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
-msgstr ""
-"Tab 'Sự kiện và Số liệu' mở rộng, với các móc cho các mô-đun tùy chỉnh khác."
+msgstr "Tab 'Sự kiện và Số liệu' mở rộng, với các móc cho các mô-đun tùy chỉnh khác."
 
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:39
-msgid "Intended as a replacement for the original 'Facts and events' module."
-msgstr "Dự định thay thế cho mô-đun 'Sự kiện và số liệu' ban đầu."
+#: FunctionsPrintWithHooks.php:172 IndividualFactsTabModuleTrait.php:174
+msgid "Arcanum Maps"
+msgstr "Arcanum Maps"
 
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:40
-msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar."
-msgstr ""
-"Hỗ trợ thẻ Gedcom không chuẩn,_FSFTID (id Tìm kiếm gia đình), trong tab và "
-"trong thanh bên."
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:69
-msgid "Use separate toggle checkbox"
-msgstr "Sử dụng hộp kiểm chuyển đổi riêng biệt"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:70
-msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
-msgstr ""
-"Trong tab gốc, hai loại dữ kiện và sự kiện bổ sung được hiển thị khi 'Sự "
-"kiện của họ hàng gần gũi' được chọn trên tab:"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:71
-msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
-msgstr ""
-"Các sự kiện thực tế của những người thân ruột thịt, và các sự kiện và sự "
-"kiện mà cá nhân hiện tại được liệt kê là một cộng sự."
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:72
-msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
-msgstr ""
-"Loại thứ hai không thực sự bị hạn chế đối với những người thân ruột thịt, và "
-"do đó, có thể ít gây nhầm lẫn hơn khi cung cấp một hộp kiểm chuyển đổi riêng "
-"cho họ."
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:76
-msgid "Only show specific facts and events"
-msgstr "Chỉ hiển thị sự kiện và sự kiện cụ thể"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:77
-msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
-msgstr ""
-"Nếu tùy chọn này được chọn, các dữ kiện và sự kiện bổ sung trong đó cá nhân "
-"được liệt kê là cộng sự sẽ bị hạn chế đối với các dữ kiện và sự kiện sau đây."
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:92
-msgid "Latitude/Longitude"
-msgstr "Kinh độ/Vĩ độ"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:94
-msgid "Hide coordinates, show map links after place name"
-msgstr "Ẩn tọa độ, hiển thị liên kết bản đồ sau tên địa điểm"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:95
-msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
-msgstr ""
-"Trong tab gốc, các tọa độ được hiển thị (với các liên kết bản đồ). Điều này "
-"có xu hướng làm lộn xộn hiển thị địa điểm, đặc biệt nếu có các mô-đun bổ "
-"sung cung cấp tọa độ."
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:99
-msgid "Open links in new browser tab"
-msgstr "Mở liên kết trong tab trình duyệt mới"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:104
-msgid "Show additional info for map links"
-msgstr "Hiển thị thông tin bổ sung cho các liên kết bản đồ"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:105
-msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
-msgstr ""
-"Hiển thị một biểu tượng với chú giải công cụ cho biết nguồn của các liên kết "
-"bản đồ. Đây là mục đích chủ yếu để gỡ lỗi."
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:112
-msgid "Show links to Google Maps"
-msgstr "Hiển thị các liên kết đến Google Maps"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:117 IndividualFactsTabModuleTrait.php:137
-#: IndividualFactsTabModuleTrait.php:157
-msgid "Include 'TM' in tooltip"
-msgstr "Bao gồm 'TM' trong chú giải công cụ"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:118 IndividualFactsTabModuleTrait.php:138
-#: IndividualFactsTabModuleTrait.php:158
-msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
-msgstr ""
-"Tab ban đầu có dấu hiệu nhãn hiệu - hãy giữ nó nếu bạn muốn, hoặc nếu bạn "
-"cảm thấy bị ràng buộc về mặt pháp lý."
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:122 IndividualFactsTabModuleTrait.php:142
-#: IndividualFactsTabModuleTrait.php:167 IndividualFactsTabModuleTrait.php:182
-msgid "Zoom level of linked map"
-msgstr "Mức độ thu phóng của bản đồ được liên kết"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:132
-msgid "Show links to Bing Maps"
-msgstr "Hiển thị liên kết đến Bản đồ Bing Maps"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:152
-msgid "Show links to OpenStreetMap"
-msgstr "Hiển thị liên kết đến OpenStreetMap"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:162
-msgid "Include marker"
-msgstr "Bao gồm điểm đánh dấu"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:163
-msgid "Include a marker in the linked map."
-msgstr "Bao gồm một điểm đánh dấu trong bản đồ được liên kết."
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:175
-msgid "Mapire (historic maps)"
-msgstr "Mapire (bản đồ lịch sử)"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:177
-msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
-msgstr ""
-"Hiển thị các liên kết đến bản đồ lịch sử của Châu Âu trong thế kỷ XIX. kỷ, "
-"hoặc Hợp chủng quốc Hoa Kỳ (1880-1926), nếu có"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:178
-msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
-msgstr ""
-"Mục liên kết sẽ không được hiển thị cho các vị trí bên ngoài ranh giới tương "
-"ứng của Châu Âu và Hoa Kỳ."
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:189
-msgid "Show linked map with additional options"
-msgstr "Hiển thị bản đồ được liên kết với các tùy chọn bổ sung"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:190
-msgid "When checked, links to the main Mapire page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
-msgstr ""
-"Khi được chọn, các liên kết đến trang Mapire chính, nơi bạn có thể chuyển "
-"đổi giữa các lớp lịch sử khác nhau có sẵn cho vị trí tương ứng và làm mờ dần "
-"bản đồ hiện đại, có thể được định cấu hình thêm tại đây:"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:196
-msgid "OSM Base Map"
-msgstr "OSM Base Map"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:197
-msgid "Aerial Base Map"
-msgstr ""
-
-#. I18N: Module Configuration: Name of a custom map provider
-#: IndividualFactsTabModuleTrait.php:208
-msgid "Name"
-msgstr "Tên"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:209
-msgid "You can also configure a custom map provider. Enter its name here."
-msgstr ""
-"Bạn cũng có thể định cấu hình một nhà cung cấp bản đồ tùy chỉnh. Nhập tên "
-"của nó ở đây."
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:215
-msgid "URI template"
-msgstr "Mẫu URI"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:216
-#, php-format
-msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
-msgstr ""
-"URI cho bản đồ liên kết với trình giữ chỗ (%1$s và %2$s) cho các tọa độ bản "
-"đồ. Mức thu phóng phải là một phần của URI. Ví dụ: %3$s"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:223
-msgid "Link icon as data URI"
-msgstr "Biểu tượng liên kết dưới dạng URI dữ liệu"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:224
-#, php-format
-msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
-msgstr ""
-"URI dữ liệu được mã hóa Base64 cho biểu tượng liên kết. Chuyển đổi biểu "
-"tượng thành URI dữ liệu, ví dụ: qua %1$s. Kết quả sẽ bắt đầu bằng %2$s. "
-"Nguồn tốt của hình ảnh biểu tượng thường là hình ảnh biểu tượng yêu thích "
-"của nhà cung cấp bản đồ, chẳng hạn như %3$s. Nó sẽ được hiển thị thay đổi "
-"kích thước thích hợp."
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:237
-msgid "Facts and Events List"
-msgstr "Danh sách Sự kiện và Số liệu"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:241
-msgid "Place Settings"
-msgstr "Thiết lập địa điểm"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
-msgid "Best man at a marriage"
-msgstr "Người đàn ông tốt nhất trong cuộc hôn nhân"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:24
-msgid "Bridesmaid at a marriage"
-msgstr "Phù dâu trong hôn lễ"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:28
-msgctxt "MALE"
-msgid "Witness at a marriage"
-msgstr "Làm chứng trong một cuộc hôn nhân"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:30
-msgctxt "FEMALE"
-msgid "Witness at a marriage"
-msgstr "Làm chứng trong một cuộc hôn nhân"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:32
-msgid "Witness at a marriage"
-msgstr "Làm chứng trong một cuộc hôn nhân"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:37
-msgctxt "MALE"
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:41
 msgid "Associate at a marriage"
 msgstr "Liên kết khi kết hôn"
 
@@ -341,34 +56,289 @@ msgctxt "FEMALE"
 msgid "Associate at a marriage"
 msgstr "Liên kết khi kết hôn"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:41
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:37
+msgctxt "MALE"
 msgid "Associate at a marriage"
 msgstr "Liên kết khi kết hôn"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:56
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:63
-msgid "Baptism of a godson"
-msgstr "Lễ rửa tội của con trai đỡ đầu"
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:67
+msgid "Baptism of a godchild"
+msgstr "Lễ rửa tội của một đứa con đỡ đầu"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:59
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:65
 msgid "Baptism of a goddaughter"
 msgstr "Lễ rửa tội của một con gái đỡ đầu"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:67
-msgid "Baptism of a godchild"
-msgstr "Lễ rửa tội của một đứa con đỡ đầu"
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:56
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:63
+msgid "Baptism of a godson"
+msgstr "Lễ rửa tội của con trai đỡ đầu"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:84
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:91
-msgid "Christening of a godson"
-msgstr "Chúa của một đứa con trai đỡ đầu"
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:225
+#, php-format
+msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
+msgstr "URI dữ liệu được mã hóa Base64 cho biểu tượng liên kết. Chuyển đổi biểu tượng thành URI dữ liệu, ví dụ: qua %1$s. Kết quả sẽ bắt đầu bằng %2$s. Nguồn tốt của hình ảnh biểu tượng thường là hình ảnh biểu tượng yêu thích của nhà cung cấp bản đồ, chẳng hạn như %3$s. Nó sẽ được hiển thị thay đổi kích thước thích hợp."
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
+msgid "Best man at a marriage"
+msgstr "Người đàn ông tốt nhất trong cuộc hôn nhân"
+
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:101 IndividualFactsTabModuleTrait.php:130
+msgid "Bing Maps"
+msgstr "Bản đồ Bing Maps"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:24
+msgid "Bridesmaid at a marriage"
+msgstr "Phù dâu trong hôn lễ"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:95
+msgid "Christening of a godchild"
+msgstr "Làm chúa của một đứa con đỡ đầu"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:87
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:93
 msgid "Christening of a goddaughter"
 msgstr "Chúa của một đứa con gái đỡ đầu"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:95
-msgid "Christening of a godchild"
-msgstr "Làm chúa của một đứa con đỡ đầu"
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:84
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:91
+msgid "Christening of a godson"
+msgstr "Chúa của một đứa con trai đỡ đầu"
+
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:118 IndividualFactsTabModuleTrait.php:207
+msgid "Custom Map Provider"
+msgstr "Nhà cung cấp bản đồ tùy chỉnh"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:105
+msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
+msgstr "Hiển thị một biểu tượng với chú giải công cụ cho biết nguồn của các liên kết bản đồ. Đây là mục đích chủ yếu để gỡ lỗi."
+
+#: FunctionsPrintWithHooks.php:174
+#, php-format
+msgid "Europe in the XIX. century | %1$s"
+msgstr "Châu Âu trong thế kỷ XIX. kỷ | %1$s"
+
+#: IndividualFactsTabModuleExtended.php:218
+msgid "Events of close relatives"
+msgstr "Sự kiện của những người thân"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:238
+msgid "Facts and Events List"
+msgstr "Danh sách Sự kiện và Số liệu"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleExtended.php:326
+msgid "Facts and Events Tab UI Element Providers"
+msgstr "Tab Sự kiện và Số liệu Nhà cung cấp phần tử giao diện người dùng"
+
+#: IndividualFactsTabModuleExtended.php:110
+msgid "Facts and events"
+msgstr "Sự kiện và số liệu"
+
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:90 IndividualFactsTabModuleTrait.php:110
+msgid "Google Maps"
+msgstr "Bản đồ Google Maps"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:94
+msgid "Hide coordinates, show map links after place name"
+msgstr "Ẩn tọa độ, hiển thị liên kết bản đồ sau tên địa điểm"
+
+#: IndividualFactsTabModuleExtended.php:232
+msgid "Historic events"
+msgstr "Sự kiện lịch sử"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:77
+msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
+msgstr "Nếu tùy chọn này được chọn, các dữ kiện và sự kiện bổ sung trong đó cá nhân được liệt kê là cộng sự sẽ bị hạn chế đối với các dữ kiện và sự kiện sau đây."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:95
+msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
+msgstr "Trong tab gốc, các tọa độ được hiển thị (với các liên kết bản đồ). Điều này có xu hướng làm lộn xộn hiển thị địa điểm, đặc biệt nếu có các mô-đun bổ sung cung cấp tọa độ."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:70
+msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
+msgstr "Trong tab gốc, hai loại dữ kiện và sự kiện bổ sung được hiển thị khi 'Sự kiện của họ hàng gần gũi' được chọn trên tab:"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:117 IndividualFactsTabModuleTrait.php:137
+#: IndividualFactsTabModuleTrait.php:157
+msgid "Include 'TM' in tooltip"
+msgstr "Bao gồm 'TM' trong chú giải công cụ"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:163
+msgid "Include a marker in the linked map."
+msgstr "Bao gồm một điểm đánh dấu trong bản đồ được liên kết."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:162
+msgid "Include marker"
+msgstr "Bao gồm điểm đánh dấu"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:39
+msgid "Intended as a replacement for the original 'Facts and events' module."
+msgstr "Dự định thay thế cho mô-đun 'Sự kiện và số liệu' ban đầu."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:92
+msgid "Latitude/Longitude"
+msgstr "Kinh độ/Vĩ độ"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:224
+msgid "Link icon as data URI"
+msgstr "Biểu tượng liên kết dưới dạng URI dữ liệu"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleExtended.php:330
+msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
+msgstr "Các mô-đun được liệt kê ở đây có thể cung cấp dữ liệu bổ sung cho các dữ kiện và sự kiện (được hiển thị theo thứ tự đã định cấu hình)."
+
+#. I18N: Module Configuration: Name of a custom map provider
+#: IndividualFactsTabModuleTrait.php:209
+msgid "Name"
+msgstr "Tên"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:197
+msgid "OSM Base Map"
+msgstr "OSM Base Map"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:76
+msgid "Only show specific facts and events"
+msgstr "Chỉ hiển thị sự kiện và sự kiện cụ thể"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:99
+msgid "Open links in new browser tab"
+msgstr "Mở liên kết trong tab trình duyệt mới"
+
+#. I18N: Module Configuration
+#: FunctionsPrintWithHooks.php:107 IndividualFactsTabModuleTrait.php:150
+msgid "OpenStreetMap"
+msgstr "Bản đồ OpenStreetMap"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:242
+msgid "Place Settings"
+msgstr "Thiết lập địa điểm"
+
+#: IndividualFactsTabModuleTrait.php:27
+msgid "Replacement for the original 'Facts and events' module."
+msgstr "Thay thế cho mô-đun 'Sự kiện và số liệu' ban đầu."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:104
+msgid "Show additional info for map links"
+msgstr "Hiển thị thông tin bổ sung cho các liên kết bản đồ"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:190
+msgid "Show linked map with additional options"
+msgstr "Hiển thị bản đồ được liên kết với các tùy chọn bổ sung"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:132
+msgid "Show links to Bing Maps"
+msgstr "Hiển thị liên kết đến Bản đồ Bing Maps"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:112
+msgid "Show links to Google Maps"
+msgstr "Hiển thị các liên kết đến Google Maps"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:152
+msgid "Show links to OpenStreetMap"
+msgstr "Hiển thị liên kết đến OpenStreetMap"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:178
+msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
+msgstr "Hiển thị các liên kết đến bản đồ lịch sử của Châu Âu trong thế kỷ XIX. kỷ, hoặc Hợp chủng quốc Hoa Kỳ (1880-1926), nếu có"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:40
+msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar."
+msgstr "Hỗ trợ thẻ Gedcom không chuẩn,_FSFTID (id Tìm kiếm gia đình), trong tab và trong thanh bên."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:72
+msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
+msgstr "Loại thứ hai không thực sự bị hạn chế đối với những người thân ruột thịt, và do đó, có thể ít gây nhầm lẫn hơn khi cung cấp một hộp kiểm chuyển đổi riêng cho họ."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:179
+msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
+msgstr "Mục liên kết sẽ không được hiển thị cho các vị trí bên ngoài ranh giới tương ứng của Châu Âu và Hoa Kỳ."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:118 IndividualFactsTabModuleTrait.php:138
+#: IndividualFactsTabModuleTrait.php:158
+msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
+msgstr "Tab ban đầu có dấu hiệu nhãn hiệu - hãy giữ nó nếu bạn muốn, hoặc nếu bạn cảm thấy bị ràng buộc về mặt pháp lý."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:217
+#, php-format
+msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
+msgstr "URI cho bản đồ liên kết với trình giữ chỗ (%1$s và %2$s) cho các tọa độ bản đồ. Mức thu phóng phải là một phần của URI. Ví dụ: %3$s"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:216
+msgid "URI template"
+msgstr "Mẫu URI"
+
+#: FunctionsPrintWithHooks.php:178
+#, php-format
+msgid "United States of America (1880-1926) | %1$s"
+msgstr "Hợp chủng quốc Hoa Kỳ (1880-1926) | %1$s"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:69
+msgid "Use separate toggle checkbox"
+msgstr "Sử dụng hộp kiểm chuyển đổi riêng biệt"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:191
+#, php-format
+msgid "When checked, links to the main %1$s page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
+msgstr "Khi được chọn, các liên kết đến trang %1$s chính, nơi bạn có thể chuyển đổi giữa các lớp lịch sử khác nhau có sẵn cho vị trí tương ứng và làm mờ dần bản đồ hiện đại, có thể được định cấu hình thêm tại đây:"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:32
+msgid "Witness at a marriage"
+msgstr "Làm chứng trong một cuộc hôn nhân"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:30
+msgctxt "FEMALE"
+msgid "Witness at a marriage"
+msgstr "Làm chứng trong một cuộc hôn nhân"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:28
+msgctxt "MALE"
+msgid "Witness at a marriage"
+msgstr "Làm chứng trong một cuộc hôn nhân"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:210
+msgid "You can also configure a custom map provider. Enter its name here."
+msgstr "Bạn cũng có thể định cấu hình một nhà cung cấp bản đồ tùy chỉnh. Nhập tên của nó ở đây."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:122 IndividualFactsTabModuleTrait.php:142
+#: IndividualFactsTabModuleTrait.php:167 IndividualFactsTabModuleTrait.php:183
+msgid "Zoom level of linked map"
+msgstr "Mức độ thu phóng của bản đồ được liên kết"
