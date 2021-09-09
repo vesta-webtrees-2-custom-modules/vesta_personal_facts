@@ -168,7 +168,7 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
     $show_relatives_facts = $individual->tree()->getPreference('SHOW_RELATIVES_EVENTS');
     $toggleableFactsCategories = $this->getToggleableFactsCategories($show_relatives_facts, !empty($historical_facts));
 
-    //[RC] additions		
+    //[RC] additions
     $outputBeforeTab = $this->getOutputBeforeTab($individual);
     $outputAfterTab = $this->getOutputAfterTab($individual);
     $outputInDescriptionbox = $this->getOutputInDescriptionbox($individual);
@@ -1079,19 +1079,19 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
   //[RC] override hooks
 
   protected function getOutputBeforeTab(Individual $person) {
-    return new GenericViewElement('', '');
+    return GenericViewElement::createEmpty();
   }
 
   protected function getOutputAfterTab(Individual $person) {
-    return new GenericViewElement('', '');
+    return GenericViewElement::createEmpty();
   }
 
   protected function getOutputInDescriptionBox(Individual $person) {
-    return new GenericViewElement('', '');
+    return GenericViewElement::createEmpty();
   }
 
   protected function getOutputAfterDescriptionBox(Individual $person) {
-    return new GenericViewElement('', '');
+    return GenericViewElement::createEmpty();
   }
 
 }

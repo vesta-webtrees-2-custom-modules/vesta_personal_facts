@@ -34,6 +34,7 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
     $html .= $this->formatPlaceCustomFieldsAfterNames($ps);
 
     //modernized (for now, expected to be fast enough without ajax)
+    //___TEMP___;
     $mapCoordinates = FunctionsPlaceUtils::plac2map($this->module, $ps, true);
     if ($mapCoordinates !== null) {
       $hideCoordinates = $this->module->getPreference('LINKS_AFTER_PLAC', '0');
@@ -53,13 +54,14 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
       }   
     }
     
+    //___TEMP___;
     $factPlaceAdditions = IndividualFactsTabExtenderUtils::accessibleModules($this->module, $ps->getTree(), Auth::user())
             ->map(function (IndividualFactsTabExtenderInterface $module) use ($ps) {
               return $module->factPlaceAdditions($ps);
             })
             ->filter() //filter null values
             ->toArray();
-    
+                    
     foreach ($factPlaceAdditions as $factPlaceAddition) {
       $html1 .= $factPlaceAddition->getBeforePlace()->getMain();
       $script1 .= $factPlaceAddition->getBeforePlace()->getScript();
