@@ -40,8 +40,13 @@ use Vesta\Hook\HookInterfaces\PrintFunctionsPlaceInterface;
 use Vesta\Model\GenericViewElement;
 use Vesta\Model\MapCoordinates;
 use Vesta\Model\PlaceStructure;
+use Vesta\Model\VestalRequest;
+use Vesta\Model\VestalResponse;
 use Vesta\VestaAdminController;
 use Vesta\VestaModuleTrait;
+use function GuzzleHttp\json_decode;
+use function GuzzleHttp\json_encode;
+use function response;
 use function route;
 use function view;
 
@@ -68,9 +73,16 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   use IndividualFactsTabModuleTrait;
   use EmptyPrintFunctionsPlace;
 
+  protected $functionsPrint;
+  
+  public function functionsPrint() {
+    return $this->functionsPrint;
+  }
+          
   public function __construct(ModuleService $module_service, ClipboardService $clipboard_service) {
     parent::__construct($module_service, $clipboard_service);
-    $this->setFunctionsPrintFacts(new FunctionsPrintFactsWithHooks(new FunctionsPrintWithHooks($this), $this));
+    $this->functionsPrint = new FunctionsPrintWithHooks($this);
+    $this->setFunctionsPrintFacts(new FunctionsPrintFactsWithHooks($this->functionsPrint, $this));
   }
 
   //assumes to get called after setName!
@@ -529,5 +541,50 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
       
       //why are we even here then? anyway:      
       return new Collection();
+  }
+  
+  public function useVestals(): bool {    
+    return true; //TODO via module setting?
+  }
+  
+  public function vestalsActionUrl(): string {
+    $parameters = [
+        'module' => $this->name(),
+        'action' => 'Vestals'
+    ];
+
+    $url = route('module', $parameters);
+    
+    return $url;
+  }
+  
+  public function postVestalsAction(ServerRequestInterface $request): ResponseInterface {
+        
+    $body = json_decode($request->getBody());
+    
+    $responses = [];
+    
+    foreach ($body as $vestalRequestStd) {
+      $method = VestalRequest::methodFromStd($vestalRequestStd);
+      $placeStructure = PlaceStructure::fromStd($vestalRequestStd->args);
+      
+      if ('vestalBeforePlace' == $method) {
+        $response = $this->functionsPrint()->vestalBeforePlace($placeStructure);
+        $responses[$response->classAttr()] = $response;
+      } else if ('vestalAfterMap' == $method) {
+        $response = $this->functionsPrint()->vestalAfterMap($placeStructure);
+        $responses[$response->classAttr()] = $response;
+      } else if ('vestalAfterNotes' == $method) {
+        $response = $this->functionsPrint()->vestalAfterNotes($placeStructure);
+        $responses[$response->classAttr()] = $response;
+      } else {
+        error_log("unexpected method:".$method);
+      }
+    }
+    
+    ob_start();
+    //array_values required for sequential numeric indexes, otherwise we end up with json object
+    echo json_encode(array_values($responses));
+    return response(ob_get_clean());
   }
 }

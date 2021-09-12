@@ -58,7 +58,12 @@ class FunctionsPrint_2x {
    * @return GenericViewElement
    */
   //[RC] refactored completely
-  public function formatFactPlace(Fact $event, $anchor = false, $sub_records = false, $lds = false): GenericViewElement {
+  public function formatFactPlace(
+          Fact $event, 
+          $anchor = false, 
+          $sub_records = false, 
+          $lds = false): GenericViewElement {
+    
     if ($anchor || $sub_records) {
       $ps = PlaceStructure::fromFact($event);
       if ($ps === null) {

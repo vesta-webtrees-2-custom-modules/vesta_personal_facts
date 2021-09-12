@@ -188,13 +188,19 @@ class IndividualFactsTabModule_2x extends AbstractModule implements ModuleTabInt
         'usedFacts' => $usedFacts,
         
         'toggleableFactsCategories' => $toggleableFactsCategories,
+        
+        //probably needlesly generic; tab now has Vesta-specific aspects anyway!
         'printFactFunction' => function (Fact $fact) use ($individual) {
           return $this->functionsPrintFacts->printFactAndReturnScript($fact, $individual);
         },
+                
         'outputBeforeTab' => $outputBeforeTab,
         'outputAfterTab' => $outputAfterTab,
         'outputInDescriptionbox' => $outputInDescriptionbox,
-        'outputAfterDescriptionbox' => $outputAfterDescriptionbox
+        'outputAfterDescriptionbox' => $outputAfterDescriptionbox,
+                
+        //additional config etc
+        'module' => $this
     ]);
 
     return $view;

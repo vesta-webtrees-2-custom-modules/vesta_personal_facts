@@ -6,6 +6,7 @@ use Aura\Router\RouterContainer;
 use Cissee\WebtreesExt\Functions\FunctionsPrint_2x;
 use Cissee\WebtreesExt\MoreI18N;
 use Fisharebest\Webtrees\Auth;
+use Fisharebest\Webtrees\Fact;
 use Fisharebest\Webtrees\I18N;
 use GeoProjectionMercator;
 use Vesta\Hook\HookInterfaces\FunctionsPlaceUtils;
@@ -13,6 +14,9 @@ use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
 use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderUtils;
 use Vesta\Model\GenericViewElement;
 use Vesta\Model\PlaceStructure;
+use Vesta\Model\VestalRequest;
+use Vesta\Model\VestalResponse;
+use function GuzzleHttp\json_encode;
 use function view;
 
 class FunctionsPrintWithHooks extends FunctionsPrint_2x {
@@ -22,8 +26,98 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
   function __construct($module) {
     $this->module = $module;
   }
-
-  public function formatPlaceNameAndSubRecords(PlaceStructure $ps) {
+  
+  public function vestalsForFactPlace(
+          Fact $event): array {
+    
+    $ps = PlaceStructure::fromFact($event);
+    if ($ps === null) {
+      return [];
+    }
+    return $this->vestalsForPlaceNameAndSubRecords($ps);
+  }
+  
+  public function vestalBeforePlace(
+          PlaceStructure $ps): VestalResponse {
+    
+    $factPlaceAdditions = IndividualFactsTabExtenderUtils::accessibleModules($this->module, $ps->getTree(), Auth::user())
+            ->map(function (IndividualFactsTabExtenderInterface $module) use ($ps) {
+              return $module->factPlaceAdditionsBeforePlace($ps);
+            })
+            ->filter() //filter null values
+            ->toArray();
+    
+    $html1 = '';        
+    foreach ($factPlaceAdditions as $factPlaceAddition) {
+      $html1 .= $factPlaceAddition;
+    }
+    
+    $key = md5(json_encode($ps));
+    return new VestalResponse($key.'_vestalBeforePlace', $html1);
+  }
+  
+  public function vestalAfterMap(
+          PlaceStructure $ps): VestalResponse {
+    
+    $factPlaceAdditions = IndividualFactsTabExtenderUtils::accessibleModules($this->module, $ps->getTree(), Auth::user())
+            ->map(function (IndividualFactsTabExtenderInterface $module) use ($ps) {
+              return $module->factPlaceAdditionsAfterMap($ps);
+            })
+            ->filter() //filter null values
+            ->toArray();
+    
+    $html = '';        
+    foreach ($factPlaceAdditions as $factPlaceAddition) {
+      $html .= $factPlaceAddition;
+    }
+   
+    $key = md5(json_encode($ps));
+    return new VestalResponse($key.'_vestalAfterMap', $html);
+  }
+  
+  public function vestalAfterNotes(
+          PlaceStructure $ps): VestalResponse {
+    
+    $factPlaceAdditions = IndividualFactsTabExtenderUtils::accessibleModules($this->module, $ps->getTree(), Auth::user())
+            ->map(function (IndividualFactsTabExtenderInterface $module) use ($ps) {
+              return $module->factPlaceAdditionsAfterNotes($ps);
+            })
+            ->filter() //filter null values
+            ->toArray();
+    
+    $html = '';        
+    foreach ($factPlaceAdditions as $factPlaceAddition) {
+      $html .= $factPlaceAddition;
+    }
+   
+    $key = md5(json_encode($ps));
+    return new VestalResponse($key.'_vestalAfterNotes', $html);
+  }
+  
+  public function vestalsForPlaceNameAndSubRecords(
+          PlaceStructure $ps): array {
+    
+    $useVestals = $this->module->useVestals();
+    
+    if (!$useVestals) {
+      return [];
+    }
+    
+    $requests = [];
+    
+    $key = md5(json_encode($ps));
+    $requests[$key.'_vestalBeforePlace'] = new VestalRequest('vestalBeforePlace', $ps);
+    $requests[$key.'_vestalAfterMap'] = new VestalRequest('vestalAfterMap', $ps);
+    $requests[$key.'_vestalAfterNotes'] = new VestalRequest('vestalAfterNotes', $ps);
+            
+    return $requests;
+  }
+  
+  public function formatPlaceNameAndSubRecords(
+          PlaceStructure $ps): array {
+    
+    $useVestals = $this->module->useVestals();
+    
     $html1 = '';
     $script1 = '';
     
@@ -54,35 +148,67 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
       }   
     }
     
-    //___TEMP___;
-    $factPlaceAdditions = IndividualFactsTabExtenderUtils::accessibleModules($this->module, $ps->getTree(), Auth::user())
+    if ($useVestals) {
+      //add placeholders for Vestals      
+      //TODO: cleanup: strictly we have to handle script here!
+      
+      $key = md5(json_encode($ps));
+      
+      $html1 .= "<span class = '" . $key . "_vestalBeforePlace'></span>";
+      $html1 .= $this->formatPlaceName($ps);
+      
+      $html .= $this->formatPlaceCustomFieldsAfterLatiLong($ps);
+      
+      $html .= "<span class = '" . $key . "_vestalAfterMap'></span>";
+      $html .= $this->formatPlaceNotes($ps);
+      $html .= $this->formatPlaceCustomFieldsAfterNotes($ps);
+      
+      $html .= "<span class = '" . $key . "_vestalAfterNotes'></span>";
+
+      return array(
+          new GenericViewElement($html1, $script1),
+          new GenericViewElement($html, $script));
+    }
+    
+    $factPlaceAdditionsBeforePlace = IndividualFactsTabExtenderUtils::accessibleModules($this->module, $ps->getTree(), Auth::user())
             ->map(function (IndividualFactsTabExtenderInterface $module) use ($ps) {
-              return $module->factPlaceAdditions($ps);
+              return $module->factPlaceAdditionsBeforePlace($ps);
             })
             ->filter() //filter null values
             ->toArray();
-                    
-    foreach ($factPlaceAdditions as $factPlaceAddition) {
-      $html1 .= $factPlaceAddition->getBeforePlace()->getMain();
-      $script1 .= $factPlaceAddition->getBeforePlace()->getScript();
+            
+    $factPlaceAdditionsAfterMap = IndividualFactsTabExtenderUtils::accessibleModules($this->module, $ps->getTree(), Auth::user())
+            ->map(function (IndividualFactsTabExtenderInterface $module) use ($ps) {
+              return $module->factPlaceAdditionsAfterMap($ps);
+            })
+            ->filter() //filter null values
+            ->toArray();
+            
+     $factPlaceAdditionsAfterNotes = IndividualFactsTabExtenderUtils::accessibleModules($this->module, $ps->getTree(), Auth::user())
+            ->map(function (IndividualFactsTabExtenderInterface $module) use ($ps) {
+              return $module->factPlaceAdditionsAfterNotes($ps);
+            })
+            ->filter() //filter null values
+            ->toArray();
+            
+    foreach ($factPlaceAdditionsBeforePlace as $factPlaceAddition) {
+      $html1 .= $factPlaceAddition;
     }
     $html1 .= $this->formatPlaceName($ps);
     
     $html .= $this->formatPlaceCustomFieldsAfterLatiLong($ps);
-    foreach ($factPlaceAdditions as $factPlaceAddition) {
-      $html .= $factPlaceAddition->getAfterMap()->getMain();
-      $script .= $factPlaceAddition->getAfterMap()->getScript();
+    foreach ($factPlaceAdditionsAfterMap as $factPlaceAddition) {
+      $html .= $factPlaceAddition;
     }
     $html .= $this->formatPlaceNotes($ps);
     $html .= $this->formatPlaceCustomFieldsAfterNotes($ps);
-    foreach ($factPlaceAdditions as $factPlaceAddition) {
-      $html .= $factPlaceAddition->getAfterNotes()->getMain();
-      $script .= $factPlaceAddition->getAfterNotes()->getScript();
+    foreach ($factPlaceAdditionsAfterNotes as $factPlaceAddition) {
+      $html .= $factPlaceAddition;
     }
     
     return array(
-        new GenericViewElement($html1, $script1),
-        new GenericViewElement($html, $script));
+        GenericViewElement::create($html1),
+        GenericViewElement::create($html));
   }
 
   public function getMapLinks($map_lati, $map_long) {

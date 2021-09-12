@@ -4,6 +4,8 @@ use Cissee\WebtreesExt\MoreI18N;
 use Fisharebest\Webtrees\Functions\FunctionsPrint;
 use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\View;
+use Vesta\Model\PlaceStructure;
+use Vesta\Model\VestalRequest;
 
 ?>
 
@@ -90,4 +92,33 @@ View::endpush();
     webtrees.persistentToggle('<?= $toggleableFactsCategory->getId() ?>');
 <?php endforeach ?>
 </script>
+
+<?php  
+  $requests = [];
+
+  foreach ($facts as $fact) {
+    $requests = array_merge($requests, $module->functionsPrint()->vestalsForFactPlace($fact));
+  }
+
+  $url = $module->vestalsActionUrl();
+?>
+    
+<?php if (sizeof($requests) > 0) : ?>
+  <script>
+    //load via ajax
+    $.ajax({
+          url : "<?= $url ?>",
+          type: "POST",
+          data: JSON.stringify(<?= json_encode(array_values($requests)) ?>),
+          contentType: "application/json; charset=utf-8",
+          dataType   : "json",
+          success    : function(arr) {
+            for (i = 0; i < arr.length; i++) {
+              $("."+arr[i].classAttr).replaceWith(arr[i].html);
+            }
+          }
+    });
+  </script>
+<?php endif ?>  
+
 <?php View::endpush() ?>
