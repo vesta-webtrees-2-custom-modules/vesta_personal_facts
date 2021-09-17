@@ -577,6 +577,9 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
       } else if ('vestalAfterNotes' == $method) {
         $response = $this->functionsPrint()->vestalAfterNotes($placeStructure);
         $responses[$response->classAttr()] = $response;
+      } else if ('vestalMapCoordinates' == $method) {
+        $response = $this->functionsPrint()->vestalMapCoordinates($placeStructure);
+        $responses[$response->classAttr()] = $response;
       } else {
         error_log("unexpected method:".$method);
       }

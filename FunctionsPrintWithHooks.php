@@ -37,6 +37,39 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
     return $this->vestalsForPlaceNameAndSubRecords($ps);
   }
   
+  protected function mapCoordinates(
+          PlaceStructure $ps): string {
+   
+    $html = '';
+    $mapCoordinates = FunctionsPlaceUtils::plac2map($this->module, $ps, true);
+    if ($mapCoordinates !== null) {
+      $hideCoordinates = $this->module->getPreference('LINKS_AFTER_PLAC', '0');
+
+      if ($hideCoordinates) {
+        $html .= $this->getMapLinks($mapCoordinates->getLati(), $mapCoordinates->getLong());
+      } else {
+        $html .= $this->formatPlaceLatiLong($mapCoordinates->getLati(), $mapCoordinates->getLong(), $mapCoordinates->getTrace()->getAll());
+      }
+
+      //debug
+      //TODO: use proper modal here? tooltip isn't helpful on tablets etc
+      $debugMapLinks = $this->module->getPreference('DEBUG_MAP_LINKS', '1');
+      if ($debugMapLinks) {
+        $title = htmlspecialchars($mapCoordinates->getTrace()->getAll());
+        $html .= '<span class="wt-icon-help" title ="' . $title . '"><i class="fas fa-question-circle fa-fw" aria-hidden="true"></i></span>';
+      }
+    }
+    
+    return $html;
+  }
+          
+  public function vestalMapCoordinates(
+          PlaceStructure $ps): VestalResponse {
+        
+    $key = md5(json_encode($ps));
+    return new VestalResponse($key.'_vestalMapCoordinates', $this->mapCoordinates($ps));
+  }
+  
   public function vestalBeforePlace(
           PlaceStructure $ps): VestalResponse {
     
@@ -106,6 +139,7 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
     $requests = [];
     
     $key = md5(json_encode($ps));
+    $requests[$key.'_vestalMapCoordinates'] = new VestalRequest('vestalMapCoordinates', $ps);
     $requests[$key.'_vestalBeforePlace'] = new VestalRequest('vestalBeforePlace', $ps);
     $requests[$key.'_vestalAfterMap'] = new VestalRequest('vestalAfterMap', $ps);
     $requests[$key.'_vestalAfterNotes'] = new VestalRequest('vestalAfterNotes', $ps);
@@ -127,25 +161,15 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
     $html .= $this->formatPlaceHebRomn($ps);
     $html .= $this->formatPlaceCustomFieldsAfterNames($ps);
 
-    //modernized (for now, expected to be fast enough without ajax)
-    //___TEMP___;
-    $mapCoordinates = FunctionsPlaceUtils::plac2map($this->module, $ps, true);
-    if ($mapCoordinates !== null) {
-      $hideCoordinates = $this->module->getPreference('LINKS_AFTER_PLAC', '0');
+    if ($useVestals) {
+      //add placeholders for Vestals      
       
-      if ($hideCoordinates) {
-        $html .= $this->getMapLinks($mapCoordinates->getLati(), $mapCoordinates->getLong());
-      } else {
-        $html .= $this->formatPlaceLatiLong($mapCoordinates->getLati(), $mapCoordinates->getLong(), $mapCoordinates->getTrace()->getAll());
-      }
+      $key = md5(json_encode($ps));
       
-      //debug
-      //TODO: use proper modal here? tooltip isn't helpful on tablets etc
-      $debugMapLinks = $this->module->getPreference('DEBUG_MAP_LINKS', '1');
-      if ($debugMapLinks) {
-        $title = htmlspecialchars($mapCoordinates->getTrace()->getAll());
-        $html .= '<span class="wt-icon-help" title ="' . $title . '"><i class="fas fa-question-circle fa-fw" aria-hidden="true"></i></span>';
-      }   
+      $html .= "<span class = '" . $key . "_vestalMapCoordinates'></span>";
+      
+    } else {
+      $html .= $this->mapCoordinates($ps);
     }
     
     if ($useVestals) {
@@ -184,7 +208,7 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
             ->filter() //filter null values
             ->toArray();
             
-     $factPlaceAdditionsAfterNotes = IndividualFactsTabExtenderUtils::accessibleModules($this->module, $ps->getTree(), Auth::user())
+    $factPlaceAdditionsAfterNotes = IndividualFactsTabExtenderUtils::accessibleModules($this->module, $ps->getTree(), Auth::user())
             ->map(function (IndividualFactsTabExtenderInterface $module) use ($ps) {
               return $module->factPlaceAdditionsAfterNotes($ps);
             })
