@@ -316,7 +316,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   
   public function plac2html(PlaceStructure $ps): ?GenericViewElement {
     $fp = new FunctionsPrintWithHooks($this);
-    return GenericViewElement::implode($fp->formatPlaceNameAndSubRecords($ps));
+    return GenericViewElement::implode($fp->formatPlaceNameAndSubRecords($ps, false));
   }
 
   public function map2html(MapCoordinates $map): ?GenericViewElement {

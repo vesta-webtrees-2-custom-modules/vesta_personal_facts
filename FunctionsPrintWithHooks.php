@@ -24,6 +24,7 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
   protected $module;
 
   function __construct($module) {
+    parent::__construct($module->useVestals());
     $this->module = $module;
   }
   
@@ -148,9 +149,8 @@ class FunctionsPrintWithHooks extends FunctionsPrint_2x {
   }
   
   public function formatPlaceNameAndSubRecords(
-          PlaceStructure $ps): array {
-    
-    $useVestals = $this->module->useVestals();
+          PlaceStructure $ps,
+          bool $useVestals): array {
     
     $html1 = '';
     $script1 = '';

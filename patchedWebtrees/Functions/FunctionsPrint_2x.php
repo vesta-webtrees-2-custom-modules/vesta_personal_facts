@@ -25,6 +25,12 @@ use function view;
  */
 class FunctionsPrint_2x {
 
+  protected $useVestals;
+          
+  function __construct(bool $useVestals = false) {
+    $this->useVestals = $useVestals;
+  }
+  
   //[RC] added/ extracted
   public function getMapLinks($map_lati, $map_long) {
     $html = '';
@@ -69,7 +75,7 @@ class FunctionsPrint_2x {
       if ($ps === null) {
         return GenericViewElement::createEmpty();
       }
-      $gves = $this->formatPlaceNameAndSubRecords($ps);
+      $gves = $this->formatPlaceNameAndSubRecords($ps, $this->useVestals);
     }
     
     $html = '';
@@ -97,7 +103,7 @@ class FunctionsPrint_2x {
 
   //[RC] added
   //Override point
-  public function formatPlaceNameAndSubRecords(PlaceStructure $ps) {
+  public function formatPlaceNameAndSubRecords(PlaceStructure $ps, bool $useVestals) {
     $html1 = $this->formatPlaceName($ps);
     
     $html2 = '';
