@@ -2,87 +2,92 @@
 	{
 		"version": "2.0.13.0.0",
 		"from": "2.0.12",
-		"to": "2.0.17"
+		"to": "2.0.18"
 	},
 	{
 		"version": "2.0.13.1.0",
 		"from": "2.0.12",
-		"to": "2.0.17"
+		"to": "2.0.18"
 	},
 	{
 		"version": "2.0.13.1.1",
 		"from": "2.0.12",
-		"to": "2.0.17",
+		"to": "2.0.18",
 		"changelog":["Bugfix for mapire map links.","Bugfix for webtrees #3807."]
 	},
 	{
 		"version": "2.0.15.0.0",
 		"from": "2.0.12",
-		"to": "2.0.17"
+		"to": "2.0.18"
 	},
 	{
 		"version": "2.0.15.1.0",
 		"from": "2.0.12",
-		"to": "2.0.17",
+		"to": "2.0.18",
 		"changelog": ["Small bugfixes."]
 	},
 	{
 		"version": "2.0.15.2.0",
 		"from": "2.0.12",
-		"to": "2.0.17"
+		"to": "2.0.18"
 	},
 	{
 		"version": "2.0.15.3.0",
 		"from": "2.0.12",
-		"to": "2.0.17",
+		"to": "2.0.18",
 		"changelog": ["Small bugfixes."]
 	},
 	{
 		"version": "2.0.15.4.0",
 		"from": "2.0.12",
-		"to": "2.0.17"
+		"to": "2.0.18"
 	},
 	{
 		"version": "2.0.16.0.0",
 		"from": "2.0.12",
-		"to": "2.0.17"
+		"to": "2.0.18"
 	},
 	{
 		"version": "2.0.16.1.0",
 		"from": "2.0.12",
-		"to": "2.0.17"
+		"to": "2.0.18"
 	},
 	{
 		"version": "2.0.16.2.0",
 		"from": "2.0.12",
-		"to": "2.0.17",
+		"to": "2.0.18",
 		"changelog": ["Small bugfix."]
 	},
 	{
 		"version": "2.0.16.3.0",
 		"from": "2.0.12",
-		"to": "2.0.17"
+		"to": "2.0.18"
 	},
 	{
 		"version": "2.0.16.4.0",
 		"from": "2.0.12",
-		"to": "2.0.17",
+		"to": "2.0.18",
 		"changelog": ["cosmetic adjustment: Mapire is now Arcanum Maps."]
 	},
 	{
 		"version": "2.0.16.5.0",
 		"from": "2.0.12",
-		"to": "2.0.17"
+		"to": "2.0.18"
 	},
 	{
 		"version": "2.0.16.5.2",
 		"from": "2.0.12",
-		"to": "2.0.17",
+		"to": "2.0.18",
 		"changelog": ["performance improvement: load extended data asynchronously."]
 	},
 	{
 		"version": "2.0.16.6.0",
 		"from": "2.0.12",
-		"to": "2.0.17"
+		"to": "2.0.18"
+	},
+	{
+		"version": "2.0.17.0.0",
+		"from": "2.0.12",
+		"to": "2.0.18"
 	}
 ]

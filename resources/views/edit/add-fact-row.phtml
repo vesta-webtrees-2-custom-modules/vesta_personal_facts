@@ -32,7 +32,7 @@ use Ramsey\Uuid\Uuid;
 
             <div class="input-group">
                 <select class="custom-select" id="add-fact<?= $disambiguator ?>" name="fact">
-                    <option value="" disabled selected>
+                    <option value="" disabled="disabled" selected="selected">
                         <?= I18N::translate('&lt;select&gt;') ?>
                     </option>
                     <?php foreach ($add_facts as $fact => $fact_name) : ?>
