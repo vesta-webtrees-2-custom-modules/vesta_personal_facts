@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2021-07-24 09:08+0200\n"
-"PO-Revision-Date: 2021-10-12 08:25+0000\n"
+"PO-Revision-Date: 2021-10-12 11:05+0000\n"
 "Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/"
 "vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
@@ -274,7 +274,9 @@ msgstr "Toon links naar een historische kaart van Europa in de XIX eeuw, of de V
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:40
 msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar."
-msgstr "Ondersteunt het niet-standaard GEDCOM-label _FSFTID (FamilySearch-id), in het tabblad en in de zijbalk."
+msgstr ""
+"Ondersteunt het niet-standaard GEDCOM-label _FSFTID (FamilySearch-ID), in "
+"het tabblad en in de zijbalk."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:72
