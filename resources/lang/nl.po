@@ -3,15 +3,16 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2021-07-24 09:08+0200\n"
-"PO-Revision-Date: 2021-07-24 11:27+0200\n"
+"PO-Revision-Date: 2021-10-12 08:25+0000\n"
 "Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:176
@@ -22,7 +23,9 @@ msgstr "%1$s (historische kaarten)"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:71
 msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
-msgstr "Werkelijke gebeurtenissen van naaste verwanten, en feiten en gebeurtenissen waarbij de huidige persoon wordt vermeld als medewerker."
+msgstr ""
+"Werkelijke gebeurtenissen van naaste verwanten, en feiten en gebeurtenissen "
+"waarbij de huidige persoon wordt vermeld als gerelateerd persoon."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:198
@@ -44,17 +47,17 @@ msgstr "Arcanum Maps"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:41
 msgid "Associate at a marriage"
-msgstr "Medewerker bij huwelijk"
+msgstr "Gerelateerd persoon bij huwelijk"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:39
 msgctxt "FEMALE"
 msgid "Associate at a marriage"
-msgstr "Medewerkster bij huwelijk"
+msgstr "Gerelateerd persoon bij huwelijk"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:37
 msgctxt "MALE"
 msgid "Associate at a marriage"
-msgstr "Medewerker bij huwelijk"
+msgstr "Gerelateerd persoon bij huwelijk"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:67
 msgid "Baptism of a godchild"
@@ -153,7 +156,10 @@ msgstr "Historische gebeurtenissen"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:77
 msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
-msgstr "Als deze optie is aangevinkt, worden aanvullende feiten en gebeurtenissen waarbij de persoon als medewerker wordt vermeld, beperkt tot de volgende feiten en gebeurtenissen."
+msgstr ""
+"Als deze optie is aangevinkt, worden aanvullende feiten en gebeurtenissen "
+"waarbij de persoon als gerelateerd persoon wordt vermeld, beperkt tot de "
+"volgende feiten en gebeurtenissen."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:95
