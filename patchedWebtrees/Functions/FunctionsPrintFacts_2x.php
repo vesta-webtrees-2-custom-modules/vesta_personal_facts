@@ -483,7 +483,12 @@ class FunctionsPrintFacts_2x {
 
     $addr = $fact->attribute('ADDR');
     if ($addr !== '') {
-      echo GedcomTag::getLabelValue('ADDR', $addr);
+      $addr = e($addr);
+      if (str_contains($addr, "\n")) {
+          $addr = '<span class="d-block" style="white-space: pre-wrap">' . $addr . '</span';
+      }
+            
+      echo GedcomTag::getLabelValue($fact->tag() . ':ADDR', $addr);
     }
 
     // Print the associates of this fact/event
