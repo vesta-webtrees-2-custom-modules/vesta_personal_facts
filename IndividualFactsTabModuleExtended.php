@@ -41,7 +41,6 @@ use Vesta\Model\GenericViewElement;
 use Vesta\Model\MapCoordinates;
 use Vesta\Model\PlaceStructure;
 use Vesta\Model\VestalRequest;
-use Vesta\Model\VestalResponse;
 use Vesta\VestaAdminController;
 use Vesta\VestaModuleTrait;
 use function GuzzleHttp\json_decode;
