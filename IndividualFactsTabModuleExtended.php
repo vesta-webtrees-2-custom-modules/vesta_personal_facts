@@ -146,16 +146,21 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
       if ('fab' === $themeName) {
         //fab also uses font awesome icons
         $themeName = 'minimal';
+      /*
       } else if ('_myartjaub_ruraltheme_' === $themeName) {
-        //and the custom 'rural' theme
+        //and the custom 'rural' theme - but not for map links!
         $themeName = 'minimal';
       } else if ('_jc-theme-justlight_' === $themeName) {
-        //and the custom 'JustLight' theme
+        //and the custom 'JustLight' theme - but not for map links!
         $themeName = 'minimal';
+      } else if ('_jc-theme-justlight2_' === $themeName) {
+        //and the custom 'JustLight' theme, version 2 - but not for map links!
+        $themeName = 'minimal';
+      */
       } else {
         //default
         $themeName = 'webtrees';
-      }      
+      }
     }
     
     $pre .= '<link href="' . $this->assetUrl('css/'.$themeName.'.css') . '" type="text/css" rel="stylesheet" />';
@@ -164,6 +169,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   }
   
   protected function getOutputBeforeTab(Individual $person) {
+	
     $tree = $person->tree();
     $a1 = IndividualFactsTabExtenderUtils::accessibleModules($this, $tree, Auth::user())
             ->map(function (IndividualFactsTabExtenderInterface $module) use ($tree) {
