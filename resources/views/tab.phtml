@@ -1,15 +1,28 @@
 <?php
 
+use Cissee\Webtrees\Module\PersonalFacts\IndividualFactsTabModule_2x;
 use Cissee\WebtreesExt\MoreI18N;
-use Fisharebest\Webtrees\Functions\FunctionsPrint;
 use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\View;
-use Vesta\Model\PlaceStructure;
-use Vesta\Model\VestalRequest;
+use Vesta\VestaUtils;
+use function GuzzleHttp\json_encode;
+
+/**
+ * @var bool             $can_edit
+ * @var Collection<Fact> $facts
+ * @var bool             $has_associate_facts
+ * @var bool             $has_historic_facts
+ * @var bool             $has_relative_facts
+ * @var Individual       $individual
+ * 
+ * @var IndividualFactsTabModule_2x $module
+ */
 
 ?>
 
 <?php
+ //[RC] PATCHED
+$outputBeforeTab = $module->getOutputBeforeTab($individual);
 echo $outputBeforeTab->getMain();
 View::push('javascript');
 echo $outputBeforeTab->getScript();
@@ -21,14 +34,39 @@ View::endpush();
         <tbody>
             <tr>
                 <td colspan="2">
-                    <?php foreach ($toggleableFactsCategories as $toggleableFactsCategory): ?>
-                      <label>
-                          <input id="<?= $toggleableFactsCategory->getId() ?>" type="checkbox" data-toggle="collapse" data-target="<?= $toggleableFactsCategory->getTarget() ?>">
-                          <?= $toggleableFactsCategory->getLabel() ?>
-                      </label>
-                    <?php endforeach ?>
+                    <?php
+                    //[RC] PATCHED change labels etc in order to keep separate from original module
+                    ?>
+                    <?php if ($has_associate_facts) : ?>
+                        <label>
+                            <input id="show-associate-facts-pfh" type="checkbox" data-bs-toggle="collapse" data-bs-target=".wt-associate-fact-pfh" data-wt-persist="associates-pfh">
+                            <?= MoreI18N::xlate('Associated events') ?>
+                        </label>
+                    <?php endif ?>
+
+                    <?php
+                    //[RC] PATCHED change labels etc in order to keep separate from original module
+                    ?>
+                    <?php if ($has_relative_facts) : ?>
+                        <label>
+                            <input id="show-relatives-facts-pfh" type="checkbox" data-bs-toggle="collapse" data-bs-target=".wt-relation-fact-pfh" data-wt-persist="relatives-pfh">
+                            <?= MoreI18N::xlate('Events of close relatives') ?>
+                        </label>
+                    <?php endif ?>
+
+                    <?php
+                    //[RC] PATCHED change labels etc in order to keep separate from original module
+                    ?>
+                    <?php if ($has_historic_facts) : ?>
+                        <label>
+                            <input id="show-historical-facts-pfh" type="checkbox" data-bs-toggle="collapse" data-bs-target=".wt-historic-fact-pfh" data-wt-persist="historic-facts-pfh">
+                            <?= MoreI18N::xlate('Historic events') ?>
+                        </label>
+                    <?php endif ?>
+                    
                     <?php
                     //[RC] PATCHED
+                    $outputInDescriptionbox = $module->getOutputInDescriptionbox($individual);
                     echo $outputInDescriptionbox->getMain();
                     View::push('javascript');
                     echo $outputInDescriptionbox->getScript();
@@ -41,6 +79,7 @@ View::endpush();
 
     <?php
     //[RC] PATCHED
+    $outputAfterDescriptionbox = $module->getOutputAfterDescriptionbox($individual);
     echo $outputAfterDescriptionbox->getMain();
     View::push('javascript');
     echo $outputAfterDescriptionbox->getScript();
@@ -49,13 +88,8 @@ View::endpush();
 
     <table class="table wt-facts-table">
         <tbody>
-            <?php foreach ($facts as $fact): ?>
-              <?php
-              $script = $printFactFunction($fact);
-              View::push('javascript');
-              echo $script;
-              View::endpush();
-              ?>
+            <?php foreach ($facts as $fact) : ?>
+                <?= view(VestaUtils::vestaViewsNamespace() . '::fact', ['fact' => $fact, 'record' => $individual, 'module' => $module]) ?>
             <?php endforeach ?>
 
             <?php if ($facts->isEmpty()) : ?>
@@ -67,17 +101,15 @@ View::endpush();
             <?php endif ?>
 
             <?php if ($individual->canEdit()) : ?>
-                <?= view('edit/paste-fact-row', ['record' => $individual, 'facts' => $clipboard_facts]) ?>
-                <?php
-                //[RC] PATCHED, fix #3807
-                ?>
-                <?php FunctionsPrint::printAddNewFact($individual, $usedFacts, Individual::RECORD_TYPE) ?>
+                <?= view('fact-add-new', ['record' => $individual]) ?>
             <?php endif ?>
         </tbody>
     </table>
 </div>
 
 <?php
+//[RC] PATCHED
+$outputAfterTab = $module->getOutputAfterTab($individual);
 echo $outputAfterTab->getMain();
 View::push('javascript');
 echo $outputAfterTab->getScript();
@@ -88,19 +120,36 @@ View::endpush();
 <script>
   'use strict';
 
-<?php foreach ($toggleableFactsCategories as $toggleableFactsCategory): ?>
-    webtrees.persistentToggle('<?= $toggleableFactsCategory->getId() ?>');
-<?php endforeach ?>
+<?php
+    //note: webtrees registers other persistentToggles via webtrees.js itself, but we must register explicitly if loaded within ajax!
+?>
+<?php if ($has_associate_facts) : ?>
+    webtrees.persistentToggle(document.querySelector('#show-associate-facts-pfh'));
+<?php endif ?>
+
+<?php
+//[RC] PATCHED change labels etc in order to keep separate from original module
+?>
+<?php if ($has_relative_facts) : ?>
+    webtrees.persistentToggle(document.querySelector('#show-relatives-facts-pfh'));
+<?php endif ?>
+
+<?php
+//[RC] PATCHED change labels etc in order to keep separate from original module
+?>
+<?php if ($has_historic_facts) : ?>
+    webtrees.persistentToggle(document.querySelector('#show-historical-facts-pfh'));
+<?php endif ?>    
 </script>
 
 <?php  
   $requests = [];
 
   foreach ($facts as $fact) {
-    $requests = array_merge($requests, $module->functionsPrint()->vestalsForFactPlace($fact));
+    $requests = array_merge($requests, $module->functionsVestals()->vestalsForFactPlace($fact));
   }
 
-  $url = $module->vestalsActionUrl();
+  $url = $module->functionsVestals()->vestalsActionUrl();
 ?>
     
 <?php if (sizeof($requests) > 0) : ?>

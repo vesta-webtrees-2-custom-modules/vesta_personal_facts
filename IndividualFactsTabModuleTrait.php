@@ -62,16 +62,12 @@ trait IndividualFactsTabModuleTrait {
                 'VESTA_SIDEBAR',
                 '1')));
 
+    //'ASSO_SEPARATE' is obsolete (now properly handled by webtrees)
+    
     $factsAndEventsSub = array();
     $factsAndEventsSub[] = new ControlPanelSubsection(
-            CommonI18N::associatedFactsAndEvents(),
-            array(new ControlPanelCheckbox(
-                /* I18N: Module Configuration */I18N::translate('Use separate toggle checkbox'),
-                /* I18N: Module Configuration */I18N::translate('In the original tab, two kinds of additional facts and events are displayed when \'Events of close relatives\' is selected on the tab:') . ' ' .
-                /* I18N: Module Configuration */I18N::translate('Actual events of close relatives, and facts and events where the current individual is listed as an associate.') . ' ' .
-                /* I18N: Module Configuration */I18N::translate('The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them.'),
-                'ASSO_SEPARATE',
-                '0'),
+            MoreI18N::xlate('Associated events'),
+            array(
         new ControlPanelCheckbox(
                 /* I18N: Module Configuration */I18N::translate('Only show specific facts and events'),
                 /* I18N: Module Configuration */I18N::translate('If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events.') . ' ' .

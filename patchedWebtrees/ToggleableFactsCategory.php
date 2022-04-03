@@ -2,6 +2,8 @@
 
 namespace Cissee\WebtreesExt;
 
+use Fisharebest\Webtrees\Webtrees;
+
 class ToggleableFactsCategory {
 
   private $id;
@@ -30,6 +32,10 @@ class ToggleableFactsCategory {
     $this->id = $id;
     $this->target = $target;
     $this->label = $label;
+    
+    if (str_starts_with(Webtrees::VERSION, '2.1')) {
+        //class is obsolete.
+    }
   }
 
 }

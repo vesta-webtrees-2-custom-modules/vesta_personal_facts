@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2021-07-24 09:08+0200\n"
+"POT-Creation-Date: 2022-04-03 20:23+0200\n"
 "PO-Revision-Date: 2021-06-08 20:33+0000\n"
 "Last-Translator: Josef Prause <josef.prause@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/cs/>\n"
@@ -19,18 +19,13 @@ msgstr ""
 "X-Generator: Weblate 4.7-dev\n"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:176
+#: IndividualFactsTabModuleTrait.php:172
 #, php-format
 msgid "%1$s (historic maps)"
 msgstr "%1$s (historické mapy)"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:71
-msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
-msgstr "Aktuální události blízkých příbuzných a fakta a události, u nichž současná osoba vystupuje jako společník."
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:198
+#: IndividualFactsTabModuleTrait.php:194
 msgid "Aerial Base Map"
 msgstr "Letecká mapa"
 
@@ -43,7 +38,7 @@ msgstr "Taktéž nahrazuje původní modul 'Dodatečné údaje'."
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr "Rozšířená záložka 'Fakta a události' s háčky pro ostatní moduly."
 
-#: FunctionsPrintWithHooks.php:172 IndividualFactsTabModuleTrait.php:174
+#: FunctionsPrintWithHooks.php:324 IndividualFactsTabModuleTrait.php:170
 msgid "Arcanum Maps"
 msgstr "Arcanum Maps"
 
@@ -61,6 +56,34 @@ msgctxt "MALE"
 msgid "Associate at a marriage"
 msgstr "Společník na svatbě"
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:207
+msgid "Attendant"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:204
+msgctxt "FEMALE"
+msgid "Attendant"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:200
+msgctxt "MALE"
+msgid "Attendant"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:218
+msgid "Attending"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:215
+msgctxt "FEMALE"
+msgid "Attending"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:211
+msgctxt "MALE"
+msgid "Attending"
+msgstr ""
+
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:67
 msgid "Baptism of a godchild"
 msgstr "Křest kmotřence/kmotřenky"
@@ -76,23 +99,45 @@ msgid "Baptism of a godson"
 msgstr "Křest kmotřence"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:225
+#: IndividualFactsTabModuleTrait.php:221
 #, php-format
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr "Base64 kódované datové URI pro ikonu odkazu. Převeďte ikonu na datové URI např. pomocí %1$s. Výsledek by měl začínat něčím jako %2$s. Dobrým zdrojem obrázku ikony je obvykle obrázek faviconu poskytovatele mapy, jako např. %3$s. Zobrazí se ve správné velikosti."
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:222
+msgid "Best man"
+msgstr ""
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
 msgid "Best man at a marriage"
 msgstr "Svědek ženicha"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:101 IndividualFactsTabModuleTrait.php:130
+#: FunctionsPrintWithHooks.php:253 IndividualFactsTabModuleTrait.php:126
 msgid "Bing Maps"
 msgstr "Mapy Bing"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:226
+msgid "Bridesmaid"
+msgstr ""
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:24
 msgid "Bridesmaid at a marriage"
 msgstr "Družička nevěsty"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:237
+msgid "Buyer"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:234
+msgctxt "FEMALE"
+msgid "Buyer"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:230
+msgctxt "MALE"
+msgid "Buyer"
+msgstr ""
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:95
 msgid "Christening of a godchild"
@@ -108,83 +153,198 @@ msgstr "Křest kmotřenky"
 msgid "Christening of a godson"
 msgstr "Křest kmotřence"
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:241
+msgid "Circumciser"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:252
+msgid "Civil registrar"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:249
+msgctxt "FEMALE"
+msgid "Civil registrar"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:245
+msgctxt "MALE"
+msgid "Civil registrar"
+msgstr ""
+
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:118 IndividualFactsTabModuleTrait.php:207
+#: FunctionsPrintWithHooks.php:270 IndividualFactsTabModuleTrait.php:203
 msgid "Custom Map Provider"
 msgstr "Uživatelem definovaný poskytovatel mapy"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:105
+#: IndividualFactsTabModuleTrait.php:101
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Zobrazit ikonu s tooltipem naznačujícím pramen mapových odkazů. Toto je zamýšleno hlavně pro debugging."
 
-#: FunctionsPrintWithHooks.php:174
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:263
+msgid "Employee"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:260
+msgctxt "FEMALE"
+msgid "Employee"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:256
+msgctxt "MALE"
+msgid "Employee"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:274
+msgid "Employer"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:271
+msgctxt "FEMALE"
+msgid "Employer"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:267
+msgctxt "MALE"
+msgid "Employer"
+msgstr ""
+
+#: FunctionsPrintWithHooks.php:326
 #, php-format
 msgid "Europe in the XIX. century | %1$s"
 msgstr "Evropa v XIX. století | %1$s"
 
-#: IndividualFactsTabModuleExtended.php:218
-msgid "Events of close relatives"
-msgstr "Události blízkých příbuzných"
-
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:238
+#: IndividualFactsTabModuleTrait.php:234
 msgid "Facts and Events List"
 msgstr "Seznam faktů a událostí"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:326
+#: IndividualFactsTabModuleExtended.php:266
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Poskytovatelé UI elementů pro záložku Fakta a události"
 
-#: IndividualFactsTabModuleExtended.php:110
+#: IndividualFactsTabModuleExtended.php:121
 msgid "Facts and events"
 msgstr "Fakta a události"
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:278
+msgid "Foster child"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:282
+msgid "Foster father"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:286
+msgid "Foster mother"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:297
+msgid "Friend"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:294
+msgctxt "FEMALE"
+msgid "Friend"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:290
+msgctxt "MALE"
+msgid "Friend"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:335
+msgid "Godchild"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:324
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:332
+msgid "Goddaughter"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:301
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:309
+msgid "Godfather"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:305
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:313
+msgid "Godmother"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:316
+msgid "Godparent"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:320
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:328
+msgid "Godson"
+msgstr ""
+
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:90 IndividualFactsTabModuleTrait.php:110
+#: FunctionsPrintWithHooks.php:242 IndividualFactsTabModuleTrait.php:106
 msgid "Google Maps"
 msgstr "Mapy Google"
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:346
+msgid "Guardian"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:343
+msgctxt "FEMALE"
+msgid "Guardian"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:339
+msgctxt "MALE"
+msgid "Guardian"
+msgstr ""
+
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:94
+#: IndividualFactsTabModuleTrait.php:90
 msgid "Hide coordinates, show map links after place name"
 msgstr "Skrýt souřadnice, zobrazit odkazy na mapy za názvem místa"
 
-#: IndividualFactsTabModuleExtended.php:232
-msgid "Historic events"
-msgstr "Historické události"
-
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:77
+#: IndividualFactsTabModuleTrait.php:73
 msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
 msgstr "Je-li zvolena tato možnost, jsou dodatečná fakta a události spojené s osobou společníka omezena na následující fakta a události."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:95
+#: IndividualFactsTabModuleTrait.php:91
 msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
 msgstr "V původní záložce jsou zobrazeny souřadnice (včetně odkazů na mapy). To vede k přeplnění zobrazení místa, zvláště když se zapojí další moduly poskytující souřadnice."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:70
-msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
-msgstr "V původní záložce se zobrazují dva druhy dodatečných faktů a událostí, jestliže je na záložce aktivován přepínač 'Události blízkých příbuzných':"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:117 IndividualFactsTabModuleTrait.php:137
-#: IndividualFactsTabModuleTrait.php:157
+#: IndividualFactsTabModuleTrait.php:113 IndividualFactsTabModuleTrait.php:133
+#: IndividualFactsTabModuleTrait.php:153
 msgid "Include 'TM' in tooltip"
 msgstr "V tooltipu zahrnout 'TM'"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:163
+#: IndividualFactsTabModuleTrait.php:159
 msgid "Include a marker in the linked map."
 msgstr "Zobrazit poziční značku na odkazované mapě."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:162
+#: IndividualFactsTabModuleTrait.php:158
 msgid "Include marker"
 msgstr "Zobrazit poziční značku"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:357
+msgid "Informant"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:354
+msgctxt "FEMALE"
+msgid "Informant"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:350
+msgctxt "MALE"
+msgid "Informant"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:39
@@ -192,83 +352,197 @@ msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr "Zamýšlen jako náhrada za původní modul 'Fakta a události'."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:92
+#: IndividualFactsTabModuleTrait.php:88
 msgid "Latitude/Longitude"
 msgstr "Zeměpisná šířka/délka"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:224
+#: IndividualFactsTabModuleTrait.php:220
 msgid "Link icon as data URI"
 msgstr "Ikona odkazu jako datové URI"
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:368
+msgid "Lodger"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:365
+msgctxt "FEMALE"
+msgid "Lodger"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:361
+msgctxt "MALE"
+msgid "Lodger"
+msgstr ""
+
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:330
+#: IndividualFactsTabModuleExtended.php:270
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr "Moduly v tomto seznamu mohou poskytovat přídavné údaje o faktech a událostech (zobrazené v nastaveném pořadí)."
 
 #. I18N: Module Configuration: Name of a custom map provider
-#: IndividualFactsTabModuleTrait.php:209
+#: IndividualFactsTabModuleTrait.php:205
 msgid "Name"
 msgstr "Jméno"
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:372
+msgid "Nanny"
+msgstr ""
+
+#: IndividualFactsTabModuleExtended.php:592
+msgid "No relationship found"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:383
+msgid "Nurse"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:380
+msgctxt "FEMALE"
+msgid "Nurse"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:376
+msgctxt "MALE"
+msgid "Nurse"
+msgstr ""
+
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:197
+#: IndividualFactsTabModuleTrait.php:193
 msgid "OSM Base Map"
 msgstr "Mapa OSM"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:76
+#: IndividualFactsTabModuleTrait.php:72
 msgid "Only show specific facts and events"
 msgstr "Zobrazit jen určitá fakta a události"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:99
+#: IndividualFactsTabModuleTrait.php:95
 msgid "Open links in new browser tab"
 msgstr "Odkazy otevírat v nové záložce prohlížeče"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:107 IndividualFactsTabModuleTrait.php:150
+#: FunctionsPrintWithHooks.php:259 IndividualFactsTabModuleTrait.php:146
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:394
+msgid "Owner"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:391
+msgctxt "FEMALE"
+msgid "Owner"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:387
+msgctxt "MALE"
+msgid "Owner"
+msgstr ""
+
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:242
+#: IndividualFactsTabModuleTrait.php:238
 msgid "Place Settings"
 msgstr "Nastavení místa"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:398
+msgid "Priest"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:402
+msgid "Rabbi"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:413
+msgid "Registry officer"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:410
+msgctxt "FEMALE"
+msgid "Registry officer"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:406
+msgctxt "MALE"
+msgid "Registry officer"
+msgstr ""
 
 #: IndividualFactsTabModuleTrait.php:27
 msgid "Replacement for the original 'Facts and events' module."
 msgstr "Náhrada za původní modul 'Fakta a události'."
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:424
+msgid "Seller"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:421
+msgctxt "FEMALE"
+msgid "Seller"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:417
+msgctxt "MALE"
+msgid "Seller"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:435
+msgid "Servant"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:432
+msgctxt "FEMALE"
+msgid "Servant"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:428
+msgctxt "MALE"
+msgid "Servant"
+msgstr ""
+
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:104
+#: IndividualFactsTabModuleTrait.php:100
 msgid "Show additional info for map links"
 msgstr "Zobrazit přídavné informace k odkazům na mapy"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:190
+#: IndividualFactsTabModuleTrait.php:186
 msgid "Show linked map with additional options"
 msgstr "Zobrazovat odkazovanou mapu s dalšími možnostmi"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:132
+#: IndividualFactsTabModuleTrait.php:128
 msgid "Show links to Bing Maps"
 msgstr "Zobrazovat odkaz na Bing Maps"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:112
+#: IndividualFactsTabModuleTrait.php:108
 msgid "Show links to Google Maps"
 msgstr "Zobrazovat odkaz na Google Maps"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:152
+#: IndividualFactsTabModuleTrait.php:148
 msgid "Show links to OpenStreetMap"
 msgstr "Zobrazovat odkaz na OpenStreetMap"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:178
+#: IndividualFactsTabModuleTrait.php:174
 msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
 msgstr "Zobrazit odkazy na historickou mapu Evropy v XIX. století, nebo Spojených států amerických (1880 - 1926), pokud možno"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:446
+msgid "Slave"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:443
+msgctxt "FEMALE"
+msgid "Slave"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:439
+msgctxt "MALE"
+msgid "Slave"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:40
@@ -276,47 +550,55 @@ msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the ta
 msgstr "Podporuje naetsndardní GEDCOM tag _FSFTID (FamilySearch id) v záložce a postranním panelu."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:72
-msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
-msgstr "To druhé není omezeno na blízké příbuzné, proto může být méně matoucí nabídnout pro ně samostatný přepínač."
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:179
+#: IndividualFactsTabModuleTrait.php:175
 msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
 msgstr "Odkaz se nezobrazí pro místa ležící mimo hranice Evropy, případně USA."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:118 IndividualFactsTabModuleTrait.php:138
-#: IndividualFactsTabModuleTrait.php:158
+#: IndividualFactsTabModuleTrait.php:114 IndividualFactsTabModuleTrait.php:134
+#: IndividualFactsTabModuleTrait.php:154
 msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
 msgstr "Na původní záložce byl znak obchodní značky (trade mark) ‒ ponechte jej, pokud chcete nebo jste k tomu právně zavázáni."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:217
+#: IndividualFactsTabModuleTrait.php:213
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
 msgstr "URI pro odkazy na mapu se zástupnými symboly (%1$s a %2$s) pro souřadnice. Úroveň přiblížení by měla být součástí URI. Příklad: %3$s"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:216
+#: IndividualFactsTabModuleTrait.php:212
 msgid "URI template"
 msgstr "Šablona URI"
 
-#: FunctionsPrintWithHooks.php:178
+#: FunctionsPrintWithHooks.php:330
 #, php-format
 msgid "United States of America (1880-1926) | %1$s"
 msgstr "Spojené státy americké (1880-1926) | %1$s"
 
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:69
-msgid "Use separate toggle checkbox"
-msgstr "Použít samostatný přepínač"
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:457
+msgid "Ward"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:454
+msgctxt "FEMALE"
+msgid "Ward"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:450
+msgctxt "MALE"
+msgid "Ward"
+msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:191
+#: IndividualFactsTabModuleTrait.php:187
 #, php-format
 msgid "When checked, links to the main %1$s page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
 msgstr "Je-li zvoleno, odkazuje na hlavní mapu %1$s, kde je možno přepínat mezi různými historickými hladinami dostupnými pro danou polohu, a stínovat z a do moderní mapy, což je možno konfigurovat zde:"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:461
+msgid "Witness"
+msgstr ""
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:32
 msgid "Witness at a marriage"
@@ -333,18 +615,21 @@ msgid "Witness at a marriage"
 msgstr "Svědek na svatbě"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:210
+#: IndividualFactsTabModuleTrait.php:206
 msgid "You can also configure a custom map provider. Enter its name here."
 msgstr "Můžete také konfigurovat vlastního poskytovatele mapy. Sem zadejte jeho jméno."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:122 IndividualFactsTabModuleTrait.php:142
-#: IndividualFactsTabModuleTrait.php:167 IndividualFactsTabModuleTrait.php:183
+#: IndividualFactsTabModuleTrait.php:118 IndividualFactsTabModuleTrait.php:138
+#: IndividualFactsTabModuleTrait.php:163 IndividualFactsTabModuleTrait.php:179
 msgid "Zoom level of linked map"
 msgstr "Úroveň zvětšení odkazované mapy"
 
 #~ msgid "A tab showing the facts and events of an individual."
 #~ msgstr "Záložka zobrazující fakta a události osoby."
+
+#~ msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
+#~ msgstr "Aktuální události blízkých příbuzných a fakta a události, u nichž současná osoba vystupuje jako společník."
 
 #~ msgid "Associated facts and events"
 #~ msgstr "Fakta a události společníků"
@@ -355,14 +640,23 @@ msgstr "Úroveň zvětšení odkazované mapy"
 #~ msgid "Displayed title"
 #~ msgstr "Zobrazený název"
 
+#~ msgid "Events of close relatives"
+#~ msgstr "Události blízkých příbuzných"
+
 #~ msgid "Facts and Events Tab Location Data Providers"
 #~ msgstr "Poskytovatelé polohových údajů pro záložku Fakta a události"
 
 #~ msgid "General"
 #~ msgstr "Všeobecné"
 
+#~ msgid "Historic events"
+#~ msgstr "Historické události"
+
 #~ msgid "In particular if both lists are empty, no additional facts and events of this kind will be shown."
 #~ msgstr "Zejména když jsou oba seznamy prázdné, nezobrazí se žádná fakta a události tohoto druhu."
+
+#~ msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
+#~ msgstr "V původní záložce se zobrazují dva druhy dodatečných faktů a událostí, jestliže je na záložce aktivován přepínač 'Události blízkých příbuzných':"
 
 #~ msgid "Include the %1$s symbol in the tab title"
 #~ msgstr "Vložit symbol %1$s do názvu záložky"
@@ -387,6 +681,12 @@ msgstr "Úroveň zvětšení odkazované mapy"
 
 #~ msgid "Show links to a historic map of Europe"
 #~ msgstr "Zobrazovat odkaz na historickou mapu Evropy"
+
+#~ msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
+#~ msgstr "To druhé není omezeno na blízké příbuzné, proto může být méně matoucí nabídnout pro ně samostatný přepínač."
+
+#~ msgid "Use separate toggle checkbox"
+#~ msgstr "Použít samostatný přepínač"
 
 #~ msgid "Vesta Facts and events"
 #~ msgstr "Vesta Facts and events"

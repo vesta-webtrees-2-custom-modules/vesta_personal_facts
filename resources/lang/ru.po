@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2021-07-24 09:08+0200\n"
+"POT-Creation-Date: 2022-04-03 20:23+0200\n"
 "PO-Revision-Date: 2021-07-24 11:29+0200\n"
 "Last-Translator: Продай Своё <ol810car@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/ru/>\n"
@@ -19,18 +19,13 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:176
+#: IndividualFactsTabModuleTrait.php:172
 #, php-format
 msgid "%1$s (historic maps)"
 msgstr "%1$s (исторические карты)"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:71
-msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
-msgstr "Фактические события близких родственников, а также факты и события, в которых текущий человек указан в качестве партнера."
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:198
+#: IndividualFactsTabModuleTrait.php:194
 msgid "Aerial Base Map"
 msgstr "Аэрографическая базовая карта"
 
@@ -43,7 +38,7 @@ msgstr "Также заменяет исходный модуль «Дополн
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr "Расширенная вкладка «Факты и события» с хуками для других пользовательских модулей."
 
-#: FunctionsPrintWithHooks.php:172 IndividualFactsTabModuleTrait.php:174
+#: FunctionsPrintWithHooks.php:324 IndividualFactsTabModuleTrait.php:170
 msgid "Arcanum Maps"
 msgstr "Arcanum Maps"
 
@@ -61,6 +56,34 @@ msgctxt "MALE"
 msgid "Associate at a marriage"
 msgstr "Супруг"
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:207
+msgid "Attendant"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:204
+msgctxt "FEMALE"
+msgid "Attendant"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:200
+msgctxt "MALE"
+msgid "Attendant"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:218
+msgid "Attending"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:215
+msgctxt "FEMALE"
+msgid "Attending"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:211
+msgctxt "MALE"
+msgid "Attending"
+msgstr ""
+
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:67
 msgid "Baptism of a godchild"
 msgstr "Крестник"
@@ -76,23 +99,45 @@ msgid "Baptism of a godson"
 msgstr "Крестный"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:225
+#: IndividualFactsTabModuleTrait.php:221
 #, php-format
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr "URI данных в кодировке Base64 для значка ссылки. Преобразуйте значок в URI данных, например через %1$s. Результат должен начинаться примерно с %2$s. Хорошим источником изображения значка обычно является изображение значка поставщика карты, например %3$s. Он будет отображаться с правильным размером."
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:222
+msgid "Best man"
+msgstr ""
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
 msgid "Best man at a marriage"
 msgstr "Шафер на свадьбе"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:101 IndividualFactsTabModuleTrait.php:130
+#: FunctionsPrintWithHooks.php:253 IndividualFactsTabModuleTrait.php:126
 msgid "Bing Maps"
 msgstr "Карты Bing"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:226
+msgid "Bridesmaid"
+msgstr ""
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:24
 msgid "Bridesmaid at a marriage"
 msgstr "Подружка невесты на свадьбе"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:237
+msgid "Buyer"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:234
+msgctxt "FEMALE"
+msgid "Buyer"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:230
+msgctxt "MALE"
+msgid "Buyer"
+msgstr ""
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:95
 msgid "Christening of a godchild"
@@ -108,83 +153,198 @@ msgstr "Крещение крестницы"
 msgid "Christening of a godson"
 msgstr "Крещение крестника"
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:241
+msgid "Circumciser"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:252
+msgid "Civil registrar"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:249
+msgctxt "FEMALE"
+msgid "Civil registrar"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:245
+msgctxt "MALE"
+msgid "Civil registrar"
+msgstr ""
+
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:118 IndividualFactsTabModuleTrait.php:207
+#: FunctionsPrintWithHooks.php:270 IndividualFactsTabModuleTrait.php:203
 msgid "Custom Map Provider"
 msgstr "Поставщик пользовательских карт"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:105
+#: IndividualFactsTabModuleTrait.php:101
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Отобразите значок с всплывающей подсказкой, указывающей на источник ссылок на карту. Это предназначено в основном для отладки."
 
-#: FunctionsPrintWithHooks.php:174
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:263
+msgid "Employee"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:260
+msgctxt "FEMALE"
+msgid "Employee"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:256
+msgctxt "MALE"
+msgid "Employee"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:274
+msgid "Employer"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:271
+msgctxt "FEMALE"
+msgid "Employer"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:267
+msgctxt "MALE"
+msgid "Employer"
+msgstr ""
+
+#: FunctionsPrintWithHooks.php:326
 #, php-format
 msgid "Europe in the XIX. century | %1$s"
 msgstr "Европа в XIX в. век | %1$s"
 
-#: IndividualFactsTabModuleExtended.php:218
-msgid "Events of close relatives"
-msgstr "События, связанные с близкими родственниками"
-
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:238
+#: IndividualFactsTabModuleTrait.php:234
 msgid "Facts and Events List"
 msgstr "Список фактов и событий"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:326
+#: IndividualFactsTabModuleExtended.php:266
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Вкладка \"Факты и события\" Поставщики элементов пользовательского интерфейса"
 
-#: IndividualFactsTabModuleExtended.php:110
+#: IndividualFactsTabModuleExtended.php:121
 msgid "Facts and events"
 msgstr "Факты и события"
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:278
+msgid "Foster child"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:282
+msgid "Foster father"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:286
+msgid "Foster mother"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:297
+msgid "Friend"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:294
+msgctxt "FEMALE"
+msgid "Friend"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:290
+msgctxt "MALE"
+msgid "Friend"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:335
+msgid "Godchild"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:324
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:332
+msgid "Goddaughter"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:301
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:309
+msgid "Godfather"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:305
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:313
+msgid "Godmother"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:316
+msgid "Godparent"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:320
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:328
+msgid "Godson"
+msgstr ""
+
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:90 IndividualFactsTabModuleTrait.php:110
+#: FunctionsPrintWithHooks.php:242 IndividualFactsTabModuleTrait.php:106
 msgid "Google Maps"
 msgstr "Карты Гугл"
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:346
+msgid "Guardian"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:343
+msgctxt "FEMALE"
+msgid "Guardian"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:339
+msgctxt "MALE"
+msgid "Guardian"
+msgstr ""
+
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:94
+#: IndividualFactsTabModuleTrait.php:90
 msgid "Hide coordinates, show map links after place name"
 msgstr "Скрыть координаты, показать ссылки на карту после названия места"
 
-#: IndividualFactsTabModuleExtended.php:232
-msgid "Historic events"
-msgstr "Исторические события"
-
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:77
+#: IndividualFactsTabModuleTrait.php:73
 msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
 msgstr "Если этот параметр отмечен, дополнительные факты и события, в которых данное лицо указано как ассоциированное лицо, ограничиваются следующими фактами и событиями."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:95
+#: IndividualFactsTabModuleTrait.php:91
 msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
 msgstr "В исходной вкладке отображаются координаты (со ссылками на карту). Это имеет тенденцию загромождать отображение места, в частности, если есть дополнительные модули, предоставляющие координаты."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:70
-msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
-msgstr "На исходной вкладке отображаются два вида дополнительных фактов и событий, когда на вкладке выбрано «События близких родственников»:"
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:117 IndividualFactsTabModuleTrait.php:137
-#: IndividualFactsTabModuleTrait.php:157
+#: IndividualFactsTabModuleTrait.php:113 IndividualFactsTabModuleTrait.php:133
+#: IndividualFactsTabModuleTrait.php:153
 msgid "Include 'TM' in tooltip"
 msgstr "Включить TM во всплывающую подсказку"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:163
+#: IndividualFactsTabModuleTrait.php:159
 msgid "Include a marker in the linked map."
 msgstr "Добавьте маркер на связанную карту."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:162
+#: IndividualFactsTabModuleTrait.php:158
 msgid "Include marker"
 msgstr "Включить маркер"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:357
+msgid "Informant"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:354
+msgctxt "FEMALE"
+msgid "Informant"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:350
+msgctxt "MALE"
+msgid "Informant"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:39
@@ -192,83 +352,197 @@ msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr "Предназначен для замены исходного модуля «Факты и события»."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:92
+#: IndividualFactsTabModuleTrait.php:88
 msgid "Latitude/Longitude"
 msgstr "Широта/Долгота"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:224
+#: IndividualFactsTabModuleTrait.php:220
 msgid "Link icon as data URI"
 msgstr "Значок ссылки как URI данных"
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:368
+msgid "Lodger"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:365
+msgctxt "FEMALE"
+msgid "Lodger"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:361
+msgctxt "MALE"
+msgid "Lodger"
+msgstr ""
+
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:330
+#: IndividualFactsTabModuleExtended.php:270
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr "Перечисленные здесь модули могут предоставлять дополнительные данные для фактов и событий (отображаются в настроенном порядке)."
 
 #. I18N: Module Configuration: Name of a custom map provider
-#: IndividualFactsTabModuleTrait.php:209
+#: IndividualFactsTabModuleTrait.php:205
 msgid "Name"
 msgstr "Имя"
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:372
+msgid "Nanny"
+msgstr ""
+
+#: IndividualFactsTabModuleExtended.php:592
+msgid "No relationship found"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:383
+msgid "Nurse"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:380
+msgctxt "FEMALE"
+msgid "Nurse"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:376
+msgctxt "MALE"
+msgid "Nurse"
+msgstr ""
+
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:197
+#: IndividualFactsTabModuleTrait.php:193
 msgid "OSM Base Map"
 msgstr "Базовая карта ОСМ"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:76
+#: IndividualFactsTabModuleTrait.php:72
 msgid "Only show specific facts and events"
 msgstr "Показывать только конкретные факты и события"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:99
+#: IndividualFactsTabModuleTrait.php:95
 msgid "Open links in new browser tab"
 msgstr "Открытые ссылки в новой вкладке браузера"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:107 IndividualFactsTabModuleTrait.php:150
+#: FunctionsPrintWithHooks.php:259 IndividualFactsTabModuleTrait.php:146
 msgid "OpenStreetMap"
 msgstr "Открытые карты"
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:394
+msgid "Owner"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:391
+msgctxt "FEMALE"
+msgid "Owner"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:387
+msgctxt "MALE"
+msgid "Owner"
+msgstr ""
+
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:242
+#: IndividualFactsTabModuleTrait.php:238
 msgid "Place Settings"
 msgstr "Настройки места"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:398
+msgid "Priest"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:402
+msgid "Rabbi"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:413
+msgid "Registry officer"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:410
+msgctxt "FEMALE"
+msgid "Registry officer"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:406
+msgctxt "MALE"
+msgid "Registry officer"
+msgstr ""
 
 #: IndividualFactsTabModuleTrait.php:27
 msgid "Replacement for the original 'Facts and events' module."
 msgstr "Замена оригинального модуля «Факты и события»."
 
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:424
+msgid "Seller"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:421
+msgctxt "FEMALE"
+msgid "Seller"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:417
+msgctxt "MALE"
+msgid "Seller"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:435
+msgid "Servant"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:432
+msgctxt "FEMALE"
+msgid "Servant"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:428
+msgctxt "MALE"
+msgid "Servant"
+msgstr ""
+
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:104
+#: IndividualFactsTabModuleTrait.php:100
 msgid "Show additional info for map links"
 msgstr "Показать дополнительную информацию для ссылок на карту"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:190
+#: IndividualFactsTabModuleTrait.php:186
 msgid "Show linked map with additional options"
 msgstr "Показать связанную карту с дополнительными опциями"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:132
+#: IndividualFactsTabModuleTrait.php:128
 msgid "Show links to Bing Maps"
 msgstr "Показать ссылки на Bing Maps"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:112
+#: IndividualFactsTabModuleTrait.php:108
 msgid "Show links to Google Maps"
 msgstr "Показать ссылки на Google Карты"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:152
+#: IndividualFactsTabModuleTrait.php:148
 msgid "Show links to OpenStreetMap"
 msgstr "Показать ссылки на OpenStreetMap"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:178
+#: IndividualFactsTabModuleTrait.php:174
 msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
 msgstr "Показать ссылки на историческую карту Европы в XIX. или Соединенных Штатов Америки (1880-1926), если это применимо"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:446
+msgid "Slave"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:443
+msgctxt "FEMALE"
+msgid "Slave"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:439
+msgctxt "MALE"
+msgid "Slave"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:40
@@ -276,47 +550,55 @@ msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the ta
 msgstr "Поддерживает нестандартный тег Gedcom _FSFTID (FamilySearch id) на вкладке и на боковой панели."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:72
-msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
-msgstr "Последние на самом деле не ограничиваются близкими родственниками, и поэтому может быть менее запутанно предлагать для них отдельный переключатель."
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:179
+#: IndividualFactsTabModuleTrait.php:175
 msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
 msgstr "Элемент ссылки не будет отображаться для местоположений за пределами соответствующих границ Европы и США."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:118 IndividualFactsTabModuleTrait.php:138
-#: IndividualFactsTabModuleTrait.php:158
+#: IndividualFactsTabModuleTrait.php:114 IndividualFactsTabModuleTrait.php:134
+#: IndividualFactsTabModuleTrait.php:154
 msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
 msgstr "На исходной вкладке был знак товарного знака - сохраните его, если хотите или если вы чувствуете себя обязанным по закону."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:217
+#: IndividualFactsTabModuleTrait.php:213
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
 msgstr "URI для ссылок на карту с заполнителями (%1$s и %2$s) для координат карты. Уровень масштабирования должен быть частью uri. Пример: %3$s"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:216
+#: IndividualFactsTabModuleTrait.php:212
 msgid "URI template"
 msgstr "Шаблон URI"
 
-#: FunctionsPrintWithHooks.php:178
+#: FunctionsPrintWithHooks.php:330
 #, php-format
 msgid "United States of America (1880-1926) | %1$s"
 msgstr "Соединенные Штаты Америки (1880-1926) | %1$s"
 
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:69
-msgid "Use separate toggle checkbox"
-msgstr "Используйте отдельный флажок для переключения"
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:457
+msgid "Ward"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:454
+msgctxt "FEMALE"
+msgid "Ward"
+msgstr ""
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:450
+msgctxt "MALE"
+msgid "Ward"
+msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:191
+#: IndividualFactsTabModuleTrait.php:187
 #, php-format
 msgid "When checked, links to the main %1$s page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
 msgstr "Если флажок установлен, ссылка ведет на главную страницу %1$s, где можно переключаться между различными историческими слоями, доступными для соответствующего местоположения, и переходить к современной карте, которая может быть дополнительно настроена здесь:"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:461
+msgid "Witness"
+msgstr ""
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:32
 msgid "Witness at a marriage"
@@ -333,12 +615,30 @@ msgid "Witness at a marriage"
 msgstr "Свидетель на бракосочетании"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:210
+#: IndividualFactsTabModuleTrait.php:206
 msgid "You can also configure a custom map provider. Enter its name here."
 msgstr "Вы также можете настроить собственный поставщик карт. Введите его имя здесь."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:122 IndividualFactsTabModuleTrait.php:142
-#: IndividualFactsTabModuleTrait.php:167 IndividualFactsTabModuleTrait.php:183
+#: IndividualFactsTabModuleTrait.php:118 IndividualFactsTabModuleTrait.php:138
+#: IndividualFactsTabModuleTrait.php:163 IndividualFactsTabModuleTrait.php:179
 msgid "Zoom level of linked map"
 msgstr "Уровень масштабирования связанной карты"
+
+#~ msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
+#~ msgstr "Фактические события близких родственников, а также факты и события, в которых текущий человек указан в качестве партнера."
+
+#~ msgid "Events of close relatives"
+#~ msgstr "События, связанные с близкими родственниками"
+
+#~ msgid "Historic events"
+#~ msgstr "Исторические события"
+
+#~ msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
+#~ msgstr "На исходной вкладке отображаются два вида дополнительных фактов и событий, когда на вкладке выбрано «События близких родственников»:"
+
+#~ msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
+#~ msgstr "Последние на самом деле не ограничиваются близкими родственниками, и поэтому может быть менее запутанно предлагать для них отдельный переключатель."
+
+#~ msgid "Use separate toggle checkbox"
+#~ msgstr "Используйте отдельный флажок для переключения"

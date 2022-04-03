@@ -51,5 +51,11 @@ if (!$ok) {
 
 //app/Application/Container isn't so much about IoC (we're calling 'app', after all, that's no inversion!)
 //but about autowiring dependencies (here: ModuleService and ClipboardService)
-return app(IndividualFactsTabModuleExtended::class);
-//return new IndividualFactsTabModuleExtended(app(ModuleService::class), app(ClipboardService::class));
+
+if (str_starts_with(Webtrees::VERSION, '2.1')) {
+    return app(IndividualFactsTabModuleExtended::class);
+}
+
+return app(IndividualFactsTabModuleExtended_20::class);
+
+

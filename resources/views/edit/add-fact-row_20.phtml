@@ -1,9 +1,12 @@
 <?php
 
+use Fisharebest\Webtrees\Family;
 use Fisharebest\Webtrees\GedcomRecord;
+use Fisharebest\Webtrees\GedcomTag;
 use Fisharebest\Webtrees\Http\RequestHandlers\AddNewFact;
 use Fisharebest\Webtrees\Http\RequestHandlers\SelectNewFact;
 use Fisharebest\Webtrees\I18N;
+use Fisharebest\Webtrees\Individual;
 use Ramsey\Uuid\Uuid;
 
 /**
@@ -32,24 +35,34 @@ use Ramsey\Uuid\Uuid;
                     <option value="" disabled="disabled" selected="selected">
                         <?= I18N::translate('&lt;select&gt;') ?>
                     </option>
-                    <?php foreach ($add_facts as $fact => $label) : ?>
-                        <option value="<?= $fact ?>"><?= $label ?></option>
+                    <?php foreach ($add_facts as $fact => $fact_name) : ?>
+                        <option value="<?= $fact ?>"><?= $fact_name ?></option>
                     <?php endforeach ?>
+                    <?php if ($record->tag() === Individual::RECORD_TYPE || $record->tag() === Family::RECORD_TYPE) : ?>
+                        <option value="FACT">
+                        <?= I18N::translate('Custom fact') ?>
+                        </option>
+                    <option value="EVEN">
+                        <?= I18N::translate('Custom event') ?>
+                    </option>
+                    <?php endif ?>
                 </select>
-                <button class="btn btn-light" type="submit">
-                    <?= /* I18N: A button label. */ I18N::translate('add') ?>
-                </button>
+                <div class="input-group-append">
+                    <button class="btn btn-light" type="submit">
+                        <?= /* I18N: A button label. */ I18N::translate('add') ?>
+                    </button>
+                </div>
             </div>
         </form>
 
         <div class="wt-quick-facts">
-            <?php foreach ($quick_facts as $fact => $label) : ?>
+            <?php foreach ($quick_facts as $fact) : ?>
                 <a class="btn btn-link btn-sm wt-quick-fact" href="<?= e(route(AddNewFact::class, [
                     'fact' => $fact,
                     'xref' => $record->xref(),
                     'tree' => $record->tree()->name(),
                 ])) ?>">
-                    <?= $label ?>
+                    <?= GedcomTag::getLabel($record->tag() . ':' . $fact) ?>
                 </a>
             <?php endforeach ?>
         </div>

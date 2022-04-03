@@ -1,0 +1,123 @@
+<?php
+
+use Cissee\WebtreesExt\MoreI18N;
+use Fisharebest\Webtrees\Functions\FunctionsPrint;
+use Fisharebest\Webtrees\Individual;
+use Fisharebest\Webtrees\View;
+use function GuzzleHttp\json_encode;
+
+?>
+
+<?php
+echo $outputBeforeTab->getMain();
+View::push('javascript');
+echo $outputBeforeTab->getScript();
+View::endpush();
+?>
+
+<div class="wt-facts-tab py-4">
+    <table class="table wt-facts-table">
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <?php foreach ($toggleableFactsCategories as $toggleableFactsCategory): ?>
+                      <label>
+                          <input id="<?= $toggleableFactsCategory->getId() ?>" type="checkbox" data-toggle="collapse" data-target="<?= $toggleableFactsCategory->getTarget() ?>">
+                          <?= $toggleableFactsCategory->getLabel() ?>
+                      </label>
+                    <?php endforeach ?>
+                    <?php
+                    //[RC] PATCHED
+                    echo $outputInDescriptionbox->getMain();
+                    View::push('javascript');
+                    echo $outputInDescriptionbox->getScript();
+                    View::endpush();
+                    ?>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <?php
+    //[RC] PATCHED
+    echo $outputAfterDescriptionbox->getMain();
+    View::push('javascript');
+    echo $outputAfterDescriptionbox->getScript();
+    View::endpush();
+    ?>
+
+    <table class="table wt-facts-table">
+        <tbody>
+            <?php foreach ($facts as $fact): ?>
+              <?php
+              $script = $printFactFunction($fact);
+              View::push('javascript');
+              echo $script;
+              View::endpush();
+              ?>
+            <?php endforeach ?>
+
+            <?php if ($facts->isEmpty()) : ?>
+                <tr>
+                    <td colspan="2">
+                        <?= MoreI18N::xlate('There are no facts for this individual.') ?>
+                    </td>
+                </tr>
+            <?php endif ?>
+
+            <?php if ($individual->canEdit()) : ?>
+                <?= view('edit/paste-fact-row', ['record' => $individual, 'facts' => $clipboard_facts]) ?>
+                <?php
+                //[RC] PATCHED, fix #3807
+                ?>
+                <?php FunctionsPrint::printAddNewFact($individual, $usedFacts, Individual::RECORD_TYPE) ?>
+            <?php endif ?>
+        </tbody>
+    </table>
+</div>
+
+<?php
+echo $outputAfterTab->getMain();
+View::push('javascript');
+echo $outputAfterTab->getScript();
+View::endpush();
+?>
+
+<?php View::push('javascript') ?>
+<script>
+  'use strict';
+
+<?php foreach ($toggleableFactsCategories as $toggleableFactsCategory): ?>
+    webtrees.persistentToggle('<?= $toggleableFactsCategory->getId() ?>');
+<?php endforeach ?>
+</script>
+
+<?php  
+  $requests = [];
+
+  foreach ($facts as $fact) {
+    $requests = array_merge($requests, $module->functionsPrint()->vestalsForFactPlace($fact));
+  }
+
+  $url = $module->vestalsActionUrl();
+?>
+    
+<?php if (sizeof($requests) > 0) : ?>
+  <script>
+    //load via ajax
+    $.ajax({
+          url : "<?= $url ?>",
+          type: "POST",
+          data: JSON.stringify(<?= json_encode(array_values($requests)) ?>),
+          contentType: "application/json; charset=utf-8",
+          dataType   : "json",
+          success    : function(arr) {
+            for (i = 0; i < arr.length; i++) {
+              $("."+arr[i].classAttr).replaceWith(arr[i].html);
+            }
+          }
+    });
+  </script>
+<?php endif ?>  
+
+<?php View::endpush() ?>
