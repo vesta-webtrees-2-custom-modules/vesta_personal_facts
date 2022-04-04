@@ -224,22 +224,25 @@ class IndividualFactsTabModuleExtended_20 extends IndividualFactsTabModule_20 im
     return $facts;
   }
 
-  protected function getToggleableFactsCategories($show_relatives_facts, $has_historical_facts) {
+  protected function getToggleableFactsCategories(
+      $show_relatives_facts, 
+      $has_historical_facts) {
+      
     $categories = [];
 
     /* [RC] note: this is problematic wrt asso events, which we still may want to show */
-    if ($show_relatives_facts || (!$this->getPreference('ASSO_SEPARATE', '0') && $this->showAssociateFacts())) {
+    if ($show_relatives_facts /*|| (!$this->getPreference('ASSO_SEPARATE', '0') && $this->showAssociateFacts())*/) {
       $categories[] = new ToggleableFactsCategory(
               'show-relatives-facts-pfh', //cf FunctionsPrintFactsWithHooks.additionalStyleadds()!
               '.wt-relation-fact-pfh',
               I18N::translate('Events of close relatives'));
     }
 
-    if ($this->getPreference('ASSO_SEPARATE', '0') && $this->showAssociateFacts()) {
+    if (/*$this->getPreference('ASSO_SEPARATE', '0') &&*/ $this->showAssociateFacts()) {
       $categories[] = new ToggleableFactsCategory(
               'show-associate-facts-pfh', //cf FunctionsPrintFactsWithHooks.additionalStyleadds()!
               '.wt-associate-fact-pfh',
-              CommonI18N::associatedFactsAndEvents());
+              MoreI18N::xlate('Associated events'));
     } //if setting for separate checkbox isn't set: toggles via show-relatives-facts-pfh!
 
     if ($has_historical_facts) {
@@ -271,7 +274,7 @@ class IndividualFactsTabModuleExtended_20 extends IndividualFactsTabModule_20 im
   }
 
   protected function showAssociateFacts() {
-    $restricted = $this->getPreference('ASSO_RESTRICTED', '0');
+    $restricted = boolval($this->getPreference('ASSO_RESTRICTED', '0'));
 
     if ($restricted) {
       //check if completely empty - in which case we may shortcut			
@@ -298,7 +301,7 @@ class IndividualFactsTabModuleExtended_20 extends IndividualFactsTabModule_20 im
   }
 
   protected function filterAssociateFact(Fact $fact) {
-    $restricted = (boolean) $this->getPreference('ASSO_RESTRICTED', '0');
+    $restricted = boolval($this->getPreference('ASSO_RESTRICTED', '0'));
     if ($restricted) {
       $parent = $fact->record();
       if ($parent instanceof Family) {

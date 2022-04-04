@@ -188,7 +188,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     }
 
     protected function showAssociateFacts() {
-        $restricted = $this->getPreference('ASSO_RESTRICTED', '0');
+        $restricted = boolval($this->getPreference('ASSO_RESTRICTED', '0'));
 
         if ($restricted) {
             //check if completely empty - in which case we may shortcut			
@@ -217,7 +217,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     protected function filterAssociateFact(Fact $fact) {
         [, $tag] = explode(':', $fact->tag());
 
-        $restricted = (boolean) $this->getPreference('ASSO_RESTRICTED', '0');
+        $restricted = boolval($this->getPreference('ASSO_RESTRICTED', '0'));
         if ($restricted) {
             $parent = $fact->record();
             if ($parent instanceof Family) {

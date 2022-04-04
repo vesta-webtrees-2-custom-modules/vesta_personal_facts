@@ -64,11 +64,11 @@ class FunctionsPrintFactsWithHooks_20 extends FunctionsPrintFacts_20 {
 
     // Event of close associates
     if ($fact->id() == 'asso') {
-      if ($this->module->getPreference('ASSO_SEPARATE', '0')) {
+      //if ($this->module->getPreference('ASSO_SEPARATE', '0')) {
         $styleadd = trim($styleadd . ' wt-associate-fact-pfh collapse');
-      } else {
-        $styleadd = trim($styleadd . ' wt-relation-fact-pfh collapse');
-      }
+      //} else {
+      //  $styleadd = trim($styleadd . ' wt-relation-fact-pfh collapse');
+      //}
     }
 
     // historical facts
