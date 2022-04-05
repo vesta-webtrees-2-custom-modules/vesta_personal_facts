@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2022-04-03 20:23+0200\n"
-"PO-Revision-Date: 2021-07-24 11:29+0200\n"
-"Last-Translator: Продай Своё <ol810car@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/ru/>\n"
+"PO-Revision-Date: 2022-04-05 07:39+0000\n"
+"Last-Translator: Олег <uolega@yandex.ru>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Poedit 1.8.6\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:172
@@ -58,31 +60,31 @@ msgstr "Супруг"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:207
 msgid "Attendant"
-msgstr ""
+msgstr "Посетитель"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:204
 msgctxt "FEMALE"
 msgid "Attendant"
-msgstr ""
+msgstr "Посетитель"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:200
 msgctxt "MALE"
 msgid "Attendant"
-msgstr ""
+msgstr "Посетитель"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:218
 msgid "Attending"
-msgstr ""
+msgstr "Посещать"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:215
 msgctxt "FEMALE"
 msgid "Attending"
-msgstr ""
+msgstr "Посещение"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:211
 msgctxt "MALE"
 msgid "Attending"
-msgstr ""
+msgstr "Посещение сайта"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:67
 msgid "Baptism of a godchild"
@@ -106,7 +108,7 @@ msgstr "URI данных в кодировке Base64 для значка ссы
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:222
 msgid "Best man"
-msgstr ""
+msgstr "Шафер"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
 msgid "Best man at a marriage"
@@ -119,7 +121,7 @@ msgstr "Карты Bing"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:226
 msgid "Bridesmaid"
-msgstr ""
+msgstr "Подружка невесты"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:24
 msgid "Bridesmaid at a marriage"
@@ -127,17 +129,17 @@ msgstr "Подружка невесты на свадьбе"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:237
 msgid "Buyer"
-msgstr ""
+msgstr "Покупатель"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:234
 msgctxt "FEMALE"
 msgid "Buyer"
-msgstr ""
+msgstr "Покупатель"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:230
 msgctxt "MALE"
 msgid "Buyer"
-msgstr ""
+msgstr "Покупатель"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:95
 msgid "Christening of a godchild"
@@ -155,21 +157,21 @@ msgstr "Крещение крестника"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:241
 msgid "Circumciser"
-msgstr ""
+msgstr "Обрезатель"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:252
 msgid "Civil registrar"
-msgstr ""
+msgstr "Регистратор актов гражданского состояния"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:249
 msgctxt "FEMALE"
 msgid "Civil registrar"
-msgstr ""
+msgstr "Регистратор актов гражданского состояния"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:245
 msgctxt "MALE"
 msgid "Civil registrar"
-msgstr ""
+msgstr "Регистратор актов гражданского состояния"
 
 #. I18N: Module Configuration
 #: FunctionsPrintWithHooks.php:270 IndividualFactsTabModuleTrait.php:203
@@ -183,31 +185,31 @@ msgstr "Отобразите значок с всплывающей подска
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:263
 msgid "Employee"
-msgstr ""
+msgstr "Сотрудник"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:260
 msgctxt "FEMALE"
 msgid "Employee"
-msgstr ""
+msgstr "Сотрудник"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:256
 msgctxt "MALE"
 msgid "Employee"
-msgstr ""
+msgstr "Сотрудник"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:274
 msgid "Employer"
-msgstr ""
+msgstr "Работодатель"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:271
 msgctxt "FEMALE"
 msgid "Employer"
-msgstr ""
+msgstr "Работодатель"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:267
 msgctxt "MALE"
 msgid "Employer"
-msgstr ""
+msgstr "Работодатель"
 
 #: FunctionsPrintWithHooks.php:326
 #, php-format
@@ -230,57 +232,57 @@ msgstr "Факты и события"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:278
 msgid "Foster child"
-msgstr ""
+msgstr "Приемный ребенок"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:282
 msgid "Foster father"
-msgstr ""
+msgstr "Приемный отец"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:286
 msgid "Foster mother"
-msgstr ""
+msgstr "Приемная мать"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:297
 msgid "Friend"
-msgstr ""
+msgstr "Друг"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:294
 msgctxt "FEMALE"
 msgid "Friend"
-msgstr ""
+msgstr "Друг"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:290
 msgctxt "MALE"
 msgid "Friend"
-msgstr ""
+msgstr "Друг"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:335
 msgid "Godchild"
-msgstr ""
+msgstr "Крестник"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:324
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:332
 msgid "Goddaughter"
-msgstr ""
+msgstr "Крестница"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:301
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:309
 msgid "Godfather"
-msgstr ""
+msgstr "Крестный отец"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:305
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:313
 msgid "Godmother"
-msgstr ""
+msgstr "Крестная мать"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:316
 msgid "Godparent"
-msgstr ""
+msgstr "Крестный родитель"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:320
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:328
 msgid "Godson"
-msgstr ""
+msgstr "Крестник"
 
 #. I18N: Module Configuration
 #: FunctionsPrintWithHooks.php:242 IndividualFactsTabModuleTrait.php:106
@@ -289,17 +291,17 @@ msgstr "Карты Гугл"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:346
 msgid "Guardian"
-msgstr ""
+msgstr "Опекун"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:343
 msgctxt "FEMALE"
 msgid "Guardian"
-msgstr ""
+msgstr "Опекун"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:339
 msgctxt "MALE"
 msgid "Guardian"
-msgstr ""
+msgstr "Опекун"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:90
@@ -334,17 +336,17 @@ msgstr "Включить маркер"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:357
 msgid "Informant"
-msgstr ""
+msgstr "Информатор"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:354
 msgctxt "FEMALE"
 msgid "Informant"
-msgstr ""
+msgstr "Информатор"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:350
 msgctxt "MALE"
 msgid "Informant"
-msgstr ""
+msgstr "Информатор"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:39
@@ -363,17 +365,17 @@ msgstr "Значок ссылки как URI данных"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:368
 msgid "Lodger"
-msgstr ""
+msgstr "Жилец"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:365
 msgctxt "FEMALE"
 msgid "Lodger"
-msgstr ""
+msgstr "Жилец"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:361
 msgctxt "MALE"
 msgid "Lodger"
-msgstr ""
+msgstr "Жилец"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:270
@@ -387,25 +389,25 @@ msgstr "Имя"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:372
 msgid "Nanny"
-msgstr ""
+msgstr "Няня"
 
 #: IndividualFactsTabModuleExtended.php:592
 msgid "No relationship found"
-msgstr ""
+msgstr "Связь не найдена"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:383
 msgid "Nurse"
-msgstr ""
+msgstr "Медсестра"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:380
 msgctxt "FEMALE"
 msgid "Nurse"
-msgstr ""
+msgstr "Медсестра"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:376
 msgctxt "MALE"
 msgid "Nurse"
-msgstr ""
+msgstr "Медсестра"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:193
@@ -429,17 +431,17 @@ msgstr "Открытые карты"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:394
 msgid "Owner"
-msgstr ""
+msgstr "Владелец"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:391
 msgctxt "FEMALE"
 msgid "Owner"
-msgstr ""
+msgstr "Владелец"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:387
 msgctxt "MALE"
 msgid "Owner"
-msgstr ""
+msgstr "Владелец"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:238
@@ -448,25 +450,25 @@ msgstr "Настройки места"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:398
 msgid "Priest"
-msgstr ""
+msgstr "Священник"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:402
 msgid "Rabbi"
-msgstr ""
+msgstr "Раввин"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:413
 msgid "Registry officer"
-msgstr ""
+msgstr "Сотрудник отдела регистрации"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:410
 msgctxt "FEMALE"
 msgid "Registry officer"
-msgstr ""
+msgstr "Сотрудник отдела регистрации"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:406
 msgctxt "MALE"
 msgid "Registry officer"
-msgstr ""
+msgstr "Сотрудник отдела регистрации"
 
 #: IndividualFactsTabModuleTrait.php:27
 msgid "Replacement for the original 'Facts and events' module."
@@ -474,31 +476,31 @@ msgstr "Замена оригинального модуля «Факты и с�
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:424
 msgid "Seller"
-msgstr ""
+msgstr "Продавец"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:421
 msgctxt "FEMALE"
 msgid "Seller"
-msgstr ""
+msgstr "Продавец"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:417
 msgctxt "MALE"
 msgid "Seller"
-msgstr ""
+msgstr "Продавец"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:435
 msgid "Servant"
-msgstr ""
+msgstr "Слуга"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:432
 msgctxt "FEMALE"
 msgid "Servant"
-msgstr ""
+msgstr "Слуга"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:428
 msgctxt "MALE"
 msgid "Servant"
-msgstr ""
+msgstr "Слуга"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:100
@@ -532,17 +534,17 @@ msgstr "Показать ссылки на историческую карту �
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:446
 msgid "Slave"
-msgstr ""
+msgstr "Раб"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:443
 msgctxt "FEMALE"
 msgid "Slave"
-msgstr ""
+msgstr "Раб"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:439
 msgctxt "MALE"
 msgid "Slave"
-msgstr ""
+msgstr "Раб"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:40
@@ -578,17 +580,17 @@ msgstr "Соединенные Штаты Америки (1880-1926) | %1$s"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:457
 msgid "Ward"
-msgstr ""
+msgstr "Подопечный"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:454
 msgctxt "FEMALE"
 msgid "Ward"
-msgstr ""
+msgstr "Подопечный"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:450
 msgctxt "MALE"
 msgid "Ward"
-msgstr ""
+msgstr "Подопечный"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:187
@@ -598,7 +600,7 @@ msgstr "Если флажок установлен, ссылка ведет на
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:461
 msgid "Witness"
-msgstr ""
+msgstr "Свидетель"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:32
 msgid "Witness at a marriage"
