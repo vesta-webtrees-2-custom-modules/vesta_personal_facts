@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2022-04-03 20:23+0200\n"
-"PO-Revision-Date: 2022-04-05 06:07+0000\n"
+"PO-Revision-Date: 2022-04-06 14:08+0000\n"
 "Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/"
 "vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
@@ -68,17 +68,17 @@ msgstr "Verzorger"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:218
 msgid "Attending"
-msgstr "Aanwezige"
+msgstr "Gast"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:215
 msgctxt "FEMALE"
 msgid "Attending"
-msgstr "Aanwezige"
+msgstr "Gast"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:211
 msgctxt "MALE"
 msgid "Attending"
-msgstr "Aanwezige"
+msgstr "Gast"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:67
 msgid "Baptism of a godchild"
