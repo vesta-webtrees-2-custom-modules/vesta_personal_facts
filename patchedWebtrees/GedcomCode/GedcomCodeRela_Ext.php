@@ -103,9 +103,11 @@ class GedcomCodeRela_Ext {
   public static function invert($type) {
     switch ($type) {
       case 'attendant':
-        return 'attending';
+        return null;
+        //return 'attending'; //doubtful, see https://www.webtrees.net/index.php/en/forum/8-translation/36667-attendant-and-attending
       case 'attending':
-        return 'attendant';
+        return null;  
+        //return 'attendant'; //doubtful, see https://www.webtrees.net/index.php/en/forum/8-translation/36667-attendant-and-attending
       case 'best_man':
         return null;
       case 'bridesmaid':
