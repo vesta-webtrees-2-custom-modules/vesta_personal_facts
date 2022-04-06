@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-06 19:26+0200\n"
+"POT-Creation-Date: 2022-04-06 21:13+0200\n"
 "PO-Revision-Date: 2021-03-16 15:02+0000\n"
 "Last-Translator: mpwt <der@bauschaffen.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/de/>\n"
@@ -147,11 +147,6 @@ msgstr "Liste der Tatsachen und Ereignisse"
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Tatsachen und Ereignisse Registerkarte UI Element Provider"
 
-#: IndividualFactsTabModuleExtended.php:121
-#: IndividualFactsTabModuleExtended_20.php:122
-msgid "Facts and events"
-msgstr "Tatsachen und Ereignisse"
-
 #. I18N: Module Configuration
 #: FunctionsFactPlace.php:71 FunctionsPrintWithHooks_20.php:242
 #: IndividualFactsTabModuleTrait.php:106
@@ -194,10 +189,6 @@ msgstr "Marker einfügen"
 msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr "Ist als Ersatz für das ursprüngliche Modul \"Tatsachen und Ereignisse\" gedacht."
 
-#: FunctionsFactPlace.php:254
-msgid "Latitude"
-msgstr ""
-
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:88
 msgid "Latitude/Longitude"
@@ -207,10 +198,6 @@ msgstr "Breitengrad/Längengrad (Lat/Lon)"
 #: IndividualFactsTabModuleTrait.php:220
 msgid "Link icon as data URI"
 msgstr "Link-Symbol als Daten-URI"
-
-#: FunctionsFactPlace.php:255
-msgid "Longitude"
-msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:270
@@ -356,6 +343,9 @@ msgstr ""
 
 #~ msgid "Events of close relatives"
 #~ msgstr "Ereignisse naher Verwandter"
+
+#~ msgid "Facts and events"
+#~ msgstr "Tatsachen und Ereignisse"
 
 #~ msgid "Historic events"
 #~ msgstr "Historische Ereignisse"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-06 19:26+0200\n"
+"POT-Creation-Date: 2022-04-06 21:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,19 +54,6 @@ msgstr ""
 #: FunctionsFactPlace.php:161 FunctionsPrintWithHooks_20.php:330
 #, php-format
 msgid "United States of America (1880-1926) | %1$s"
-msgstr ""
-
-#: FunctionsFactPlace.php:254
-msgid "Latitude"
-msgstr ""
-
-#: FunctionsFactPlace.php:255
-msgid "Longitude"
-msgstr ""
-
-#: IndividualFactsTabModuleExtended.php:121
-#: IndividualFactsTabModuleExtended_20.php:122
-msgid "Facts and events"
 msgstr ""
 
 #. I18N: Module Configuration

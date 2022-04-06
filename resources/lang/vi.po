@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-06 19:26+0200\n"
+"POT-Creation-Date: 2022-04-06 21:13+0200\n"
 "PO-Revision-Date: 2021-07-24 11:35+0200\n"
 "Last-Translator: ngohuuthuanfc9865b89dde4baf <ngohuuthuan@gmail.com>\n"
 "Language-Team: Vietnamese <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/vi/>\n"
@@ -152,11 +152,6 @@ msgstr "Danh sách Sự kiện và Số liệu"
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Tab Sự kiện và Số liệu Nhà cung cấp phần tử giao diện người dùng"
 
-#: IndividualFactsTabModuleExtended.php:121
-#: IndividualFactsTabModuleExtended_20.php:122
-msgid "Facts and events"
-msgstr "Sự kiện và số liệu"
-
 #. I18N: Module Configuration
 #: FunctionsFactPlace.php:71 FunctionsPrintWithHooks_20.php:242
 #: IndividualFactsTabModuleTrait.php:106
@@ -199,10 +194,6 @@ msgstr "Bao gồm điểm đánh dấu"
 msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr "Dự định thay thế cho mô-đun 'Sự kiện và số liệu' ban đầu."
 
-#: FunctionsFactPlace.php:254
-msgid "Latitude"
-msgstr ""
-
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:88
 msgid "Latitude/Longitude"
@@ -212,10 +203,6 @@ msgstr "Kinh độ/Vĩ độ"
 #: IndividualFactsTabModuleTrait.php:220
 msgid "Link icon as data URI"
 msgstr "Biểu tượng liên kết dưới dạng URI dữ liệu"
-
-#: FunctionsFactPlace.php:255
-msgid "Longitude"
-msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:270
@@ -361,6 +348,9 @@ msgstr ""
 
 #~ msgid "Events of close relatives"
 #~ msgstr "Sự kiện của những người thân"
+
+#~ msgid "Facts and events"
+#~ msgstr "Sự kiện và số liệu"
 
 #~ msgid "Historic events"
 #~ msgstr "Sự kiện lịch sử"

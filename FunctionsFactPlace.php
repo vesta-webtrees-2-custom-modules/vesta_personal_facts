@@ -251,8 +251,8 @@ class FunctionsFactPlace {
         if ($map_lati && $map_long) {
             //cf original view 'fact-place'   
             $html .= '<div class="wt-fact-coordinates">';
-            $html .= '<span class="label"' . $title . '>' . I18N::translate('Latitude') . ': </span>' . $map_lati . ' ';
-            $html .= '<span class="label"' . $title . '>' . I18N::translate('Longitude') . ': </span>' . $map_long . ' ';
+            $html .= '<span class="label"' . $title . '>' . MoreI18N::xlate('Latitude') . ': </span>' . $map_lati . ' ';
+            $html .= '<span class="label"' . $title . '>' . MoreI18N::xlate('Longitude') . ': </span>' . $map_long . ' ';
       
             $map_lati = trim(strtr($map_lati, "NSEW,�", " - -. ")); // S5,6789 ==> -5.6789
             $map_long = trim(strtr($map_long, "NSEW,�", " - -. ")); // E3.456� ==> 3.456            

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-06 19:26+0200\n"
+"POT-Creation-Date: 2022-04-06 21:13+0200\n"
 "PO-Revision-Date: 2022-04-05 07:39+0000\n"
 "Last-Translator: Олег <uolega@yandex.ru>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/ru/>\n"
@@ -152,11 +152,6 @@ msgstr "Список фактов и событий"
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Вкладка \"Факты и события\" Поставщики элементов пользовательского интерфейса"
 
-#: IndividualFactsTabModuleExtended.php:121
-#: IndividualFactsTabModuleExtended_20.php:122
-msgid "Facts and events"
-msgstr "Факты и события"
-
 #. I18N: Module Configuration
 #: FunctionsFactPlace.php:71 FunctionsPrintWithHooks_20.php:242
 #: IndividualFactsTabModuleTrait.php:106
@@ -199,10 +194,6 @@ msgstr "Включить маркер"
 msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr "Предназначен для замены исходного модуля «Факты и события»."
 
-#: FunctionsFactPlace.php:254
-msgid "Latitude"
-msgstr ""
-
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:88
 msgid "Latitude/Longitude"
@@ -212,10 +203,6 @@ msgstr "Широта/Долгота"
 #: IndividualFactsTabModuleTrait.php:220
 msgid "Link icon as data URI"
 msgstr "Значок ссылки как URI данных"
-
-#: FunctionsFactPlace.php:255
-msgid "Longitude"
-msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:270
@@ -436,6 +423,9 @@ msgstr ""
 
 #~ msgid "Events of close relatives"
 #~ msgstr "События, связанные с близкими родственниками"
+
+#~ msgid "Facts and events"
+#~ msgstr "Факты и события"
 
 #~ msgid "Foster child"
 #~ msgstr "Приемный ребенок"

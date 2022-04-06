@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-06 19:26+0200\n"
+"POT-Creation-Date: 2022-04-06 21:13+0200\n"
 "PO-Revision-Date: 2021-07-24 11:33+0200\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/tr/>\n"
@@ -152,11 +152,6 @@ msgstr "Gerçekler ve Olaylar Listesi"
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Gerçekler ve Olaylar Sekmesi UI Öğe Sağlayıcıları"
 
-#: IndividualFactsTabModuleExtended.php:121
-#: IndividualFactsTabModuleExtended_20.php:122
-msgid "Facts and events"
-msgstr "Gerçekler ve olaylar"
-
 #. I18N: Module Configuration
 #: FunctionsFactPlace.php:71 FunctionsPrintWithHooks_20.php:242
 #: IndividualFactsTabModuleTrait.php:106
@@ -199,10 +194,6 @@ msgstr "İşaretleyiciyi dahil et"
 msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr "Orijinal 'Gerçekler ve olaylar' modülünün yerine geçmesi amaçlanmıştır."
 
-#: FunctionsFactPlace.php:254
-msgid "Latitude"
-msgstr ""
-
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:88
 msgid "Latitude/Longitude"
@@ -212,10 +203,6 @@ msgstr "Enlem/Boylam"
 #: IndividualFactsTabModuleTrait.php:220
 msgid "Link icon as data URI"
 msgstr "Veri URI'si olarak bağlantı simgesi"
-
-#: FunctionsFactPlace.php:255
-msgid "Longitude"
-msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:270
@@ -361,6 +348,9 @@ msgstr ""
 
 #~ msgid "Events of close relatives"
 #~ msgstr "Yakın akrabaların olayları"
+
+#~ msgid "Facts and events"
+#~ msgstr "Gerçekler ve olaylar"
 
 #~ msgid "Historic events"
 #~ msgstr "Tarihi olaylar"

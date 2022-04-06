@@ -118,7 +118,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     }
   
     public function tabTitle(): string {
-        return $this->getTabTitle(I18N::translate('Facts and events'));
+        return $this->getTabTitle(MoreI18N::xlate('Facts and events'));
     }
 
     //there may be further ajax calls from this tab so we suggest to load tab itself via ajax
