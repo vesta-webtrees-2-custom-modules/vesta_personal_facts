@@ -2,11 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-03 20:23+0200\n"
+"POT-Creation-Date: 2022-04-06 18:59+0200\n"
 "PO-Revision-Date: 2022-04-06 14:08+0000\n"
 "Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/"
-"vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,16 +13,36 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.12-dev\n"
 
+#. I18N: Abbreviation for "number %s"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:215
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:222
+#, php-format
+msgid "#%s"
+msgstr ""
+
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:172
 #, php-format
 msgid "%1$s (historic maps)"
 msgstr "%1$s (historische kaarten)"
 
+#: resources/views/edit/add-fact-row_20.phtml:36
+msgid "&lt;select&gt;"
+msgstr ""
+
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:728
+#, php-format
+msgid "<span class=\"label\">%1$s:</span> <span class=\"field\" dir=\"auto\">%2$s</span>"
+msgstr ""
+
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:194
 msgid "Aerial Base Map"
 msgstr "Luchtfotokaart"
+
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:301
+msgid "Age"
+msgstr ""
 
 #: IndividualFactsTabModuleTrait.php:29
 msgid "Also replaces the original 'Extra information' module."
@@ -34,63 +53,40 @@ msgstr "Vervangt ook de originele module 'Extra informatie'."
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr "Een uitgebreid tabblad 'Feiten en gebeurtenissen', met 'hooks' voor andere aangepaste modules."
 
-#: FunctionsPrintWithHooks.php:324 IndividualFactsTabModuleTrait.php:170
+#: FunctionsFactPlace.php:155 FunctionsPrintWithHooks.php:324
+#: FunctionsPrintWithHooks_20.php:324 IndividualFactsTabModuleTrait.php:170
 msgid "Arcanum Maps"
 msgstr "Arcanum Maps"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:41
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:42
 msgid "Associate at a marriage"
 msgstr "Gerelateerd persoon bij huwelijk"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:39
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:40
 msgctxt "FEMALE"
 msgid "Associate at a marriage"
 msgstr "Gerelateerd persoon bij huwelijk"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:37
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:38
 msgctxt "MALE"
 msgid "Associate at a marriage"
 msgstr "Gerelateerd persoon bij huwelijk"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:207
-msgid "Attendant"
-msgstr "Verzorger"
+#: IndividualFactsTabModuleExtended_20.php:245
+msgid "Associated events"
+msgstr ""
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:204
-msgctxt "FEMALE"
-msgid "Attendant"
-msgstr "Verzorgster"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:200
-msgctxt "MALE"
-msgid "Attendant"
-msgstr "Verzorger"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:218
-msgid "Attending"
-msgstr "Gast"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:215
-msgctxt "FEMALE"
-msgid "Attending"
-msgstr "Gast"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:211
-msgctxt "MALE"
-msgid "Attending"
-msgstr "Gast"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:67
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:68
 msgid "Baptism of a godchild"
 msgstr "Doop van petekind"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:59
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:65
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:60
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:66
 msgid "Baptism of a goddaughter"
 msgstr "Doop van peetdochter"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:56
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:63
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:57
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:64
 msgid "Baptism of a godson"
 msgstr "Doop van peetzoon"
 
@@ -100,115 +96,67 @@ msgstr "Doop van peetzoon"
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr "Base64-gecodeerde gegevens-URI voor het koppelingspictogram. Converteer het pictogram naar een gegevens-URI, bijvoorbeeld via %1$s. Het resultaat moet beginnen met iets als %2$s. Een goede bron voor de pictogramafbeelding is meestal de favicon-afbeelding van de kaartprovider, zoals %3$s. Het zal worden weergegeven in de juiste aangepaste grootte."
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:222
-msgid "Best man"
-msgstr "Getuige bij huwelijk"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:22
 msgid "Best man at a marriage"
 msgstr "Getuige bij huwelijk"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:253 IndividualFactsTabModuleTrait.php:126
+#: FunctionsFactPlace.php:82 FunctionsPrintWithHooks.php:253
+#: FunctionsPrintWithHooks_20.php:253 IndividualFactsTabModuleTrait.php:126
 msgid "Bing Maps"
 msgstr "Bing Maps"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:226
-msgid "Bridesmaid"
-msgstr "Bruidsmeisje"
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:43
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:45
+msgid "Bing Maps™"
+msgstr ""
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:24
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:25
 msgid "Bridesmaid at a marriage"
 msgstr "Getuige bij huwelijk"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:237
-msgid "Buyer"
-msgstr "Koper"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:234
-msgctxt "FEMALE"
-msgid "Buyer"
-msgstr "Koper"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:230
-msgctxt "MALE"
-msgid "Buyer"
-msgstr "Koper"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:95
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:96
 msgid "Christening of a godchild"
 msgstr "Doop van petekind"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:87
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:93
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:88
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:94
 msgid "Christening of a goddaughter"
 msgstr "Doop van peetdochter"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:84
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:91
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:85
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:92
 msgid "Christening of a godson"
 msgstr "Doop van peetzoon"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:241
-msgid "Circumciser"
-msgstr "Besnijder"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:252
-msgid "Civil registrar"
-msgstr "Ambtenaar Burgerlijke Stand"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:249
-msgctxt "FEMALE"
-msgid "Civil registrar"
-msgstr "Ambtenaar Burgerlijke Stand"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:245
-msgctxt "MALE"
-msgid "Civil registrar"
-msgstr "Ambtenaar Burgerlijke Stand"
-
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:270 IndividualFactsTabModuleTrait.php:203
+#: FunctionsFactPlace.php:99 FunctionsPrintWithHooks.php:270
+#: FunctionsPrintWithHooks_20.php:270 IndividualFactsTabModuleTrait.php:203
 msgid "Custom Map Provider"
 msgstr "Andere kaartprovider"
+
+#: resources/views/edit/add-fact-row_20.phtml:46
+msgid "Custom event"
+msgstr ""
+
+#: resources/views/edit/add-fact-row_20.phtml:43
+msgid "Custom fact"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:101
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Geef een pictogram weer met een tooltip die de bron van de kaartkoppelingen aangeeft. Dit is vooral bedoeld voor debugging."
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:263
-msgid "Employee"
-msgstr "Werknemer"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:260
-msgctxt "FEMALE"
-msgid "Employee"
-msgstr "Werknemer"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:256
-msgctxt "MALE"
-msgid "Employee"
-msgstr "Werknemer"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:274
-msgid "Employer"
-msgstr "Werkgever"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:271
-msgctxt "FEMALE"
-msgid "Employer"
-msgstr "Werkgever"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:267
-msgctxt "MALE"
-msgid "Employer"
-msgstr "Werkgever"
-
-#: FunctionsPrintWithHooks.php:326
+#: FunctionsFactPlace.php:157 FunctionsPrintWithHooks.php:326
+#: FunctionsPrintWithHooks_20.php:326
 #, php-format
 msgid "Europe in the XIX. century | %1$s"
 msgstr "Europa in de XIX-eeuw | %1$s"
+
+#: resources/views/edit/add-fact-row_20.phtml:25
+msgid "Fact or event"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:234
@@ -217,90 +165,34 @@ msgstr "Lijst met feiten en gebeurtenissen"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:266
+#: IndividualFactsTabModuleExtended_20.php:346
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Aanbieders van UI-elementen voor tabblad Feiten en gebeurtenissen"
 
 #: IndividualFactsTabModuleExtended.php:121
+#: IndividualFactsTabModuleExtended_20.php:122
 msgid "Facts and events"
 msgstr "Feiten en gebeurtenissen"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:278
-msgid "Foster child"
-msgstr "Pleegkind"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:282
-msgid "Foster father"
-msgstr "Pleegvader"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:286
-msgid "Foster mother"
-msgstr "Pleegmoeder"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:297
-msgid "Friend"
-msgstr "Vriend(in)"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:294
-msgctxt "FEMALE"
-msgid "Friend"
-msgstr "Vriendin"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:290
-msgctxt "MALE"
-msgid "Friend"
-msgstr "Vriend"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:335
-msgid "Godchild"
-msgstr "Petekind"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:324
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:332
-msgid "Goddaughter"
-msgstr "Peetdochter"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:301
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:309
-msgid "Godfather"
-msgstr "Peetvader"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:305
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:313
-msgid "Godmother"
-msgstr "Peetmoeder"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:316
-msgid "Godparent"
-msgstr "Peetouder"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:320
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:328
-msgid "Godson"
-msgstr "Peetzoon"
-
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:242 IndividualFactsTabModuleTrait.php:106
+#: FunctionsFactPlace.php:71 FunctionsPrintWithHooks.php:242
+#: FunctionsPrintWithHooks_20.php:242 IndividualFactsTabModuleTrait.php:106
 msgid "Google Maps"
 msgstr "Google Maps"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:346
-msgid "Guardian"
-msgstr "Voogd"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:343
-msgctxt "FEMALE"
-msgid "Guardian"
-msgstr "Voogdes"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:339
-msgctxt "MALE"
-msgid "Guardian"
-msgstr "Voogd"
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:38
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:40
+msgid "Google Maps™"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:90
 msgid "Hide coordinates, show map links after place name"
 msgstr "Coördinaten verbergen, toon kaartkoppelingen na plaatsnaam"
+
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:302
+msgid "Husband"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:73
@@ -328,24 +220,18 @@ msgstr "Neem een markering op in de gekoppelde kaart."
 msgid "Include marker"
 msgstr "Markering opnemen"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:357
-msgid "Informant"
-msgstr "Aangever"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:354
-msgctxt "FEMALE"
-msgid "Informant"
-msgstr "Aangever"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:350
-msgctxt "MALE"
-msgid "Informant"
-msgstr "Aangever"
-
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:39
 msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr "Bedoeld als vervanging van de originele module 'Feiten en gebeurtenissen'."
+
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:201
+msgid "LDS temple"
+msgstr ""
+
+#: FunctionsFactPlace.php:254
+msgid "Latitude"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:88
@@ -357,22 +243,13 @@ msgstr "Breedtegraad/lengtegraad"
 msgid "Link icon as data URI"
 msgstr "Koppelingspictogram als gegevens-URI"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:368
-msgid "Lodger"
-msgstr "Kamerbewoner"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:365
-msgctxt "FEMALE"
-msgid "Lodger"
-msgstr "Kamerbewoonster"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:361
-msgctxt "MALE"
-msgid "Lodger"
-msgstr "Kamerbewoner"
+#: FunctionsFactPlace.php:255
+msgid "Longitude"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:270
+#: IndividualFactsTabModuleExtended_20.php:350
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr "De hier vermelde modules kunnen aanvullende gegevens bevatten voor feiten en gebeurtenissen (weergegeven in de geconfigureerde volgorde)."
 
@@ -381,32 +258,24 @@ msgstr "De hier vermelde modules kunnen aanvullende gegevens bevatten voor feite
 msgid "Name"
 msgstr "Naam"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:372
-msgid "Nanny"
-msgstr "Kinderjuffrouw"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:441
+msgid "No"
+msgstr ""
 
 #: IndividualFactsTabModuleExtended.php:592
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:328
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:697
 msgid "No relationship found"
 msgstr "Geen verwantschap gevonden"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:383
-msgid "Nurse"
-msgstr "Verpleegkundige"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:380
-msgctxt "FEMALE"
-msgid "Nurse"
-msgstr "Verpleegster"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:376
-msgctxt "MALE"
-msgid "Nurse"
-msgstr "Verpleger"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:193
 msgid "OSM Base Map"
 msgstr "OSM-basiskaart"
+
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:585
+msgid "Only managers can edit"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:72
@@ -419,82 +288,24 @@ msgid "Open links in new browser tab"
 msgstr "Koppelingen openen in nieuw browsertabblad"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:259 IndividualFactsTabModuleTrait.php:146
+#: FunctionsFactPlace.php:88 FunctionsPrintWithHooks.php:259
+#: FunctionsPrintWithHooks_20.php:259 IndividualFactsTabModuleTrait.php:146
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:394
-msgid "Owner"
-msgstr "Eigenaar"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:391
-msgctxt "FEMALE"
-msgid "Owner"
-msgstr "Eigenares"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:387
-msgctxt "MALE"
-msgid "Owner"
-msgstr "Eigenaar"
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:48
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:50
+msgid "OpenStreetMap™"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:238
 msgid "Place Settings"
 msgstr "Plaatsinstellingen"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:398
-msgid "Priest"
-msgstr "Priester"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:402
-msgid "Rabbi"
-msgstr "Rabbijn"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:413
-msgid "Registry officer"
-msgstr "Ambtenaar bevolkingsregister"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:410
-msgctxt "FEMALE"
-msgid "Registry officer"
-msgstr "Ambtenaar bevolkingsregister"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:406
-msgctxt "MALE"
-msgid "Registry officer"
-msgstr "Ambtenaar bevolkingsregister"
-
 #: IndividualFactsTabModuleTrait.php:27
 msgid "Replacement for the original 'Facts and events' module."
 msgstr "Vervanging van de originele module 'Feiten en gebeurtenissen'."
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:424
-msgid "Seller"
-msgstr "Verkoper"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:421
-msgctxt "FEMALE"
-msgid "Seller"
-msgstr "Verkoopster"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:417
-msgctxt "MALE"
-msgid "Seller"
-msgstr "Verkoper"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:435
-msgid "Servant"
-msgstr "Bediende"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:432
-msgctxt "FEMALE"
-msgid "Servant"
-msgstr "Bediende"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:428
-msgctxt "MALE"
-msgid "Servant"
-msgstr "Bediende"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:100
@@ -526,19 +337,21 @@ msgstr "Toon koppelingen naar OpenStreetMap"
 msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
 msgstr "Toon links naar een historische kaart van Europa in de XIX eeuw, of de Verenigde Staten van Amerika (1880-1926), indien van toepassing"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:446
-msgid "Slave"
-msgstr "Slaaf"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:582
+msgid "Show to managers"
+msgstr ""
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:443
-msgctxt "FEMALE"
-msgid "Slave"
-msgstr "Slavin"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:579
+msgid "Show to members"
+msgstr ""
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:439
-msgctxt "MALE"
-msgid "Slave"
-msgstr "Slaaf"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:576
+msgid "Show to visitors"
+msgstr ""
+
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:204
+msgid "Status"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:40
@@ -554,9 +367,7 @@ msgstr "Het linkitem wordt niet weergegeven voor locaties buiten de grenzen van 
 #: IndividualFactsTabModuleTrait.php:114 IndividualFactsTabModuleTrait.php:134
 #: IndividualFactsTabModuleTrait.php:154
 msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
-msgstr ""
-"Het oorspronkelijke tabblad had het TM-handelsmerkteken - behoud het als je "
-"wilt of als je je daartoe verplicht voelt."
+msgstr "Het oorspronkelijke tabblad had het TM-handelsmerkteken - behoud het als je wilt of als je je daartoe verplicht voelt."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:213
@@ -569,24 +380,15 @@ msgstr "De URI voor kaartkoppelingen, met tijdelijke aanduidingen (%1$s en %2$s)
 msgid "URI template"
 msgstr "URI-sjabloon"
 
-#: FunctionsPrintWithHooks.php:330
+#: FunctionsFactPlace.php:161 FunctionsPrintWithHooks.php:330
+#: FunctionsPrintWithHooks_20.php:330
 #, php-format
 msgid "United States of America (1880-1926) | %1$s"
 msgstr "Verenigde Staten van Amerika (1880-1926) | %1$s"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:457
-msgid "Ward"
-msgstr "Pupil"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:454
-msgctxt "FEMALE"
-msgid "Ward"
-msgstr "Pupil"
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:450
-msgctxt "MALE"
-msgid "Ward"
-msgstr "Pupil"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:370
+msgid "View this family"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:187
@@ -594,20 +396,20 @@ msgstr "Pupil"
 msgid "When checked, links to the main %1$s page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
 msgstr "Indien aangevinkt, worden koppelingen geplaatst naar de hoofdpagina van %1$s, waar u kunt schakelen tussen verschillende historische lagen die beschikbaar zijn voor de desbetreffende locatie, en in- en uitzoomen op een moderne kaart, die hier bovendien kan worden geconfigureerd:"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:461
-msgid "Witness"
-msgstr "Getuige"
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:303
+msgid "Wife"
+msgstr ""
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:32
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:33
 msgid "Witness at a marriage"
 msgstr "Getuige bij huwelijk"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:30
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:31
 msgctxt "FEMALE"
 msgid "Witness at a marriage"
 msgstr "Getuige bij huwelijk"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:28
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:29
 msgctxt "MALE"
 msgid "Witness at a marriage"
 msgstr "Getuige bij huwelijk"
@@ -623,6 +425,11 @@ msgstr "U kunt ook een aangepaste kaartprovider configureren. Voer hier de naam 
 msgid "Zoom level of linked map"
 msgstr "Zoomniveau van gekoppelde kaart"
 
+#. I18N: A button label.
+#: resources/views/edit/add-fact-row_20.phtml:52
+msgid "add"
+msgstr ""
+
 #~ msgid "A tab showing the facts and events of an individual."
 #~ msgstr "Een tabblad met de feiten en gebeurtenissen van een persoon."
 
@@ -632,11 +439,86 @@ msgstr "Zoomniveau van gekoppelde kaart"
 #~ msgid "Associated facts and events"
 #~ msgstr "Feiten en gebeurtenissen als/met medewerker(s)"
 
+#~ msgid "Attendant"
+#~ msgstr "Verzorger"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Attendant"
+#~ msgstr "Verzorgster"
+
+#~ msgctxt "MALE"
+#~ msgid "Attendant"
+#~ msgstr "Verzorger"
+
+#~ msgid "Attending"
+#~ msgstr "Gast"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Attending"
+#~ msgstr "Gast"
+
+#~ msgctxt "MALE"
+#~ msgid "Attending"
+#~ msgstr "Gast"
+
+#~ msgid "Best man"
+#~ msgstr "Getuige bij huwelijk"
+
+#~ msgid "Bridesmaid"
+#~ msgstr "Bruidsmeisje"
+
+#~ msgid "Buyer"
+#~ msgstr "Koper"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Buyer"
+#~ msgstr "Koper"
+
+#~ msgctxt "MALE"
+#~ msgid "Buyer"
+#~ msgstr "Koper"
+
+#~ msgid "Circumciser"
+#~ msgstr "Besnijder"
+
+#~ msgid "Civil registrar"
+#~ msgstr "Ambtenaar Burgerlijke Stand"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Civil registrar"
+#~ msgstr "Ambtenaar Burgerlijke Stand"
+
+#~ msgctxt "MALE"
+#~ msgid "Civil registrar"
+#~ msgstr "Ambtenaar Burgerlijke Stand"
+
 #~ msgid "Deselect in order to have the tab appear exactly as the original tab."
 #~ msgstr "Schakel de selectie uit om de naam van het oorspronkelijke tabblad te blijven gebruiken."
 
 #~ msgid "Displayed title"
 #~ msgstr "Weergegeven titel"
+
+#~ msgid "Employee"
+#~ msgstr "Werknemer"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Employee"
+#~ msgstr "Werknemer"
+
+#~ msgctxt "MALE"
+#~ msgid "Employee"
+#~ msgstr "Werknemer"
+
+#~ msgid "Employer"
+#~ msgstr "Werkgever"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Employer"
+#~ msgstr "Werkgever"
+
+#~ msgctxt "MALE"
+#~ msgid "Employer"
+#~ msgstr "Werkgever"
 
 #~ msgid "Events of close relatives"
 #~ msgstr "Gebeurtenissen van naaste verwanten"
@@ -647,8 +529,57 @@ msgstr "Zoomniveau van gekoppelde kaart"
 #~ msgid "Facts and events of inverse associates"
 #~ msgstr "Feiten en gebeurtenissen als medewerker"
 
+#~ msgid "Foster child"
+#~ msgstr "Pleegkind"
+
+#~ msgid "Foster father"
+#~ msgstr "Pleegvader"
+
+#~ msgid "Foster mother"
+#~ msgstr "Pleegmoeder"
+
+#~ msgid "Friend"
+#~ msgstr "Vriend(in)"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Friend"
+#~ msgstr "Vriendin"
+
+#~ msgctxt "MALE"
+#~ msgid "Friend"
+#~ msgstr "Vriend"
+
 #~ msgid "General"
 #~ msgstr "Algemeen"
+
+#~ msgid "Godchild"
+#~ msgstr "Petekind"
+
+#~ msgid "Goddaughter"
+#~ msgstr "Peetdochter"
+
+#~ msgid "Godfather"
+#~ msgstr "Peetvader"
+
+#~ msgid "Godmother"
+#~ msgstr "Peetmoeder"
+
+#~ msgid "Godparent"
+#~ msgstr "Peetouder"
+
+#~ msgid "Godson"
+#~ msgstr "Peetzoon"
+
+#~ msgid "Guardian"
+#~ msgstr "Voogd"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Guardian"
+#~ msgstr "Voogdes"
+
+#~ msgctxt "MALE"
+#~ msgid "Guardian"
+#~ msgstr "Voogd"
 
 #~ msgid "Historic events"
 #~ msgstr "Historische gebeurtenissen"
@@ -671,11 +602,75 @@ msgstr "Zoomniveau van gekoppelde kaart"
 #~ msgid "Include the %1$s symbol in the tab title"
 #~ msgstr "Het %1$s-symbool opnemen in de titel van het tabblad"
 
+#~ msgid "Informant"
+#~ msgstr "Aangever"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Informant"
+#~ msgstr "Aangever"
+
+#~ msgctxt "MALE"
+#~ msgid "Informant"
+#~ msgstr "Aangever"
+
+#~ msgid "Lodger"
+#~ msgstr "Kamerbewoner"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Lodger"
+#~ msgstr "Kamerbewoonster"
+
+#~ msgctxt "MALE"
+#~ msgid "Lodger"
+#~ msgstr "Kamerbewoner"
+
 #~ msgid "Modules listed here are used (in the configured order) to determine map coordinates of places."
 #~ msgstr "Modules die hier worden vermeld, worden (in de geconfigureerde volgorde) gebruikt om kaartcoördinaten van plaatsen te bepalen."
 
+#~ msgid "Nanny"
+#~ msgstr "Kinderjuffrouw"
+
+#~ msgid "Nurse"
+#~ msgstr "Verpleegkundige"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Nurse"
+#~ msgstr "Verpleegster"
+
+#~ msgctxt "MALE"
+#~ msgid "Nurse"
+#~ msgstr "Verpleger"
+
 #~ msgid "OpenStreetMaps"
 #~ msgstr "OpenStreetMaps"
+
+#~ msgid "Owner"
+#~ msgstr "Eigenaar"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Owner"
+#~ msgstr "Eigenares"
+
+#~ msgctxt "MALE"
+#~ msgid "Owner"
+#~ msgstr "Eigenaar"
+
+#~ msgid "Priest"
+#~ msgstr "Priester"
+
+#~ msgid "Rabbi"
+#~ msgstr "Rabbijn"
+
+#~ msgid "Registry officer"
+#~ msgstr "Ambtenaar bevolkingsregister"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Registry officer"
+#~ msgstr "Ambtenaar bevolkingsregister"
+
+#~ msgctxt "MALE"
+#~ msgid "Registry officer"
+#~ msgstr "Ambtenaar bevolkingsregister"
 
 #~ msgid "Requires the '%1$s Vesta Common' module."
 #~ msgstr "Vereist de module '%1$s Vesta Algemeen'."
@@ -686,11 +681,44 @@ msgstr "Zoomniveau van gekoppelde kaart"
 #~ msgid "Restrict to this list of GEDCOM individual facts and events. You can modify this list by removing or adding fact and event names, even custom ones, as necessary."
 #~ msgstr "Beperken tot deze lijst van GEDCOM persoonsfeiten en -gebeurtenissen. Indien nodig kunt u deze lijst wijzigen door namen van feiten en gebeurtenissen, zelfs aangepaste namen, te verwijderen of toe te voegen."
 
+#~ msgid "Seller"
+#~ msgstr "Verkoper"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Seller"
+#~ msgstr "Verkoopster"
+
+#~ msgctxt "MALE"
+#~ msgid "Seller"
+#~ msgstr "Verkoper"
+
+#~ msgid "Servant"
+#~ msgstr "Bediende"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Servant"
+#~ msgstr "Bediende"
+
+#~ msgctxt "MALE"
+#~ msgid "Servant"
+#~ msgstr "Bediende"
+
 #~ msgid "Show links to OpenStreetMaps"
 #~ msgstr "Toon koppelingen naar OpenStreetMaps"
 
 #~ msgid "Show links to a historic map of Europe"
 #~ msgstr "Toon koppelingen naar een historische kaart van Europa"
+
+#~ msgid "Slave"
+#~ msgstr "Slaaf"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Slave"
+#~ msgstr "Slavin"
+
+#~ msgctxt "MALE"
+#~ msgid "Slave"
+#~ msgstr "Slaaf"
 
 #~ msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
 #~ msgstr "Deze laatste zijn niet echt beperkt tot naaste familieleden, en daarom kan het minder verwarrend zijn om een apart schakelvakje voor hen aan te bieden."
@@ -700,3 +728,17 @@ msgstr "Zoomniveau van gekoppelde kaart"
 
 #~ msgid "Vesta Facts and events"
 #~ msgstr "Vesta Feiten en gebeurtenissen"
+
+#~ msgid "Ward"
+#~ msgstr "Pupil"
+
+#~ msgctxt "FEMALE"
+#~ msgid "Ward"
+#~ msgstr "Pupil"
+
+#~ msgctxt "MALE"
+#~ msgid "Ward"
+#~ msgstr "Pupil"
+
+#~ msgid "Witness"
+#~ msgstr "Getuige"

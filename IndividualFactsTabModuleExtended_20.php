@@ -235,21 +235,21 @@ class IndividualFactsTabModuleExtended_20 extends IndividualFactsTabModule_20 im
       $categories[] = new ToggleableFactsCategory(
               'show-relatives-facts-pfh', //cf FunctionsPrintFactsWithHooks.additionalStyleadds()!
               '.wt-relation-fact-pfh',
-              I18N::translate('Events of close relatives'));
+              MoreI18N::xlate('Events of close relatives'));
     }
 
     if (/*$this->getPreference('ASSO_SEPARATE', '0') &&*/ $this->showAssociateFacts()) {
       $categories[] = new ToggleableFactsCategory(
               'show-associate-facts-pfh', //cf FunctionsPrintFactsWithHooks.additionalStyleadds()!
               '.wt-associate-fact-pfh',
-              MoreI18N::xlate('Associated events'));
+              I18N::translate('Associated events'));
     } //if setting for separate checkbox isn't set: toggles via show-relatives-facts-pfh!
 
     if ($has_historical_facts) {
       $categories[] = new ToggleableFactsCategory(
               'show-historical-facts-pfh', //cf FunctionsPrintFactsWithHooks.additionalStyleadds()!
               '.wt-historic-fact-pfh',
-              I18N::translate('Historic events'));
+              MoreI18N::xlate('Historic events'));
     }
 
     return $categories;

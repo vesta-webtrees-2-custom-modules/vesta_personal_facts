@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-03 20:23+0200\n"
+"POT-Creation-Date: 2022-04-06 18:59+0200\n"
 "PO-Revision-Date: 2021-07-24 11:35+0200\n"
 "Last-Translator: ngohuuthuanfc9865b89dde4baf <ngohuuthuan@gmail.com>\n"
 "Language-Team: Vietnamese <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/vi/>\n"
@@ -18,15 +18,35 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.6\n"
 
+#. I18N: Abbreviation for "number %s"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:215
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:222
+#, php-format
+msgid "#%s"
+msgstr ""
+
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:172
 #, php-format
 msgid "%1$s (historic maps)"
 msgstr "%1$s (bản đồ lịch sử)"
 
+#: resources/views/edit/add-fact-row_20.phtml:36
+msgid "&lt;select&gt;"
+msgstr ""
+
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:728
+#, php-format
+msgid "<span class=\"label\">%1$s:</span> <span class=\"field\" dir=\"auto\">%2$s</span>"
+msgstr ""
+
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:194
 msgid "Aerial Base Map"
+msgstr ""
+
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:301
+msgid "Age"
 msgstr ""
 
 #: IndividualFactsTabModuleTrait.php:29
@@ -38,63 +58,40 @@ msgstr "Đồng thời thay thế mô-đun 'Thông tin bổ sung' ban đầu."
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr "Tab 'Sự kiện và Số liệu' mở rộng, với các móc cho các mô-đun tùy chỉnh khác."
 
-#: FunctionsPrintWithHooks.php:324 IndividualFactsTabModuleTrait.php:170
+#: FunctionsFactPlace.php:155 FunctionsPrintWithHooks.php:324
+#: FunctionsPrintWithHooks_20.php:324 IndividualFactsTabModuleTrait.php:170
 msgid "Arcanum Maps"
 msgstr "Arcanum Maps"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:41
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:42
 msgid "Associate at a marriage"
 msgstr "Liên kết khi kết hôn"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:39
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:40
 msgctxt "FEMALE"
 msgid "Associate at a marriage"
 msgstr "Liên kết khi kết hôn"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:37
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:38
 msgctxt "MALE"
 msgid "Associate at a marriage"
 msgstr "Liên kết khi kết hôn"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:207
-msgid "Attendant"
+#: IndividualFactsTabModuleExtended_20.php:245
+msgid "Associated events"
 msgstr ""
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:204
-msgctxt "FEMALE"
-msgid "Attendant"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:200
-msgctxt "MALE"
-msgid "Attendant"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:218
-msgid "Attending"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:215
-msgctxt "FEMALE"
-msgid "Attending"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:211
-msgctxt "MALE"
-msgid "Attending"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:67
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:68
 msgid "Baptism of a godchild"
 msgstr "Lễ rửa tội của một đứa con đỡ đầu"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:59
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:65
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:60
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:66
 msgid "Baptism of a goddaughter"
 msgstr "Lễ rửa tội của một con gái đỡ đầu"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:56
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:63
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:57
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:64
 msgid "Baptism of a godson"
 msgstr "Lễ rửa tội của con trai đỡ đầu"
 
@@ -104,115 +101,67 @@ msgstr "Lễ rửa tội của con trai đỡ đầu"
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr "URI dữ liệu được mã hóa Base64 cho biểu tượng liên kết. Chuyển đổi biểu tượng thành URI dữ liệu, ví dụ: qua %1$s. Kết quả sẽ bắt đầu bằng %2$s. Nguồn tốt của hình ảnh biểu tượng thường là hình ảnh biểu tượng yêu thích của nhà cung cấp bản đồ, chẳng hạn như %3$s. Nó sẽ được hiển thị thay đổi kích thước thích hợp."
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:222
-msgid "Best man"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:22
 msgid "Best man at a marriage"
 msgstr "Người đàn ông tốt nhất trong cuộc hôn nhân"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:253 IndividualFactsTabModuleTrait.php:126
+#: FunctionsFactPlace.php:82 FunctionsPrintWithHooks.php:253
+#: FunctionsPrintWithHooks_20.php:253 IndividualFactsTabModuleTrait.php:126
 msgid "Bing Maps"
 msgstr "Bản đồ Bing Maps"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:226
-msgid "Bridesmaid"
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:43
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:45
+msgid "Bing Maps™"
 msgstr ""
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:24
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:25
 msgid "Bridesmaid at a marriage"
 msgstr "Phù dâu trong hôn lễ"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:237
-msgid "Buyer"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:234
-msgctxt "FEMALE"
-msgid "Buyer"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:230
-msgctxt "MALE"
-msgid "Buyer"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:95
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:96
 msgid "Christening of a godchild"
 msgstr "Làm chúa của một đứa con đỡ đầu"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:87
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:93
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:88
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:94
 msgid "Christening of a goddaughter"
 msgstr "Chúa của một đứa con gái đỡ đầu"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:84
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:91
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:85
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:92
 msgid "Christening of a godson"
 msgstr "Chúa của một đứa con trai đỡ đầu"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:241
-msgid "Circumciser"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:252
-msgid "Civil registrar"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:249
-msgctxt "FEMALE"
-msgid "Civil registrar"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:245
-msgctxt "MALE"
-msgid "Civil registrar"
-msgstr ""
-
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:270 IndividualFactsTabModuleTrait.php:203
+#: FunctionsFactPlace.php:99 FunctionsPrintWithHooks.php:270
+#: FunctionsPrintWithHooks_20.php:270 IndividualFactsTabModuleTrait.php:203
 msgid "Custom Map Provider"
 msgstr "Nhà cung cấp bản đồ tùy chỉnh"
+
+#: resources/views/edit/add-fact-row_20.phtml:46
+msgid "Custom event"
+msgstr ""
+
+#: resources/views/edit/add-fact-row_20.phtml:43
+msgid "Custom fact"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:101
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Hiển thị một biểu tượng với chú giải công cụ cho biết nguồn của các liên kết bản đồ. Đây là mục đích chủ yếu để gỡ lỗi."
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:263
-msgid "Employee"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:260
-msgctxt "FEMALE"
-msgid "Employee"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:256
-msgctxt "MALE"
-msgid "Employee"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:274
-msgid "Employer"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:271
-msgctxt "FEMALE"
-msgid "Employer"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:267
-msgctxt "MALE"
-msgid "Employer"
-msgstr ""
-
-#: FunctionsPrintWithHooks.php:326
+#: FunctionsFactPlace.php:157 FunctionsPrintWithHooks.php:326
+#: FunctionsPrintWithHooks_20.php:326
 #, php-format
 msgid "Europe in the XIX. century | %1$s"
 msgstr "Châu Âu trong thế kỷ XIX. kỷ | %1$s"
+
+#: resources/views/edit/add-fact-row_20.phtml:25
+msgid "Fact or event"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:234
@@ -221,90 +170,34 @@ msgstr "Danh sách Sự kiện và Số liệu"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:266
+#: IndividualFactsTabModuleExtended_20.php:346
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Tab Sự kiện và Số liệu Nhà cung cấp phần tử giao diện người dùng"
 
 #: IndividualFactsTabModuleExtended.php:121
+#: IndividualFactsTabModuleExtended_20.php:122
 msgid "Facts and events"
 msgstr "Sự kiện và số liệu"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:278
-msgid "Foster child"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:282
-msgid "Foster father"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:286
-msgid "Foster mother"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:297
-msgid "Friend"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:294
-msgctxt "FEMALE"
-msgid "Friend"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:290
-msgctxt "MALE"
-msgid "Friend"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:335
-msgid "Godchild"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:324
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:332
-msgid "Goddaughter"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:301
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:309
-msgid "Godfather"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:305
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:313
-msgid "Godmother"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:316
-msgid "Godparent"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:320
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:328
-msgid "Godson"
-msgstr ""
-
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:242 IndividualFactsTabModuleTrait.php:106
+#: FunctionsFactPlace.php:71 FunctionsPrintWithHooks.php:242
+#: FunctionsPrintWithHooks_20.php:242 IndividualFactsTabModuleTrait.php:106
 msgid "Google Maps"
 msgstr "Bản đồ Google Maps"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:346
-msgid "Guardian"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:343
-msgctxt "FEMALE"
-msgid "Guardian"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:339
-msgctxt "MALE"
-msgid "Guardian"
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:38
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:40
+msgid "Google Maps™"
 msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:90
 msgid "Hide coordinates, show map links after place name"
 msgstr "Ẩn tọa độ, hiển thị liên kết bản đồ sau tên địa điểm"
+
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:302
+msgid "Husband"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:73
@@ -332,24 +225,18 @@ msgstr "Bao gồm một điểm đánh dấu trong bản đồ được liên k�
 msgid "Include marker"
 msgstr "Bao gồm điểm đánh dấu"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:357
-msgid "Informant"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:354
-msgctxt "FEMALE"
-msgid "Informant"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:350
-msgctxt "MALE"
-msgid "Informant"
-msgstr ""
-
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:39
 msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr "Dự định thay thế cho mô-đun 'Sự kiện và số liệu' ban đầu."
+
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:201
+msgid "LDS temple"
+msgstr ""
+
+#: FunctionsFactPlace.php:254
+msgid "Latitude"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:88
@@ -361,22 +248,13 @@ msgstr "Kinh độ/Vĩ độ"
 msgid "Link icon as data URI"
 msgstr "Biểu tượng liên kết dưới dạng URI dữ liệu"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:368
-msgid "Lodger"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:365
-msgctxt "FEMALE"
-msgid "Lodger"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:361
-msgctxt "MALE"
-msgid "Lodger"
+#: FunctionsFactPlace.php:255
+msgid "Longitude"
 msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:270
+#: IndividualFactsTabModuleExtended_20.php:350
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr "Các mô-đun được liệt kê ở đây có thể cung cấp dữ liệu bổ sung cho các dữ kiện và sự kiện (được hiển thị theo thứ tự đã định cấu hình)."
 
@@ -385,32 +263,24 @@ msgstr "Các mô-đun được liệt kê ở đây có thể cung cấp dữ li
 msgid "Name"
 msgstr "Tên"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:372
-msgid "Nanny"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:441
+msgid "No"
 msgstr ""
 
 #: IndividualFactsTabModuleExtended.php:592
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:328
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:697
 msgid "No relationship found"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:383
-msgid "Nurse"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:380
-msgctxt "FEMALE"
-msgid "Nurse"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:376
-msgctxt "MALE"
-msgid "Nurse"
 msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:193
 msgid "OSM Base Map"
 msgstr "OSM Base Map"
+
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:585
+msgid "Only managers can edit"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:72
@@ -423,22 +293,14 @@ msgid "Open links in new browser tab"
 msgstr "Mở liên kết trong tab trình duyệt mới"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:259 IndividualFactsTabModuleTrait.php:146
+#: FunctionsFactPlace.php:88 FunctionsPrintWithHooks.php:259
+#: FunctionsPrintWithHooks_20.php:259 IndividualFactsTabModuleTrait.php:146
 msgid "OpenStreetMap"
 msgstr "Bản đồ OpenStreetMap"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:394
-msgid "Owner"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:391
-msgctxt "FEMALE"
-msgid "Owner"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:387
-msgctxt "MALE"
-msgid "Owner"
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:48
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:50
+msgid "OpenStreetMap™"
 msgstr ""
 
 #. I18N: Module Configuration
@@ -446,59 +308,9 @@ msgstr ""
 msgid "Place Settings"
 msgstr "Thiết lập địa điểm"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:398
-msgid "Priest"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:402
-msgid "Rabbi"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:413
-msgid "Registry officer"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:410
-msgctxt "FEMALE"
-msgid "Registry officer"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:406
-msgctxt "MALE"
-msgid "Registry officer"
-msgstr ""
-
 #: IndividualFactsTabModuleTrait.php:27
 msgid "Replacement for the original 'Facts and events' module."
 msgstr "Thay thế cho mô-đun 'Sự kiện và số liệu' ban đầu."
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:424
-msgid "Seller"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:421
-msgctxt "FEMALE"
-msgid "Seller"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:417
-msgctxt "MALE"
-msgid "Seller"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:435
-msgid "Servant"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:432
-msgctxt "FEMALE"
-msgid "Servant"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:428
-msgctxt "MALE"
-msgid "Servant"
-msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:100
@@ -530,18 +342,20 @@ msgstr "Hiển thị liên kết đến OpenStreetMap"
 msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
 msgstr "Hiển thị các liên kết đến bản đồ lịch sử của Châu Âu trong thế kỷ XIX. kỷ, hoặc Hợp chủng quốc Hoa Kỳ (1880-1926), nếu có"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:446
-msgid "Slave"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:582
+msgid "Show to managers"
 msgstr ""
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:443
-msgctxt "FEMALE"
-msgid "Slave"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:579
+msgid "Show to members"
 msgstr ""
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:439
-msgctxt "MALE"
-msgid "Slave"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:576
+msgid "Show to visitors"
+msgstr ""
+
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:204
+msgid "Status"
 msgstr ""
 
 #. I18N: Module Configuration
@@ -571,23 +385,14 @@ msgstr "URI cho bản đồ liên kết với trình giữ chỗ (%1$s và %2$s)
 msgid "URI template"
 msgstr "Mẫu URI"
 
-#: FunctionsPrintWithHooks.php:330
+#: FunctionsFactPlace.php:161 FunctionsPrintWithHooks.php:330
+#: FunctionsPrintWithHooks_20.php:330
 #, php-format
 msgid "United States of America (1880-1926) | %1$s"
 msgstr "Hợp chủng quốc Hoa Kỳ (1880-1926) | %1$s"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:457
-msgid "Ward"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:454
-msgctxt "FEMALE"
-msgid "Ward"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:450
-msgctxt "MALE"
-msgid "Ward"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:370
+msgid "View this family"
 msgstr ""
 
 #. I18N: Module Configuration
@@ -596,20 +401,20 @@ msgstr ""
 msgid "When checked, links to the main %1$s page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
 msgstr "Khi được chọn, các liên kết đến trang %1$s chính, nơi bạn có thể chuyển đổi giữa các lớp lịch sử khác nhau có sẵn cho vị trí tương ứng và làm mờ dần bản đồ hiện đại, có thể được định cấu hình thêm tại đây:"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:461
-msgid "Witness"
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:303
+msgid "Wife"
 msgstr ""
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:32
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:33
 msgid "Witness at a marriage"
 msgstr "Làm chứng trong một cuộc hôn nhân"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:30
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:31
 msgctxt "FEMALE"
 msgid "Witness at a marriage"
 msgstr "Làm chứng trong một cuộc hôn nhân"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:28
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:29
 msgctxt "MALE"
 msgid "Witness at a marriage"
 msgstr "Làm chứng trong một cuộc hôn nhân"
@@ -624,6 +429,11 @@ msgstr "Bạn cũng có thể định cấu hình một nhà cung cấp bản đ
 #: IndividualFactsTabModuleTrait.php:163 IndividualFactsTabModuleTrait.php:179
 msgid "Zoom level of linked map"
 msgstr "Mức độ thu phóng của bản đồ được liên kết"
+
+#. I18N: A button label.
+#: resources/views/edit/add-fact-row_20.phtml:52
+msgid "add"
+msgstr ""
 
 #~ msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
 #~ msgstr "Các sự kiện thực tế của những người thân ruột thịt, và các sự kiện và sự kiện mà cá nhân hiện tại được liệt kê là một cộng sự."

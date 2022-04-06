@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-03 20:23+0200\n"
+"POT-Creation-Date: 2022-04-06 18:59+0200\n"
 "PO-Revision-Date: 2021-08-08 19:34+0000\n"
 "Last-Translator: z-yurets <zaharchenko.yurij@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/uk/>\n"
@@ -18,16 +18,36 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.8-dev\n"
 
+#. I18N: Abbreviation for "number %s"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:215
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:222
+#, php-format
+msgid "#%s"
+msgstr ""
+
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:172
 #, php-format
 msgid "%1$s (historic maps)"
 msgstr "%1$s (історичні карти)"
 
+#: resources/views/edit/add-fact-row_20.phtml:36
+msgid "&lt;select&gt;"
+msgstr ""
+
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:728
+#, php-format
+msgid "<span class=\"label\">%1$s:</span> <span class=\"field\" dir=\"auto\">%2$s</span>"
+msgstr ""
+
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:194
 msgid "Aerial Base Map"
 msgstr "Повітряна базова карта"
+
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:301
+msgid "Age"
+msgstr ""
 
 #: IndividualFactsTabModuleTrait.php:29
 msgid "Also replaces the original 'Extra information' module."
@@ -38,63 +58,40 @@ msgstr "Також замінює оригінальний модуль \"Дод
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr "Розширена вкладка \"Факти та події\" з гачками для інших користувацьких модулів."
 
-#: FunctionsPrintWithHooks.php:324 IndividualFactsTabModuleTrait.php:170
+#: FunctionsFactPlace.php:155 FunctionsPrintWithHooks.php:324
+#: FunctionsPrintWithHooks_20.php:324 IndividualFactsTabModuleTrait.php:170
 msgid "Arcanum Maps"
 msgstr "Arcanum Maps"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:41
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:42
 msgid "Associate at a marriage"
 msgstr "Поплічник у шлюбі"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:39
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:40
 msgctxt "FEMALE"
 msgid "Associate at a marriage"
 msgstr "Поплічник у шлюбі"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:37
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:38
 msgctxt "MALE"
 msgid "Associate at a marriage"
 msgstr "Поплічник у шлюбі"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:207
-msgid "Attendant"
+#: IndividualFactsTabModuleExtended_20.php:245
+msgid "Associated events"
 msgstr ""
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:204
-msgctxt "FEMALE"
-msgid "Attendant"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:200
-msgctxt "MALE"
-msgid "Attendant"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:218
-msgid "Attending"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:215
-msgctxt "FEMALE"
-msgid "Attending"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:211
-msgctxt "MALE"
-msgid "Attending"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:67
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:68
 msgid "Baptism of a godchild"
 msgstr "Хрестини хрещеника/хресниці (таїнство)"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:59
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:65
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:60
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:66
 msgid "Baptism of a goddaughter"
 msgstr "Хрестини хрещениці (таїнство)"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:56
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:63
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:57
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:64
 msgid "Baptism of a godson"
 msgstr "Хрестини хрещеника (таїнство)"
 
@@ -104,115 +101,67 @@ msgstr "Хрестини хрещеника (таїнство)"
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr "data URI, закодований в Base64, для значка посилання. Перетворіть значок на data URI, наприклад за допомогою сервісу %1$s. Результат повинен починатися приблизно як %2$s. Хорошим джерелом зображення піктограми зазвичай є зображення значка постачальника карт, наприклад %3$s. Його розмір буде відображено належним чином."
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:222
-msgid "Best man"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:21
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:22
 msgid "Best man at a marriage"
 msgstr "Боярин на весіллі"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:253 IndividualFactsTabModuleTrait.php:126
+#: FunctionsFactPlace.php:82 FunctionsPrintWithHooks.php:253
+#: FunctionsPrintWithHooks_20.php:253 IndividualFactsTabModuleTrait.php:126
 msgid "Bing Maps"
 msgstr "Bing Maps"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:226
-msgid "Bridesmaid"
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:43
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:45
+msgid "Bing Maps™"
 msgstr ""
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:24
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:25
 msgid "Bridesmaid at a marriage"
 msgstr "Подружка нареченої"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:237
-msgid "Buyer"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:234
-msgctxt "FEMALE"
-msgid "Buyer"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:230
-msgctxt "MALE"
-msgid "Buyer"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:95
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:96
 msgid "Christening of a godchild"
 msgstr "Хрещення хресника/хресниці (церемонія)"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:87
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:93
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:88
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:94
 msgid "Christening of a goddaughter"
 msgstr "Хрещення хрещениці (церемонія)"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:84
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:91
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:85
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:92
 msgid "Christening of a godson"
 msgstr "Хрещення хрещеника (церемонія)"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:241
-msgid "Circumciser"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:252
-msgid "Civil registrar"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:249
-msgctxt "FEMALE"
-msgid "Civil registrar"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:245
-msgctxt "MALE"
-msgid "Civil registrar"
-msgstr ""
-
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:270 IndividualFactsTabModuleTrait.php:203
+#: FunctionsFactPlace.php:99 FunctionsPrintWithHooks.php:270
+#: FunctionsPrintWithHooks_20.php:270 IndividualFactsTabModuleTrait.php:203
 msgid "Custom Map Provider"
 msgstr "Сторонній постачальник карт"
+
+#: resources/views/edit/add-fact-row_20.phtml:46
+msgid "Custom event"
+msgstr ""
+
+#: resources/views/edit/add-fact-row_20.phtml:43
+msgid "Custom fact"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:101
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Відображати піктограму із підказкою із зазначенням джерела посилань на карту. Це призначено в основному для налагодження."
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:263
-msgid "Employee"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:260
-msgctxt "FEMALE"
-msgid "Employee"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:256
-msgctxt "MALE"
-msgid "Employee"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:274
-msgid "Employer"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:271
-msgctxt "FEMALE"
-msgid "Employer"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:267
-msgctxt "MALE"
-msgid "Employer"
-msgstr ""
-
-#: FunctionsPrintWithHooks.php:326
+#: FunctionsFactPlace.php:157 FunctionsPrintWithHooks.php:326
+#: FunctionsPrintWithHooks_20.php:326
 #, php-format
 msgid "Europe in the XIX. century | %1$s"
 msgstr "Європа в XIX. століття | %1$s"
+
+#: resources/views/edit/add-fact-row_20.phtml:25
+msgid "Fact or event"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:234
@@ -221,90 +170,34 @@ msgstr "Перелік фактів та подій"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:266
+#: IndividualFactsTabModuleExtended_20.php:346
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Вкладка \"Факти та події\" Постачальники елементів інтерфейсу користувача"
 
 #: IndividualFactsTabModuleExtended.php:121
+#: IndividualFactsTabModuleExtended_20.php:122
 msgid "Facts and events"
 msgstr "Факти та події"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:278
-msgid "Foster child"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:282
-msgid "Foster father"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:286
-msgid "Foster mother"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:297
-msgid "Friend"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:294
-msgctxt "FEMALE"
-msgid "Friend"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:290
-msgctxt "MALE"
-msgid "Friend"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:335
-msgid "Godchild"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:324
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:332
-msgid "Goddaughter"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:301
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:309
-msgid "Godfather"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:305
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:313
-msgid "Godmother"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:316
-msgid "Godparent"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:320
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:328
-msgid "Godson"
-msgstr ""
-
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:242 IndividualFactsTabModuleTrait.php:106
+#: FunctionsFactPlace.php:71 FunctionsPrintWithHooks.php:242
+#: FunctionsPrintWithHooks_20.php:242 IndividualFactsTabModuleTrait.php:106
 msgid "Google Maps"
 msgstr "Google Maps"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:346
-msgid "Guardian"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:343
-msgctxt "FEMALE"
-msgid "Guardian"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:339
-msgctxt "MALE"
-msgid "Guardian"
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:38
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:40
+msgid "Google Maps™"
 msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:90
 msgid "Hide coordinates, show map links after place name"
 msgstr "Приховати координати, показати посилання на карту після назви місця"
+
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:302
+msgid "Husband"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:73
@@ -332,24 +225,18 @@ msgstr "Показувати маркер на пов’язаній карті.
 msgid "Include marker"
 msgstr "Включити маркер"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:357
-msgid "Informant"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:354
-msgctxt "FEMALE"
-msgid "Informant"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:350
-msgctxt "MALE"
-msgid "Informant"
-msgstr ""
-
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:39
 msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr "Призначений як заміна оригінального модуля \"Факти та події\"."
+
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:201
+msgid "LDS temple"
+msgstr ""
+
+#: FunctionsFactPlace.php:254
+msgid "Latitude"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:88
@@ -361,22 +248,13 @@ msgstr "Широта/довгота"
 msgid "Link icon as data URI"
 msgstr "Значок посилання як data URI"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:368
-msgid "Lodger"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:365
-msgctxt "FEMALE"
-msgid "Lodger"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:361
-msgctxt "MALE"
-msgid "Lodger"
+#: FunctionsFactPlace.php:255
+msgid "Longitude"
 msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:270
+#: IndividualFactsTabModuleExtended_20.php:350
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr "Модулі, перераховані тут, можуть надавати додаткові дані про факти та події (відображаються у налаштованому порядку)."
 
@@ -385,32 +263,24 @@ msgstr "Модулі, перераховані тут, можуть надава
 msgid "Name"
 msgstr "Ім'я"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:372
-msgid "Nanny"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:441
+msgid "No"
 msgstr ""
 
 #: IndividualFactsTabModuleExtended.php:592
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:328
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:697
 msgid "No relationship found"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:383
-msgid "Nurse"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:380
-msgctxt "FEMALE"
-msgid "Nurse"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:376
-msgctxt "MALE"
-msgid "Nurse"
 msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:193
 msgid "OSM Base Map"
 msgstr "Базова карта OSM"
+
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:585
+msgid "Only managers can edit"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:72
@@ -423,22 +293,14 @@ msgid "Open links in new browser tab"
 msgstr "Відкривати посилання в новій вкладці"
 
 #. I18N: Module Configuration
-#: FunctionsPrintWithHooks.php:259 IndividualFactsTabModuleTrait.php:146
+#: FunctionsFactPlace.php:88 FunctionsPrintWithHooks.php:259
+#: FunctionsPrintWithHooks_20.php:259 IndividualFactsTabModuleTrait.php:146
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:394
-msgid "Owner"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:391
-msgctxt "FEMALE"
-msgid "Owner"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:387
-msgctxt "MALE"
-msgid "Owner"
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:48
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:50
+msgid "OpenStreetMap™"
 msgstr ""
 
 #. I18N: Module Configuration
@@ -446,59 +308,9 @@ msgstr ""
 msgid "Place Settings"
 msgstr "Налаштування місця"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:398
-msgid "Priest"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:402
-msgid "Rabbi"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:413
-msgid "Registry officer"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:410
-msgctxt "FEMALE"
-msgid "Registry officer"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:406
-msgctxt "MALE"
-msgid "Registry officer"
-msgstr ""
-
 #: IndividualFactsTabModuleTrait.php:27
 msgid "Replacement for the original 'Facts and events' module."
 msgstr "Заміна оригінального модуля \"Факти та події\"."
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:424
-msgid "Seller"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:421
-msgctxt "FEMALE"
-msgid "Seller"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:417
-msgctxt "MALE"
-msgid "Seller"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:435
-msgid "Servant"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:432
-msgctxt "FEMALE"
-msgid "Servant"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:428
-msgctxt "MALE"
-msgid "Servant"
-msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:100
@@ -530,18 +342,20 @@ msgstr "Показувати посилання на OpenStreetMap"
 msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
 msgstr "Показати посилання на історичну карту Європи XIX. століття, або Сполучені Штати Америки (1880-1926), якщо потрібно"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:446
-msgid "Slave"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:582
+msgid "Show to managers"
 msgstr ""
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:443
-msgctxt "FEMALE"
-msgid "Slave"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:579
+msgid "Show to members"
 msgstr ""
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:439
-msgctxt "MALE"
-msgid "Slave"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:576
+msgid "Show to visitors"
+msgstr ""
+
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:204
+msgid "Status"
 msgstr ""
 
 #. I18N: Module Configuration
@@ -571,23 +385,14 @@ msgstr "URI для посилань на карту із заповнювача�
 msgid "URI template"
 msgstr "Шаблон URI"
 
-#: FunctionsPrintWithHooks.php:330
+#: FunctionsFactPlace.php:161 FunctionsPrintWithHooks.php:330
+#: FunctionsPrintWithHooks_20.php:330
 #, php-format
 msgid "United States of America (1880-1926) | %1$s"
 msgstr "Сполучені Штати Америки (1880-1926) | %1$s"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:457
-msgid "Ward"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:454
-msgctxt "FEMALE"
-msgid "Ward"
-msgstr ""
-
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:450
-msgctxt "MALE"
-msgid "Ward"
+#: patchedWebtrees/Functions/FunctionsPrintFacts_20.php:370
+msgid "View this family"
 msgstr ""
 
 #. I18N: Module Configuration
@@ -596,20 +401,20 @@ msgstr ""
 msgid "When checked, links to the main %1$s page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
 msgstr "Якщо встановлено прапорець, посилання веде на головну сторінку %1$s, де ви можете перемикатися між різними історичними шарами, доступними для відповідного місця, і порівнювати з сучасною картою, яку можна додатково налаштувати тут:"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:461
-msgid "Witness"
+#: patchedWebtrees/Functions/FunctionsPrint_20.php:303
+msgid "Wife"
 msgstr ""
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:32
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:33
 msgid "Witness at a marriage"
 msgstr "Свідок на весіллі"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:30
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:31
 msgctxt "FEMALE"
 msgid "Witness at a marriage"
 msgstr "Свідок на весіллі"
 
-#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:28
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:29
 msgctxt "MALE"
 msgid "Witness at a marriage"
 msgstr "Свідок на весіллі"
@@ -624,6 +429,11 @@ msgstr "Ви також можете налаштувати власного п�
 #: IndividualFactsTabModuleTrait.php:163 IndividualFactsTabModuleTrait.php:179
 msgid "Zoom level of linked map"
 msgstr "Рівень масштабування пов'язаної карти"
+
+#. I18N: A button label.
+#: resources/views/edit/add-fact-row_20.phtml:52
+msgid "add"
+msgstr ""
 
 #~ msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
 #~ msgstr "Фактичні події близьких родичів, а також факти та події, коли поточна особа вказана як асоційована особа."
