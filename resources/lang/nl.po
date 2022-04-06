@@ -5,7 +5,8 @@ msgstr ""
 "POT-Creation-Date: 2022-04-06 21:13+0200\n"
 "PO-Revision-Date: 2022-04-06 14:08+0000\n"
 "Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/vesta-webtrees-"
+"custom-modules/vesta-facts-and-events/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +22,7 @@ msgstr "%1$s (historische kaarten)"
 
 #: resources/views/edit/add-fact-row_20.phtml:36
 msgid "&lt;select&gt;"
-msgstr ""
+msgstr "&lt;selecteer&gt;"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:194
@@ -34,8 +35,11 @@ msgstr "Vervangt ook de originele module 'Extra informatie'."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:38
-msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
-msgstr "Een uitgebreid tabblad 'Feiten en gebeurtenissen', met 'hooks' voor andere aangepaste modules."
+msgid ""
+"An extended 'Facts and Events' tab, with hooks for other custom modules."
+msgstr ""
+"Een uitgebreid tabblad 'Feiten en gebeurtenissen', met 'hooks' voor andere "
+"aangepaste modules."
 
 #: FunctionsFactPlace.php:155 FunctionsPrintWithHooks_20.php:324
 #: IndividualFactsTabModuleTrait.php:170
@@ -58,7 +62,7 @@ msgstr "Gerelateerd persoon bij huwelijk"
 
 #: IndividualFactsTabModuleExtended_20.php:245
 msgid "Associated events"
-msgstr ""
+msgstr "Gerelateerde gebeurtenissen"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:68
 msgid "Baptism of a godchild"
@@ -77,8 +81,17 @@ msgstr "Doop van peetzoon"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:221
 #, php-format
-msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
-msgstr "Base64-gecodeerde gegevens-URI voor het koppelingspictogram. Converteer het pictogram naar een gegevens-URI, bijvoorbeeld via %1$s. Het resultaat moet beginnen met iets als %2$s. Een goede bron voor de pictogramafbeelding is meestal de favicon-afbeelding van de kaartprovider, zoals %3$s. Het zal worden weergegeven in de juiste aangepaste grootte."
+msgid ""
+"Base64-encoded data URI for the link icon. Convert the icon to a data URI e."
+"g. via %1$s. The result should start with something like %2$s. A good source "
+"of the icon image is usually the map provider's favicon image, such as %3$s. "
+"It will be displayed properly resized."
+msgstr ""
+"Base64-gecodeerde gegevens-URI voor het koppelingspictogram. Converteer het "
+"pictogram naar een gegevens-URI, bijvoorbeeld via %1$s. Het resultaat moet "
+"beginnen met iets als %2$s. Een goede bron voor de pictogramafbeelding is "
+"meestal de favicon-afbeelding van de kaartprovider, zoals %3$s. Het zal "
+"worden weergegeven in de juiste aangepaste grootte."
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:22
 msgid "Best man at a marriage"
@@ -116,16 +129,20 @@ msgstr "Andere kaartprovider"
 
 #: resources/views/edit/add-fact-row_20.phtml:46
 msgid "Custom event"
-msgstr ""
+msgstr "Vrij te kiezen gebeurtenis"
 
 #: resources/views/edit/add-fact-row_20.phtml:43
 msgid "Custom fact"
-msgstr ""
+msgstr "Niet-standaard feit"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:101
-msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
-msgstr "Geef een pictogram weer met een tooltip die de bron van de kaartkoppelingen aangeeft. Dit is vooral bedoeld voor debugging."
+msgid ""
+"Display an icon with a tooltip indicating the source of the map links. This "
+"is intended mainly for debugging."
+msgstr ""
+"Geef een pictogram weer met een tooltip die de bron van de kaartkoppelingen "
+"aangeeft. Dit is vooral bedoeld voor debugging."
 
 #: FunctionsFactPlace.php:157 FunctionsPrintWithHooks_20.php:326
 #, php-format
@@ -134,7 +151,7 @@ msgstr "Europa in de XIX-eeuw | %1$s"
 
 #: resources/views/edit/add-fact-row_20.phtml:25
 msgid "Fact or event"
-msgstr ""
+msgstr "Feit of gebeurtenis"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:234
@@ -160,13 +177,24 @@ msgstr "Coördinaten verbergen, toon kaartkoppelingen na plaatsnaam"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:73
-msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
-msgstr "Als deze optie is aangevinkt, worden aanvullende feiten en gebeurtenissen waarbij de persoon als gerelateerd persoon wordt vermeld, beperkt tot de volgende feiten en gebeurtenissen."
+msgid ""
+"If this option is checked, additional facts and events where the individual "
+"is listed as an associate are restricted to the following facts and events."
+msgstr ""
+"Als deze optie is aangevinkt, worden aanvullende feiten en gebeurtenissen "
+"waarbij de persoon als gerelateerd persoon wordt vermeld, beperkt tot de "
+"volgende feiten en gebeurtenissen."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:91
-msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
-msgstr "Op het oorspronkelijke tabblad worden coördinaten getoond (met kaartkoppelingen). Dit heeft de neiging om de plaatsweergave te vertroebelen, met name als er extra modules zijn die coördinaten geven."
+msgid ""
+"In the original tab, coordinates are shown (with map links). This tends to "
+"clutter the place display, in particular if there are additional modules "
+"providing coordinates."
+msgstr ""
+"Op het oorspronkelijke tabblad worden coördinaten getoond (met "
+"kaartkoppelingen). Dit heeft de neiging om de plaatsweergave te "
+"vertroebelen, met name als er extra modules zijn die coördinaten geven."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:113 IndividualFactsTabModuleTrait.php:133
@@ -187,7 +215,8 @@ msgstr "Markering opnemen"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:39
 msgid "Intended as a replacement for the original 'Facts and events' module."
-msgstr "Bedoeld als vervanging van de originele module 'Feiten en gebeurtenissen'."
+msgstr ""
+"Bedoeld als vervanging van de originele module 'Feiten en gebeurtenissen'."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:88
@@ -202,8 +231,12 @@ msgstr "Koppelingspictogram als gegevens-URI"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:270
 #: IndividualFactsTabModuleExtended_20.php:350
-msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
-msgstr "De hier vermelde modules kunnen aanvullende gegevens bevatten voor feiten en gebeurtenissen (weergegeven in de geconfigureerde volgorde)."
+msgid ""
+"Modules listed here may provide additional data for facts and events "
+"(displayed in the configured order)."
+msgstr ""
+"De hier vermelde modules kunnen aanvullende gegevens bevatten voor feiten en "
+"gebeurtenissen (weergegeven in de geconfigureerde volgorde)."
 
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:205
@@ -267,30 +300,51 @@ msgstr "Toon koppelingen naar OpenStreetMap"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:174
-msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
-msgstr "Toon links naar een historische kaart van Europa in de XIX eeuw, of de Verenigde Staten van Amerika (1880-1926), indien van toepassing"
+msgid ""
+"Show links to a historic map of Europe in the XIX. century, or the United "
+"States of America (1880-1926), if applicable"
+msgstr ""
+"Toon links naar een historische kaart van Europa in de XIX eeuw, of de "
+"Verenigde Staten van Amerika (1880-1926), indien van toepassing"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:40
-msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar."
-msgstr "Ondersteunt het niet-standaard GEDCOM-label _FSFTID (FamilySearch-ID), in het tabblad en in de zijbalk."
+msgid ""
+"Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab "
+"and in the sidebar."
+msgstr ""
+"Ondersteunt het niet-standaard GEDCOM-label _FSFTID (FamilySearch-ID), in "
+"het tabblad en in de zijbalk."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:175
-msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
-msgstr "Het linkitem wordt niet weergegeven voor locaties buiten de grenzen van Europa en de VS."
+msgid ""
+"The link item will not be shown for locations outside the respective "
+"boundaries of Europe and the US."
+msgstr ""
+"Het linkitem wordt niet weergegeven voor locaties buiten de grenzen van "
+"Europa en de VS."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:114 IndividualFactsTabModuleTrait.php:134
 #: IndividualFactsTabModuleTrait.php:154
-msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
-msgstr "Het oorspronkelijke tabblad had het TM-handelsmerkteken - behoud het als je wilt of als je je daartoe verplicht voelt."
+msgid ""
+"The original tab had the trademark sign - keep it if you like, or if you "
+"feel legally bound to."
+msgstr ""
+"Het oorspronkelijke tabblad had het TM-handelsmerkteken - behoud het als je "
+"wilt of als je je daartoe verplicht voelt."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:213
 #, php-format
-msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
-msgstr "De URI voor kaartkoppelingen, met tijdelijke aanduidingen (%1$s en %2$s) voor kaartcoördinaten. Het zoomniveau moet deel uitmaken van de URI. Voorbeeld: %3$s"
+msgid ""
+"The uri for map links, with placeholders (%1$s and %2$s) for map "
+"coordinates. The zoom level should be part of the uri. Example: %3$s"
+msgstr ""
+"De URI voor kaartkoppelingen, met tijdelijke aanduidingen (%1$s en %2$s) "
+"voor kaartcoördinaten. Het zoomniveau moet deel uitmaken van de URI. "
+"Voorbeeld: %3$s"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:212
@@ -305,8 +359,15 @@ msgstr "Verenigde Staten van Amerika (1880-1926) | %1$s"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:187
 #, php-format
-msgid "When checked, links to the main %1$s page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
-msgstr "Indien aangevinkt, worden koppelingen geplaatst naar de hoofdpagina van %1$s, waar u kunt schakelen tussen verschillende historische lagen die beschikbaar zijn voor de desbetreffende locatie, en in- en uitzoomen op een moderne kaart, die hier bovendien kan worden geconfigureerd:"
+msgid ""
+"When checked, links to the main %1$s page, where you can switch between "
+"different historical layers available for the respective location, and fade "
+"in and out of a modern map, which may additionally be configured here:"
+msgstr ""
+"Indien aangevinkt, worden koppelingen geplaatst naar de hoofdpagina van "
+"%1$s, waar u kunt schakelen tussen verschillende historische lagen die "
+"beschikbaar zijn voor de desbetreffende locatie, en in- en uitzoomen op een "
+"moderne kaart, die hier bovendien kan worden geconfigureerd:"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:33
 msgid "Witness at a marriage"
@@ -325,7 +386,8 @@ msgstr "Getuige bij huwelijk"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:206
 msgid "You can also configure a custom map provider. Enter its name here."
-msgstr "U kunt ook een aangepaste kaartprovider configureren. Voer hier de naam in."
+msgstr ""
+"U kunt ook een aangepaste kaartprovider configureren. Voer hier de naam in."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:118 IndividualFactsTabModuleTrait.php:138
@@ -336,13 +398,31 @@ msgstr "Zoomniveau van gekoppelde kaart"
 #. I18N: A button label.
 #: resources/views/edit/add-fact-row_20.phtml:52
 msgid "add"
-msgstr ""
+msgstr "toevoegen"
+
+#: IndividualFactsTabModuleExtended.php:121
+#: IndividualFactsTabModuleExtended_20.php:122
+msgid "Facts and events"
+msgstr "Feiten en gebeurtenissen"
+
+#: FunctionsFactPlace.php:254
+msgid "Latitude"
+msgstr "Breedtegraad"
+
+#: FunctionsFactPlace.php:255
+msgid "Longitude"
+msgstr "Lengtegraad"
 
 #~ msgid "A tab showing the facts and events of an individual."
 #~ msgstr "Een tabblad met de feiten en gebeurtenissen van een persoon."
 
-#~ msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
-#~ msgstr "Werkelijke gebeurtenissen van naaste verwanten, en feiten en gebeurtenissen waarbij de huidige persoon wordt vermeld als gerelateerd persoon."
+#~ msgid ""
+#~ "Actual events of close relatives, and facts and events where the current "
+#~ "individual is listed as an associate."
+#~ msgstr ""
+#~ "Werkelijke gebeurtenissen van naaste verwanten, en feiten en "
+#~ "gebeurtenissen waarbij de huidige persoon wordt vermeld als gerelateerd "
+#~ "persoon."
 
 #~ msgid "Associated facts and events"
 #~ msgstr "Feiten en gebeurtenissen als/met medewerker(s)"
@@ -400,8 +480,11 @@ msgstr ""
 #~ msgid "Civil registrar"
 #~ msgstr "Ambtenaar Burgerlijke Stand"
 
-#~ msgid "Deselect in order to have the tab appear exactly as the original tab."
-#~ msgstr "Schakel de selectie uit om de naam van het oorspronkelijke tabblad te blijven gebruiken."
+#~ msgid ""
+#~ "Deselect in order to have the tab appear exactly as the original tab."
+#~ msgstr ""
+#~ "Schakel de selectie uit om de naam van het oorspronkelijke tabblad te "
+#~ "blijven gebruiken."
 
 #~ msgid "Displayed title"
 #~ msgstr "Weergegeven titel"
@@ -432,10 +515,8 @@ msgstr ""
 #~ msgstr "Gebeurtenissen van naaste verwanten"
 
 #~ msgid "Facts and Events Tab Location Data Providers"
-#~ msgstr "Aanbieders van locatiegegevens voor tabblad Feiten en gebeurtenissen"
-
-#~ msgid "Facts and events"
-#~ msgstr "Feiten en gebeurtenissen"
+#~ msgstr ""
+#~ "Aanbieders van locatiegegevens voor tabblad Feiten en gebeurtenissen"
 
 #~ msgid "Facts and events of inverse associates"
 #~ msgstr "Feiten en gebeurtenissen als medewerker"
@@ -498,14 +579,28 @@ msgstr ""
 #~ msgid "Historical facts"
 #~ msgstr "Historische feiten"
 
-#~ msgid "If this option is checked, additional facts and events of inverse associates are limited to the following facts and events."
-#~ msgstr "Als deze optie is aangevinkt, zijn aanvullende feiten en gebeurtenissen waarbij de persoon als medewerker wordt genoemd beperkt tot de volgende feiten en gebeurtenissen."
+#~ msgid ""
+#~ "If this option is checked, additional facts and events of inverse "
+#~ "associates are limited to the following facts and events."
+#~ msgstr ""
+#~ "Als deze optie is aangevinkt, zijn aanvullende feiten en gebeurtenissen "
+#~ "waarbij de persoon als medewerker wordt genoemd beperkt tot de volgende "
+#~ "feiten en gebeurtenissen."
 
-#~ msgid "In particular if both lists are empty, no additional facts and events of this kind will be shown."
-#~ msgstr "Als beide lijsten leeg zijn, zullen geen aanvullende feiten en gebeurtenissen van deze aard worden getoond."
+#~ msgid ""
+#~ "In particular if both lists are empty, no additional facts and events of "
+#~ "this kind will be shown."
+#~ msgstr ""
+#~ "Als beide lijsten leeg zijn, zullen geen aanvullende feiten en "
+#~ "gebeurtenissen van deze aard worden getoond."
 
-#~ msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
-#~ msgstr "In het oorspronkelijke tabblad worden twee soorten aanvullende feiten en gebeurtenissen weergegeven wanneer 'Gebeurtenissen van naaste verwanten' op het tabblad worden geselecteerd:"
+#~ msgid ""
+#~ "In the original tab, two kinds of additional facts and events are "
+#~ "displayed when 'Events of close relatives' is selected on the tab:"
+#~ msgstr ""
+#~ "In het oorspronkelijke tabblad worden twee soorten aanvullende feiten en "
+#~ "gebeurtenissen weergegeven wanneer 'Gebeurtenissen van naaste verwanten' "
+#~ "op het tabblad worden geselecteerd:"
 
 #~ msgid "Include the %1$s symbol in the module title"
 #~ msgstr "Het %1$s-symbool opnemen in de moduletitel"
@@ -535,8 +630,12 @@ msgstr ""
 #~ msgid "Lodger"
 #~ msgstr "Kamerbewoner"
 
-#~ msgid "Modules listed here are used (in the configured order) to determine map coordinates of places."
-#~ msgstr "Modules die hier worden vermeld, worden (in de geconfigureerde volgorde) gebruikt om kaartcoördinaten van plaatsen te bepalen."
+#~ msgid ""
+#~ "Modules listed here are used (in the configured order) to determine map "
+#~ "coordinates of places."
+#~ msgstr ""
+#~ "Modules die hier worden vermeld, worden (in de geconfigureerde volgorde) "
+#~ "gebruikt om kaartcoördinaten van plaatsen te bepalen."
 
 #~ msgid "Nanny"
 #~ msgstr "Kinderjuffrouw"
@@ -589,11 +688,23 @@ msgstr ""
 #~ msgid "Requires the '%1$s Vesta Common' module."
 #~ msgstr "Vereist de module '%1$s Vesta Algemeen'."
 
-#~ msgid "Restrict to this list of GEDCOM family facts and events. You can modify this list by removing or adding fact and event names, even custom ones, as necessary."
-#~ msgstr "Beperken tot deze lijst van GEDCOM gezinsfeiten en -gebeurtenissen. Indien nodig kunt u deze lijst wijzigen door namen van feiten en gebeurtenissen, zelfs aangepaste namen, te verwijderen of toe te voegen."
+#~ msgid ""
+#~ "Restrict to this list of GEDCOM family facts and events. You can modify "
+#~ "this list by removing or adding fact and event names, even custom ones, "
+#~ "as necessary."
+#~ msgstr ""
+#~ "Beperken tot deze lijst van GEDCOM gezinsfeiten en -gebeurtenissen. "
+#~ "Indien nodig kunt u deze lijst wijzigen door namen van feiten en "
+#~ "gebeurtenissen, zelfs aangepaste namen, te verwijderen of toe te voegen."
 
-#~ msgid "Restrict to this list of GEDCOM individual facts and events. You can modify this list by removing or adding fact and event names, even custom ones, as necessary."
-#~ msgstr "Beperken tot deze lijst van GEDCOM persoonsfeiten en -gebeurtenissen. Indien nodig kunt u deze lijst wijzigen door namen van feiten en gebeurtenissen, zelfs aangepaste namen, te verwijderen of toe te voegen."
+#~ msgid ""
+#~ "Restrict to this list of GEDCOM individual facts and events. You can "
+#~ "modify this list by removing or adding fact and event names, even custom "
+#~ "ones, as necessary."
+#~ msgstr ""
+#~ "Beperken tot deze lijst van GEDCOM persoonsfeiten en -gebeurtenissen. "
+#~ "Indien nodig kunt u deze lijst wijzigen door namen van feiten en "
+#~ "gebeurtenissen, zelfs aangepaste namen, te verwijderen of toe te voegen."
 
 #~ msgid "Seller"
 #~ msgstr "Verkoper"
@@ -634,8 +745,13 @@ msgstr ""
 #~ msgid "Slave"
 #~ msgstr "Slaaf"
 
-#~ msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
-#~ msgstr "Deze laatste zijn niet echt beperkt tot naaste familieleden, en daarom kan het minder verwarrend zijn om een apart schakelvakje voor hen aan te bieden."
+#~ msgid ""
+#~ "The latter are not actually restricted to close relatives, and therefore "
+#~ "it may be less confusing to offer a separate toggle checkbox for them."
+#~ msgstr ""
+#~ "Deze laatste zijn niet echt beperkt tot naaste familieleden, en daarom "
+#~ "kan het minder verwarrend zijn om een apart schakelvakje voor hen aan te "
+#~ "bieden."
 
 #~ msgid "Use separate toggle checkbox"
 #~ msgstr "Apart schakelvak gebruiken"
