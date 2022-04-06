@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-06 19:23+0200\n"
+"POT-Creation-Date: 2022-04-06 19:26+0200\n"
 "PO-Revision-Date: 2022-04-06 14:08+0000\n"
 "Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
@@ -222,10 +222,6 @@ msgstr "De hier vermelde modules kunnen aanvullende gegevens bevatten voor feite
 #: IndividualFactsTabModuleTrait.php:205
 msgid "Name"
 msgstr "Naam"
-
-#: IndividualFactsTabModuleExtended.php:592
-msgid "No relationship found"
-msgstr "Geen verwantschap gevonden"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:193
@@ -554,6 +550,9 @@ msgstr ""
 
 #~ msgid "Nanny"
 #~ msgstr "Kinderjuffrouw"
+
+#~ msgid "No relationship found"
+#~ msgstr "Geen verwantschap gevonden"
 
 #~ msgid "Nurse"
 #~ msgstr "Verpleegkundige"

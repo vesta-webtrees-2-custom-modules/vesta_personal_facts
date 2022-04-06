@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-06 19:23+0200\n"
+"POT-Creation-Date: 2022-04-06 19:26+0200\n"
 "PO-Revision-Date: 2021-07-24 11:25+0200\n"
 "Last-Translator: Vincent DENIS <vincent.denis06@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/fr/>\n"
@@ -222,10 +222,6 @@ msgstr "Les modules répertoriés ici peuvent fournir des données supplémentai
 #: IndividualFactsTabModuleTrait.php:205
 msgid "Name"
 msgstr "Nom"
-
-#: IndividualFactsTabModuleExtended.php:592
-msgid "No relationship found"
-msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:193

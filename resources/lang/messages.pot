@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-06 19:23+0200\n"
+"POT-Creation-Date: 2022-04-06 19:26+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -79,10 +79,6 @@ msgstr ""
 #: IndividualFactsTabModuleExtended.php:270
 #: IndividualFactsTabModuleExtended_20.php:350
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
-msgstr ""
-
-#: IndividualFactsTabModuleExtended.php:592
-msgid "No relationship found"
 msgstr ""
 
 #: IndividualFactsTabModuleExtended_20.php:245

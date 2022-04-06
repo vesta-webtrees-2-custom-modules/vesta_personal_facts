@@ -589,7 +589,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
             $relationship_name = app(RelationshipService::class)->getCloseRelationshipName($record, $label_person);
             if ($relationship_name === '') {
                 //RC adjusted
-                $relationship_name = I18N::translate('No relationship found');
+                $relationship_name = MoreI18N::xlate('No relationship found');
             }
 
             //[RC] ADJUSTED (this part wouldn't be in main webtrees)

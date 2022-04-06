@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-06 19:23+0200\n"
+"POT-Creation-Date: 2022-04-06 19:26+0200\n"
 "PO-Revision-Date: 2022-04-04 21:10+0000\n"
 "Last-Translator: ro-la <lacoros@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/sk/>\n"
@@ -228,10 +228,6 @@ msgstr "Moduly v tomto zozname poskytujú dodatočné údaje pre fakty a údaje 
 msgid "Name"
 msgstr "Meno"
 
-#: IndividualFactsTabModuleExtended.php:592
-msgid "No relationship found"
-msgstr "Nenašiel sa žiaden vzťah"
-
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:193
 msgid "OSM Base Map"
@@ -377,6 +373,9 @@ msgstr ""
 
 #~ msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
 #~ msgstr "Na originálnej záložke sa po zapnutí „Udalosti blízkych príbuzných“ zobrazujú dva druhy dodatočných faktov a udalostí:"
+
+#~ msgid "No relationship found"
+#~ msgstr "Nenašiel sa žiaden vzťah"
 
 #~ msgid "OpenStreetMaps"
 #~ msgstr "OpenStreetMaps"

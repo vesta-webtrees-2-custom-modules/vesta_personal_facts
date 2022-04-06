@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-06 19:23+0200\n"
+"POT-Creation-Date: 2022-04-06 19:26+0200\n"
 "PO-Revision-Date: 2021-09-08 20:33+0000\n"
 "Last-Translator: Richard Cissée <ric@richard-cissee.de>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/nb_NO/>\n"
@@ -227,10 +227,6 @@ msgstr "Moduler som er oppført her, kan gi ytterligere data for fakta og hendel
 #: IndividualFactsTabModuleTrait.php:205
 msgid "Name"
 msgstr "Navn"
-
-#: IndividualFactsTabModuleExtended.php:592
-msgid "No relationship found"
-msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:193
