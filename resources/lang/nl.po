@@ -428,26 +428,26 @@ msgstr "Lengtegraad"
 #~ msgstr "Feiten en gebeurtenissen als/met medewerker(s)"
 
 #~ msgid "Attendant"
-#~ msgstr "Verzorger"
+#~ msgstr "Assistent"
 
 #~ msgctxt "FEMALE"
 #~ msgid "Attendant"
-#~ msgstr "Verzorgster"
+#~ msgstr "Assistente"
 
 #~ msgctxt "MALE"
 #~ msgid "Attendant"
-#~ msgstr "Verzorger"
+#~ msgstr "Assistent"
 
 #~ msgid "Attending"
-#~ msgstr "Gast"
+#~ msgstr "Aanwezig"
 
 #~ msgctxt "FEMALE"
 #~ msgid "Attending"
-#~ msgstr "Gast"
+#~ msgstr "Aanwezig"
 
 #~ msgctxt "MALE"
 #~ msgid "Attending"
-#~ msgstr "Gast"
+#~ msgstr "Aanwezig"
 
 #~ msgid "Best man"
 #~ msgstr "Getuige bij huwelijk"
