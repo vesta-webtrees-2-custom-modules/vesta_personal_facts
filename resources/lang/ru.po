@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2022-04-06 21:13+0200\n"
-"PO-Revision-Date: 2022-04-05 07:39+0000\n"
+"PO-Revision-Date: 2022-04-11 05:47+0000\n"
 "Last-Translator: Олег <uolega@yandex.ru>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/ru/>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.12-dev\n"
 
 #. I18N: Module Configuration
@@ -26,7 +28,7 @@ msgstr "%1$s (исторические карты)"
 
 #: resources/views/edit/add-fact-row_20.phtml:36
 msgid "&lt;select&gt;"
-msgstr ""
+msgstr "&lt;выберите&gt;"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:194
@@ -63,7 +65,7 @@ msgstr "Супруг"
 
 #: IndividualFactsTabModuleExtended_20.php:245
 msgid "Associated events"
-msgstr ""
+msgstr "Связанные события"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:68
 msgid "Baptism of a godchild"
@@ -121,11 +123,11 @@ msgstr "Поставщик пользовательских карт"
 
 #: resources/views/edit/add-fact-row_20.phtml:46
 msgid "Custom event"
-msgstr ""
+msgstr "Пользовательское событие"
 
 #: resources/views/edit/add-fact-row_20.phtml:43
 msgid "Custom fact"
-msgstr ""
+msgstr "Пользовательский факт"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:101
@@ -139,7 +141,7 @@ msgstr "Европа в XIX в. век | %1$s"
 
 #: resources/views/edit/add-fact-row_20.phtml:25
 msgid "Fact or event"
-msgstr ""
+msgstr "Факт или событие"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:234
@@ -341,7 +343,7 @@ msgstr "Уровень масштабирования связанной кар�
 #. I18N: A button label.
 #: resources/views/edit/add-fact-row_20.phtml:52
 msgid "add"
-msgstr ""
+msgstr "добавить"
 
 #~ msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
 #~ msgstr "Фактические события близких родственников, а также факты и события, в которых текущий человек указан в качестве партнера."
