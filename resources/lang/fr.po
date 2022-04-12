@@ -3,15 +3,16 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2022-04-06 21:13+0200\n"
-"PO-Revision-Date: 2021-07-24 11:25+0200\n"
+"PO-Revision-Date: 2022-04-12 11:07+0000\n"
 "Last-Translator: Vincent DENIS <vincent.denis06@gmail.com>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Weblate 4.12-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:172
@@ -21,7 +22,7 @@ msgstr "%1$s (cartes historiques)"
 
 #: resources/views/edit/add-fact-row_20.phtml:36
 msgid "&lt;select&gt;"
-msgstr ""
+msgstr "&lt;sélectionner&gt;"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:194
@@ -58,7 +59,7 @@ msgstr "Associé à un mariage"
 
 #: IndividualFactsTabModuleExtended_20.php:245
 msgid "Associated events"
-msgstr ""
+msgstr "Événements associés"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:68
 msgid "Baptism of a godchild"
@@ -116,11 +117,11 @@ msgstr "Fournisseur de carte personnalisée"
 
 #: resources/views/edit/add-fact-row_20.phtml:46
 msgid "Custom event"
-msgstr ""
+msgstr "Événement personnalisé"
 
 #: resources/views/edit/add-fact-row_20.phtml:43
 msgid "Custom fact"
-msgstr ""
+msgstr "Fait personnalisé"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:101
@@ -134,7 +135,7 @@ msgstr "L'Europe au XIX. siècle | %1$s"
 
 #: resources/views/edit/add-fact-row_20.phtml:25
 msgid "Fact or event"
-msgstr ""
+msgstr "Fait ou événement"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:234
@@ -336,7 +337,7 @@ msgstr "Niveau de zoom de la carte liée"
 #. I18N: A button label.
 #: resources/views/edit/add-fact-row_20.phtml:52
 msgid "add"
-msgstr ""
+msgstr "ajouter"
 
 #~ msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
 #~ msgstr "Événements réels de parents proches, et faits et événements où l'individu actuel est répertorié comme associé."
