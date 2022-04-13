@@ -8,12 +8,13 @@ use Vesta\VestaUtils;
 use function GuzzleHttp\json_encode;
 
 /**
- * @var bool             $can_edit
- * @var Collection<Fact> $facts
- * @var bool             $has_associate_facts
- * @var bool             $has_historic_facts
- * @var bool             $has_relative_facts
- * @var Individual       $individual
+ * @var bool                 $can_edit
+ * @var Collection<int,Fact> $clipboard_facts
+ * @var Collection<int,Fact> $facts
+ * @var bool                 $has_associate_facts
+ * @var bool                 $has_historic_facts
+ * @var bool                 $has_relative_facts
+ * @var Individual           $individual
  * 
  * @var IndividualFactsTabModule_2x $module
  */
@@ -30,7 +31,7 @@ View::endpush();
 ?>
 
 <div class="wt-facts-tab py-4">
-    <table class="table wt-facts-table">
+    <table class="table wt-facts-table" style="table-layout: fixed">
         <tbody>
             <tr>
                 <td colspan="2">
@@ -86,7 +87,11 @@ View::endpush();
     View::endpush();
     ?>
 
-    <table class="table wt-facts-table">
+    <table class="table wt-facts-table" style="table-layout: fixed">
+        <colgroup>
+            <col style="width:25%">
+            <col style="width:75%">
+        </colgroup>
         <tbody>
             <?php foreach ($facts as $fact) : ?>
                 <?= view(VestaUtils::vestaViewsNamespace() . '::fact', ['fact' => $fact, 'record' => $individual, 'module' => $module]) ?>

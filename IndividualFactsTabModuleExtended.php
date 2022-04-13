@@ -88,6 +88,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     protected function getViewNameTab(): string {
         //we do not want to use the original name 'modules/personal_facts/tab' here, so we use our own namespace
         return $this->name() . '::tab';
+        //return 'modules/personal_facts/tab';
     }
   
     public function customModuleAuthorName(): string {
