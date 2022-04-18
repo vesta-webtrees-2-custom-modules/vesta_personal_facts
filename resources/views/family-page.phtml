@@ -3,10 +3,10 @@
 use Cissee\Webtrees\Module\PersonalFacts\DefaultAssociateFactUtils;
 use Cissee\Webtrees\Module\PersonalFacts\IndividualFactsTabModuleExtended;
 use Cissee\WebtreesExt\Contracts\FactListUtils;
+use Cissee\WebtreesExt\MoreI18N;
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\Fact;
 use Fisharebest\Webtrees\Family;
-use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\View;
 use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
 use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderUtils;
@@ -66,7 +66,7 @@ View::endpush();
         <?= view('family-page-parents', ['family' => $record]) ?>
     </div>
 
-    <h3 class="mt-4"><?= I18N::translate('Facts and events') ?></h3>
+    <h3 class="mt-4"><?= MoreI18N::xlate('Facts and events') ?></h3>
     <table class="table wt-facts-table" style="table-layout: fixed">
         <tbody>
             <tr>
@@ -88,7 +88,7 @@ View::endpush();
         <?php if ($facts->isEmpty()) : ?>
             <tr>
                 <td colspan="2">
-                    <?= I18N::translate('No facts exist for this family.') ?>
+                    <?= MoreI18N::xlate('No facts exist for this family.') ?>
                 </td>
             </tr>
         <?php else : ?>
