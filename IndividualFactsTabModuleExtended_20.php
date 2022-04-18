@@ -12,6 +12,7 @@ use Cissee\WebtreesExt\ToggleableFactsCategory;
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\Fact;
 use Fisharebest\Webtrees\Family;
+use Fisharebest\Webtrees\GedcomRecord;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\Module\ModuleConfigInterface;
@@ -169,8 +170,8 @@ class IndividualFactsTabModuleExtended_20 extends IndividualFactsTabModule_20 im
     return $pre;
   }
   
-  protected function getOutputBeforeTab(Individual $person) {
-    $tree = $person->tree();
+  protected function getOutputBeforeTab(GedcomRecord $record) {
+    $tree = $record->tree();
     $a1 = IndividualFactsTabExtenderUtils::accessibleModules($this, $tree, Auth::user())
             ->map(function (IndividualFactsTabExtenderInterface $module) use ($tree) {
               return $module->hFactsTabRequiresModalVesta($tree);
@@ -189,18 +190,18 @@ class IndividualFactsTabModuleExtended_20 extends IndividualFactsTabModule_20 im
     }        
     
     $a2 = IndividualFactsTabExtenderUtils::accessibleModules($this, $tree, Auth::user())
-            ->map(function (IndividualFactsTabExtenderInterface $module) use ($person) {
-              return $module->hFactsTabGetOutputBeforeTab($person);
+            ->map(function (IndividualFactsTabExtenderInterface $module) use ($record) {
+              return $module->hFactsTabGetOutputBeforeTab($record);
             })
             ->toArray();
 
     return GenericViewElement::implode([$gve1, GenericViewElement::implode($a2)]);
   }
 
-  protected function getOutputAfterTab(Individual $person) {
-    $a = IndividualFactsTabExtenderUtils::accessibleModules($this, $person->tree(), Auth::user())
-            ->map(function (IndividualFactsTabExtenderInterface $module) use ($person) {
-              return $module->hFactsTabGetOutputAfterTab($person);
+  protected function getOutputAfterTab(GedcomRecord $record) {
+    $a = IndividualFactsTabExtenderUtils::accessibleModules($this, $record->tree(), Auth::user())
+            ->map(function (IndividualFactsTabExtenderInterface $module) use ($record) {
+              return $module->hFactsTabGetOutputAfterTab($record, true);
             })
             ->toArray();
 

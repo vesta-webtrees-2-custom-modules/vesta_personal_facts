@@ -1,6 +1,9 @@
 <?php
 
+use Cissee\Webtrees\Module\PersonalFacts\DefaultAssociateFactUtils;
 use Cissee\Webtrees\Module\PersonalFacts\IndividualFactsTabModule_2x;
+use Cissee\WebtreesExt\Contracts\AssociateFactUtils;
+use Cissee\WebtreesExt\Contracts\FactListUtils;
 use Cissee\WebtreesExt\MoreI18N;
 use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\View;
@@ -17,13 +20,14 @@ use function GuzzleHttp\json_encode;
  * @var Individual           $individual
  * 
  * @var IndividualFactsTabModule_2x $module
+ * @var AssociateFactUtils          $associateFactUtils
  */
 
 ?>
 
 <?php
  //[RC] PATCHED
-$outputBeforeTab = $module->getOutputBeforeTab($individual);
+$outputBeforeTab = FactListUtils::getOutputBeforeTab($module, $individual, true);
 echo $outputBeforeTab->getMain();
 View::push('javascript');
 echo $outputBeforeTab->getScript();
@@ -40,7 +44,7 @@ View::endpush();
                     ?>
                     <?php if ($has_associate_facts) : ?>
                         <label>
-                            <input id="show-associate-facts-pfh" type="checkbox" data-bs-toggle="collapse" data-bs-target=".wt-associate-fact-pfh" data-wt-persist="associates-pfh">
+                            <input id="show-associate-facts-pfh" type="checkbox" data-bs-toggle="collapse" data-bs-target=".wt-associate-fact-pfh" data-wt-persist="associates-pfh" autocomplete="off">
                             <?= MoreI18N::xlate('Associated events') ?>
                         </label>
                     <?php endif ?>
@@ -50,7 +54,7 @@ View::endpush();
                     ?>
                     <?php if ($has_relative_facts) : ?>
                         <label>
-                            <input id="show-relatives-facts-pfh" type="checkbox" data-bs-toggle="collapse" data-bs-target=".wt-relation-fact-pfh" data-wt-persist="relatives-pfh">
+                            <input id="show-relatives-facts-pfh" type="checkbox" data-bs-toggle="collapse" data-bs-target=".wt-relation-fact-pfh" data-wt-persist="relatives-pfh" autocomplete="off">
                             <?= MoreI18N::xlate('Events of close relatives') ?>
                         </label>
                     <?php endif ?>
@@ -60,14 +64,14 @@ View::endpush();
                     ?>
                     <?php if ($has_historic_facts) : ?>
                         <label>
-                            <input id="show-historical-facts-pfh" type="checkbox" data-bs-toggle="collapse" data-bs-target=".wt-historic-fact-pfh" data-wt-persist="historic-facts-pfh">
+                            <input id="show-historical-facts-pfh" type="checkbox" data-bs-toggle="collapse" data-bs-target=".wt-historic-fact-pfh" data-wt-persist="historic-facts-pfh" autocomplete="off">
                             <?= MoreI18N::xlate('Historic events') ?>
                         </label>
                     <?php endif ?>
                     
                     <?php
                     //[RC] PATCHED
-                    $outputInDescriptionbox = $module->getOutputInDescriptionbox($individual);
+                    $outputInDescriptionbox = FactListUtils::getOutputInDescriptionbox($module, $individual);
                     echo $outputInDescriptionbox->getMain();
                     View::push('javascript');
                     echo $outputInDescriptionbox->getScript();
@@ -80,7 +84,7 @@ View::endpush();
 
     <?php
     //[RC] PATCHED
-    $outputAfterDescriptionbox = $module->getOutputAfterDescriptionbox($individual);
+    $outputAfterDescriptionbox = FactListUtils::getOutputAfterDescriptionbox($module, $individual);
     echo $outputAfterDescriptionbox->getMain();
     View::push('javascript');
     echo $outputAfterDescriptionbox->getScript();
@@ -94,7 +98,17 @@ View::endpush();
         </colgroup>
         <tbody>
             <?php foreach ($facts as $fact) : ?>
-                <?= view(VestaUtils::vestaViewsNamespace() . '::fact', ['fact' => $fact, 'record' => $individual, 'module' => $module]) ?>
+                <?= view(VestaUtils::vestaViewsNamespace() . '::fact', [                    
+                    'fact'                   => $fact, 
+                    'record'                 => $individual, 
+                    'module'                 => $module,
+                    'useVestals'             => $module->useVestals(),
+                    'hideCoordinates'        => boolval($module->getPreference('LINKS_AFTER_PLAC', '0')),
+                    'associateFactUtils'     => new DefaultAssociateFactUtils(),
+                    'styles'                 => [], //no additional styles
+                    'predecessors'           => [], //not used here
+                    'relToPredecessorSuffix' => '', //not used here
+                    ]) ?>
             <?php endforeach ?>
 
             <?php if ($facts->isEmpty()) : ?>
@@ -114,7 +128,7 @@ View::endpush();
 
 <?php
 //[RC] PATCHED
-$outputAfterTab = $module->getOutputAfterTab($individual);
+$outputAfterTab = FactListUtils::getOutputAfterTab($module, $individual, true);
 echo $outputAfterTab->getMain();
 View::push('javascript');
 echo $outputAfterTab->getScript();
@@ -148,13 +162,15 @@ View::endpush();
 </script>
 
 <?php  
-  $requests = [];
+    $requests = [];
 
-  foreach ($facts as $fact) {
-    $requests = array_merge($requests, $module->functionsVestals()->vestalsForFactPlace($fact));
-  }
+    if ($module->useVestals()) {
+        foreach ($facts as $fact) {
+            $requests = array_merge($requests, $module->functionsVestals()->vestalsForFactPlace($fact));
+        }        
+    }
 
-  $url = $module->functionsVestals()->vestalsActionUrl();
+    $url = $module->functionsVestals()->vestalsActionUrl();
 ?>
     
 <?php if (sizeof($requests) > 0) : ?>

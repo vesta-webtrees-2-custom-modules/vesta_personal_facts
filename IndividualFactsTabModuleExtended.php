@@ -2,32 +2,30 @@
 
 namespace Cissee\Webtrees\Module\PersonalFacts;
 
-use Cissee\WebtreesExt\GedcomCode\GedcomCodeRela_Ext;
 use Cissee\WebtreesExt\Http\RequestHandlers\FunctionsPlaceProvidersAction;
 use Cissee\WebtreesExt\Http\RequestHandlers\IndividualFactsTabExtenderProvidersAction;
 use Cissee\WebtreesExt\Module\IndividualFactsTabModule_2x;
 use Cissee\WebtreesExt\Module\ModuleMetaInterface;
 use Cissee\WebtreesExt\Module\ModuleMetaTrait;
+use Cissee\WebtreesExt\Module\ModuleVestalInterface;
+use Cissee\WebtreesExt\Module\ModuleVestalTrait;
 use Cissee\WebtreesExt\MoreI18N;
 use Fisharebest\Webtrees\Auth;
 use Fisharebest\Webtrees\Fact;
 use Fisharebest\Webtrees\Family;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Individual;
-use Fisharebest\Webtrees\Module\ModuleChartInterface;
 use Fisharebest\Webtrees\Module\ModuleConfigInterface;
 use Fisharebest\Webtrees\Module\ModuleConfigTrait;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomTrait;
 use Fisharebest\Webtrees\Module\ModuleGlobalInterface;
 use Fisharebest\Webtrees\Module\ModuleGlobalTrait;
-use Fisharebest\Webtrees\Module\ModuleInterface;
+use Fisharebest\Webtrees\Module\ModuleMapLinkInterface;
 use Fisharebest\Webtrees\Module\ModuleTabInterface;
-use Fisharebest\Webtrees\Module\RelationshipsChartModule;
 use Fisharebest\Webtrees\Services\ClipboardService;
 use Fisharebest\Webtrees\Services\LinkedRecordService;
 use Fisharebest\Webtrees\Services\ModuleService;
-use Fisharebest\Webtrees\Services\RelationshipService;
 use Fisharebest\Webtrees\Session;
 use Fisharebest\Webtrees\View;
 use Illuminate\Support\Collection;
@@ -43,14 +41,10 @@ use Vesta\Hook\HookInterfaces\PrintFunctionsPlaceInterface;
 use Vesta\Model\GenericViewElement;
 use Vesta\Model\MapCoordinates;
 use Vesta\Model\PlaceStructure;
-use Vesta\Model\VestalRequest;
 use Vesta\VestaAdminController;
 use Vesta\VestaModuleTrait;
 use Vesta\VestaUtils;
 use function app;
-use function GuzzleHttp\json_decode;
-use function GuzzleHttp\json_encode;
-use function response;
 use function route;
 use function view;
 
@@ -60,11 +54,15 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     ModuleConfigInterface, 
     ModuleGlobalInterface, 
     ModuleTabInterface, 
+    ModuleMapLinkInterface,
+    ModuleVestalInterface,
     PrintFunctionsPlaceInterface {
 
     //must not use ModuleTabTrait here - already used in superclass IndividualFactsTabModule_2x,
     //and - more importantly - partially implemented there! (supportedFacts)
-    use ModuleCustomTrait, ModuleMetaTrait, ModuleConfigTrait, ModuleGlobalTrait, VestaModuleTrait {
+    
+    //skip ModuleMapLinkTrait here - it doesn't contain anyting that's useful for us
+    use ModuleCustomTrait, ModuleMetaTrait, ModuleConfigTrait, ModuleGlobalTrait, ModuleVestalTrait, VestaModuleTrait {
         VestaModuleTrait::customTranslations insteadof ModuleCustomTrait;
         VestaModuleTrait::getAssetAction insteadof ModuleCustomTrait;
         VestaModuleTrait::assetUrl insteadof ModuleCustomTrait;    
@@ -112,10 +110,18 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     }
 
     public function onBoot(): void {
-        $this->flashWhatsNew('\Cissee\Webtrees\Module\PersonalFacts\WhatsNew', 2);
+
+        //explicitly register in order to re-use in views where we cannot pass via variable
+        //(could also resolve via module service)
+        app()->instance(IndividualFactsTabModuleExtended::class, $this); //do not use bind()! for some reason leads to 'Illegal offset type in isset or empty'
 
         // Replace an existing view with our own version.    
-        View::registerCustomView('::edit/add-fact-row', $this->name() . '::edit/add-fact-row');      
+        View::registerCustomView('::edit/add-fact-row', $this->name() . '::edit/add-fact-row');
+
+        //TODO make this configurable?
+        View::registerCustomView('::family-page', $this->name() . '::family-page');
+        
+        $this->flashWhatsNew('\Cissee\Webtrees\Module\PersonalFacts\WhatsNew', 2);
     }
   
     public function tabTitle(): string {
@@ -171,11 +177,12 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
   
 
 
-    protected function additionalFacts(Individual $person) {
+    protected function additionalFacts(Individual $record) {
+        
         $facts = array();
-        $ret = IndividualFactsTabExtenderUtils::accessibleModules($this, $person->tree(), Auth::user())
-            ->map(function (IndividualFactsTabExtenderInterface $module) use ($person) {
-              return $module->hFactsTabGetAdditionalFacts($person);
+        $ret = IndividualFactsTabExtenderUtils::accessibleModules($this, $record->tree(), Auth::user())
+            ->map(function (IndividualFactsTabExtenderInterface $module) use ($record) {
+              return $module->hFactsTabGetAdditionalFacts($record);
             })
             ->toArray();
 
@@ -216,7 +223,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     }
 
     protected function filterAssociateFact(Fact $fact) {
-        [, $tag] = explode(':', $fact->tag());
+        $tag = explode(':', $fact->tag())[1];
 
         $restricted = boolval($this->getPreference('ASSO_RESTRICTED', '0'));
         if ($restricted) {
@@ -243,8 +250,10 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     
         //probably not very efficient    
         return GenericViewElement::fromView(
-            VestaUtils::vestaViewsNamespace() . '::fact-place', 
-            ['ps' => $ps, 'module' => $this]);
+            VestaUtils::vestaViewsNamespace() . '::fact-place', [   
+                'ps' => $ps, 
+                'module' => $this,
+                'hideCoordinates' => boolval($this->getPreference('LINKS_AFTER_PLAC', '0'))]);
     }
 
     public function map2html(MapCoordinates $map): ?GenericViewElement {
@@ -358,343 +367,24 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
         <?php
     }
     
-    public function useVestals(): bool {    
-        return true; //TODO via module setting?
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////
+   
+    //ModuleVestalInterface
+    public function hideCoordinates(): bool {
+        return boolval($this->getPreference('LINKS_AFTER_PLAC', '0'));
+    }
+   
+    //ModuleMapLinkInterface
+    public function mapLink(Fact $fact): string {
+        return $this->functionsFactPlace()->mapLink($fact);
     }
     
-    public function vestalsActionUrl(): string {
-        $parameters = [
-            'module' => $this->name(),
-            'action' => 'Vestals'
-        ];
-
-        $url = route('module', $parameters);
-
-        return $url;
-    }
-  
-    public function postVestalsAction(ServerRequestInterface $request): ResponseInterface {
-        
-        $body = json_decode($request->getBody());
-
-        $responses = [];
-
-        foreach ($body as $vestalRequestStd) {
-            $method = VestalRequest::methodFromStd($vestalRequestStd);
-            $placeStructure = PlaceStructure::fromStd($vestalRequestStd->args);
-
-            if ('vestalBeforePlace' == $method) {
-                $response = $this->functionsVestals()->vestalBeforePlace($placeStructure);
-                $responses[$response->classAttr()] = $response;
-            } else if ('vestalAfterMap' == $method) {
-                $response = $this->functionsVestals()->vestalAfterMap($placeStructure);
-                $responses[$response->classAttr()] = $response;
-            } else if ('vestalAfterNotes' == $method) {
-                $response = $this->functionsVestals()->vestalAfterNotes($placeStructure);
-                $responses[$response->classAttr()] = $response;
-            } else if ('vestalMapCoordinates' == $method) {
-                $response = $this->functionsVestals()->vestalMapCoordinates($placeStructure);
-                $responses[$response->classAttr()] = $response;
-            } else {
-                error_log("unexpected method:".$method);
-            }
-        }
-    
-        ob_start();
-        //array_values required for sequential numeric indexes, otherwise we end up with json object
-        echo json_encode(array_values($responses));
-        return response(ob_get_clean());
-    }
-  
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    //functions called from custom view 'tab'
-
-    public function getOutputBeforeTab(Individual $person) {
-        $tree = $person->tree();
-        $a1 = IndividualFactsTabExtenderUtils::accessibleModules($this, $tree, Auth::user())
-                ->map(function (IndividualFactsTabExtenderInterface $module) use ($tree) {
-                  return $module->hFactsTabRequiresModalVesta($tree);
-                })
-                ->toArray();
-    
-        $gve1 = GenericViewElement::createEmpty();
-        if (!empty($a1)) {
-            $script = implode($a1);
-            $html = view(VestaUtils::vestaViewsNamespace() . '::modals/ajax-modal-vesta', [
-                    'ajax' => true, //tab is loaded via ajax!
-                    'select2Initializers' => [$script]
-            ]);
-    
-            $gve1 = GenericViewElement::create($html);
-        }        
-    
-        $a2 = IndividualFactsTabExtenderUtils::accessibleModules($this, $tree, Auth::user())
-            ->map(function (IndividualFactsTabExtenderInterface $module) use ($person) {
-              return $module->hFactsTabGetOutputBeforeTab($person);
-            })
-            ->toArray();
-
-        return GenericViewElement::implode([$gve1, GenericViewElement::implode($a2)]);
-    }
-
-    public function getOutputAfterTab(Individual $person) {
-        $a = IndividualFactsTabExtenderUtils::accessibleModules($this, $person->tree(), Auth::user())
-            ->map(function (IndividualFactsTabExtenderInterface $module) use ($person) {
-              return $module->hFactsTabGetOutputAfterTab($person);
-            })
-            ->toArray();
-
-        return GenericViewElement::implode($a);
-    }
-  
-    public function getOutputInDescriptionBox(Individual $person) {
-        return GenericViewElement::implode(IndividualFactsTabExtenderUtils::accessibleModules($this, $person->tree(), Auth::user())
-                            ->map(function (IndividualFactsTabExtenderInterface $module) use ($person) {
-                              return $module->hFactsTabGetOutputInDBox($person);
-                            })
-                            ->toArray());
-    }
-
-    public function getOutputAfterDescriptionBox(Individual $person) {
-        return GenericViewElement::implode(IndividualFactsTabExtenderUtils::accessibleModules($this, $person->tree(), Auth::user())
-                            ->map(function (IndividualFactsTabExtenderInterface $module) use ($person) {
-                              return $module->hFactsTabGetOutputAfterDBox($person);
-                            })
-                            ->toArray());
-    }
-  
-    public function functionsVestals():  FunctionsVestals {  
-        return new FunctionsVestals(
-                $this,
-                $this->vestalsActionUrl(),
-                $this->useVestals());
-    }
-  
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    //functions called from custom view 'fact'
-  
-    public function additionalStyles(Fact $fact): array {
-    
-        $styles = [];
-
-        $additions = IndividualFactsTabExtenderUtils::accessibleModules($this, $fact->record()->tree(), Auth::user())
-                ->map(function (IndividualFactsTabExtenderInterface $module) {
-                  return $module->hFactsTabGetStyleadds();
-                })
-                ->toArray();
-
-        foreach ($additions as $a) {
-            foreach ($a as $id => $cssClass) {
-                if ($fact->id() === $id) {
-                    $styles[] = trim($cssClass);
-                }
-            }
-        }
-        return $styles;
-    }
-  
-    public function gveAdditionalEditControls(Fact $fact): GenericViewElement {
-        $additions = IndividualFactsTabExtenderUtils::accessibleModules($this, $fact->record()->tree(), Auth::user())
-            ->map(function (IndividualFactsTabExtenderInterface $module) use ($fact) {
-              return $module->hFactsTabGetAdditionalEditControls($fact);
-            })
-            ->toArray();
-            
-        return GenericViewElement::implode($additions);
-    }
-  
-    public function gveLabelForAsso(
-        string $label,
-        Fact $fact,
-        Individual $record): GenericViewElement {
-    
-        $main = '';
-        $script = '';
-
-        $parent = $fact->record();
-        [, $tag] = explode(':', $fact->tag());
-
-        $label_persons = array();
-        if ($parent instanceof Family) {
-            // Family event
-            //we want husband + wife
-            //(even if only one of them may be 'close relative')
-            $label_persons = $parent->spouses();
-        } else {
-            $label_persons[] = $parent;
-        }
-
-        $rela = null;
-        $inverted = null;
-        $label2 = null;
-
-        // Is there a "RELA" tag (code adjusted from elsewhere - note though that strictly according to the Gedcom spec, RELA is mandatory!)
-        //(note: this requires adjustment in IndividualFactsTabModule*, where this 'virtual' fact is created)
-        if (preg_match('/\n[23] RELA (.+)/', $fact->gedcom(), $rmatch)) {
-            $rela = $rmatch[1];
-        }
-        
-        if ($parent instanceof Family) {
-            //skip
-        } else {
-            if ($rela !== null) {
-                // Use the supplied relationship - inverted - as a label
-                $inverted = GedcomCodeRela_Ext::invert($rela);
-                if ($inverted !== null) {
-                    $label2 = GedcomCodeRela_Ext::getValue($inverted, $parent);
-                } else {
-                    //cannot invert: skip
-                    //$label2 = 'non-inversible';
-                }
-            } else {
-                //skip
-            }
-        }
-
-        //handle common cases with explicit translations
-        $finalLabel = null;
-        switch ($tag) {
-            case 'MARR':
-                $finalLabel = GedcomCodeRela_Ext::getValueOrNullForMARR($rela, $parent);
-                break;
-            case 'CHR':
-                if ($inverted !== null) {
-                  $finalLabel = GedcomCodeRela_Ext::getValueOrNullForCHR($inverted, $parent);
-                }
-                break;
-            case 'BAPM':
-                if ($inverted !== null) {
-                  $finalLabel = GedcomCodeRela_Ext::getValueOrNullForBAPM($inverted, $parent);
-                }
-                break;
-            default:
-                break;
-        }
-
-        if ($finalLabel) {
-            $main = $finalLabel;
-        } else {
-            $main = $label;
-            if ($label2) {
-                $main .= ": " . $label2;
-            } else {
-                $main .= ": " . MoreI18N::xlate('Associate');
-            }
-        }
-
-        foreach ($label_persons as $label_person) {
-            $relationship_name = app(RelationshipService::class)->getCloseRelationshipName($record, $label_person);
-            if ($relationship_name === '') {
-                //RC adjusted
-                $relationship_name = MoreI18N::xlate('No relationship found');
-            }
-
-            //[RC] ADJUSTED (this part wouldn't be in main webtrees)
-            $prefix = '(';
-            $suffix = ')';
-            if ($parent instanceof Family) {
-                // For family ASSO records (e.g. MARR), identify the spouse with a sex icon
-                $sex = '<small>' . view('icons/sex', ['sex' => $label_person->sex()]) . '</small>';
-                $suffix = $sex . ')';
-            }
-      
-            $val = $this->getOutputForRelationship(
-                $fact, 
-                $label_person, 
-                $record, 
-                $prefix, 
-                $relationship_name, 
-                $suffix, 
-                true);
-      
-            if ($val != null) {
-                $main .= "<br/>";
-                $main .= $val->getMain();
-                $script .= $val->getScript();
-            }
-        }
-    
-        return new GenericViewElement($main, $script);
-    }
-  
-    public function getOutputForRelationship(
-        Fact $event,
-        Individual $person,
-        Individual $associate,
-        $relationship_name_prefix,
-        $relationship_name,
-        $relationship_name_suffix,
-        $inverse): GenericViewElement {
-
-        $outs = IndividualFactsTabExtenderUtils::accessibleModules($this, $person->tree(), Auth::user())
-            ->map(function (IndividualFactsTabExtenderInterface $module) use ($event, $person, $associate, $relationship_name_prefix, $relationship_name, $relationship_name_suffix, $inverse) {
-              return $module->hFactsTabGetOutputForAssoRel($event, $person, $associate, $relationship_name_prefix, $relationship_name, $relationship_name_suffix, $inverse);
-            })
-            ->toArray();
-
-        foreach ($outs as $out) {
-            if ($out == null) {
-                //first return wins
-                return null; //do not proceed
-            }
-            if (($out->getMain() !== '') || ($out->getScript() !== '')) {
-                //first return wins
-                return $out;
-            }
-        }
-
-        //nothing hooked or only empty string(s) returned: fallback!
-        return $this->getOutputForRelationshipFallback(
-                    $event,
-                    $person,
-                    $associate,
-                    $relationship_name_prefix,
-                    $relationship_name,
-                    $relationship_name_suffix,
-                    $inverse);
-    }
-  
-    protected function getOutputForRelationshipFallback(
-        Fact $event,
-        Individual $person,
-        Individual $associate,
-        $relationship_name_prefix,
-        $relationship_name,
-        $relationship_name_suffix,
-        $inverse): GenericViewElement {
-
-        //TODO use $inverse here?
-
-        $main = "";
-
-        $module = app(ModuleService::class)->findByComponent(ModuleChartInterface::class, $person->tree(), Auth::user())->first(static function (ModuleInterface $module) {
-            return $module instanceof RelationshipsChartModule;
-        });
-
-        if ($module instanceof RelationshipsChartModule) {
-            $main = '<a href="' . $module->chartUrl($associate, ['xref2' => $person->xref()]) . '" rel="nofollow">' . $relationship_name_prefix . $relationship_name . $relationship_name_suffix . '</a>';
-        }
-
-        //$main = '<a href="' . e(route('relationships', ['xref1' => $associate->xref(), 'xref2' => $person->xref(), 'ged' => $person->tree()->name()])) . '" rel="nofollow">' . $relationship_name_prefix . $relationship_name . $relationship_name_suffix . '</a>';
-
-        //use the relationship name even if no chart is configured
-        //(note: webtrees doesn't do this in fact-association-structure view)
-        $main = $relationship_name_prefix . $relationship_name . $relationship_name_suffix;
-        return new GenericViewElement($main, '');
-    }
-  
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////
     //functions called from custom view 'fact-place', and internally
 
     public function functionsFactPlace():  FunctionsFactPlace {  
-        return new FunctionsFactPlace(
-                  $this);
+        return new FunctionsFactPlace($this);
     }
   
 }

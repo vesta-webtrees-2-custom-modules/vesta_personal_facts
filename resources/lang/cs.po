@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-06 21:13+0200\n"
+"POT-Creation-Date: 2022-04-18 21:21+0200\n"
 "PO-Revision-Date: 2021-06-08 20:33+0000\n"
 "Last-Translator: Josef Prause <josef.prause@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/cs/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Weblate 4.7-dev\n"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:172
+#: IndividualFactsTabModuleTrait.php:197
 #, php-format
 msgid "%1$s (historic maps)"
 msgstr "%1$s (historické mapy)"
@@ -29,21 +29,29 @@ msgid "&lt;select&gt;"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:194
+#: IndividualFactsTabModuleTrait.php:219
 msgid "Aerial Base Map"
 msgstr "Letecká mapa"
 
-#: IndividualFactsTabModuleTrait.php:29
+#: IndividualFactsTabModuleTrait.php:32 IndividualFactsTabModuleTrait.php:52
+msgid "Also extends facts and events on the family page."
+msgstr ""
+
+#: IndividualFactsTabModuleTrait.php:33 IndividualFactsTabModuleTrait.php:53
+msgid "Also provides additional map links."
+msgstr ""
+
+#: IndividualFactsTabModuleTrait.php:37
 msgid "Also replaces the original 'Extra information' module."
 msgstr "Taktéž nahrazuje původní modul 'Dodatečné údaje'."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:38
+#: IndividualFactsTabModuleTrait.php:48
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr "Rozšířená záložka 'Fakta a události' s háčky pro ostatní moduly."
 
-#: FunctionsFactPlace.php:155 FunctionsPrintWithHooks_20.php:324
-#: IndividualFactsTabModuleTrait.php:170
+#: FunctionsFactPlace.php:145 FunctionsPrintWithHooks_20.php:324
+#: IndividualFactsTabModuleTrait.php:195
 msgid "Arcanum Maps"
 msgstr "Arcanum Maps"
 
@@ -61,7 +69,7 @@ msgctxt "MALE"
 msgid "Associate at a marriage"
 msgstr "Společník na svatbě"
 
-#: IndividualFactsTabModuleExtended_20.php:245
+#: IndividualFactsTabModuleExtended_20.php:246
 msgid "Associated events"
 msgstr ""
 
@@ -80,7 +88,7 @@ msgid "Baptism of a godson"
 msgstr "Křest kmotřence"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:221
+#: IndividualFactsTabModuleTrait.php:246
 #, php-format
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr "Base64 kódované datové URI pro ikonu odkazu. Převeďte ikonu na datové URI např. pomocí %1$s. Výsledek by měl začínat něčím jako %2$s. Dobrým zdrojem obrázku ikony je obvykle obrázek faviconu poskytovatele mapy, jako např. %3$s. Zobrazí se ve správné velikosti."
@@ -90,8 +98,8 @@ msgid "Best man at a marriage"
 msgstr "Svědek ženicha"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:82 FunctionsPrintWithHooks_20.php:253
-#: IndividualFactsTabModuleTrait.php:126
+#: FunctionsFactPlace.php:69 FunctionsPrintWithHooks_20.php:253
+#: IndividualFactsTabModuleTrait.php:151
 msgid "Bing Maps"
 msgstr "Mapy Bing"
 
@@ -114,8 +122,8 @@ msgid "Christening of a godson"
 msgstr "Křest kmotřence"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:99 FunctionsPrintWithHooks_20.php:270
-#: IndividualFactsTabModuleTrait.php:203
+#: FunctionsFactPlace.php:88 FunctionsPrintWithHooks_20.php:270
+#: IndividualFactsTabModuleTrait.php:228
 msgid "Custom Map Provider"
 msgstr "Uživatelem definovaný poskytovatel mapy"
 
@@ -128,11 +136,11 @@ msgid "Custom fact"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:101
+#: IndividualFactsTabModuleTrait.php:126
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Zobrazit ikonu s tooltipem naznačujícím pramen mapových odkazů. Toto je zamýšleno hlavně pro debugging."
 
-#: FunctionsFactPlace.php:157 FunctionsPrintWithHooks_20.php:326
+#: FunctionsFactPlace.php:147 FunctionsPrintWithHooks_20.php:326
 #, php-format
 msgid "Europe in the XIX. century | %1$s"
 msgstr "Evropa v XIX. století | %1$s"
@@ -142,173 +150,188 @@ msgid "Fact or event"
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:234
+#: IndividualFactsTabModuleTrait.php:259
 msgid "Facts and Events List"
 msgstr "Seznam faktů a událostí"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:266
-#: IndividualFactsTabModuleExtended_20.php:346
+#: IndividualFactsTabModuleExtended.php:276
+#: IndividualFactsTabModuleExtended_20.php:347
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Poskytovatelé UI elementů pro záložku Fakta a události"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:71 FunctionsPrintWithHooks_20.php:242
-#: IndividualFactsTabModuleTrait.php:106
+#: FunctionsFactPlace.php:57 FunctionsPrintWithHooks_20.php:242
+#: IndividualFactsTabModuleTrait.php:131
 msgid "Google Maps"
 msgstr "Mapy Google"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:90
+#: IndividualFactsTabModuleTrait.php:110
 msgid "Hide coordinates, show map links after place name"
 msgstr "Skrýt souřadnice, zobrazit odkazy na mapy za názvem místa"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:73
+#: IndividualFactsTabModuleTrait.php:92
 msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
 msgstr "Je-li zvolena tato možnost, jsou dodatečná fakta a události spojené s osobou společníka omezena na následující fakta a události."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:91
+#: IndividualFactsTabModuleTrait.php:111
 msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
 msgstr "V původní záložce jsou zobrazeny souřadnice (včetně odkazů na mapy). To vede k přeplnění zobrazení místa, zvláště když se zapojí další moduly poskytující souřadnice."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:113 IndividualFactsTabModuleTrait.php:133
-#: IndividualFactsTabModuleTrait.php:153
+#: IndividualFactsTabModuleTrait.php:138 IndividualFactsTabModuleTrait.php:158
+#: IndividualFactsTabModuleTrait.php:178
 msgid "Include 'TM' in tooltip"
 msgstr "V tooltipu zahrnout 'TM'"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:159
+#: IndividualFactsTabModuleTrait.php:184
 msgid "Include a marker in the linked map."
 msgstr "Zobrazit poziční značku na odkazované mapě."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:158
+#: IndividualFactsTabModuleTrait.php:183
 msgid "Include marker"
 msgstr "Zobrazit poziční značku"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:39
+#: IndividualFactsTabModuleTrait.php:49
 msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr "Zamýšlen jako náhrada za původní modul 'Fakta a události'."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:88
+#: IndividualFactsTabModuleTrait.php:107
 msgid "Latitude/Longitude"
 msgstr "Zeměpisná šířka/délka"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:220
+#: IndividualFactsTabModuleTrait.php:245
 msgid "Link icon as data URI"
 msgstr "Ikona odkazu jako datové URI"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:270
-#: IndividualFactsTabModuleExtended_20.php:350
+#: IndividualFactsTabModuleTrait.php:268
+msgid "Map links are also configurable via separate modules now."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleExtended.php:280
+#: IndividualFactsTabModuleExtended_20.php:351
 msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
 msgstr "Moduly v tomto seznamu mohou poskytovat přídavné údaje o faktech a událostech (zobrazené v nastaveném pořadí)."
 
 #. I18N: Module Configuration: Name of a custom map provider
-#: IndividualFactsTabModuleTrait.php:205
+#: IndividualFactsTabModuleTrait.php:230
 msgid "Name"
 msgstr "Jméno"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:193
+#: IndividualFactsTabModuleTrait.php:218
 msgid "OSM Base Map"
 msgstr "Mapa OSM"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:72
+#: IndividualFactsTabModuleTrait.php:91
 msgid "Only show specific facts and events"
 msgstr "Zobrazit jen určitá fakta a události"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:95
+#: IndividualFactsTabModuleTrait.php:120
 msgid "Open links in new browser tab"
 msgstr "Odkazy otevírat v nové záložce prohlížeče"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:88 FunctionsPrintWithHooks_20.php:259
-#: IndividualFactsTabModuleTrait.php:146
+#: FunctionsFactPlace.php:76 FunctionsPrintWithHooks_20.php:259
+#: IndividualFactsTabModuleTrait.php:171
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:238
+#: IndividualFactsTabModuleTrait.php:263
 msgid "Place Settings"
 msgstr "Nastavení místa"
 
-#: IndividualFactsTabModuleTrait.php:27
+#: IndividualFactsTabModuleTrait.php:28
 msgid "Replacement for the original 'Facts and events' module."
 msgstr "Náhrada za původní modul 'Fakta a události'."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:100
+#: IndividualFactsTabModuleTrait.php:125
 msgid "Show additional info for map links"
 msgstr "Zobrazit přídavné informace k odkazům na mapy"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:186
+#: IndividualFactsTabModuleTrait.php:211
 msgid "Show linked map with additional options"
 msgstr "Zobrazovat odkazovanou mapu s dalšími možnostmi"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:128
+#: IndividualFactsTabModuleTrait.php:153
 msgid "Show links to Bing Maps"
 msgstr "Zobrazovat odkaz na Bing Maps"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:108
+#: IndividualFactsTabModuleTrait.php:133
 msgid "Show links to Google Maps"
 msgstr "Zobrazovat odkaz na Google Maps"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:148
+#: IndividualFactsTabModuleTrait.php:173
 msgid "Show links to OpenStreetMap"
 msgstr "Zobrazovat odkaz na OpenStreetMap"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:174
+#: IndividualFactsTabModuleTrait.php:199
 msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
 msgstr "Zobrazit odkazy na historickou mapu Evropy v XIX. století, nebo Spojených států amerických (1880 - 1926), pokud možno"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:40
+#: IndividualFactsTabModuleTrait.php:57
 msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar."
 msgstr "Podporuje naetsndardní GEDCOM tag _FSFTID (FamilySearch id) v záložce a postranním panelu."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:175
+#: IndividualFactsTabModuleTrait.php:269
+msgid "The following options may be used alternatively or additionally."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:200
 msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
 msgstr "Odkaz se nezobrazí pro místa ležící mimo hranice Evropy, případně USA."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:114 IndividualFactsTabModuleTrait.php:134
-#: IndividualFactsTabModuleTrait.php:154
+#: IndividualFactsTabModuleTrait.php:139 IndividualFactsTabModuleTrait.php:159
+#: IndividualFactsTabModuleTrait.php:179
 msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
 msgstr "Na původní záložce byl znak obchodní značky (trade mark) ‒ ponechte jej, pokud chcete nebo jste k tomu právně zavázáni."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:213
+#: IndividualFactsTabModuleTrait.php:238
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
 msgstr "URI pro odkazy na mapu se zástupnými symboly (%1$s a %2$s) pro souřadnice. Úroveň přiblížení by měla být součástí URI. Příklad: %3$s"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:212
+#: IndividualFactsTabModuleTrait.php:270
+msgid "They are used wherever facts are displayed, i.e. also outside this module."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:237
 msgid "URI template"
 msgstr "Šablona URI"
 
-#: FunctionsFactPlace.php:161 FunctionsPrintWithHooks_20.php:330
+#: FunctionsFactPlace.php:151 FunctionsPrintWithHooks_20.php:330
 #, php-format
 msgid "United States of America (1880-1926) | %1$s"
 msgstr "Spojené státy americké (1880-1926) | %1$s"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:187
+#: IndividualFactsTabModuleTrait.php:212
 #, php-format
 msgid "When checked, links to the main %1$s page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
 msgstr "Je-li zvoleno, odkazuje na hlavní mapu %1$s, kde je možno přepínat mezi různými historickými hladinami dostupnými pro danou polohu, a stínovat z a do moderní mapy, což je možno konfigurovat zde:"
@@ -328,13 +351,13 @@ msgid "Witness at a marriage"
 msgstr "Svědek na svatbě"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:206
+#: IndividualFactsTabModuleTrait.php:231
 msgid "You can also configure a custom map provider. Enter its name here."
 msgstr "Můžete také konfigurovat vlastního poskytovatele mapy. Sem zadejte jeho jméno."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:118 IndividualFactsTabModuleTrait.php:138
-#: IndividualFactsTabModuleTrait.php:163 IndividualFactsTabModuleTrait.php:179
+#: IndividualFactsTabModuleTrait.php:143 IndividualFactsTabModuleTrait.php:163
+#: IndividualFactsTabModuleTrait.php:188 IndividualFactsTabModuleTrait.php:204
 msgid "Zoom level of linked map"
 msgstr "Úroveň zvětšení odkazované mapy"
 

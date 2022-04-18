@@ -1,0 +1,155 @@
+<?php
+
+use Cissee\Webtrees\Module\PersonalFacts\DefaultAssociateFactUtils;
+use Cissee\Webtrees\Module\PersonalFacts\IndividualFactsTabModuleExtended;
+use Cissee\WebtreesExt\Contracts\FactListUtils;
+use Fisharebest\Webtrees\Auth;
+use Fisharebest\Webtrees\Fact;
+use Fisharebest\Webtrees\Family;
+use Fisharebest\Webtrees\I18N;
+use Fisharebest\Webtrees\View;
+use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
+use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderUtils;
+use Vesta\VestaUtils;
+
+/**
+ * @var bool                 $can_upload_media
+ * @var Collection<int,Fact> $clipboard_facts
+ * @var Collection<int,Fact> $facts
+ * @var Family               $record
+ */
+
+$module = app(IndividualFactsTabModuleExtended::class);
+
+$additionalFacts = array();
+$ret = IndividualFactsTabExtenderUtils::accessibleModules($module, $record->tree(), Auth::user())
+    ->map(function (IndividualFactsTabExtenderInterface $module) use ($record) {
+      return $module->hFactsTabGetAdditionalFacts($record);
+    })
+    ->toArray();
+
+foreach ($ret as $r) {
+    foreach ($r as $rr) {
+        $additionalFacts[] = $rr;
+    }
+}
+
+//[RC] ADDED
+$facts = $facts->merge($additionalFacts);
+$facts = Fact::sortFacts($facts);
+        
+?>
+
+<?php
+//[RC] PATCHED
+$outputBeforeTab = FactListUtils::getOutputBeforeTab($module, $record, false);
+echo $outputBeforeTab->getMain();
+View::push('javascript');
+echo $outputBeforeTab->getScript();
+View::endpush();
+?>
+
+<?= view('family-page-pending', ['record' => $record]) ?>
+
+<div class="d-flex mb-4">
+    <h2 class="wt-page-title mx-auto">
+        <?= $record->fullName() ?>
+    </h2>
+    <?php if ($record->canEdit()) : ?>
+        <?= view('family-page-menu', ['can_upload_media' => $can_upload_media, 'clipboard_facts' => $clipboard_facts, 'record' => $record]) ?>
+    <?php endif ?>
+</div>
+
+<div class="wt-page-content">
+    <div class="wt-family-members d-flex">
+        <?= view('family-page-children', ['family' => $record]) ?>
+        <?= view('family-page-parents', ['family' => $record]) ?>
+    </div>
+
+    <h3 class="mt-4"><?= I18N::translate('Facts and events') ?></h3>
+    <table class="table wt-facts-table" style="table-layout: fixed">
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <?php
+                    //[RC] PATCHED
+                    $outputInDescriptionbox = FactListUtils::getOutputInDescriptionbox($module, $record);
+                    echo $outputInDescriptionbox->getMain();
+                    View::push('javascript');
+                    echo $outputInDescriptionbox->getScript();
+                    View::endpush();
+                    ?>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table wt-facts-table">
+        <?php if ($facts->isEmpty()) : ?>
+            <tr>
+                <td colspan="2">
+                    <?= I18N::translate('No facts exist for this family.') ?>
+                </td>
+            </tr>
+        <?php else : ?>
+            <?php foreach ($facts as $fact) : ?>
+                <?= view(VestaUtils::vestaViewsNamespace() . '::fact', [                    
+                    'fact'                   => $fact, 
+                    'record'                 => $record, 
+                    'module'                 => $module,
+                    'useVestals'             => $module->useVestals(),
+                    'hideCoordinates'        => boolval($module->getPreference('LINKS_AFTER_PLAC', '0')),
+                    'associateFactUtils'     => new DefaultAssociateFactUtils(),
+                    'styles'                 => [], //no additional styles
+                    'predecessors'           => [], //not used here
+                    'relToPredecessorSuffix' => '', //not used here
+                    ]) ?>
+            <?php endforeach ?>
+        <?php endif ?>
+
+        <?php if ($record->canEdit()) : ?>
+            <?= view('fact-add-new', ['record' => $record]) ?>
+        <?php endif ?>
+    </table>
+</div>
+
+<?php
+//[RC] PATCHED
+$outputAfterTab = FactListUtils::getOutputAfterTab($module, $record, false);
+echo $outputAfterTab->getMain();
+View::push('javascript');
+echo $outputAfterTab->getScript();
+View::endpush();
+?>
+
+<?php  
+    $requests = [];
+
+    if ($module->useVestals()) {
+        foreach ($facts as $fact) {
+            $requests = array_merge($requests, $module->functionsVestals()->vestalsForFactPlace($fact));
+        }        
+    }
+
+    $url = $module->functionsVestals()->vestalsActionUrl();
+?>
+    
+<?php if (sizeof($requests) > 0) : ?>
+    <?php View::push('javascript') ?>
+    <script>
+    //load via ajax
+    $.ajax({
+          url : "<?= $url ?>",
+          type: "POST",
+          data: JSON.stringify(<?= json_encode(array_values($requests)) ?>),
+          contentType: "application/json; charset=utf-8",
+          dataType   : "json",
+          success    : function(arr) {
+            for (i = 0; i < arr.length; i++) {
+              $("."+arr[i].classAttr).replaceWith(arr[i].html);
+            }
+          }
+    });
+    </script>
+    <?php View::endpush() ?>
+<?php endif ?>
