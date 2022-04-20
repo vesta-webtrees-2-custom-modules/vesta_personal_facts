@@ -3,9 +3,10 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2022-04-18 21:39+0200\n"
-"PO-Revision-Date: 2022-04-07 07:06+0000\n"
+"PO-Revision-Date: 2022-04-20 22:13+0000\n"
 "Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,11 +31,11 @@ msgstr "Luchtfotokaart"
 
 #: IndividualFactsTabModuleTrait.php:32 IndividualFactsTabModuleTrait.php:52
 msgid "Also extends facts and events on the family page."
-msgstr ""
+msgstr "Breidt ook feiten en gebeurtenissen uit op de gezinspagina."
 
 #: IndividualFactsTabModuleTrait.php:33 IndividualFactsTabModuleTrait.php:53
 msgid "Also provides additional map links."
-msgstr ""
+msgstr "Biedt ook extra kaartkoppelingen."
 
 #: IndividualFactsTabModuleTrait.php:37
 msgid "Also replaces the original 'Extra information' module."
@@ -211,6 +212,8 @@ msgstr "Koppelingspictogram als gegevens-URI"
 #: IndividualFactsTabModuleTrait.php:268
 msgid "Map links are also configurable via separate modules now."
 msgstr ""
+"Kaartkoppelingen kunnen nu ook via afzonderlijke modules worden "
+"geconfigureerd."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:280
@@ -292,6 +295,7 @@ msgstr "Ondersteunt het niet-standaard GEDCOM-label _FSFTID (FamilySearch-ID), i
 #: IndividualFactsTabModuleTrait.php:269
 msgid "The following options may be used alternatively or additionally."
 msgstr ""
+"De volgende opties kunnen als alternatief of als aanvulling worden gebruikt."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:200
@@ -314,6 +318,8 @@ msgstr "De URI voor kaartkoppelingen, met tijdelijke aanduidingen (%1$s en %2$s)
 #: IndividualFactsTabModuleTrait.php:270
 msgid "They are used wherever facts are displayed, i.e. also outside this module."
 msgstr ""
+"Zij worden overal gebruikt waar feiten worden weergegeven, ook buiten deze "
+"module."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:237
