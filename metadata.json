@@ -151,5 +151,10 @@
 		"from": "2.0.12",
 		"to": "2.1.0",
 		"changelog": ["All extensions supported on family page as well (webtrees 2.1 branch only)."]
+	},
+	{
+		"version": "2.1.0.0.0",
+		"from": "2.0.12",
+		"to": "2.1.1"
 	}
 ]
