@@ -3,15 +3,16 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2022-04-18 21:39+0200\n"
-"PO-Revision-Date: 2022-04-15 19:08+0000\n"
-"Last-Translator: Bernd Schwendinger <b0ernie@gmx.net>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/de/>\n"
+"PO-Revision-Date: 2022-04-22 10:06+0000\n"
+"Last-Translator: mpwt <der@bauschaffen.de>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.12-dev\n"
+"X-Generator: Weblate 4.12.1-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:197
@@ -30,11 +31,11 @@ msgstr "Luftbild-Grundkarte"
 
 #: IndividualFactsTabModuleTrait.php:32 IndividualFactsTabModuleTrait.php:52
 msgid "Also extends facts and events on the family page."
-msgstr ""
+msgstr "Auch Tatsachen und Ereignisse auf der Familienseite erweitern."
 
 #: IndividualFactsTabModuleTrait.php:33 IndividualFactsTabModuleTrait.php:53
 msgid "Also provides additional map links."
-msgstr ""
+msgstr "Enthält auch zusätzliche Kartenlinks."
 
 #: IndividualFactsTabModuleTrait.php:37
 msgid "Also replaces the original 'Extra information' module."
@@ -210,7 +211,7 @@ msgstr "Link-Symbol als Daten-URI"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:268
 msgid "Map links are also configurable via separate modules now."
-msgstr ""
+msgstr "Kartenlinks sind auch über separate Module konfigurierbar."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:280
@@ -292,6 +293,7 @@ msgstr "Unterstützt des benutzerdefinierte Gedcom-Kennzeichen _FSFTID (FamilySe
 #: IndividualFactsTabModuleTrait.php:269
 msgid "The following options may be used alternatively or additionally."
 msgstr ""
+"Die folgenden Optionen können alternativ oder zusätzlich verwendet werden."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:200
@@ -314,6 +316,8 @@ msgstr "Die URI für Kartenlinks mit Platzhaltern (%1$s und %2$s) für Kartenkoo
 #: IndividualFactsTabModuleTrait.php:270
 msgid "They are used wherever facts are displayed, i.e. also outside this module."
 msgstr ""
+"Auch außerhalb dieses Module werden sie überall dort verwendet, wo Tatsachen "
+"angezeigt werden."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:237
