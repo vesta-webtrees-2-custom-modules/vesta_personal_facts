@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2022-04-18 21:39+0200\n"
-"PO-Revision-Date: 2022-04-29 13:09+0000\n"
+"PO-Revision-Date: 2022-05-13 10:18+0000\n"
 "Last-Translator: ro-la <lacoros@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/"
 "vesta-webtrees-custom-modules/vesta-facts-and-events/sk/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.12.1\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:197
@@ -27,7 +27,7 @@ msgstr "%1$s (historické mapy)"
 
 #: resources/views/edit/add-fact-row_20.phtml:36
 msgid "&lt;select&gt;"
-msgstr ""
+msgstr "&lt;vybrať&gt;"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:219
@@ -36,11 +36,11 @@ msgstr "HERE mapa (letecká)"
 
 #: IndividualFactsTabModuleTrait.php:32 IndividualFactsTabModuleTrait.php:52
 msgid "Also extends facts and events on the family page."
-msgstr ""
+msgstr "Rozšíriť fakty a udalosti aj na stránke rodiny."
 
 #: IndividualFactsTabModuleTrait.php:33 IndividualFactsTabModuleTrait.php:53
 msgid "Also provides additional map links."
-msgstr ""
+msgstr "Poskytnúť aj dodatočné odkazy na mapy."
 
 #: IndividualFactsTabModuleTrait.php:37
 msgid "Also replaces the original 'Extra information' module."
@@ -72,7 +72,7 @@ msgstr "Pridružená osoba pri sobáši"
 
 #: IndividualFactsTabModuleExtended_20.php:246
 msgid "Associated events"
-msgstr ""
+msgstr "Pripojené udalosti"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:68
 msgid "Baptism of a godchild"
@@ -130,11 +130,11 @@ msgstr "Užívateľom definovaný poskytovateľ mapy"
 
 #: resources/views/edit/add-fact-row_20.phtml:46
 msgid "Custom event"
-msgstr ""
+msgstr "Užívateľsky definovaná udalosť"
 
 #: resources/views/edit/add-fact-row_20.phtml:43
 msgid "Custom fact"
-msgstr ""
+msgstr "Užívateľsky definovaný fakt"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:126
@@ -148,7 +148,7 @@ msgstr "Európa v XIX. storočí | %1$s"
 
 #: resources/views/edit/add-fact-row_20.phtml:25
 msgid "Fact or event"
-msgstr ""
+msgstr "Fakt alebo udalosť"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:259
@@ -216,7 +216,7 @@ msgstr "Ikona odkazu ako dátové URI"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:268
 msgid "Map links are also configurable via separate modules now."
-msgstr ""
+msgstr "Odkazy na mapy sa teraz dajú konfigurovať v samostatnom module."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:280
@@ -297,7 +297,7 @@ msgstr "Podporuje neštandardný GEDCOM tag _FSFTID (FamilySearch id) v záložk
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:269
 msgid "The following options may be used alternatively or additionally."
-msgstr ""
+msgstr "Nasledovné možnosti sa môžu používať dodatočne, alebo alternatívne."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:200
@@ -319,7 +319,7 @@ msgstr "URI pre odkaz na mapu so zástupným i symbolmi (%1$s a%2$s) pre súradn
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:270
 msgid "They are used wherever facts are displayed, i.e. also outside this module."
-msgstr ""
+msgstr "Použijú sa vždy, keď sa zobrazia fakty, t.j. aj mimo tohoto modulu."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:237
@@ -365,7 +365,7 @@ msgstr "Zoom odkazovanej mapy"
 #. I18N: A button label.
 #: resources/views/edit/add-fact-row_20.phtml:52
 msgid "add"
-msgstr ""
+msgstr "pridať"
 
 #~ msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
 #~ msgstr "Aktuálne udalosti blízkych príbuzných a fakty a udalosti, pri ktorých je zobrazovaná osoba uvedená ako pridružená osoba."
