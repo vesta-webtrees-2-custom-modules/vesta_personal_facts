@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-18 21:39+0200\n"
+"POT-Creation-Date: 2022-05-15 08:05+0200\n"
 "PO-Revision-Date: 2021-07-24 11:35+0200\n"
 "Last-Translator: ngohuuthuanfc9865b89dde4baf <ngohuuthuan@gmail.com>\n"
 "Language-Team: Vietnamese <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/vi/>\n"
@@ -217,12 +217,6 @@ msgstr "Biểu tượng liên kết dưới dạng URI dữ liệu"
 msgid "Map links are also configurable via separate modules now."
 msgstr ""
 
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:280
-#: IndividualFactsTabModuleExtended_20.php:351
-msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
-msgstr "Các mô-đun được liệt kê ở đây có thể cung cấp dữ liệu bổ sung cho các dữ kiện và sự kiện (được hiển thị theo thứ tự đã định cấu hình)."
-
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:230
 msgid "Name"
@@ -380,6 +374,9 @@ msgstr ""
 
 #~ msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
 #~ msgstr "Trong tab gốc, hai loại dữ kiện và sự kiện bổ sung được hiển thị khi 'Sự kiện của họ hàng gần gũi' được chọn trên tab:"
+
+#~ msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
+#~ msgstr "Các mô-đun được liệt kê ở đây có thể cung cấp dữ liệu bổ sung cho các dữ kiện và sự kiện (được hiển thị theo thứ tự đã định cấu hình)."
 
 #~ msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
 #~ msgstr "Loại thứ hai không thực sự bị hạn chế đối với những người thân ruột thịt, và do đó, có thể ít gây nhầm lẫn hơn khi cung cấp một hộp kiểm chuyển đổi riêng cho họ."

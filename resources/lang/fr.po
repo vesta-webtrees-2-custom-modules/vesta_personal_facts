@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-18 21:39+0200\n"
+"POT-Creation-Date: 2022-05-15 08:05+0200\n"
 "PO-Revision-Date: 2022-04-12 11:07+0000\n"
 "Last-Translator: Vincent DENIS <vincent.denis06@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/fr/>\n"
@@ -212,12 +212,6 @@ msgstr "Icône de lien comme URI de données"
 msgid "Map links are also configurable via separate modules now."
 msgstr ""
 
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:280
-#: IndividualFactsTabModuleExtended_20.php:351
-msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
-msgstr "Les modules répertoriés ici peuvent fournir des données supplémentaires sur les faits et les événements (affichés dans l'ordre configuré)."
-
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:230
 msgid "Name"
@@ -375,6 +369,9 @@ msgstr "ajouter"
 
 #~ msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
 #~ msgstr "Dans l'onglet d'origine, deux types de faits et d'événements supplémentaires sont affichés lorsque \"Événements de parents proches\" est sélectionné dans l'onglet :"
+
+#~ msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
+#~ msgstr "Les modules répertoriés ici peuvent fournir des données supplémentaires sur les faits et les événements (affichés dans l'ordre configuré)."
 
 #~ msgid "OpenStreetMaps"
 #~ msgstr "OpenStreetMaps"

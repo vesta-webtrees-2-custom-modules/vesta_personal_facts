@@ -277,7 +277,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     }
   
     private function description2(): string {
-        return /* I18N: Module Configuration */I18N::translate('Modules listed here may provide additional data for facts and events (displayed in the configured order).');
+        return CommonI18N::factDataProvidersDescription();
     }
   
     //hook management - generalize?
@@ -318,7 +318,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
         return $controller->handle($request);
     }
 
-     protected function editConfigBeforeFaq() {
+    protected function editConfigBeforeFaq() {
         $modules1 = FunctionsPlaceUtils::modules($this, true);
 
         $url1 = route('module', [

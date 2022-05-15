@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-18 21:39+0200\n"
+"POT-Creation-Date: 2022-05-15 08:05+0200\n"
 "PO-Revision-Date: 2021-09-08 20:33+0000\n"
 "Last-Translator: Richard Cissée <ric@richard-cissee.de>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/nb_NO/>\n"
@@ -217,12 +217,6 @@ msgstr "Lenke-ikon som data-URI"
 msgid "Map links are also configurable via separate modules now."
 msgstr ""
 
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:280
-#: IndividualFactsTabModuleExtended_20.php:351
-msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
-msgstr "Moduler som er oppført her, kan gi ytterligere data for fakta og hendelser (vises i den konfigurerte rekkefølgen)."
-
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:230
 msgid "Name"
@@ -380,6 +374,9 @@ msgstr ""
 
 #~ msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
 #~ msgstr "I den opprinnelige kategorien vises to typer tilleggsfakta og hendelser når Hendelser med nære slektninger er valgt i kategorien:"
+
+#~ msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
+#~ msgstr "Moduler som er oppført her, kan gi ytterligere data for fakta og hendelser (vises i den konfigurerte rekkefølgen)."
 
 #~ msgid "OpenStreetMaps"
 #~ msgstr "OpenStreetMaps"

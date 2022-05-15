@@ -2,11 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-18 21:39+0200\n"
+"POT-Creation-Date: 2022-05-15 08:05+0200\n"
 "PO-Revision-Date: 2022-04-22 10:06+0000\n"
 "Last-Translator: mpwt <der@bauschaffen.de>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/"
-"vesta-webtrees-custom-modules/vesta-facts-and-events/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -213,12 +212,6 @@ msgstr "Link-Symbol als Daten-URI"
 msgid "Map links are also configurable via separate modules now."
 msgstr "Kartenlinks sind auch über separate Module konfigurierbar."
 
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:280
-#: IndividualFactsTabModuleExtended_20.php:351
-msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
-msgstr "Die hier aufgeführten Module können zusätzliche Daten für Tatsachen und Ereignisse bereitstellen (Anzeige in der konfigurierten Reihenfolge)."
-
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:230
 msgid "Name"
@@ -292,8 +285,7 @@ msgstr "Unterstützt des benutzerdefinierte Gedcom-Kennzeichen _FSFTID (FamilySe
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:269
 msgid "The following options may be used alternatively or additionally."
-msgstr ""
-"Die folgenden Optionen können alternativ oder zusätzlich verwendet werden."
+msgstr "Die folgenden Optionen können alternativ oder zusätzlich verwendet werden."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:200
@@ -315,9 +307,7 @@ msgstr "Die URI für Kartenlinks mit Platzhaltern (%1$s und %2$s) für Kartenkoo
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:270
 msgid "They are used wherever facts are displayed, i.e. also outside this module."
-msgstr ""
-"Auch außerhalb dieses Module werden sie überall dort verwendet, wo Tatsachen "
-"angezeigt werden."
+msgstr "Auch außerhalb dieses Module werden sie überall dort verwendet, wo Tatsachen angezeigt werden."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:237
@@ -379,6 +369,9 @@ msgstr "hinzufügen"
 
 #~ msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
 #~ msgstr "In der ursprünglichen Registerkarte werden zwei Arten von zusätzlichen Tatsachen und Ereignissen angezeigt, wenn \"Ereignisse naher Verwandter\" auf der Registerkarte ausgewählt ist:"
+
+#~ msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
+#~ msgstr "Die hier aufgeführten Module können zusätzliche Daten für Tatsachen und Ereignisse bereitstellen (Anzeige in der konfigurierten Reihenfolge)."
 
 #~ msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
 #~ msgstr "Letztere sind nicht wirklich auf nahe Verwandte beschränkt, und daher ist es vielleicht weniger verwirrend, ein separates Umschaltkästchen für sie anzubieten."

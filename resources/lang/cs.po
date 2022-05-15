@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-18 21:39+0200\n"
+"POT-Creation-Date: 2022-05-15 08:05+0200\n"
 "PO-Revision-Date: 2021-06-08 20:33+0000\n"
 "Last-Translator: Josef Prause <josef.prause@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/cs/>\n"
@@ -217,12 +217,6 @@ msgstr "Ikona odkazu jako datové URI"
 msgid "Map links are also configurable via separate modules now."
 msgstr ""
 
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:280
-#: IndividualFactsTabModuleExtended_20.php:351
-msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
-msgstr "Moduly v tomto seznamu mohou poskytovat přídavné údaje o faktech a událostech (zobrazené v nastaveném pořadí)."
-
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:230
 msgid "Name"
@@ -407,6 +401,9 @@ msgstr ""
 
 #~ msgid "Modules listed here are used (in the configured order) to determine map coordinates of places."
 #~ msgstr "Moduly v tomto seznamu slouží (v tom pořadí) k určení mapových souřadnic míst."
+
+#~ msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
+#~ msgstr "Moduly v tomto seznamu mohou poskytovat přídavné údaje o faktech a událostech (zobrazené v nastaveném pořadí)."
 
 #~ msgid "OpenStreetMaps"
 #~ msgstr "OpenStreetMaps"

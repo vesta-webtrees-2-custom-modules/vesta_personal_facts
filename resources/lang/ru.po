@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-18 21:39+0200\n"
+"POT-Creation-Date: 2022-05-15 08:05+0200\n"
 "PO-Revision-Date: 2022-04-11 05:47+0000\n"
 "Last-Translator: Олег <uolega@yandex.ru>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/ru/>\n"
@@ -216,12 +216,6 @@ msgstr "Значок ссылки как URI данных"
 #: IndividualFactsTabModuleTrait.php:268
 msgid "Map links are also configurable via separate modules now."
 msgstr ""
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:280
-#: IndividualFactsTabModuleExtended_20.php:351
-msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
-msgstr "Перечисленные здесь модули могут предоставлять дополнительные данные для фактов и событий (отображаются в настроенном порядке)."
 
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:230
@@ -526,6 +520,9 @@ msgstr "добавить"
 #~ msgctxt "MALE"
 #~ msgid "Lodger"
 #~ msgstr "Жилец"
+
+#~ msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
+#~ msgstr "Перечисленные здесь модули могут предоставлять дополнительные данные для фактов и событий (отображаются в настроенном порядке)."
 
 #~ msgid "Nanny"
 #~ msgstr "Няня"

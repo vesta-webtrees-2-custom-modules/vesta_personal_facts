@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-04-18 21:39+0200\n"
+"POT-Creation-Date: 2022-05-15 08:05+0200\n"
 "PO-Revision-Date: 2021-08-08 19:34+0000\n"
 "Last-Translator: z-yurets <zaharchenko.yurij@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/uk/>\n"
@@ -217,12 +217,6 @@ msgstr "Значок посилання як data URI"
 msgid "Map links are also configurable via separate modules now."
 msgstr ""
 
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:280
-#: IndividualFactsTabModuleExtended_20.php:351
-msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
-msgstr "Модулі, перераховані тут, можуть надавати додаткові дані про факти та події (відображаються у налаштованому порядку)."
-
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:230
 msgid "Name"
@@ -380,6 +374,9 @@ msgstr ""
 
 #~ msgid "In the original tab, two kinds of additional facts and events are displayed when 'Events of close relatives' is selected on the tab:"
 #~ msgstr "На початковій вкладці відображаються два типи додаткових фактів та подій, коли на вкладці вибрано \"Події найближчих родичів\":"
+
+#~ msgid "Modules listed here may provide additional data for facts and events (displayed in the configured order)."
+#~ msgstr "Модулі, перераховані тут, можуть надавати додаткові дані про факти та події (відображаються у налаштованому порядку)."
 
 #~ msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
 #~ msgstr "Останні фактично не обмежуються для найближчих родичів, і тому може бути менш заплутаним запропонувати окремий перемикач для них."

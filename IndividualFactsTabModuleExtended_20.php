@@ -348,7 +348,7 @@ class IndividualFactsTabModuleExtended_20 extends IndividualFactsTabModule_20 im
   }
   
   private function description2(): string {
-    return /* I18N: Module Configuration */I18N::translate('Modules listed here may provide additional data for facts and events (displayed in the configured order).');
+    return CommonI18N::factDataProvidersDescription();
   }
   
   //hook management - generalize?
