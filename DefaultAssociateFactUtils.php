@@ -11,6 +11,7 @@ use Fisharebest\Webtrees\Family;
 use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\Module\ModuleInterface;
 use Fisharebest\Webtrees\Services\RelationshipService;
+use Vesta\CommonI18N;
 use Vesta\Model\GenericViewElement;
 use function app;
 use function view;
@@ -101,7 +102,7 @@ class DefaultAssociateFactUtils implements AssociateFactUtils {
             $relationship_name = app(RelationshipService::class)->getCloseRelationshipName($record, $label_person);
             if ($relationship_name === '') {
                 //RC adjusted
-                $relationship_name = MoreI18N::xlate('No relationship found');
+                $relationship_name = CommonI18N::noRelationshipFound();
             }
 
             //[RC] ADJUSTED (this part wouldn't be in main webtrees)
