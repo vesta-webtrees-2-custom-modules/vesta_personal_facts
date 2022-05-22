@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-05-15 08:05+0200\n"
+"POT-Creation-Date: 2022-05-22 14:26+0200\n"
 "PO-Revision-Date: 2022-04-11 05:47+0000\n"
 "Last-Translator: Олег <uolega@yandex.ru>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/ru/>\n"
@@ -19,39 +19,30 @@ msgstr ""
 "X-Generator: Weblate 4.12-dev\n"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:197
+#: IndividualFactsTabModuleTrait.php:188
 #, php-format
 msgid "%1$s (historic maps)"
 msgstr "%1$s (исторические карты)"
 
-#: resources/views/edit/add-fact-row_20.phtml:36
-msgid "&lt;select&gt;"
-msgstr "&lt;выберите&gt;"
-
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:219
+#: IndividualFactsTabModuleTrait.php:210
 msgid "Aerial Base Map"
 msgstr "Аэрографическая базовая карта"
 
-#: IndividualFactsTabModuleTrait.php:32 IndividualFactsTabModuleTrait.php:52
+#: IndividualFactsTabModuleTrait.php:30 IndividualFactsTabModuleTrait.php:46
 msgid "Also extends facts and events on the family page."
 msgstr ""
 
-#: IndividualFactsTabModuleTrait.php:33 IndividualFactsTabModuleTrait.php:53
+#: IndividualFactsTabModuleTrait.php:31 IndividualFactsTabModuleTrait.php:47
 msgid "Also provides additional map links."
 msgstr ""
 
-#: IndividualFactsTabModuleTrait.php:37
-msgid "Also replaces the original 'Extra information' module."
-msgstr "Также заменяет исходный модуль «Дополнительная информация»."
-
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:48
+#: IndividualFactsTabModuleTrait.php:43
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr "Расширенная вкладка «Факты и события» с хуками для других пользовательских модулей."
 
-#: FunctionsFactPlace.php:145 FunctionsPrintWithHooks_20.php:324
-#: IndividualFactsTabModuleTrait.php:195
+#: FunctionsFactPlace.php:144 IndividualFactsTabModuleTrait.php:186
 msgid "Arcanum Maps"
 msgstr "Arcanum Maps"
 
@@ -69,10 +60,6 @@ msgctxt "MALE"
 msgid "Associate at a marriage"
 msgstr "Супруг"
 
-#: IndividualFactsTabModuleExtended_20.php:246
-msgid "Associated events"
-msgstr "Связанные события"
-
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:68
 msgid "Baptism of a godchild"
 msgstr "Крестник"
@@ -88,7 +75,7 @@ msgid "Baptism of a godson"
 msgstr "Крестный"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:246
+#: IndividualFactsTabModuleTrait.php:237
 #, php-format
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr "URI данных в кодировке Base64 для значка ссылки. Преобразуйте значок в URI данных, например через %1$s. Результат должен начинаться примерно с %2$s. Хорошим источником изображения значка обычно является изображение значка поставщика карты, например %3$s. Он будет отображаться с правильным размером."
@@ -98,8 +85,7 @@ msgid "Best man at a marriage"
 msgstr "Шафер на свадьбе"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:69 FunctionsPrintWithHooks_20.php:253
-#: IndividualFactsTabModuleTrait.php:151
+#: FunctionsFactPlace.php:68 IndividualFactsTabModuleTrait.php:142
 msgid "Bing Maps"
 msgstr "Карты Bing"
 
@@ -122,210 +108,189 @@ msgid "Christening of a godson"
 msgstr "Крещение крестника"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:88 FunctionsPrintWithHooks_20.php:270
-#: IndividualFactsTabModuleTrait.php:228
+#: FunctionsFactPlace.php:87 IndividualFactsTabModuleTrait.php:219
 msgid "Custom Map Provider"
 msgstr "Поставщик пользовательских карт"
 
-#: resources/views/edit/add-fact-row_20.phtml:46
-msgid "Custom event"
-msgstr "Пользовательское событие"
-
-#: resources/views/edit/add-fact-row_20.phtml:43
-msgid "Custom fact"
-msgstr "Пользовательский факт"
-
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:126
+#: IndividualFactsTabModuleTrait.php:117
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Отобразите значок с всплывающей подсказкой, указывающей на источник ссылок на карту. Это предназначено в основном для отладки."
 
-#: FunctionsFactPlace.php:147 FunctionsPrintWithHooks_20.php:326
+#: FunctionsFactPlace.php:146
 #, php-format
 msgid "Europe in the XIX. century | %1$s"
 msgstr "Европа в XIX в. век | %1$s"
 
-#: resources/views/edit/add-fact-row_20.phtml:25
-msgid "Fact or event"
-msgstr "Факт или событие"
-
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:259
+#: IndividualFactsTabModuleTrait.php:250
 msgid "Facts and Events List"
 msgstr "Список фактов и событий"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:276
-#: IndividualFactsTabModuleExtended_20.php:347
+#: IndividualFactsTabModuleExtended.php:278
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Вкладка \"Факты и события\" Поставщики элементов пользовательского интерфейса"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:57 FunctionsPrintWithHooks_20.php:242
-#: IndividualFactsTabModuleTrait.php:131
+#: FunctionsFactPlace.php:56 IndividualFactsTabModuleTrait.php:122
 msgid "Google Maps"
 msgstr "Карты Гугл"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:110
+#: IndividualFactsTabModuleTrait.php:101
 msgid "Hide coordinates, show map links after place name"
 msgstr "Скрыть координаты, показать ссылки на карту после названия места"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:92
+#: IndividualFactsTabModuleTrait.php:83
 msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
 msgstr "Если этот параметр отмечен, дополнительные факты и события, в которых данное лицо указано как ассоциированное лицо, ограничиваются следующими фактами и событиями."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:111
+#: IndividualFactsTabModuleTrait.php:102
 msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
 msgstr "В исходной вкладке отображаются координаты (со ссылками на карту). Это имеет тенденцию загромождать отображение места, в частности, если есть дополнительные модули, предоставляющие координаты."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:138 IndividualFactsTabModuleTrait.php:158
-#: IndividualFactsTabModuleTrait.php:178
+#: IndividualFactsTabModuleTrait.php:129 IndividualFactsTabModuleTrait.php:149
+#: IndividualFactsTabModuleTrait.php:169
 msgid "Include 'TM' in tooltip"
 msgstr "Включить TM во всплывающую подсказку"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:184
+#: IndividualFactsTabModuleTrait.php:175
 msgid "Include a marker in the linked map."
 msgstr "Добавьте маркер на связанную карту."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:183
+#: IndividualFactsTabModuleTrait.php:174
 msgid "Include marker"
 msgstr "Включить маркер"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:49
+#: IndividualFactsTabModuleTrait.php:44
 msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr "Предназначен для замены исходного модуля «Факты и события»."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:107
+#: IndividualFactsTabModuleTrait.php:98
 msgid "Latitude/Longitude"
 msgstr "Широта/Долгота"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:245
+#: IndividualFactsTabModuleTrait.php:236
 msgid "Link icon as data URI"
 msgstr "Значок ссылки как URI данных"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:268
+#: IndividualFactsTabModuleTrait.php:259
 msgid "Map links are also configurable via separate modules now."
 msgstr ""
 
 #. I18N: Module Configuration: Name of a custom map provider
-#: IndividualFactsTabModuleTrait.php:230
+#: IndividualFactsTabModuleTrait.php:221
 msgid "Name"
 msgstr "Имя"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:218
+#: IndividualFactsTabModuleTrait.php:209
 msgid "OSM Base Map"
 msgstr "Базовая карта ОСМ"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:91
+#: IndividualFactsTabModuleTrait.php:82
 msgid "Only show specific facts and events"
 msgstr "Показывать только конкретные факты и события"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:120
+#: IndividualFactsTabModuleTrait.php:111
 msgid "Open links in new browser tab"
 msgstr "Открытые ссылки в новой вкладке браузера"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:76 FunctionsPrintWithHooks_20.php:259
-#: IndividualFactsTabModuleTrait.php:171
+#: FunctionsFactPlace.php:75 IndividualFactsTabModuleTrait.php:162
 msgid "OpenStreetMap"
 msgstr "Открытые карты"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:263
+#: IndividualFactsTabModuleTrait.php:254
 msgid "Place Settings"
 msgstr "Настройки места"
 
-#: IndividualFactsTabModuleTrait.php:28
+#: IndividualFactsTabModuleTrait.php:27
 msgid "Replacement for the original 'Facts and events' module."
 msgstr "Замена оригинального модуля «Факты и события»."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:125
+#: IndividualFactsTabModuleTrait.php:116
 msgid "Show additional info for map links"
 msgstr "Показать дополнительную информацию для ссылок на карту"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:211
+#: IndividualFactsTabModuleTrait.php:202
 msgid "Show linked map with additional options"
 msgstr "Показать связанную карту с дополнительными опциями"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:153
+#: IndividualFactsTabModuleTrait.php:144
 msgid "Show links to Bing Maps"
 msgstr "Показать ссылки на Bing Maps"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:133
+#: IndividualFactsTabModuleTrait.php:124
 msgid "Show links to Google Maps"
 msgstr "Показать ссылки на Google Карты"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:173
+#: IndividualFactsTabModuleTrait.php:164
 msgid "Show links to OpenStreetMap"
 msgstr "Показать ссылки на OpenStreetMap"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:199
+#: IndividualFactsTabModuleTrait.php:190
 msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
 msgstr "Показать ссылки на историческую карту Европы в XIX. или Соединенных Штатов Америки (1880-1926), если это применимо"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:57
-msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar."
-msgstr "Поддерживает нестандартный тег Gedcom _FSFTID (FamilySearch id) на вкладке и на боковой панели."
-
-#. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:269
+#: IndividualFactsTabModuleTrait.php:260
 msgid "The following options may be used alternatively or additionally."
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:200
+#: IndividualFactsTabModuleTrait.php:191
 msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
 msgstr "Элемент ссылки не будет отображаться для местоположений за пределами соответствующих границ Европы и США."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:139 IndividualFactsTabModuleTrait.php:159
-#: IndividualFactsTabModuleTrait.php:179
+#: IndividualFactsTabModuleTrait.php:130 IndividualFactsTabModuleTrait.php:150
+#: IndividualFactsTabModuleTrait.php:170
 msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
 msgstr "На исходной вкладке был знак товарного знака - сохраните его, если хотите или если вы чувствуете себя обязанным по закону."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:238
+#: IndividualFactsTabModuleTrait.php:229
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
 msgstr "URI для ссылок на карту с заполнителями (%1$s и %2$s) для координат карты. Уровень масштабирования должен быть частью uri. Пример: %3$s"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:270
+#: IndividualFactsTabModuleTrait.php:261
 msgid "They are used wherever facts are displayed, i.e. also outside this module."
 msgstr ""
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:237
+#: IndividualFactsTabModuleTrait.php:228
 msgid "URI template"
 msgstr "Шаблон URI"
 
-#: FunctionsFactPlace.php:151 FunctionsPrintWithHooks_20.php:330
+#: FunctionsFactPlace.php:150
 #, php-format
 msgid "United States of America (1880-1926) | %1$s"
 msgstr "Соединенные Штаты Америки (1880-1926) | %1$s"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:212
+#: IndividualFactsTabModuleTrait.php:203
 #, php-format
 msgid "When checked, links to the main %1$s page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
 msgstr "Если флажок установлен, ссылка ведет на главную страницу %1$s, где можно переключаться между различными историческими слоями, доступными для соответствующего местоположения, и переходить к современной карте, которая может быть дополнительно настроена здесь:"
@@ -345,23 +310,27 @@ msgid "Witness at a marriage"
 msgstr "Свидетель на бракосочетании"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:231
+#: IndividualFactsTabModuleTrait.php:222
 msgid "You can also configure a custom map provider. Enter its name here."
 msgstr "Вы также можете настроить собственный поставщик карт. Введите его имя здесь."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:143 IndividualFactsTabModuleTrait.php:163
-#: IndividualFactsTabModuleTrait.php:188 IndividualFactsTabModuleTrait.php:204
+#: IndividualFactsTabModuleTrait.php:134 IndividualFactsTabModuleTrait.php:154
+#: IndividualFactsTabModuleTrait.php:179 IndividualFactsTabModuleTrait.php:195
 msgid "Zoom level of linked map"
 msgstr "Уровень масштабирования связанной карты"
 
-#. I18N: A button label.
-#: resources/views/edit/add-fact-row_20.phtml:52
-msgid "add"
-msgstr "добавить"
+#~ msgid "&lt;select&gt;"
+#~ msgstr "&lt;выберите&gt;"
 
 #~ msgid "Actual events of close relatives, and facts and events where the current individual is listed as an associate."
 #~ msgstr "Фактические события близких родственников, а также факты и события, в которых текущий человек указан в качестве партнера."
+
+#~ msgid "Also replaces the original 'Extra information' module."
+#~ msgstr "Также заменяет исходный модуль «Дополнительная информация»."
+
+#~ msgid "Associated events"
+#~ msgstr "Связанные события"
 
 #~ msgid "Attendant"
 #~ msgstr "Посетитель"
@@ -416,6 +385,12 @@ msgstr "добавить"
 #~ msgid "Civil registrar"
 #~ msgstr "Регистратор актов гражданского состояния"
 
+#~ msgid "Custom event"
+#~ msgstr "Пользовательское событие"
+
+#~ msgid "Custom fact"
+#~ msgstr "Пользовательский факт"
+
 #~ msgid "Employee"
 #~ msgstr "Сотрудник"
 
@@ -440,6 +415,9 @@ msgstr "добавить"
 
 #~ msgid "Events of close relatives"
 #~ msgstr "События, связанные с близкими родственниками"
+
+#~ msgid "Fact or event"
+#~ msgstr "Факт или событие"
 
 #~ msgid "Facts and events"
 #~ msgstr "Факты и события"
@@ -602,6 +580,9 @@ msgstr "добавить"
 #~ msgid "Slave"
 #~ msgstr "Раб"
 
+#~ msgid "Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar."
+#~ msgstr "Поддерживает нестандартный тег Gedcom _FSFTID (FamilySearch id) на вкладке и на боковой панели."
+
 #~ msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
 #~ msgstr "Последние на самом деле не ограничиваются близкими родственниками, и поэтому может быть менее запутанно предлагать для них отдельный переключатель."
 
@@ -621,3 +602,6 @@ msgstr "добавить"
 
 #~ msgid "Witness"
 #~ msgstr "Свидетель"
+
+#~ msgid "add"
+#~ msgstr "добавить"

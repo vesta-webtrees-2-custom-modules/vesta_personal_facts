@@ -3,6 +3,7 @@
 namespace Cissee\WebtreesExt\Module;
 
 use Fisharebest\Webtrees\Auth;
+use Fisharebest\Webtrees\Elements\CustomElement;
 use Fisharebest\Webtrees\Fact;
 use Fisharebest\Webtrees\Family;
 use Fisharebest\Webtrees\Gedcom;
@@ -10,7 +11,9 @@ use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\Module\IndividualFactsTabModule;
 use Fisharebest\Webtrees\Module\ModuleSidebarInterface;
 use Fisharebest\Webtrees\Module\ModuleTabInterface;
+use Fisharebest\Webtrees\Registry;
 use Fisharebest\Webtrees\Services\ClipboardService;
+use Fisharebest\Webtrees\Services\IndividualFactsService;
 use Fisharebest\Webtrees\Services\LinkedRecordService;
 use Fisharebest\Webtrees\Services\ModuleService;
 use Illuminate\Support\Collection;
@@ -22,30 +25,27 @@ use function view;
  */
 class IndividualFactsTabModule_2x extends IndividualFactsTabModule implements ModuleTabInterface {
 
+    protected ClipboardService $clipboard_service;
+    protected IndividualFactsService $individual_facts_service;
     protected ModuleService $module_service;
     protected LinkedRecordService $linked_record_service;
-    protected ClipboardService $clipboard_service;
 
     protected function getViewNameTab(): string {
         return 'modules/personal_facts/tab';
     }
 
-    /**
-     * IndividualFactsTabModule_2x constructor.
-     *
-     * @param ModuleService    $module_service
-     * @param ClipboardService $clipboard_service
-     */
     public function __construct(
+        ClipboardService $clipboard_service,
+        IndividualFactsService $individual_facts_service,
         ModuleService $module_service,
-        LinkedRecordService $linked_record_service,
-        ClipboardService $clipboard_service) {
+        LinkedRecordService $linked_record_service) {
 
-        parent::__construct($module_service, $linked_record_service, $clipboard_service);
+        parent::__construct($clipboard_service, $individual_facts_service, $module_service);
 
+        $this->clipboard_service = $clipboard_service;
+        $this->individual_facts_service = $individual_facts_service;
         $this->module_service = $module_service;
         $this->linked_record_service = $linked_record_service;
-        $this->clipboard_service = $clipboard_service;
     }
 
     /**
@@ -57,55 +57,33 @@ class IndividualFactsTabModule_2x extends IndividualFactsTabModule implements Mo
      */
     public function getTabContent(Individual $individual): string {
 
-        // Only include events of close relatives that are between birth and death
-        $min_date = $individual->getEstimatedBirthDate();
-        $max_date = $individual->getEstimatedDeathDate();
-
         // Which facts and events are handled by other modules?
         $sidebar_facts = $this->module_service
             ->findByComponent(ModuleSidebarInterface::class, $individual->tree(), Auth::user())
-            ->map(fn(ModuleSidebarInterface $sidebar): Collection => $sidebar->supportedFacts());
+            ->map(fn (ModuleSidebarInterface $sidebar): Collection => $sidebar->supportedFacts())
+            ->flatten();
 
         $tab_facts = $this->module_service
             ->findByComponent(ModuleTabInterface::class, $individual->tree(), Auth::user())
-            ->map(fn(ModuleTabInterface $tab): Collection => $tab->supportedFacts());
+            ->map(fn (ModuleTabInterface $tab): Collection => $tab->supportedFacts())
+            ->flatten();
 
-        $exclude_facts = $sidebar_facts->merge($tab_facts)->flatten();
+        $indi_exclude_facts = $sidebar_facts->merge($tab_facts);
+        $fam_exclude_facts  = new Collection(['FAM:CHAN', 'FAM:_UID', 'FAM:HUSB', 'FAM:WIFE', 'FAM:CHIL']);
 
-        // The individual’s own facts
-        $individual_facts = $individual->facts()
-            ->filter(fn(Fact $fact): bool => !$exclude_facts->contains($fact->tag()));
-
-        $relative_facts = new Collection();
-
-        // Add spouse-family facts
-        foreach ($individual->spouseFamilies() as $family) {
-            foreach ($family->facts() as $fact) {
-                if (!$exclude_facts->contains($fact->tag()) && $fact->tag() !== 'FAM:CHAN') {
-                    $relative_facts->push($fact);
-                }
-            }
-
-            $spouse = $family->spouse($individual);
-
-            if ($spouse instanceof Individual) {
-                $spouse_facts = $this->spouseFacts($individual, $spouse, $min_date, $max_date);
-                $relative_facts = $relative_facts->merge($spouse_facts);
-            }
-
-            $child_facts = $this->childFacts($individual, $family, '_CHIL', '', $min_date, $max_date);
-            $relative_facts = $relative_facts->merge($child_facts);
-        }
-
-        $parent_facts = $this->parentFacts($individual, 1, $min_date, $max_date);
-        $relative_facts = $relative_facts->merge($parent_facts);
-        $associate_facts = $this->associateFacts($individual);
-        $historic_facts = $this->historicFacts($individual);
+        $individual_facts = $this->individual_facts_service->individualFacts($individual, $indi_exclude_facts);
+        $family_facts     = $this->individual_facts_service->familyFacts($individual, $fam_exclude_facts);
+        $relative_facts   = $this->individual_facts_service->relativeFacts($individual);
+        
+        //[RC] adjusted
+        $associate_facts  = $this->associateFacts($individual);
+        $historic_facts   = $this->individual_facts_service->historicFacts($individual);
 
         $individual_facts = $individual_facts
+            ->merge($family_facts)
+            ->merge($relative_facts)
             ->merge($associate_facts)
-            ->merge($historic_facts)
-            ->merge($relative_facts);
+            ->merge($historic_facts);
 
         //[RC] ADDED
         $individual_facts = $individual_facts
@@ -113,8 +91,13 @@ class IndividualFactsTabModule_2x extends IndividualFactsTabModule implements Mo
 
         $individual_facts = Fact::sortFacts($individual_facts);
 
+        // Facts of relatives take the form 1 EVEN / 2 TYPE Event of Individual
+        // Ensure custom tags from there are recognised
+        Registry::elementFactory()->registerTags(['INDI:EVEN:CEME' => new CustomElement('Cemetery')]);
+
         $view = view($this->getViewNameTab(), [
             'can_edit' => $individual->canEdit(),
+            'clipboard_facts'     => $this->clipboard_service->pastableFacts($individual),
             'has_associate_facts' => $associate_facts->isNotEmpty(),
             'has_historic_facts' => $historic_facts->isNotEmpty(),
             'has_relative_facts' => $relative_facts->isNotEmpty(),
@@ -148,7 +131,7 @@ class IndividualFactsTabModule_2x extends IndividualFactsTabModule implements Mo
         return $attributes;
     }
 
-    //[RC] adapted
+    //[RC] adapted, webtrees now has this in individual_facts_service
     protected function associateFacts(Individual $person): Collection {
         $facts = [];
 

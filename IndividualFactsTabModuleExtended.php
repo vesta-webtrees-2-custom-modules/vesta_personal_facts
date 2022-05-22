@@ -24,6 +24,7 @@ use Fisharebest\Webtrees\Module\ModuleGlobalTrait;
 use Fisharebest\Webtrees\Module\ModuleMapLinkInterface;
 use Fisharebest\Webtrees\Module\ModuleTabInterface;
 use Fisharebest\Webtrees\Services\ClipboardService;
+use Fisharebest\Webtrees\Services\IndividualFactsService;
 use Fisharebest\Webtrees\Services\LinkedRecordService;
 use Fisharebest\Webtrees\Services\ModuleService;
 use Fisharebest\Webtrees\Session;
@@ -75,11 +76,12 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     use EmptyPrintFunctionsPlace;
           
     public function __construct(
-            ModuleService $module_service, 
-            LinkedRecordService $linked_record_service, 
-            ClipboardService $clipboard_service) {
+            ClipboardService $clipboard_service,
+            IndividualFactsService $individual_facts_service,
+            ModuleService $module_service,            
+            LinkedRecordService $linked_record_service) {
         
-        parent::__construct($module_service, $linked_record_service, $clipboard_service);
+        parent::__construct($clipboard_service, $individual_facts_service, $module_service, $linked_record_service);
     }
 
     //assumes to get called after setName!

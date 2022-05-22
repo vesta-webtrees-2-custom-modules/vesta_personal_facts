@@ -4,7 +4,6 @@ namespace Cissee\Webtrees\Module\PersonalFacts;
 
 use Cissee\WebtreesExt\MoreI18N;
 use Fisharebest\Webtrees\I18N;
-use Fisharebest\Webtrees\Webtrees;
 use Vesta\CommonI18N;
 use Vesta\ControlPanelUtils\Model\ControlPanelCheckbox;
 use Vesta\ControlPanelUtils\Model\ControlPanelCheckboxInverted;
@@ -28,14 +27,10 @@ trait IndividualFactsTabModuleTrait {
         $part2 = I18N::translate('Replacement for the original \'Facts and events\' module.');
         $part2 .= ' ';
 
-        if (str_starts_with(Webtrees::VERSION, '2.1')) {
-            $part2 .= ' ' . I18N::translate('Also extends facts and events on the family page.');
-            $part2 .= ' ' . I18N::translate('Also provides additional map links.');
+        $part2 .= ' ' . I18N::translate('Also extends facts and events on the family page.');
+        $part2 .= ' ' . I18N::translate('Also provides additional map links.');
 
-            //_FSFTID now handled by webtrees!
-        } else {
-            $part2 .= ' ' . I18N::translate('Also replaces the original \'Extra information\' module.');
-        }
+        //_FSFTID now handled by webtrees!
 
         if (!$this->isEnabled()) {
             $part2 = ModuleI18N::translate($this, $part2);
@@ -48,14 +43,10 @@ trait IndividualFactsTabModuleTrait {
         $description[] = /* I18N: Module Configuration */I18N::translate('An extended \'Facts and Events\' tab, with hooks for other custom modules.');
         $description[] = /* I18N: Module Configuration */I18N::translate('Intended as a replacement for the original \'Facts and events\' module.');
 
-        if (str_starts_with(Webtrees::VERSION, '2.1')) {
-            $description[] = I18N::translate('Also extends facts and events on the family page.');
-            $description[] = I18N::translate('Also provides additional map links.');
+        $description[] = I18N::translate('Also extends facts and events on the family page.');
+        $description[] = I18N::translate('Also provides additional map links.');
 
-            //_FSFTID now handled by webtrees!
-        } else {
-            $description[] = /* I18N: Module Configuration */I18N::translate('Supports the non-standard Gedcom _FSFTID (FamilySearch id) tag, in the tab and in the sidebar.');
-        }
+        //_FSFTID now handled by webtrees!
 
         $description[] = CommonI18N::requires1(CommonI18N::titleVestaCommon());
         return $description;
@@ -264,13 +255,10 @@ trait IndividualFactsTabModuleTrait {
             null,
             $placeSub1);
 
-        if (str_starts_with(Webtrees::VERSION, '2.1')) {
-            $mapLinksDesc = /* I18N: Module Configuration */I18N::translate('Map links are also configurable via separate modules now.') . ' ' .
-                /* I18N: Module Configuration */I18N::translate('The following options may be used alternatively or additionally.') . ' ' .
-                /* I18N: Module Configuration */I18N::translate('They are used wherever facts are displayed, i.e. also outside this module.');
-        } else {
-            $mapLinksDesc = null;
-        }
+        $mapLinksDesc = 
+            /* I18N: Module Configuration */I18N::translate('Map links are also configurable via separate modules now.') . ' ' .
+            /* I18N: Module Configuration */I18N::translate('The following options may be used alternatively or additionally.') . ' ' .
+            /* I18N: Module Configuration */I18N::translate('They are used wherever facts are displayed, i.e. also outside this module.');
 
         $sections[] = new ControlPanelSection(
             /* I18N: Module Configuration */MoreI18N::xlate('Map links'),

@@ -18,7 +18,6 @@ if (defined("WT_MODULES_DIR")) {
 //note: in the current module system, this would happen anyway because all module.php's are executed
 //whenever a single module is loaded (assuming these autoload.php's are called by the respective module.php's)
 //so we aren't loading 'too much' here, as long as we properly filter 'disabled' modules, as in ModuleService.
-//DO NOT USE $file HERE! see Module.loadModule($file) - we must not change that var!
 
 //cf ModuleService        
 $pattern   = Webtrees::MODULES_DIR . '*/autoload.php';
@@ -51,11 +50,7 @@ if (!$ok) {
 
 //app/Application/Container isn't so much about IoC (we're calling 'app', after all, that's no inversion!)
 //but about autowiring dependencies (here: ModuleService and ClipboardService)
-
-if (str_starts_with(Webtrees::VERSION, '2.1')) {
-    return app(IndividualFactsTabModuleExtended::class);
-}
-
-return app(IndividualFactsTabModuleExtended_20::class);
+$placeholder = app(PlaceholderModule::class);
+return $placeholder->ifIncompatible() ?? app(IndividualFactsTabModuleExtended::class);
 
 

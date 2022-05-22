@@ -25,7 +25,6 @@ use Ramsey\Uuid\Uuid;
     <td>
           
         <form method="post" action="<?= e(route(SelectNewFact::class, ['tree' => $record->tree()->name(), 'xref' => $record->xref()])) ?>" onsubmit="if ($('#add-fact<?= $disambiguator ?>').val() === null) {event.preventDefault();}">
-            <?= csrf_field() ?>
 
             <div class="input-group">
                 <select class="custom-select" id="add-fact<?= $disambiguator ?>" name="fact">
@@ -40,6 +39,7 @@ use Ramsey\Uuid\Uuid;
                     <?= /* I18N: A button label. */ I18N::translate('add') ?>
                 </button>
             </div>
+            <?= csrf_field() ?>
         </form>
 
         <div class="wt-quick-facts">

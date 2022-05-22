@@ -6,7 +6,6 @@ use Aura\Router\RouterContainer;
 use Cissee\WebtreesExt\MoreI18N;
 use Fisharebest\Webtrees\Fact;
 use Fisharebest\Webtrees\I18N;
-use Fisharebest\Webtrees\Webtrees;
 use GeoProjectionMercator;
 use Vesta\Hook\HookInterfaces\FunctionsPlaceUtils;
 use Vesta\Model\PlaceStructure;
@@ -220,16 +219,9 @@ class FunctionsFactPlace {
             $t = ' target="_blank"';
         }
 
-        if (str_starts_with(Webtrees::VERSION, '2.1')) {
-            return '<a href="' . $url . '" rel="nofollow" title="' . $title . '"' . $t . '>' .
-                view($view) .
-                '<span class="visually-hidden">' . $title . '</span>' .
-                '</a> ';
-        }
-
         return '<a href="' . $url . '" rel="nofollow" title="' . $title . '"' . $t . '>' .
             view($view) .
-            '<span class="sr-only">' . $title . '</span>' .
+            '<span class="visually-hidden">' . $title . '</span>' .
             '</a> ';
     }
 
