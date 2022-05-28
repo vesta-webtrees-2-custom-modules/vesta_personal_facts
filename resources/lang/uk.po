@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2022-05-22 14:26+0200\n"
-"PO-Revision-Date: 2021-08-08 19:34+0000\n"
-"Last-Translator: z-yurets <zaharchenko.yurij@gmail.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/uk/>\n"
+"PO-Revision-Date: 2022-05-28 12:18+0000\n"
+"Last-Translator: Artem <artem@molotov.work>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.8-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:188
@@ -31,11 +33,11 @@ msgstr "Повітряна базова карта"
 
 #: IndividualFactsTabModuleTrait.php:30 IndividualFactsTabModuleTrait.php:46
 msgid "Also extends facts and events on the family page."
-msgstr ""
+msgstr "Також розширює факти та події на сімейній сторінці."
 
 #: IndividualFactsTabModuleTrait.php:31 IndividualFactsTabModuleTrait.php:47
 msgid "Also provides additional map links."
-msgstr ""
+msgstr "Також надає додаткові посилання карти."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:43
@@ -87,7 +89,7 @@ msgstr "Боярин на весіллі"
 #. I18N: Module Configuration
 #: FunctionsFactPlace.php:68 IndividualFactsTabModuleTrait.php:142
 msgid "Bing Maps"
-msgstr "Bing Maps"
+msgstr "Карти Bing"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:25
 msgid "Bridesmaid at a marriage"
@@ -135,7 +137,7 @@ msgstr "Вкладка \"Факти та події\" Постачальники
 #. I18N: Module Configuration
 #: FunctionsFactPlace.php:56 IndividualFactsTabModuleTrait.php:122
 msgid "Google Maps"
-msgstr "Google Maps"
+msgstr "Карти Google"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:101
@@ -187,6 +189,7 @@ msgstr "Значок посилання як data URI"
 #: IndividualFactsTabModuleTrait.php:259
 msgid "Map links are also configurable via separate modules now."
 msgstr ""
+"Посилання карти тепер також налаштовуються за допомогою окремих модулів."
 
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:221
@@ -256,6 +259,8 @@ msgstr "Показати посилання на історичну карту �
 #: IndividualFactsTabModuleTrait.php:260
 msgid "The following options may be used alternatively or additionally."
 msgstr ""
+"Наступні опції можуть використовуватися в якості альтернативних або "
+"додаткових."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:191
@@ -278,6 +283,8 @@ msgstr "URI для посилань на карту із заповнювача�
 #: IndividualFactsTabModuleTrait.php:261
 msgid "They are used wherever facts are displayed, i.e. also outside this module."
 msgstr ""
+"Вони використовуються скрізь, де показано факти, тобто, за межами цього "
+"модуля також."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:228
