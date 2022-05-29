@@ -24,7 +24,10 @@ class FunctionsFactPlace {
         if ($ps === null) {
             return '';
         }
-        $mapCoordinates = FunctionsPlaceUtils::plac2map($this->module, $ps, true);
+        
+        //ok to fallbackViaParents for map link - is this really a good idea?
+        //should we mark it in the view (via flag on MapCoordinates)?
+        $mapCoordinates = FunctionsPlaceUtils::plac2map($this->module, $ps, true); 
         if ($mapCoordinates === null) {
             return '';
         }

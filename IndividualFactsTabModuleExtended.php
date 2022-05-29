@@ -287,7 +287,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     public function getFunctionsPlaceProvidersAction(): ResponseInterface {
         $modules = FunctionsPlaceUtils::modules($this, true);
 
-        $controller = new VestaAdminController($this->name());
+        $controller = new VestaAdminController($this);
         return $controller->listHooks(
                     $modules,
                     FunctionsPlaceInterface::class,
@@ -300,12 +300,13 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     public function getIndividualFactsTabExtenderProvidersAction(): ResponseInterface {
         $modules = IndividualFactsTabExtenderUtils::modules($this, true);
 
-        $controller = new VestaAdminController($this->name());
+        $controller = new VestaAdminController($this);
         return $controller->listHooks(
                     $modules,
-                    IndividualFactsTabExtenderInterface::class,
+                    IndividualFactsTabExtenderUtils::moduleSpecificComponentName($this),
                     $this->title2(),
                     $this->description2(),
+                    true,
                     true,
                     true);
     }

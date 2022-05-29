@@ -94,7 +94,7 @@ class IndividualFactsTabModule_2x extends IndividualFactsTabModule implements Mo
         // Facts of relatives take the form 1 EVEN / 2 TYPE Event of Individual
         // Ensure custom tags from there are recognised
         Registry::elementFactory()->registerTags(['INDI:EVEN:CEME' => new CustomElement('Cemetery')]);
-
+        
         $view = view($this->getViewNameTab(), [
             'can_edit' => $individual->canEdit(),
             'clipboard_facts'     => $this->clipboard_service->pastableFacts($individual),
@@ -106,7 +106,7 @@ class IndividualFactsTabModule_2x extends IndividualFactsTabModule implements Mo
             //for further extensions in custom views
             'module' => $this
         ]);
-
+        
         return $view;
     }
 
