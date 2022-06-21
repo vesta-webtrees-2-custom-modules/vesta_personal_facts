@@ -3,10 +3,13 @@
 namespace Cissee\WebtreesExt\Module;
 
 use Fisharebest\Webtrees\Auth;
+use Fisharebest\Webtrees\Elements\AdoptedByWhichParent;
 use Fisharebest\Webtrees\Elements\CustomElement;
+use Fisharebest\Webtrees\Elements\XrefFamily;
 use Fisharebest\Webtrees\Fact;
 use Fisharebest\Webtrees\Family;
 use Fisharebest\Webtrees\Gedcom;
+use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Individual;
 use Fisharebest\Webtrees\Module\IndividualFactsTabModule;
 use Fisharebest\Webtrees\Module\ModuleSidebarInterface;
@@ -95,7 +98,12 @@ class IndividualFactsTabModule_2x extends IndividualFactsTabModule implements Mo
 
         // Facts of relatives take the form 1 EVEN / 2 TYPE Event of Individual
         // Ensure custom tags from there are recognised
-        Registry::elementFactory()->registerTags(['INDI:EVEN:CEME' => new CustomElement('Cemetery')]);
+        Registry::elementFactory()->registerTags([
+            'INDI:EVEN:CEME'      => new CustomElement('Cemetery'),
+            'INDI:EVEN:_GODP'     => new CustomElement('Godparent'),
+            'INDI:EVEN:FAMC'      => new XrefFamily(I18N::translate('Adoptive parents')),
+            'INDI:EVEN:FAMC:ADOP' => new AdoptedByWhichParent(I18N::translate('Adoption')),
+        ]);
         
         $view = view($this->getViewNameTab(), [
             'can_edit' => $individual->canEdit(),
