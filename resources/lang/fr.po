@@ -3,15 +3,16 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2022-05-22 14:26+0200\n"
-"PO-Revision-Date: 2022-04-12 11:07+0000\n"
+"PO-Revision-Date: 2022-09-01 09:17+0000\n"
 "Last-Translator: Vincent DENIS <vincent.denis06@gmail.com>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Weblate 4.12-dev\n"
+"X-Generator: Weblate 4.14.1-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:188
@@ -26,11 +27,11 @@ msgstr "Carte de vue aérienne"
 
 #: IndividualFactsTabModuleTrait.php:30 IndividualFactsTabModuleTrait.php:46
 msgid "Also extends facts and events on the family page."
-msgstr ""
+msgstr "Étend également les faits et les événements sur la page de la famille."
 
 #: IndividualFactsTabModuleTrait.php:31 IndividualFactsTabModuleTrait.php:47
 msgid "Also provides additional map links."
-msgstr ""
+msgstr "Fournit également des liens cartographiques supplémentaires."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:43
@@ -182,6 +183,8 @@ msgstr "Icône de lien comme URI de données"
 #: IndividualFactsTabModuleTrait.php:259
 msgid "Map links are also configurable via separate modules now."
 msgstr ""
+"Les liens cartographiques sont également configurables via des modules "
+"séparés maintenant."
 
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:221
@@ -251,6 +254,7 @@ msgstr "Afficher les liens vers une carte historique de l'Europe au XIX. siècle
 #: IndividualFactsTabModuleTrait.php:260
 msgid "The following options may be used alternatively or additionally."
 msgstr ""
+"Les options suivantes peuvent être utilisées alternativement ou en plus."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:191
@@ -273,6 +277,8 @@ msgstr "L'URI des liens de carte, avec des espaces réservés (%1$s et %2$s) pou
 #: IndividualFactsTabModuleTrait.php:261
 msgid "They are used wherever facts are displayed, i.e. also outside this module."
 msgstr ""
+"Ils sont utilisés partout où des faits sont affichés, c'est-à-dire également "
+"en dehors de ce module."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:228
