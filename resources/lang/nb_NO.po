@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2022-05-22 14:26+0200\n"
-"PO-Revision-Date: 2021-09-08 20:33+0000\n"
-"Last-Translator: Richard Cissée <ric@richard-cissee.de>\n"
-"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/nb_NO/>\n"
+"PO-Revision-Date: 2022-12-17 19:47+0000\n"
+"Last-Translator: H R Nilsen <hogne@visitusinmaputo.com>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.8.1-dev\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:188
@@ -27,7 +28,7 @@ msgstr "%1$s (historiske kart)"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:210
 msgid "Aerial Base Map"
-msgstr "Flyfotobasiskart"
+msgstr "Flyfoto basiskart"
 
 #: IndividualFactsTabModuleTrait.php:30 IndividualFactsTabModuleTrait.php:46
 msgid "Also extends facts and events on the family page."
