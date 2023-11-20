@@ -8,312 +8,349 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2022-05-22 14:26+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-11-20 17:02+0000\n"
+"Last-Translator: BernatBanyuls <bernatbanyuls@gmail.com>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.2\n"
 
 #. I18N: Module Configuration
 #: FunctionsFactPlace.php:56 IndividualFactsTabModuleTrait.php:122
 msgid "Google Maps"
-msgstr ""
+msgstr "Google Maps"
 
 #. I18N: Module Configuration
 #: FunctionsFactPlace.php:68 IndividualFactsTabModuleTrait.php:142
 msgid "Bing Maps"
-msgstr ""
+msgstr "Bing Maps"
 
 #. I18N: Module Configuration
 #: FunctionsFactPlace.php:75 IndividualFactsTabModuleTrait.php:162
 msgid "OpenStreetMap"
-msgstr ""
+msgstr "OpenStreetMap"
 
 #. I18N: Module Configuration
 #: FunctionsFactPlace.php:87 IndividualFactsTabModuleTrait.php:219
 msgid "Custom Map Provider"
-msgstr ""
+msgstr "Proveïdor de mapes personalitzats"
 
 #: FunctionsFactPlace.php:144 IndividualFactsTabModuleTrait.php:186
 msgid "Arcanum Maps"
-msgstr ""
+msgstr "Arcanum Maps"
 
 #: FunctionsFactPlace.php:146
 #, php-format
 msgid "Europe in the XIX. century | %1$s"
-msgstr ""
+msgstr "Europa al segle XIX. segle | %1$s"
 
 #: FunctionsFactPlace.php:150
 #, php-format
 msgid "United States of America (1880-1926) | %1$s"
-msgstr ""
+msgstr "Estats Units d'Amèrica (1880-1926) | %1$s"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleExtended.php:278
 msgid "Facts and Events Tab UI Element Providers"
 msgstr ""
+"Pestanya de Fets i esdeveniments amb Proveïdors d'elements d'interfície "
+"d'usuari"
 
 #: IndividualFactsTabModuleTrait.php:27
 msgid "Replacement for the original 'Facts and events' module."
-msgstr ""
+msgstr "Substitució del mòdul original \"Fets i esdeveniments\"."
 
 #: IndividualFactsTabModuleTrait.php:30 IndividualFactsTabModuleTrait.php:46
 msgid "Also extends facts and events on the family page."
-msgstr ""
+msgstr "També amplia fets i esdeveniments a la pàgina familiar."
 
 #: IndividualFactsTabModuleTrait.php:31 IndividualFactsTabModuleTrait.php:47
 msgid "Also provides additional map links."
-msgstr ""
+msgstr "També proporciona enllaços de mapes addicionals."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:43
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr ""
+"Una pestanya ampliada \"Dades i esdeveniments\", amb ganxos per a altres "
+"mòduls personalitzats."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:44
 msgid "Intended as a replacement for the original 'Facts and events' module."
-msgstr ""
+msgstr "Pensat com a substitut del mòdul original \"Fets i esdeveniments\"."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:82
 msgid "Only show specific facts and events"
-msgstr ""
+msgstr "Mostra només fets i esdeveniments concrets"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:83
 msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
 msgstr ""
+"Si es marca aquesta opció, els fets i esdeveniments addicionals en què la "
+"persona figura com a associada es limiten als fets i esdeveniments següents."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:98
 msgid "Latitude/Longitude"
-msgstr ""
+msgstr "Latitud/Longitud"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:101
 msgid "Hide coordinates, show map links after place name"
-msgstr ""
+msgstr "Amaga les coordenades, mostra els enllaços del mapa després del topònim"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:102
 msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
 msgstr ""
+"A la pestanya original es mostren les coordenades (amb enllaços al mapa). "
+"Això tendeix a desordenar la visualització del lloc, en particular si hi ha "
+"mòduls addicionals que proporcionen coordenades."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:111
 msgid "Open links in new browser tab"
-msgstr ""
+msgstr "Obrir enllaços en una pestanya nova del navegador"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:116
 msgid "Show additional info for map links"
-msgstr ""
+msgstr "Mostra informació addicional per als enllaços al mapa"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:117
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr ""
+"Mostra una icona amb un indicador de funció que indica l'origen dels "
+"enllaços del mapa. Això està pensat principalment per a la depuració."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:124
 msgid "Show links to Google Maps"
-msgstr ""
+msgstr "Mostrar enllaços a Google Maps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:129 IndividualFactsTabModuleTrait.php:149
 #: IndividualFactsTabModuleTrait.php:169
 msgid "Include 'TM' in tooltip"
-msgstr ""
+msgstr "Incloeu \"TM\" al consell d'eina"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:130 IndividualFactsTabModuleTrait.php:150
 #: IndividualFactsTabModuleTrait.php:170
 msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
 msgstr ""
+"La pestanya original tenia el signe de marca comercial: conserveu-lo si "
+"voleu o si us sentiu legalment obligat."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:134 IndividualFactsTabModuleTrait.php:154
 #: IndividualFactsTabModuleTrait.php:179 IndividualFactsTabModuleTrait.php:195
 msgid "Zoom level of linked map"
-msgstr ""
+msgstr "Nivell de zoom del mapa enllaçat"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:144
 msgid "Show links to Bing Maps"
-msgstr ""
+msgstr "Mostra enllaços als Mapes del Bing"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:164
 msgid "Show links to OpenStreetMap"
-msgstr ""
+msgstr "Mostra enllaços a OpenStreetMap"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:174
 msgid "Include marker"
-msgstr ""
+msgstr "Inclou marcador"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:175
 msgid "Include a marker in the linked map."
-msgstr ""
+msgstr "Incloeu un marcador al mapa enllaçat."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:188
 #, php-format
 msgid "%1$s (historic maps)"
-msgstr ""
+msgstr "%1$s (mapes històrics)"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:190
 msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
 msgstr ""
+"Mostra enllaços a un mapa històric de l'Europa del segle XIX. segle, o els "
+"Estats Units d'Amèrica (1880-1926), si escau"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:191
 msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
 msgstr ""
+"L'element de l'enllaç no es mostrarà per a les ubicacions fora de les "
+"fronteres respectives d'Europa i els EUA."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:202
 msgid "Show linked map with additional options"
-msgstr ""
+msgstr "Mostra el mapa enllaçat amb opcions addicionals"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:203
 #, php-format
 msgid "When checked, links to the main %1$s page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
 msgstr ""
+"Quan es marca, enllaços al principal %1$s pàgina, on podeu canviar entre les "
+"diferents capes històriques disponibles per a la ubicació respectiva, i "
+"esvair-vos dins i fora d'un mapa modern, que també es pot configurar aquí:"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:209
 msgid "OSM Base Map"
-msgstr ""
+msgstr "Mapa base OSM"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:210
 msgid "Aerial Base Map"
-msgstr ""
+msgstr "Mapa base aeri"
 
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:221
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:222
 msgid "You can also configure a custom map provider. Enter its name here."
 msgstr ""
+"També podeu configurar un proveïdor de mapes personalitzat. Introdueix el "
+"seu nom aquí."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:228
 msgid "URI template"
-msgstr ""
+msgstr "Plantilla URI"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:229
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
 msgstr ""
+"L'uri per als enllaços cartogràfics, amb marcadors de posició (%1$s i %2$s) "
+"per a les coordenades del mapa. El nivell de zoom ha de formar part de "
+"l'uri. Exemple: %3$s"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:236
 msgid "Link icon as data URI"
-msgstr ""
+msgstr "Icona d'enllaç com a URI de dades"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:237
 #, php-format
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr ""
+"URI de dades codificades en base64 per a la icona de l'enllaç. Converteix la "
+"icona en una URI de dades, per exemple, mitjançant: %1$s. El resultat hauria "
+"de començar amb alguna cosa així %2$s. Una bona font de la imatge de la "
+"icona sol ser la imatge de favicon del proveïdor de mapes, com ara %3$s. Es "
+"mostrarà correctament redimensionat."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:250
 msgid "Facts and Events List"
-msgstr ""
+msgstr "Llista de fets i esdeveniments"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:254
 msgid "Place Settings"
-msgstr ""
+msgstr "Configuració del lloc"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:259
 msgid "Map links are also configurable via separate modules now."
 msgstr ""
+"Ara els enllaços de mapes també es poden configurar mitjançant mòduls "
+"separats."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:260
 msgid "The following options may be used alternatively or additionally."
 msgstr ""
+"Les opcions següents es poden utilitzar alternativament o addicionalment."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:261
 msgid "They are used wherever facts are displayed, i.e. also outside this module."
 msgstr ""
+"S'utilitzen allà on es mostren els fets, és a dir, també fora d'aquest mòdul."
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:22
 msgid "Best man at a marriage"
-msgstr ""
+msgstr "Padrí de boda"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:25
 msgid "Bridesmaid at a marriage"
-msgstr ""
+msgstr "Dama d'honor en una boda"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:29
 msgctxt "MALE"
 msgid "Witness at a marriage"
-msgstr ""
+msgstr "Testimoni d'un matrimoni"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:31
 msgctxt "FEMALE"
 msgid "Witness at a marriage"
-msgstr ""
+msgstr "Testimoni d'un matrimoni"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:33
 msgid "Witness at a marriage"
-msgstr ""
+msgstr "Testimoni d'un matrimoni"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:38
 msgctxt "MALE"
 msgid "Associate at a marriage"
-msgstr ""
+msgstr "Associat a un matrimoni"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:40
 msgctxt "FEMALE"
 msgid "Associate at a marriage"
-msgstr ""
+msgstr "Associat a un matrimoni"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:42
 msgid "Associate at a marriage"
-msgstr ""
+msgstr "Associat a un matrimoni"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:57
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:64
 msgid "Baptism of a godson"
-msgstr ""
+msgstr "Baptisme d'un fillol"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:60
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:66
 msgid "Baptism of a goddaughter"
-msgstr ""
+msgstr "Baptisme de fillola"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:68
 msgid "Baptism of a godchild"
-msgstr ""
+msgstr "Baptisme d'un fillol"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:85
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:92
 msgid "Christening of a godson"
-msgstr ""
+msgstr "Bateig de fillol"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:88
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:94
 msgid "Christening of a goddaughter"
-msgstr ""
+msgstr "Bateig de fillola"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:96
 msgid "Christening of a godchild"
-msgstr ""
+msgstr "Bateig de fillol"
