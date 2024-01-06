@@ -31,6 +31,7 @@ class FunctionsFactPlace {
         if ($mapCoordinates === null) {
             return '';
         }
+       
         
         //debug
         //TODO: use proper modal here? tooltip isn't helpful on tablets etc
@@ -45,12 +46,14 @@ class FunctionsFactPlace {
         return $this->getMapLinks(
             $mapCoordinates->getLati(), 
             $mapCoordinates->getLong(),
+            $ps->getGedcomName(),
             $debug);
     }
 
     protected function getMapLinks(
         $map_lati,
         $map_long,
+        string $gedcomName,
         string $debugMapLinks) {
 
         $html = '';
@@ -101,7 +104,8 @@ class FunctionsFactPlace {
             $router->get('CMP_1', $uriTemplate);
             $url = $router_container->getGenerator()->generate('CMP_1', [
                 'lati' => $map_lati,
-                'long' => $map_long]);
+                'long' => $map_long,
+                'name' => $gedcomName]);
 
             $html .= $this->linkIcon($this->module->name() . '::icons/custom-map-provider-1', $title, $url);
         }

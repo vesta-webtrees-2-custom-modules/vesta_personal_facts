@@ -226,7 +226,7 @@ trait IndividualFactsTabModuleTrait {
                 31),
             new ControlPanelTextbox(
                 /* I18N: Module Configuration */I18N::translate('URI template'),
-                /* I18N: Module Configuration */ I18N::translate('The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s', '\'lati\'', '\'long\'', 'https://en.mapy.cz/zakladni?x={long}&y={lati}&z=11&source=coor&id={long},{lati}'),
+                /* I18N: Module Configuration */ I18N::translate('The uri for map links, with placeholders (%1$s and %2$s) for map coordinates, and optional placeholder %3$s for the place name. The zoom level should be part of the uri. Example: %4$s', '\'lati\'', '\'long\'', '\'name\'', 'https://en.mapy.cz/zakladni?x={long}&y={lati}&z=11&source=coor&id={long},{lati}'),
                 'CMP_1_LINK_URI',
                 '',
                 false,
