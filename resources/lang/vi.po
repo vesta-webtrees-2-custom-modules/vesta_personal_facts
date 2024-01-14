@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-05-22 14:26+0200\n"
+"POT-Creation-Date: 2024-01-07 18:40+0100\n"
 "PO-Revision-Date: 2021-07-24 11:35+0200\n"
 "Last-Translator: ngohuuthuanfc9865b89dde4baf <ngohuuthuan@gmail.com>\n"
 "Language-Team: Vietnamese <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/vi/>\n"
@@ -42,7 +42,7 @@ msgstr ""
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr "Tab 'Sự kiện và Số liệu' mở rộng, với các móc cho các mô-đun tùy chỉnh khác."
 
-#: FunctionsFactPlace.php:144 IndividualFactsTabModuleTrait.php:186
+#: FunctionsFactPlace.php:151 IndividualFactsTabModuleTrait.php:186
 msgid "Arcanum Maps"
 msgstr "Arcanum Maps"
 
@@ -85,7 +85,7 @@ msgid "Best man at a marriage"
 msgstr "Người đàn ông tốt nhất trong cuộc hôn nhân"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:68 IndividualFactsTabModuleTrait.php:142
+#: FunctionsFactPlace.php:74 IndividualFactsTabModuleTrait.php:142
 msgid "Bing Maps"
 msgstr "Bản đồ Bing Maps"
 
@@ -108,7 +108,7 @@ msgid "Christening of a godson"
 msgstr "Chúa của một đứa con trai đỡ đầu"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:87 IndividualFactsTabModuleTrait.php:219
+#: FunctionsFactPlace.php:93 IndividualFactsTabModuleTrait.php:219
 msgid "Custom Map Provider"
 msgstr "Nhà cung cấp bản đồ tùy chỉnh"
 
@@ -117,7 +117,7 @@ msgstr "Nhà cung cấp bản đồ tùy chỉnh"
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Hiển thị một biểu tượng với chú giải công cụ cho biết nguồn của các liên kết bản đồ. Đây là mục đích chủ yếu để gỡ lỗi."
 
-#: FunctionsFactPlace.php:146
+#: FunctionsFactPlace.php:153
 #, php-format
 msgid "Europe in the XIX. century | %1$s"
 msgstr "Châu Âu trong thế kỷ XIX. kỷ | %1$s"
@@ -133,7 +133,7 @@ msgid "Facts and Events Tab UI Element Providers"
 msgstr "Tab Sự kiện và Số liệu Nhà cung cấp phần tử giao diện người dùng"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:56 IndividualFactsTabModuleTrait.php:122
+#: FunctionsFactPlace.php:62 IndividualFactsTabModuleTrait.php:122
 msgid "Google Maps"
 msgstr "Bản đồ Google Maps"
 
@@ -209,7 +209,7 @@ msgid "Open links in new browser tab"
 msgstr "Mở liên kết trong tab trình duyệt mới"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:75 IndividualFactsTabModuleTrait.php:162
+#: FunctionsFactPlace.php:81 IndividualFactsTabModuleTrait.php:162
 msgid "OpenStreetMap"
 msgstr "Bản đồ OpenStreetMap"
 
@@ -271,8 +271,8 @@ msgstr "Tab ban đầu có dấu hiệu nhãn hiệu - hãy giữ nó nếu bạ
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:229
 #, php-format
-msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
-msgstr "URI cho bản đồ liên kết với trình giữ chỗ (%1$s và %2$s) cho các tọa độ bản đồ. Mức thu phóng phải là một phần của URI. Ví dụ: %3$s"
+msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates, and optional placeholder %3$s for the place name. The zoom level should be part of the uri. Example: %4$s"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:261
@@ -284,7 +284,7 @@ msgstr ""
 msgid "URI template"
 msgstr "Mẫu URI"
 
-#: FunctionsFactPlace.php:150
+#: FunctionsFactPlace.php:157
 #, php-format
 msgid "United States of America (1880-1926) | %1$s"
 msgstr "Hợp chủng quốc Hoa Kỳ (1880-1926) | %1$s"
@@ -346,6 +346,9 @@ msgstr "Mức độ thu phóng của bản đồ được liên kết"
 
 #~ msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
 #~ msgstr "Loại thứ hai không thực sự bị hạn chế đối với những người thân ruột thịt, và do đó, có thể ít gây nhầm lẫn hơn khi cung cấp một hộp kiểm chuyển đổi riêng cho họ."
+
+#~ msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
+#~ msgstr "URI cho bản đồ liên kết với trình giữ chỗ (%1$s và %2$s) cho các tọa độ bản đồ. Mức thu phóng phải là một phần của URI. Ví dụ: %3$s"
 
 #~ msgid "Use separate toggle checkbox"
 #~ msgstr "Sử dụng hộp kiểm chuyển đổi riêng biệt"

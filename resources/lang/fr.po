@@ -2,11 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-05-22 14:26+0200\n"
+"POT-Creation-Date: 2024-01-07 18:40+0100\n"
 "PO-Revision-Date: 2022-09-01 09:17+0000\n"
 "Last-Translator: Vincent DENIS <vincent.denis06@gmail.com>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/"
-"vesta-webtrees-custom-modules/vesta-facts-and-events/fr/>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,7 +37,7 @@ msgstr "Fournit également des liens cartographiques supplémentaires."
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr "Un onglet «Faits et événements» étendu, avec des accroches pour d'autres modules personnalisés."
 
-#: FunctionsFactPlace.php:144 IndividualFactsTabModuleTrait.php:186
+#: FunctionsFactPlace.php:151 IndividualFactsTabModuleTrait.php:186
 msgid "Arcanum Maps"
 msgstr "Arcanum Maps"
 
@@ -81,7 +80,7 @@ msgid "Best man at a marriage"
 msgstr "Garçon d'honneur au mariage"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:68 IndividualFactsTabModuleTrait.php:142
+#: FunctionsFactPlace.php:74 IndividualFactsTabModuleTrait.php:142
 msgid "Bing Maps"
 msgstr "Cartes Bing"
 
@@ -104,7 +103,7 @@ msgid "Christening of a godson"
 msgstr "Baptême d'un filleul"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:87 IndividualFactsTabModuleTrait.php:219
+#: FunctionsFactPlace.php:93 IndividualFactsTabModuleTrait.php:219
 msgid "Custom Map Provider"
 msgstr "Fournisseur de carte personnalisée"
 
@@ -113,7 +112,7 @@ msgstr "Fournisseur de carte personnalisée"
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Affichez une icône avec une info-bulle indiquant la source des liens de la carte. Ceci est principalement destiné au débogage."
 
-#: FunctionsFactPlace.php:146
+#: FunctionsFactPlace.php:153
 #, php-format
 msgid "Europe in the XIX. century | %1$s"
 msgstr "L'Europe au XIX. siècle | %1$s"
@@ -129,7 +128,7 @@ msgid "Facts and Events Tab UI Element Providers"
 msgstr "Fournisseurs d'éléments d'interface utilisateur de l'onglet Faits et événements"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:56 IndividualFactsTabModuleTrait.php:122
+#: FunctionsFactPlace.php:62 IndividualFactsTabModuleTrait.php:122
 msgid "Google Maps"
 msgstr "Cartes Google"
 
@@ -182,9 +181,7 @@ msgstr "Icône de lien comme URI de données"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:259
 msgid "Map links are also configurable via separate modules now."
-msgstr ""
-"Les liens cartographiques sont également configurables via des modules "
-"séparés maintenant."
+msgstr "Les liens cartographiques sont également configurables via des modules séparés maintenant."
 
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:221
@@ -207,7 +204,7 @@ msgid "Open links in new browser tab"
 msgstr "Ouvrir les liens dans le nouvel onglet du navigateur"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:75 IndividualFactsTabModuleTrait.php:162
+#: FunctionsFactPlace.php:81 IndividualFactsTabModuleTrait.php:162
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
 
@@ -253,8 +250,7 @@ msgstr "Afficher les liens vers une carte historique de l'Europe au XIX. siècle
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:260
 msgid "The following options may be used alternatively or additionally."
-msgstr ""
-"Les options suivantes peuvent être utilisées alternativement ou en plus."
+msgstr "Les options suivantes peuvent être utilisées alternativement ou en plus."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:191
@@ -270,22 +266,20 @@ msgstr "L'onglet d'origine avait le signe de la marque - conservez-le si vous le
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:229
 #, php-format
-msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
-msgstr "L'URI des liens de carte, avec des espaces réservés (%1$s et %2$s) pour les coordonnées de la carte. Le niveau de zoom doit faire partie de l'URI. Exemple : %3$s"
+msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates, and optional placeholder %3$s for the place name. The zoom level should be part of the uri. Example: %4$s"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:261
 msgid "They are used wherever facts are displayed, i.e. also outside this module."
-msgstr ""
-"Ils sont utilisés partout où des faits sont affichés, c'est-à-dire également "
-"en dehors de ce module."
+msgstr "Ils sont utilisés partout où des faits sont affichés, c'est-à-dire également en dehors de ce module."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:228
 msgid "URI template"
 msgstr "Modèle d'URI"
 
-#: FunctionsFactPlace.php:150
+#: FunctionsFactPlace.php:157
 #, php-format
 msgid "United States of America (1880-1926) | %1$s"
 msgstr "États-Unis d'Amérique (1880-1926) | %1$s"
@@ -368,6 +362,9 @@ msgstr "Niveau de zoom de la carte liée"
 
 #~ msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
 #~ msgstr "Ces derniers ne sont en fait pas limités aux parents proches, et il peut donc être moins déroutant de leur proposer une case à cocher à bascule séparée."
+
+#~ msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
+#~ msgstr "L'URI des liens de carte, avec des espaces réservés (%1$s et %2$s) pour les coordonnées de la carte. Le niveau de zoom doit faire partie de l'URI. Exemple : %3$s"
 
 #~ msgid "Use separate toggle checkbox"
 #~ msgstr "Utiliser une case à cocher séparée"

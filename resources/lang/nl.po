@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-05-22 14:26+0200\n"
+"POT-Creation-Date: 2024-01-07 18:40+0100\n"
 "PO-Revision-Date: 2022-04-20 22:13+0000\n"
 "Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
@@ -37,7 +37,7 @@ msgstr "Biedt ook extra kaartkoppelingen."
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr "Een uitgebreid tabblad 'Feiten en gebeurtenissen', met 'hooks' voor andere aangepaste modules."
 
-#: FunctionsFactPlace.php:144 IndividualFactsTabModuleTrait.php:186
+#: FunctionsFactPlace.php:151 IndividualFactsTabModuleTrait.php:186
 msgid "Arcanum Maps"
 msgstr "Arcanum Maps"
 
@@ -80,7 +80,7 @@ msgid "Best man at a marriage"
 msgstr "Getuige bij huwelijk"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:68 IndividualFactsTabModuleTrait.php:142
+#: FunctionsFactPlace.php:74 IndividualFactsTabModuleTrait.php:142
 msgid "Bing Maps"
 msgstr "Bing Maps"
 
@@ -103,7 +103,7 @@ msgid "Christening of a godson"
 msgstr "Doop van peetzoon"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:87 IndividualFactsTabModuleTrait.php:219
+#: FunctionsFactPlace.php:93 IndividualFactsTabModuleTrait.php:219
 msgid "Custom Map Provider"
 msgstr "Andere kaartprovider"
 
@@ -112,7 +112,7 @@ msgstr "Andere kaartprovider"
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Geef een pictogram weer met een tooltip die de bron van de kaartkoppelingen aangeeft. Dit is vooral bedoeld voor debugging."
 
-#: FunctionsFactPlace.php:146
+#: FunctionsFactPlace.php:153
 #, php-format
 msgid "Europe in the XIX. century | %1$s"
 msgstr "Europa in de XIX-eeuw | %1$s"
@@ -128,7 +128,7 @@ msgid "Facts and Events Tab UI Element Providers"
 msgstr "Aanbieders van UI-elementen voor tabblad Feiten en gebeurtenissen"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:56 IndividualFactsTabModuleTrait.php:122
+#: FunctionsFactPlace.php:62 IndividualFactsTabModuleTrait.php:122
 msgid "Google Maps"
 msgstr "Google Maps"
 
@@ -204,7 +204,7 @@ msgid "Open links in new browser tab"
 msgstr "Koppelingen openen in nieuw browsertabblad"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:75 IndividualFactsTabModuleTrait.php:162
+#: FunctionsFactPlace.php:81 IndividualFactsTabModuleTrait.php:162
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
 
@@ -266,8 +266,8 @@ msgstr "Het oorspronkelijke tabblad had het TM-handelsmerkteken - behoud het als
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:229
 #, php-format
-msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
-msgstr "De URI voor kaartkoppelingen, met tijdelijke aanduidingen (%1$s en %2$s) voor kaartcoördinaten. Het zoomniveau moet deel uitmaken van de URI. Voorbeeld: %3$s"
+msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates, and optional placeholder %3$s for the place name. The zoom level should be part of the uri. Example: %4$s"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:261
@@ -279,7 +279,7 @@ msgstr "Zij worden overal gebruikt waar feiten worden weergegeven, ook buiten de
 msgid "URI template"
 msgstr "URI-sjabloon"
 
-#: FunctionsFactPlace.php:150
+#: FunctionsFactPlace.php:157
 #, php-format
 msgid "United States of America (1880-1926) | %1$s"
 msgstr "Verenigde Staten van Amerika (1880-1926) | %1$s"
@@ -643,6 +643,9 @@ msgstr "Zoomniveau van gekoppelde kaart"
 
 #~ msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
 #~ msgstr "Deze laatste zijn niet echt beperkt tot naaste familieleden, en daarom kan het minder verwarrend zijn om een apart schakelvakje voor hen aan te bieden."
+
+#~ msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
+#~ msgstr "De URI voor kaartkoppelingen, met tijdelijke aanduidingen (%1$s en %2$s) voor kaartcoördinaten. Het zoomniveau moet deel uitmaken van de URI. Voorbeeld: %3$s"
 
 #~ msgid "Use separate toggle checkbox"
 #~ msgstr "Apart schakelvak gebruiken"

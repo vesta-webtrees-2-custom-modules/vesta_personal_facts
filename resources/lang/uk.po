@@ -7,17 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-05-22 14:26+0200\n"
+"POT-Creation-Date: 2024-01-07 18:40+0100\n"
 "PO-Revision-Date: 2022-05-28 12:18+0000\n"
 "Last-Translator: Artem <artem@molotov.work>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/"
-"vesta-webtrees-custom-modules/vesta-facts-and-events/uk/>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.13-dev\n"
 
 #. I18N: Module Configuration
@@ -44,7 +42,7 @@ msgstr "Також надає додаткові посилання карти."
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr "Розширена вкладка \"Факти та події\" з гачками для інших користувацьких модулів."
 
-#: FunctionsFactPlace.php:144 IndividualFactsTabModuleTrait.php:186
+#: FunctionsFactPlace.php:151 IndividualFactsTabModuleTrait.php:186
 msgid "Arcanum Maps"
 msgstr "Arcanum Maps"
 
@@ -87,7 +85,7 @@ msgid "Best man at a marriage"
 msgstr "Боярин на весіллі"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:68 IndividualFactsTabModuleTrait.php:142
+#: FunctionsFactPlace.php:74 IndividualFactsTabModuleTrait.php:142
 msgid "Bing Maps"
 msgstr "Карти Bing"
 
@@ -110,7 +108,7 @@ msgid "Christening of a godson"
 msgstr "Хрещення хрещеника (церемонія)"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:87 IndividualFactsTabModuleTrait.php:219
+#: FunctionsFactPlace.php:93 IndividualFactsTabModuleTrait.php:219
 msgid "Custom Map Provider"
 msgstr "Сторонній постачальник карт"
 
@@ -119,7 +117,7 @@ msgstr "Сторонній постачальник карт"
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Відображати піктограму із підказкою із зазначенням джерела посилань на карту. Це призначено в основному для налагодження."
 
-#: FunctionsFactPlace.php:146
+#: FunctionsFactPlace.php:153
 #, php-format
 msgid "Europe in the XIX. century | %1$s"
 msgstr "Європа в XIX. століття | %1$s"
@@ -135,7 +133,7 @@ msgid "Facts and Events Tab UI Element Providers"
 msgstr "Вкладка \"Факти та події\" Постачальники елементів інтерфейсу користувача"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:56 IndividualFactsTabModuleTrait.php:122
+#: FunctionsFactPlace.php:62 IndividualFactsTabModuleTrait.php:122
 msgid "Google Maps"
 msgstr "Карти Google"
 
@@ -188,8 +186,7 @@ msgstr "Значок посилання як data URI"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:259
 msgid "Map links are also configurable via separate modules now."
-msgstr ""
-"Посилання карти тепер також налаштовуються за допомогою окремих модулів."
+msgstr "Посилання карти тепер також налаштовуються за допомогою окремих модулів."
 
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:221
@@ -212,7 +209,7 @@ msgid "Open links in new browser tab"
 msgstr "Відкривати посилання в новій вкладці"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:75 IndividualFactsTabModuleTrait.php:162
+#: FunctionsFactPlace.php:81 IndividualFactsTabModuleTrait.php:162
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
 
@@ -258,9 +255,7 @@ msgstr "Показати посилання на історичну карту �
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:260
 msgid "The following options may be used alternatively or additionally."
-msgstr ""
-"Наступні опції можуть використовуватися в якості альтернативних або "
-"додаткових."
+msgstr "Наступні опції можуть використовуватися в якості альтернативних або додаткових."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:191
@@ -276,22 +271,20 @@ msgstr "На оригінальній вкладці був знак товар�
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:229
 #, php-format
-msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
-msgstr "URI для посилань на карту із заповнювачами (%1$s та %2$s) для координат карти. Рівень масштабування повинен бути частиною URI. Приклад: %3$s"
+msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates, and optional placeholder %3$s for the place name. The zoom level should be part of the uri. Example: %4$s"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:261
 msgid "They are used wherever facts are displayed, i.e. also outside this module."
-msgstr ""
-"Вони використовуються скрізь, де показано факти, тобто, за межами цього "
-"модуля також."
+msgstr "Вони використовуються скрізь, де показано факти, тобто, за межами цього модуля також."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:228
 msgid "URI template"
 msgstr "Шаблон URI"
 
-#: FunctionsFactPlace.php:150
+#: FunctionsFactPlace.php:157
 #, php-format
 msgid "United States of America (1880-1926) | %1$s"
 msgstr "Сполучені Штати Америки (1880-1926) | %1$s"
@@ -353,6 +346,9 @@ msgstr "Рівень масштабування пов'язаної карти"
 
 #~ msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
 #~ msgstr "Останні фактично не обмежуються для найближчих родичів, і тому може бути менш заплутаним запропонувати окремий перемикач для них."
+
+#~ msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
+#~ msgstr "URI для посилань на карту із заповнювачами (%1$s та %2$s) для координат карти. Рівень масштабування повинен бути частиною URI. Приклад: %3$s"
 
 #~ msgid "Use separate toggle checkbox"
 #~ msgstr "Використовуйте окремий перемикач"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2022-05-22 14:26+0200\n"
+"POT-Creation-Date: 2024-01-07 18:40+0100\n"
 "PO-Revision-Date: 2022-05-13 10:18+0000\n"
 "Last-Translator: ro-la <lacoros@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/sk/>\n"
@@ -42,7 +42,7 @@ msgstr "Poskytnúť aj dodatočné odkazy na mapy."
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr "Rozšírená záložka „Fakty a udalost“ s háčikmi pre ďalšie moduly."
 
-#: FunctionsFactPlace.php:144 IndividualFactsTabModuleTrait.php:186
+#: FunctionsFactPlace.php:151 IndividualFactsTabModuleTrait.php:186
 msgid "Arcanum Maps"
 msgstr "Arcanum Maps"
 
@@ -85,7 +85,7 @@ msgid "Best man at a marriage"
 msgstr "Družba pri svadbe"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:68 IndividualFactsTabModuleTrait.php:142
+#: FunctionsFactPlace.php:74 IndividualFactsTabModuleTrait.php:142
 msgid "Bing Maps"
 msgstr "Bing Maps"
 
@@ -108,7 +108,7 @@ msgid "Christening of a godson"
 msgstr "Krst krstného syna"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:87 IndividualFactsTabModuleTrait.php:219
+#: FunctionsFactPlace.php:93 IndividualFactsTabModuleTrait.php:219
 msgid "Custom Map Provider"
 msgstr "Užívateľom definovaný poskytovateľ mapy"
 
@@ -117,7 +117,7 @@ msgstr "Užívateľom definovaný poskytovateľ mapy"
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Zobraziť ikonu s tooltipom, dávajúcim informáciu o zdroji mapových odkazov. Toto je určené hlavne pre debugovanie."
 
-#: FunctionsFactPlace.php:146
+#: FunctionsFactPlace.php:153
 #, php-format
 msgid "Europe in the XIX. century | %1$s"
 msgstr "Európa v XIX. storočí | %1$s"
@@ -133,7 +133,7 @@ msgid "Facts and Events Tab UI Element Providers"
 msgstr "Poskytovatelia prvkov užívateľského rozhrania pre záložku Fakty a udalosti"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:56 IndividualFactsTabModuleTrait.php:122
+#: FunctionsFactPlace.php:62 IndividualFactsTabModuleTrait.php:122
 msgid "Google Maps"
 msgstr "Google Maps"
 
@@ -209,7 +209,7 @@ msgid "Open links in new browser tab"
 msgstr "Otvárať odkazy v novom liste prehliadača"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:75 IndividualFactsTabModuleTrait.php:162
+#: FunctionsFactPlace.php:81 IndividualFactsTabModuleTrait.php:162
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
 
@@ -271,8 +271,8 @@ msgstr "Originálna záložka mala označenie obchodnej značky (trade mark) - p
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:229
 #, php-format
-msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
-msgstr "URI pre odkaz na mapu so zástupným i symbolmi (%1$s a%2$s) pre súradnice. Úroveň priblíženia by mala byť súčasťou URI. Príklad: %3$s"
+msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates, and optional placeholder %3$s for the place name. The zoom level should be part of the uri. Example: %4$s"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:261
@@ -284,7 +284,7 @@ msgstr "Použijú sa vždy, keď sa zobrazia fakty, t.j. aj mimo tohoto modulu."
 msgid "URI template"
 msgstr "URI vzor"
 
-#: FunctionsFactPlace.php:150
+#: FunctionsFactPlace.php:157
 #, php-format
 msgid "United States of America (1880-1926) | %1$s"
 msgstr "USA (1880-1926) | %1$s"
@@ -376,6 +376,9 @@ msgstr "Zoom odkazovanej mapy"
 
 #~ msgid "The latter are not actually restricted to close relatives, and therefore it may be less confusing to offer a separate toggle checkbox for them."
 #~ msgstr "Tie druhé sa nevzťahujú nutne na blízkych príbuzných, preto môže byť vhodnejšie poskytnúť samostatné prepínače."
+
+#~ msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates. The zoom level should be part of the uri. Example: %3$s"
+#~ msgstr "URI pre odkaz na mapu so zástupným i symbolmi (%1$s a%2$s) pre súradnice. Úroveň priblíženia by mala byť súčasťou URI. Príklad: %3$s"
 
 #~ msgid "Use separate toggle checkbox"
 #~ msgstr "Použiť samostatný prepínač"
