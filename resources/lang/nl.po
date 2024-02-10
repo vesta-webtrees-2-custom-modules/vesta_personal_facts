@@ -3,15 +3,16 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2024-01-07 18:40+0100\n"
-"PO-Revision-Date: 2022-04-20 22:13+0000\n"
+"PO-Revision-Date: 2024-02-10 10:02+0000\n"
 "Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.12-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:188
@@ -268,6 +269,9 @@ msgstr "Het oorspronkelijke tabblad had het TM-handelsmerkteken - behoud het als
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates, and optional placeholder %3$s for the place name. The zoom level should be part of the uri. Example: %4$s"
 msgstr ""
+"De URI voor kaartkoppelingen, met plaatshouders (%1$s en %2$s) voor "
+"kaartcoördinaten en optionele plaatshouder %3$s voor de plaatsnaam. Het "
+"zoomniveau moet deel uitmaken van de URI. Voorbeeld: %4$s"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:261
