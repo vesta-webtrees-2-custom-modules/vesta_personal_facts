@@ -24,27 +24,27 @@ class FunctionsFactPlace {
         if ($ps === null) {
             return '';
         }
-        
+
         //ok to fallbackViaParents for map link - is this really a good idea?
         //should we mark it in the view (via flag on MapCoordinates)?
-        $mapCoordinates = FunctionsPlaceUtils::plac2map($this->module, $ps, true); 
+        $mapCoordinates = FunctionsPlaceUtils::plac2map($this->module, $ps, true);
         if ($mapCoordinates === null) {
             return '';
         }
-       
-        
+
+
         //debug
         //TODO: use proper modal here? tooltip isn't helpful on tablets etc
-        //also confusing to use non-clickable helptext icon here!  
+        //also confusing to use non-clickable helptext icon here!
         $debugMapLinks = boolval($this->module->getPreference('DEBUG_MAP_LINKS', '0'));
         $debug = '';
         if ($debugMapLinks) {
             $title = htmlspecialchars($mapCoordinates->getTrace()->getAll());
             $debug = '<span class="wt-icon-help" title ="' . $title . '"><i class="fas fa-question-circle fa-fw" aria-hidden="true"></i></span>';
         }
-            
+
         return $this->getMapLinks(
-            $mapCoordinates->getLati(), 
+            $mapCoordinates->getLati(),
             $mapCoordinates->getLong(),
             $ps->getGedcomName(),
             $debug);
@@ -62,7 +62,7 @@ class FunctionsFactPlace {
             $title = boolval($this->module->getPreference('GOOGLE_TM', '1')) ? MoreI18N::xlate('Google Maps™') : I18N::translate('Google Maps');
             $title = MoreI18N::xlate('View this location using %s', $title);
             if ($zoom === 17) {
-                //use default link (better map centering)				
+                //use default link (better map centering)
                 $html .= $this->linkIcon('icons/google-maps', $title, 'https://maps.google.com/maps?q=' . $map_lati . ',' . $map_long);
             } else {
                 $html .= $this->linkIcon('icons/google-maps', $title, 'https://maps.google.com/maps?q=' . $map_lati . ',' . $map_long . '&ll=' . $map_lati . ',' . $map_long . '&z=' . $zoom);

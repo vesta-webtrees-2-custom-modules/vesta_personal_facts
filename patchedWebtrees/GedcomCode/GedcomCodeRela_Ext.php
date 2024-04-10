@@ -175,7 +175,7 @@ class GedcomCodeRela_Ext {
         }
     }
 
-    //(Webtrees::VERSION, '2.1')  
+    //(Webtrees::VERSION, '2.1')
 
     /**
      * Translate a code, for an (optional) record.

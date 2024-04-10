@@ -13,7 +13,7 @@ class FactPlaceAdditions {
   public function getBeforePlace(): GenericViewElement {
     return $this->beforePlace;
   }
-  
+
   public function getAfterMap(): GenericViewElement {
     return $this->afterMap;
   }
@@ -23,10 +23,10 @@ class FactPlaceAdditions {
   }
 
   public function __construct(
-          GenericViewElement $beforePlace, 
-          GenericViewElement $afterMap, 
+          GenericViewElement $beforePlace,
+          GenericViewElement $afterMap,
           GenericViewElement $afterNotes) {
-    
+
     $this->beforePlace = $beforePlace;
     $this->afterMap = $afterMap;
     $this->afterNotes = $afterNotes;
