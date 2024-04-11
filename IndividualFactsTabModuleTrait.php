@@ -255,7 +255,7 @@ trait IndividualFactsTabModuleTrait {
             null,
             $placeSub1);
 
-        $mapLinksDesc = 
+        $mapLinksDesc =
             /* I18N: Module Configuration */I18N::translate('Map links are also configurable via separate modules now.') . ' ' .
             /* I18N: Module Configuration */I18N::translate('The following options may be used alternatively or additionally.') . ' ' .
             /* I18N: Module Configuration */I18N::translate('They are used wherever facts are displayed, i.e. also outside this module.');

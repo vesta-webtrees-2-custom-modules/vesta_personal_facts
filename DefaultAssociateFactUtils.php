@@ -17,13 +17,13 @@ use function app;
 use function view;
 
 class DefaultAssociateFactUtils implements AssociateFactUtils {
-    
+
     public function gveLabelForAsso(
         ModuleInterface $module,
         string $label,
         Fact $fact,
         Individual $record): GenericViewElement {
-        
+
         $main = '';
         $script = '';
 
@@ -49,7 +49,7 @@ class DefaultAssociateFactUtils implements AssociateFactUtils {
         if (preg_match('/\n[23] RELA (.+)/', $fact->gedcom(), $rmatch)) {
             $rela = $rmatch[1];
         }
-        
+
         if ($parent instanceof Family) {
             //skip
         } else {
@@ -113,24 +113,24 @@ class DefaultAssociateFactUtils implements AssociateFactUtils {
                 $sex = '<small>' . view('icons/sex', ['sex' => $label_person->sex()]) . '</small>';
                 $suffix = $sex . ')';
             }
-      
+
             $val = FunctionsFactAssociates::getOutputForRelationship(
                 $module,
-                $fact, 
-                $label_person, 
-                $record, 
-                $prefix, 
-                $relationship_name, 
-                $suffix, 
+                $fact,
+                $label_person,
+                $record,
+                $prefix,
+                $relationship_name,
+                $suffix,
                 true);
-      
+
             if ($val != null) {
                 $main .= "<br/>";
                 $main .= $val->getMain();
                 $script .= $val->getScript();
             }
         }
-    
+
         return new GenericViewElement($main, $script);
     }
 }

@@ -23,7 +23,7 @@ use Ramsey\Uuid\Uuid;
         </label>
     </th>
     <td>
-          
+
         <form method="post" action="<?= e(route(SelectNewFact::class, ['tree' => $record->tree()->name(), 'xref' => $record->xref()])) ?>" onsubmit="if ($('#add-fact<?= $disambiguator ?>').val() === null) {event.preventDefault();}">
 
             <div class="input-group">

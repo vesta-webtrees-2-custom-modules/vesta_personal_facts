@@ -18,7 +18,7 @@ use function GuzzleHttp\json_encode;
  * @var bool                 $has_historic_facts
  * @var bool                 $has_relative_facts
  * @var Individual           $individual
- * 
+ *
  * @var IndividualFactsTabModule_2x $module
  * @var AssociateFactUtils          $associateFactUtils
  */
@@ -68,7 +68,7 @@ View::endpush();
                             <?= MoreI18N::xlate('Historic events') ?>
                         </label>
                     <?php endif ?>
-                    
+
                     <?php
                     //[RC] PATCHED
                     $outputInDescriptionbox = FactListUtils::getOutputInDescriptionbox($module, $individual);
@@ -101,10 +101,10 @@ View::endpush();
             $useVestals = $module->useVestals();
             $hideCoordinates = boolval($module->getPreference('LINKS_AFTER_PLAC', '0'));
             ?>
-            <?php foreach ($facts as $fact) : ?>                
-                <?= view(VestaUtils::vestaViewsNamespace() . '::fact', [                    
-                    'fact'                   => $fact, 
-                    'record'                 => $individual, 
+            <?php foreach ($facts as $fact) : ?>
+                <?= view(VestaUtils::vestaViewsNamespace() . '::fact', [
+                    'fact'                   => $fact,
+                    'record'                 => $individual,
                     'module'                 => $module,
                     'useVestals'             => $useVestals,
                     'hideCoordinates'        => $hideCoordinates,
@@ -161,21 +161,21 @@ View::endpush();
 ?>
 <?php if ($has_historic_facts) : ?>
     webtrees.persistentToggle(document.querySelector('#show-historical-facts-pfh'));
-<?php endif ?>    
+<?php endif ?>
 </script>
 
-<?php  
+<?php
     $requests = [];
 
     if ($module->useVestals()) {
         foreach ($facts as $fact) {
             $requests = array_merge($requests, $module->functionsVestals()->vestalsForFactPlace($fact));
-        }        
+        }
     }
 
     $url = $module->functionsVestals()->vestalsActionUrl();
 ?>
-    
+
 <?php if (sizeof($requests) > 0) : ?>
   <script>
     //load via ajax
@@ -192,6 +192,6 @@ View::endpush();
           }
     });
   </script>
-<?php endif ?>  
+<?php endif ?>
 
 <?php View::endpush() ?>

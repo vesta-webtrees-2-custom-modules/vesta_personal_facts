@@ -75,11 +75,11 @@ class IndividualFactsTabModule_2x extends IndividualFactsTabModule implements Mo
         $exclude_facts  = new Collection(['FAM:CHAN', 'FAM:_UID']);
         // Don't show tags that are shown in tabs or sidebars
         $exclude_facts = $exclude_facts->merge($sidebar_facts)->merge($tab_facts);
-        
+
         $individual_facts = $this->individual_facts_service->individualFacts($individual, $exclude_facts);
         $family_facts     = $this->individual_facts_service->familyFacts($individual, $exclude_facts);
         $relative_facts   = $this->individual_facts_service->relativeFacts($individual);
-        
+
         //[RC] adjusted
         $associate_facts  = $this->associateFacts($individual);
         $historic_facts   = $this->individual_facts_service->historicFacts($individual);
@@ -104,7 +104,7 @@ class IndividualFactsTabModule_2x extends IndividualFactsTabModule implements Mo
             'INDI:EVEN:FAMC'      => new XrefFamily(I18N::translate('Adoptive parents')),
             'INDI:EVEN:FAMC:ADOP' => new AdoptedByWhichParent(I18N::translate('Adoption')),
         ]);
-        
+
         $view = view($this->getViewNameTab(), [
             'can_edit' => $individual->canEdit(),
             'clipboard_facts'     => $this->clipboard_service->pastableFacts($individual),
@@ -116,13 +116,13 @@ class IndividualFactsTabModule_2x extends IndividualFactsTabModule implements Mo
             //for further extensions in custom views
             'module' => $this
         ]);
-        
+
         return $view;
     }
 
     /**
      * [RC] OverrideHook
-     * 
+     *
      * @param Fact $fact
      * @return boolean
      */

@@ -25,7 +25,7 @@ Mainly intended as a base for other custom modules. Some features are available 
   * [Arcanum Maps](https://maps.arcanum.com/), providing a historical map of Europe in the XIX. century, and of the United States of America (1880-1926).
   * The option to configure an additional custom map provider via the control panel.
 
-* The respective location data is obtained directly from GEDCOM, and may also be provided by other custom modules. 
+* The respective location data is obtained directly from GEDCOM, and may also be provided by other custom modules.
 
 * If you have collected non-GEDCOM location data via webtrees itself, activate the 'Vesta Webtrees Location Data Provider' custom module to make this data available.
 

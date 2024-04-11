@@ -37,7 +37,7 @@ foreach ($ret as $r) {
 //[RC] ADDED
 $facts = $facts->merge($additionalFacts);
 $facts = Fact::sortFacts($facts);
-        
+
 ?>
 
 <?php
@@ -93,9 +93,9 @@ View::endpush();
             </tr>
         <?php else : ?>
             <?php foreach ($facts as $fact) : ?>
-                <?= view(VestaUtils::vestaViewsNamespace() . '::fact', [                    
-                    'fact'                   => $fact, 
-                    'record'                 => $record, 
+                <?= view(VestaUtils::vestaViewsNamespace() . '::fact', [
+                    'fact'                   => $fact,
+                    'record'                 => $record,
                     'module'                 => $module,
                     'useVestals'             => $module->useVestals(),
                     'hideCoordinates'        => boolval($module->getPreference('LINKS_AFTER_PLAC', '0')),
@@ -122,18 +122,18 @@ echo $outputAfterTab->getScript();
 View::endpush();
 ?>
 
-<?php  
+<?php
     $requests = [];
 
     if ($module->useVestals()) {
         foreach ($facts as $fact) {
             $requests = array_merge($requests, $module->functionsVestals()->vestalsForFactPlace($fact));
-        }        
+        }
     }
 
     $url = $module->functionsVestals()->vestalsActionUrl();
 ?>
-    
+
 <?php if (sizeof($requests) > 0) : ?>
     <?php View::push('javascript') ?>
     <script>
