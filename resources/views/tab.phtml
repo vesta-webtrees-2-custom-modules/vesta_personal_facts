@@ -27,7 +27,8 @@ use function GuzzleHttp\json_encode;
 
 <?php
  //[RC] PATCHED
-$outputBeforeTab = FactListUtils::getOutputBeforeTab($module, $individual, true);
+$ajax = boolval($module->getPreference('CAN_LOAD_AJAX', '1'));
+$outputBeforeTab = FactListUtils::getOutputBeforeTab($module, $individual, $ajax);
 echo $outputBeforeTab->getMain();
 View::push('javascript');
 echo $outputBeforeTab->getScript();

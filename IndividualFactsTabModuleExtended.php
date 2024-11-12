@@ -131,8 +131,9 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
     }
 
     //there may be further ajax calls from this tab so we suggest to load tab itself via ajax
+    //but see #99
     public function canLoadAjax(): bool {
-        return true; //must align with ajax-modal-vesta in getOutputBeforeTab()
+        return boolval($this->getPreference('CAN_LOAD_AJAX', '1'));
     }
 
     public function assetsViaViews(): array {

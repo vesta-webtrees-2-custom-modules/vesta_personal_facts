@@ -2,16 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the vesta package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2024-01-07 18:40+0100\n"
+"POT-Creation-Date: 2024-11-10 09:19+0100\n"
 "PO-Revision-Date: 2024-04-28 19:07+0000\n"
 "Last-Translator: Semih <semihbrn10@gmail.com>\n"
-"Language-Team: Turkish <https://hosted.weblate.org/projects/"
-"vesta-webtrees-custom-modules/vesta-facts-and-events/tr/>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,13 +19,13 @@ msgstr ""
 "X-Generator: Weblate 5.5.1\n"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:188
+#: IndividualFactsTabModuleTrait.php:199
 #, php-format
 msgid "%1$s (historic maps)"
 msgstr "%1$s (tarihi haritalar)"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:210
+#: IndividualFactsTabModuleTrait.php:221
 msgid "Aerial Base Map"
 msgstr "Hava Üssü Haritası"
 
@@ -43,7 +42,7 @@ msgstr "Ayrıca ek harita bağlantıları da sağlar."
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr "Diğer özel modüller için kancalar içeren genişletilmiş bir 'Gerçekler ve Olaylar' sekmesi."
 
-#: FunctionsFactPlace.php:151 IndividualFactsTabModuleTrait.php:186
+#: FunctionsFactPlace.php:151 IndividualFactsTabModuleTrait.php:197
 msgid "Arcanum Maps"
 msgstr "Arcanum Maps"
 
@@ -76,7 +75,7 @@ msgid "Baptism of a godson"
 msgstr "Bir vaftiz oğlunun vaftizi"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:237
+#: IndividualFactsTabModuleTrait.php:248
 #, php-format
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr "Bağlantı simgesi için Base64 olarak kodlanmış veri URI'si. Simgeyi bir veri URI'sine dönüştürün, örneğin %1$s üzerinden. Sonuç %2$s gibi bir şeyle başlamalıdır. Simge görüntüsünün iyi bir kaynağı genellikle %3$s gibi harita sağlayıcısının ikon görüntüsüdür. Uygun şekilde yeniden boyutlandırılmış olarak görüntülenecektir."
@@ -86,7 +85,7 @@ msgid "Best man at a marriage"
 msgstr "Bir evlilikte sağdıç"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:74 IndividualFactsTabModuleTrait.php:142
+#: FunctionsFactPlace.php:74 IndividualFactsTabModuleTrait.php:153
 msgid "Bing Maps"
 msgstr "Bing Haritalar"
 
@@ -109,12 +108,17 @@ msgid "Christening of a godson"
 msgstr "Bir vaftiz oğlunun vaftiz edilmesi"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:93 IndividualFactsTabModuleTrait.php:219
+#: FunctionsFactPlace.php:93 IndividualFactsTabModuleTrait.php:230
 msgid "Custom Map Provider"
 msgstr "Özel Harita Sağlayıcısı"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:117
+#: IndividualFactsTabModuleTrait.php:81
+msgid "Deselecting this option may improve the tab loading behavior, in particular in case of large images."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:128
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Harita bağlantılarının kaynağını gösteren bir araç ipucu içeren bir simge görüntüler. Bu esas olarak hata ayıklama için tasarlanmıştır."
 
@@ -124,50 +128,55 @@ msgid "Europe in the XIX. century | %1$s"
 msgstr "XIX. yüzyılda Avrupa | %1$s"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:250
+#: IndividualFactsTabModuleTrait.php:261
 msgid "Facts and Events List"
 msgstr "Gerçekler ve Olaylar Listesi"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:278
+#: IndividualFactsTabModuleExtended.php:279
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Gerçekler ve Olaylar Sekmesi UI Öğe Sağlayıcıları"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:62 IndividualFactsTabModuleTrait.php:122
+#: FunctionsFactPlace.php:62 IndividualFactsTabModuleTrait.php:133
 msgid "Google Maps"
 msgstr "Google Haritalar"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:101
+#: IndividualFactsTabModuleTrait.php:112
 msgid "Hide coordinates, show map links after place name"
 msgstr "Koordinatları gizle, yer adından sonra harita bağlantılarını göster"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:83
+#: IndividualFactsTabModuleTrait.php:94
 msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
 msgstr "Bu seçenek işaretlenirse, bir kişinin bir ortak olarak listelendiği ek gerçekler ve olaylar aşağıdaki gerçekler ve olaylarla sınırlıdır."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:102
+#: IndividualFactsTabModuleTrait.php:113
 msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
 msgstr "Orijinal sekmesinde, koordinatlar gösterilir (harita bağlantıları ile). Bu, özellikle koordinatları sağlayan ek modüller varsa, yer ekranını karmaşıklaştırma eğilimindedir."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:129 IndividualFactsTabModuleTrait.php:149
-#: IndividualFactsTabModuleTrait.php:169
+#: IndividualFactsTabModuleTrait.php:140 IndividualFactsTabModuleTrait.php:160
+#: IndividualFactsTabModuleTrait.php:180
 msgid "Include 'TM' in tooltip"
 msgstr "Araç ipucuna 'TM' i dahil et"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:175
+#: IndividualFactsTabModuleTrait.php:186
 msgid "Include a marker in the linked map."
 msgstr "Bağlantılı haritaya bir işaretleyici ekleyin."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:174
+#: IndividualFactsTabModuleTrait.php:185
 msgid "Include marker"
 msgstr "İşaretleyiciyi dahil et"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:76
+msgid "Initialization"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:44
@@ -175,48 +184,52 @@ msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr "Orijinal 'Gerçekler ve olaylar' modülünün yerine geçmesi amaçlanmıştır."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:98
+#: IndividualFactsTabModuleTrait.php:109
 msgid "Latitude/Longitude"
 msgstr "Enlem/Boylam"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:236
+#: IndividualFactsTabModuleTrait.php:247
 msgid "Link icon as data URI"
 msgstr "Veri URI'si olarak bağlantı simgesi"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:259
-msgid "Map links are also configurable via separate modules now."
+#: IndividualFactsTabModuleTrait.php:79
+msgid "Load this tab dynamically"
 msgstr ""
-"Harita bağlantıları da artık ayrı modüller aracılığıyla yapılandırılabilir."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:270
+msgid "Map links are also configurable via separate modules now."
+msgstr "Harita bağlantıları da artık ayrı modüller aracılığıyla yapılandırılabilir."
 
 #. I18N: Module Configuration: Name of a custom map provider
-#: IndividualFactsTabModuleTrait.php:221
+#: IndividualFactsTabModuleTrait.php:232
 msgid "Name"
 msgstr "Ad"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:209
+#: IndividualFactsTabModuleTrait.php:220
 msgid "OSM Base Map"
 msgstr "OSM Temel Haritası"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:82
+#: IndividualFactsTabModuleTrait.php:93
 msgid "Only show specific facts and events"
 msgstr "Sadece belirli gerçekleri ve olayları göster"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:111
+#: IndividualFactsTabModuleTrait.php:122
 msgid "Open links in new browser tab"
 msgstr "Bağlantıları yeni tarayıcı sekmesinde aç"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:81 IndividualFactsTabModuleTrait.php:162
+#: FunctionsFactPlace.php:81 IndividualFactsTabModuleTrait.php:173
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:254
+#: IndividualFactsTabModuleTrait.php:265
 msgid "Place Settings"
 msgstr "Yer Ayarları"
 
@@ -225,68 +238,69 @@ msgid "Replacement for the original 'Facts and events' module."
 msgstr "Orijinal 'Gerçekler ve olaylar' modülünün değiştirilmesi."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:116
+#: IndividualFactsTabModuleTrait.php:80
+msgid "Select this option in order to load the tab contents only once the tab is actually selected."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:127
 msgid "Show additional info for map links"
 msgstr "Harita bağlantıları için ek bilgileri göster"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:202
+#: IndividualFactsTabModuleTrait.php:213
 msgid "Show linked map with additional options"
 msgstr "Bağlantılı haritayı ek seçeneklerle göster"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:144
+#: IndividualFactsTabModuleTrait.php:155
 msgid "Show links to Bing Maps"
 msgstr "Bing Haritalarına bağlantıları göster"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:124
+#: IndividualFactsTabModuleTrait.php:135
 msgid "Show links to Google Maps"
 msgstr "Google Haritalar'a bağlantıları göster"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:164
+#: IndividualFactsTabModuleTrait.php:175
 msgid "Show links to OpenStreetMap"
 msgstr "OpenStreetMap bağlantılarını göster"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:190
+#: IndividualFactsTabModuleTrait.php:201
 msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
 msgstr "XIX. yüzyılda Avrupa'nın tarihi haritasına veya varsa Amerika Birleşik Devletleri'ne (1880-1926) bağlantılar göster"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:260
+#: IndividualFactsTabModuleTrait.php:271
 msgid "The following options may be used alternatively or additionally."
 msgstr "Aşağıdaki seçenekler alternatif olarak veya ek olarak kullanılabilir."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:191
+#: IndividualFactsTabModuleTrait.php:202
 msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
 msgstr "Bağlantı öğesi, Avrupa ve ABD'nin ilgili sınırları dışındaki yerler için gösterilmeyecektir."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:130 IndividualFactsTabModuleTrait.php:150
-#: IndividualFactsTabModuleTrait.php:170
+#: IndividualFactsTabModuleTrait.php:141 IndividualFactsTabModuleTrait.php:161
+#: IndividualFactsTabModuleTrait.php:181
 msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
 msgstr "Orijinal sekmede bir ticari marka işareti vardı - isterseniz veya yasal olarak bağlı hissediyorsanız saklayın."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:229
+#: IndividualFactsTabModuleTrait.php:240
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates, and optional placeholder %3$s for the place name. The zoom level should be part of the uri. Example: %4$s"
-msgstr ""
-"Harita bağlantıları için uri, harita koordinatları için yer tutucular (%1$s "
-"ve %2$s) ve yer adı için isteğe bağlı yer tutucu %3$s. Yakınlaştırma "
-"seviyesi uri'nin bir parçası olmalıdır. Örnek: %4$s"
+msgstr "Harita bağlantıları için uri, harita koordinatları için yer tutucular (%1$s ve %2$s) ve yer adı için isteğe bağlı yer tutucu %3$s. Yakınlaştırma seviyesi uri'nin bir parçası olmalıdır. Örnek: %4$s"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:261
+#: IndividualFactsTabModuleTrait.php:272
 msgid "They are used wherever facts are displayed, i.e. also outside this module."
-msgstr ""
-"Gerçeklerin gösterildiği her yerde, yani bu modülün dışında da kullanılırlar."
+msgstr "Gerçeklerin gösterildiği her yerde, yani bu modülün dışında da kullanılırlar."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:228
+#: IndividualFactsTabModuleTrait.php:239
 msgid "URI template"
 msgstr "URI şablonu"
 
@@ -296,7 +310,7 @@ msgid "United States of America (1880-1926) | %1$s"
 msgstr "Amerika Birleşik Devletleri (1880-1926) | %1$s"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:203
+#: IndividualFactsTabModuleTrait.php:214
 #, php-format
 msgid "When checked, links to the main %1$s page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
 msgstr "İşaretlendiğinde, ilgili konum için mevcut olan farklı tarihsel katmanlar arasında geçiş yapabileceğiniz ve ek olarak burada yapılandırılabilen modern bir haritaya girip çıkabileceğiniz ana %1$s sayfasına bağlantılar:"
@@ -316,13 +330,13 @@ msgid "Witness at a marriage"
 msgstr "Bir evlilikte tanık"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:222
+#: IndividualFactsTabModuleTrait.php:233
 msgid "You can also configure a custom map provider. Enter its name here."
 msgstr "Ayrıca özel bir harita sağlayıcısı da yapılandırabilirsiniz. Adını buraya girin."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:134 IndividualFactsTabModuleTrait.php:154
-#: IndividualFactsTabModuleTrait.php:179 IndividualFactsTabModuleTrait.php:195
+#: IndividualFactsTabModuleTrait.php:145 IndividualFactsTabModuleTrait.php:165
+#: IndividualFactsTabModuleTrait.php:190 IndividualFactsTabModuleTrait.php:206
 msgid "Zoom level of linked map"
 msgstr "Bağlantılı haritanın yakınlaştırma seviyesi"
 

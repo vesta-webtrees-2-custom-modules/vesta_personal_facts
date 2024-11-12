@@ -2,11 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2024-01-07 18:40+0100\n"
+"POT-Creation-Date: 2024-11-10 09:19+0100\n"
 "PO-Revision-Date: 2024-02-05 00:01+0000\n"
 "Last-Translator: Holger Eisold <github@eisold.family>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/"
-"vesta-webtrees-custom-modules/vesta-facts-and-events/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,13 +14,13 @@ msgstr ""
 "X-Generator: Weblate 5.4-dev\n"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:188
+#: IndividualFactsTabModuleTrait.php:199
 #, php-format
 msgid "%1$s (historic maps)"
 msgstr "%1$s (historische Karten)"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:210
+#: IndividualFactsTabModuleTrait.php:221
 msgid "Aerial Base Map"
 msgstr "Luftbild-Grundkarte"
 
@@ -38,7 +37,7 @@ msgstr "Enthält auch zusätzliche Kartenlinks."
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr "Eine erweiterte Registerkarte 'Tatsachen und Ereignisse', mit Schnittstellen (hooks) für andere benutzerdefinierte Module."
 
-#: FunctionsFactPlace.php:151 IndividualFactsTabModuleTrait.php:186
+#: FunctionsFactPlace.php:151 IndividualFactsTabModuleTrait.php:197
 msgid "Arcanum Maps"
 msgstr "Arcanum Maps"
 
@@ -71,7 +70,7 @@ msgid "Baptism of a godson"
 msgstr "Taufe eines Patensohnes"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:237
+#: IndividualFactsTabModuleTrait.php:248
 #, php-format
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr "Base64-kodierte Daten-URI für das Link-Symbol. Konvertieren Sie das Symbol in einen Daten-URI z. B. über %1$s. Das Ergebnis sollte mit etwas wie %2$s beginnen. Eine gute Quelle für das Icon-Bild ist normalerweise das Favicon-Bild des Kartenanbieters, z. B. %3$s. Es wird dann in der richtigen Größe angezeigt."
@@ -81,7 +80,7 @@ msgid "Best man at a marriage"
 msgstr "Trauzeuge bei einer Hochzeit"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:74 IndividualFactsTabModuleTrait.php:142
+#: FunctionsFactPlace.php:74 IndividualFactsTabModuleTrait.php:153
 msgid "Bing Maps"
 msgstr "Bing Maps"
 
@@ -104,12 +103,17 @@ msgid "Christening of a godson"
 msgstr "Kindstaufe eines Patensohnes"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:93 IndividualFactsTabModuleTrait.php:219
+#: FunctionsFactPlace.php:93 IndividualFactsTabModuleTrait.php:230
 msgid "Custom Map Provider"
 msgstr "Benutzerdefinierte Kartenanbieter"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:117
+#: IndividualFactsTabModuleTrait.php:81
+msgid "Deselecting this option may improve the tab loading behavior, in particular in case of large images."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:128
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr "Zeigt ein Symbol mit einem Tooltip an, der die Quelle der Kartenlinks angibt. Dies ist im Wesentlichen für die Fehlersuche gedacht."
 
@@ -119,50 +123,55 @@ msgid "Europe in the XIX. century | %1$s"
 msgstr "Europa im 19. Jahrhundert | %1$s"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:250
+#: IndividualFactsTabModuleTrait.php:261
 msgid "Facts and Events List"
 msgstr "Liste der Tatsachen und Ereignisse"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleExtended.php:278
+#: IndividualFactsTabModuleExtended.php:279
 msgid "Facts and Events Tab UI Element Providers"
 msgstr "Tatsachen und Ereignisse Registerkarte UI Element Provider"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:62 IndividualFactsTabModuleTrait.php:122
+#: FunctionsFactPlace.php:62 IndividualFactsTabModuleTrait.php:133
 msgid "Google Maps"
 msgstr "Google Maps"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:101
+#: IndividualFactsTabModuleTrait.php:112
 msgid "Hide coordinates, show map links after place name"
 msgstr "Koordinaten ausblenden, Kartenlinks nach dem Ortsnamen anzeigen"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:83
+#: IndividualFactsTabModuleTrait.php:94
 msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
 msgstr "Wenn diese Einstellung aktiviert ist, werden zusätzliche Tatsachen und Ereignisse, bei denen die Person als Beteiligte aufgeführt ist, auf die folgenden Tatsachen und Ereignisse beschränkt."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:102
+#: IndividualFactsTabModuleTrait.php:113
 msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
 msgstr "In der ursprünglichen Registerkarte werden Koordinaten (mit Kartenlinks) angezeigt. Dies trägt dazu bei die Ortsanzeige unübersichtlich zu machen, insbesondere wenn es zusätzliche Module gibt, die Koordinaten liefern."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:129 IndividualFactsTabModuleTrait.php:149
-#: IndividualFactsTabModuleTrait.php:169
+#: IndividualFactsTabModuleTrait.php:140 IndividualFactsTabModuleTrait.php:160
+#: IndividualFactsTabModuleTrait.php:180
 msgid "Include 'TM' in tooltip"
 msgstr "'TM' im Tooltip anzeigen"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:175
+#: IndividualFactsTabModuleTrait.php:186
 msgid "Include a marker in the linked map."
 msgstr "Eine Markierung in die verknüpfte Karte einfügen."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:174
+#: IndividualFactsTabModuleTrait.php:185
 msgid "Include marker"
 msgstr "Marker einfügen"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:76
+msgid "Initialization"
+msgstr ""
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:44
@@ -170,47 +179,52 @@ msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr "Ist als Ersatz für das ursprüngliche Modul \"Tatsachen und Ereignisse\" gedacht."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:98
+#: IndividualFactsTabModuleTrait.php:109
 msgid "Latitude/Longitude"
 msgstr "Breitengrad/Längengrad (Lat/Lon)"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:236
+#: IndividualFactsTabModuleTrait.php:247
 msgid "Link icon as data URI"
 msgstr "Link-Symbol als Daten-URI"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:259
+#: IndividualFactsTabModuleTrait.php:79
+msgid "Load this tab dynamically"
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:270
 msgid "Map links are also configurable via separate modules now."
 msgstr "Kartenlinks sind auch über separate Module konfigurierbar."
 
 #. I18N: Module Configuration: Name of a custom map provider
-#: IndividualFactsTabModuleTrait.php:221
+#: IndividualFactsTabModuleTrait.php:232
 msgid "Name"
 msgstr "Name"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:209
+#: IndividualFactsTabModuleTrait.php:220
 msgid "OSM Base Map"
 msgstr "OSM Grundkarte"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:82
+#: IndividualFactsTabModuleTrait.php:93
 msgid "Only show specific facts and events"
 msgstr "Nur bestimmte Tatsachen und Ereignisse anzeigen"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:111
+#: IndividualFactsTabModuleTrait.php:122
 msgid "Open links in new browser tab"
 msgstr "Links im neuen Browser-Tab öffnen"
 
 #. I18N: Module Configuration
-#: FunctionsFactPlace.php:81 IndividualFactsTabModuleTrait.php:162
+#: FunctionsFactPlace.php:81 IndividualFactsTabModuleTrait.php:173
 msgid "OpenStreetMap"
 msgstr "OpenStreetMap"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:254
+#: IndividualFactsTabModuleTrait.php:265
 msgid "Place Settings"
 msgstr "Orts-Einstellungen"
 
@@ -219,67 +233,69 @@ msgid "Replacement for the original 'Facts and events' module."
 msgstr "Ersatz für das ursprüngliche Modul 'Tatsachen und Ereignisse'."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:116
+#: IndividualFactsTabModuleTrait.php:80
+msgid "Select this option in order to load the tab contents only once the tab is actually selected."
+msgstr ""
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:127
 msgid "Show additional info for map links"
 msgstr "Zusätzliche Informationen für Kartenlinks anzeigen"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:202
+#: IndividualFactsTabModuleTrait.php:213
 msgid "Show linked map with additional options"
 msgstr "Verknüpfte Karte mit zusätzlichen Optionen anzeigen"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:144
+#: IndividualFactsTabModuleTrait.php:155
 msgid "Show links to Bing Maps"
 msgstr "Links zu Bing Maps anzeigen"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:124
+#: IndividualFactsTabModuleTrait.php:135
 msgid "Show links to Google Maps"
 msgstr "Links zu Google Maps anzeigen"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:164
+#: IndividualFactsTabModuleTrait.php:175
 msgid "Show links to OpenStreetMap"
 msgstr "Links zu OpenStreetMap anzeigen"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:190
+#: IndividualFactsTabModuleTrait.php:201
 msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
 msgstr "Links zu historischen Karten von Europa aus dem 19. Jahrhundert oder den USA (1880-1926) anzeigen - falls zutreffend"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:260
+#: IndividualFactsTabModuleTrait.php:271
 msgid "The following options may be used alternatively or additionally."
 msgstr "Die folgenden Optionen können alternativ oder zusätzlich verwendet werden."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:191
+#: IndividualFactsTabModuleTrait.php:202
 msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
 msgstr "Für Standorte außerhalb der jeweiligen Grenzen von Europa und den USA wird der Link-Eintrag nicht angezeigt."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:130 IndividualFactsTabModuleTrait.php:150
-#: IndividualFactsTabModuleTrait.php:170
+#: IndividualFactsTabModuleTrait.php:141 IndividualFactsTabModuleTrait.php:161
+#: IndividualFactsTabModuleTrait.php:181
 msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
 msgstr "Die ursprüngliche Registerkarte hatte das 'TM'-Markenzeichen - behalte es, wenn Du möchtest oder Dich rechtlich dazu verpflichtet fühlst."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:229
+#: IndividualFactsTabModuleTrait.php:240
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates, and optional placeholder %3$s for the place name. The zoom level should be part of the uri. Example: %4$s"
-msgstr ""
-"Die URI für Kartenlinks, mit Platzhaltern (%1$s und %2$s) für "
-"Kartenkoordinaten und optionalem Platzhalter %3$s für den Ortsnamen. Die "
-"Zoomstufe sollte Teil der URI sein. Beispiel: %4$s"
+msgstr "Die URI für Kartenlinks, mit Platzhaltern (%1$s und %2$s) für Kartenkoordinaten und optionalem Platzhalter %3$s für den Ortsnamen. Die Zoomstufe sollte Teil der URI sein. Beispiel: %4$s"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:261
+#: IndividualFactsTabModuleTrait.php:272
 msgid "They are used wherever facts are displayed, i.e. also outside this module."
 msgstr "Auch außerhalb dieses Module werden sie überall dort verwendet, wo Tatsachen angezeigt werden."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:228
+#: IndividualFactsTabModuleTrait.php:239
 msgid "URI template"
 msgstr "URI-Vorlage"
 
@@ -289,7 +305,7 @@ msgid "United States of America (1880-1926) | %1$s"
 msgstr "Vereinigte Staaten von Amerika (1880-1926) | %1$s"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:203
+#: IndividualFactsTabModuleTrait.php:214
 #, php-format
 msgid "When checked, links to the main %1$s page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
 msgstr "Wenn diese Option aktiviert ist, verweist sie auf die %1$s-Hauptseite, auf der Du zwischen verschiedenen für den jeweiligen Standort verfügbaren historischen Layern wechseln und eine moderne Karte ein- und ausblenden kannst, die hier zusätzlich konfiguriert werden kann:"
@@ -309,13 +325,13 @@ msgid "Witness at a marriage"
 msgstr "Trauzeuge"
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:222
+#: IndividualFactsTabModuleTrait.php:233
 msgid "You can also configure a custom map provider. Enter its name here."
 msgstr "Du kannst auch einen benutzerdefinierten Kartenanbieter konfigurieren. Gib hier den Namen ein."
 
 #. I18N: Module Configuration
-#: IndividualFactsTabModuleTrait.php:134 IndividualFactsTabModuleTrait.php:154
-#: IndividualFactsTabModuleTrait.php:179 IndividualFactsTabModuleTrait.php:195
+#: IndividualFactsTabModuleTrait.php:145 IndividualFactsTabModuleTrait.php:165
+#: IndividualFactsTabModuleTrait.php:190 IndividualFactsTabModuleTrait.php:206
 msgid "Zoom level of linked map"
 msgstr "Zoom-Stufe der verknüpften Karte"
 

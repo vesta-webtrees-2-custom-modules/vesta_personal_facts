@@ -72,6 +72,17 @@ trait IndividualFactsTabModuleTrait {
                 'VESTA_SIDEBAR',
                 '1')));
 
+        $generalSub[] = new ControlPanelSubsection(
+            /* I18N: Module Configuration */I18N::translate('Initialization'),
+            array(
+            new ControlPanelCheckbox(
+                /* I18N: Module Configuration */I18N::translate('Load this tab dynamically'),
+                /* I18N: Module Configuration */I18N::translate('Select this option in order to load the tab contents only once the tab is actually selected.') . ' ' .
+                /* I18N: Module Configuration */I18N::translate('Deselecting this option may improve the tab loading behavior, in particular in case of large images.'),
+                'CAN_LOAD_AJAX',
+                '1')));
+
+
         //'ASSO_SEPARATE' is obsolete (now properly handled by webtrees)
 
         $factsAndEventsSub = array();
