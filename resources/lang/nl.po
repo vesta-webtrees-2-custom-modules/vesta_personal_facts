@@ -3,15 +3,16 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2024-11-10 09:19+0100\n"
-"PO-Revision-Date: 2024-02-10 10:02+0000\n"
+"PO-Revision-Date: 2024-11-15 19:00+0000\n"
 "Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.9-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:199
@@ -111,6 +112,8 @@ msgstr "Andere kaartprovider"
 #: IndividualFactsTabModuleTrait.php:81
 msgid "Deselecting this option may improve the tab loading behavior, in particular in case of large images."
 msgstr ""
+"Het deselecteren van deze optie kan het laadgedrag van tabbladen verbeteren, "
+"vooral in het geval van grote afbeeldingen."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:128
@@ -171,7 +174,7 @@ msgstr "Markering opnemen"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:76
 msgid "Initialization"
-msgstr ""
+msgstr "Initialisatie"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:44
@@ -191,7 +194,7 @@ msgstr "Koppelingspictogram als gegevens-URI"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:79
 msgid "Load this tab dynamically"
-msgstr ""
+msgstr "Laad dit tabblad dynamisch"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:270
@@ -236,6 +239,8 @@ msgstr "Vervanging van de originele module 'Feiten en gebeurtenissen'."
 #: IndividualFactsTabModuleTrait.php:80
 msgid "Select this option in order to load the tab contents only once the tab is actually selected."
 msgstr ""
+"Selecteer deze optie om de inhoud van het tabblad pas te laden als het "
+"tabblad daadwerkelijk is geselecteerd."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:127
