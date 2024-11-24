@@ -45,7 +45,6 @@ use Vesta\Model\PlaceStructure;
 use Vesta\VestaAdminController;
 use Vesta\VestaModuleTrait;
 use Vesta\VestaUtils;
-use function app;
 use function route;
 use function view;
 
@@ -115,7 +114,7 @@ class IndividualFactsTabModuleExtended extends IndividualFactsTabModule_2x imple
 
         //explicitly register in order to re-use in views where we cannot pass via variable
         //(could also resolve via module service)
-        app()->instance(IndividualFactsTabModuleExtended::class, $this); //do not use bind()! for some reason leads to 'Illegal offset type in isset or empty'
+        \Vesta\VestaUtils::set(IndividualFactsTabModuleExtended::class, $this); //do not use bind()! for some reason leads to 'Illegal offset type in isset or empty'
 
         // Replace an existing view with our own version.
         View::registerCustomView('::edit/add-fact-row', $this->name() . '::edit/add-fact-row');

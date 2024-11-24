@@ -13,7 +13,6 @@ use Fisharebest\Webtrees\Module\ModuleInterface;
 use Fisharebest\Webtrees\Services\RelationshipService;
 use Vesta\CommonI18N;
 use Vesta\Model\GenericViewElement;
-use function app;
 use function view;
 
 class DefaultAssociateFactUtils implements AssociateFactUtils {
@@ -99,7 +98,7 @@ class DefaultAssociateFactUtils implements AssociateFactUtils {
         }
 
         foreach ($label_persons as $label_person) {
-            $relationship_name = app(RelationshipService::class)->getCloseRelationshipName($record, $label_person);
+            $relationship_name = \Vesta\VestaUtils::get(RelationshipService::class)->getCloseRelationshipName($record, $label_person);
             if ($relationship_name === '') {
                 //RC adjusted
                 $relationship_name = CommonI18N::noRelationshipFound();

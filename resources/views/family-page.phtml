@@ -19,7 +19,7 @@ use Vesta\VestaUtils;
  * @var Family               $record
  */
 
-$module = app(IndividualFactsTabModuleExtended::class);
+$module = \Vesta\VestaUtils::get(IndividualFactsTabModuleExtended::class);
 
 $additionalFacts = array();
 $ret = IndividualFactsTabExtenderUtils::accessibleModules($module, $record->tree(), Auth::user())
