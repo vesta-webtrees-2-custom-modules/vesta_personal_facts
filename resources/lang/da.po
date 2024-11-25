@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2024-11-10 09:19+0100\n"
-"PO-Revision-Date: 2024-11-25 16:00+0000\n"
+"PO-Revision-Date: 2024-11-25 18:00+0000\n"
 "Last-Translator: stc4000 <sofie54@icloud.com>\n"
 "Language-Team: Danish <https://hosted.weblate.org/projects/"
 "vesta-webtrees-custom-modules/vesta-facts-and-events/da/>\n"
@@ -68,136 +68,156 @@ msgstr "Udvider også fakta og hændelser på familieoversigten."
 
 #: IndividualFactsTabModuleTrait.php:31 IndividualFactsTabModuleTrait.php:47
 msgid "Also provides additional map links."
-msgstr ""
+msgstr "Inkluderer yderligere kortlinks."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:43
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
 msgstr ""
+"En udvidet \"Fakta og hændelser\"-fane med hægter til andre brugerdefinerede "
+"moduler."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:44
 msgid "Intended as a replacement for the original 'Facts and events' module."
 msgstr ""
+"Tænkt som en erstatning for det oprindelige \"Fakta og hændelser\"-modul."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:76
 msgid "Initialization"
-msgstr ""
+msgstr "Initialisering"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:79
 msgid "Load this tab dynamically"
-msgstr ""
+msgstr "Indlæs denne fane dynamisk"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:80
 msgid "Select this option in order to load the tab contents only once the tab is actually selected."
 msgstr ""
+"Foretag dette valg for at indlæse fanens indhold én gang efter valget af "
+"fanen."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:81
 msgid "Deselecting this option may improve the tab loading behavior, in particular in case of large images."
 msgstr ""
+"Fravalg af denne mulighed kan forkorte fanens indlæsningshastighed. Især ved "
+"store billeder."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:93
 msgid "Only show specific facts and events"
-msgstr ""
+msgstr "Vis kun specifikke fakta og hændelser"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:94
 msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
 msgstr ""
+"Ved dette valg er yderligere fakta og begivenheder, hvor personen er opført "
+"som en part, begrænset til de følgende fakta og hændelser."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:109
 msgid "Latitude/Longitude"
-msgstr ""
+msgstr "Bredde-/længdegrad"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:112
 msgid "Hide coordinates, show map links after place name"
-msgstr ""
+msgstr "Skjul koordinater. Vis kortlinks efter stednavn"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:113
 msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
 msgstr ""
+"I den oprindelige fane vises koordinater (med kortlinks). Det kan gøre "
+"stedoversigten uoverskuelig, især hvis der er andre moduler, der angiver "
+"koordinater."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:122
 msgid "Open links in new browser tab"
-msgstr ""
+msgstr "Åbn links i en ny browserfane"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:127
 msgid "Show additional info for map links"
-msgstr ""
+msgstr "Vis mere info om kortlinks"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:128
 msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
 msgstr ""
+"Vis et ikon med værktøjstip med kortlinkets kilde. Dette er primært til "
+"fejlsøgning."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:135
 msgid "Show links to Google Maps"
-msgstr ""
+msgstr "Vis links til Google Maps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:140 IndividualFactsTabModuleTrait.php:160
 #: IndividualFactsTabModuleTrait.php:180
 msgid "Include 'TM' in tooltip"
-msgstr ""
+msgstr "Inkluder 'TM' i værktøjstip"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:141 IndividualFactsTabModuleTrait.php:161
 #: IndividualFactsTabModuleTrait.php:181
 msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
 msgstr ""
+"Den oprindelige fane bar varemærketegnet – fasthold det, hvis du vil, eller "
+"hvis du føler en juridisk forpligtelse."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:145 IndividualFactsTabModuleTrait.php:165
 #: IndividualFactsTabModuleTrait.php:190 IndividualFactsTabModuleTrait.php:206
 msgid "Zoom level of linked map"
-msgstr ""
+msgstr "Det linkede korts zoomniveau"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:155
 msgid "Show links to Bing Maps"
-msgstr ""
+msgstr "Vis links til Bing Maps"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:175
 msgid "Show links to OpenStreetMap"
-msgstr ""
+msgstr "Vis links til OpenStreetMap"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:185
 msgid "Include marker"
-msgstr ""
+msgstr "Inkluder markør"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:186
 msgid "Include a marker in the linked map."
-msgstr ""
+msgstr "Inkluder en markør på det linkede kort."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:199
 #, php-format
 msgid "%1$s (historic maps)"
-msgstr ""
+msgstr "%1$s (historiske kort)"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:201
 msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
 msgstr ""
+"Vis links til et historisk europakort fra 19. århundrede eller til kort over "
+"USA (1880-1926), hvis det er muligt"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:202
 msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
 msgstr ""
+"Linket vil ikke blive vist for steder uden for henholdsvis Europas og USA's "
+"grænser."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:213
