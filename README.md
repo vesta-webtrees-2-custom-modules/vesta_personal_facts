@@ -1,10 +1,8 @@
 
-# ⚶ Vesta Facts and events (Webtrees 2 Custom Module)
+# ⚶ Vesta Facts and events (Webtrees Custom Module)
 
 This [webtrees](https://www.webtrees.net/) custom module provides an extended 'Facts and Events' tab, with hooks for other custom modules.
 The project’s website is [cissee.de](https://cissee.de).
-
-This is a webtrees 2.x module - It cannot be used with webtrees 1.x. For its webtrees 1.x counterpart, see [here](https://github.com/ric2016/personal_facts_with_hooks).
 
 ## Contents
 
@@ -37,8 +35,8 @@ Mainly intended as a base for other custom modules. Some features are available 
 
 ### Download<a name="download"/>
 
-* Current version: 2.2.0.0.0
-* Based on and tested with webtrees 2.2.0. Requires webtrees 2.1.17 or later.
+* Current version: 2.2.1.0.0
+* Based on and tested with webtrees 2.2.1. Requires webtrees 2.1.17 or later.
 * Requires the ⚶ Vesta Common module ('vesta_common').
 * Download the zip file, which includes all Vesta modules, [here](https://cissee.de/vesta.latest.zip).
 * Support, suggestions, feature requests: <ric@richard-cissee.de>
