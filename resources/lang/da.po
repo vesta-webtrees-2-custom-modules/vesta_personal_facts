@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2024-11-10 09:19+0100\n"
-"PO-Revision-Date: 2024-11-25 18:00+0000\n"
-"Last-Translator: stc4000 <sofie54@icloud.com>\n"
+"PO-Revision-Date: 2025-02-15 16:56+0000\n"
+"Last-Translator: bangsheim <renelindberg@gmail.com>\n"
 "Language-Team: Danish <https://hosted.weblate.org/projects/"
 "vesta-webtrees-custom-modules/vesta-facts-and-events/da/>\n"
 "Language: da\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9-dev\n"
+"X-Generator: Weblate 5.10\n"
 
 #. I18N: Module Configuration
 #: FunctionsFactPlace.php:62 IndividualFactsTabModuleTrait.php:133
@@ -222,141 +222,154 @@ msgstr ""
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:213
 msgid "Show linked map with additional options"
-msgstr ""
+msgstr "Vis forbundet kort med yderligere indstillinger"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:214
 #, php-format
 msgid "When checked, links to the main %1$s page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
 msgstr ""
+"Når markeret, linker det til hovedsiden for %1$s, hvor du kan skifte mellem "
+"de forskellige historiske lag, der er tilgængelige for den respektive "
+"placering, og fader ind og ud af et moderne kort, som eventuelt kan "
+"konfigureres her:"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:220
 msgid "OSM Base Map"
-msgstr ""
+msgstr "OSM Basiskort"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:221
 msgid "Aerial Base Map"
-msgstr ""
+msgstr "Luftfotografisk grundkort"
 
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:232
 msgid "Name"
-msgstr ""
+msgstr "Navn"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:233
 msgid "You can also configure a custom map provider. Enter its name here."
 msgstr ""
+"Du kan også konfigurere en brugerdefineret kortudbyder. Indtast dens navn "
+"her."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:239
 msgid "URI template"
-msgstr ""
+msgstr "URI-skabelon"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:240
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates, and optional placeholder %3$s for the place name. The zoom level should be part of the uri. Example: %4$s"
 msgstr ""
+"URI'en til kortlinks, med pladsholdere (%1$s og %2$s) for kortkoordinater, "
+"samt en valgfri pladsholder %3$s for stednavnet. Zoomniveauet skal være "
+"inkluderet i URI'en. Eksempel: %4$s"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:247
 msgid "Link icon as data URI"
-msgstr ""
+msgstr "Link-ikon i data-URI format"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:248
 #, php-format
 msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
 msgstr ""
+"Base64-kodet data-URI for linkikonet. Konverter ikonet til en data-URI, "
+"f.eks. via %1$s. Resultatet skal starte med noget som %2$s. En god kilde til "
+"ikonbilledet er normalt kortudbyderens favicon-billede, som f.eks. %3$s. Det "
+"vil blive vist korrekt i den rigtige størrelse."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:261
 msgid "Facts and Events List"
-msgstr ""
+msgstr "Liste over fakta og hændelser"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:265
 msgid "Place Settings"
-msgstr ""
+msgstr "Indstillinger for sted"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:270
 msgid "Map links are also configurable via separate modules now."
-msgstr ""
+msgstr "Kortlinks kan nu også konfigureres via separate moduler."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:271
 msgid "The following options may be used alternatively or additionally."
-msgstr ""
+msgstr "Følgende valgmuligheder kan bruges enten alternativt eller ekstra."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:272
 msgid "They are used wherever facts are displayed, i.e. also outside this module."
-msgstr ""
+msgstr "De benyttes, hvor fakta vises, f.eks. også uden for dette modul."
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:22
 msgid "Best man at a marriage"
-msgstr ""
+msgstr "Forlover ved et bryllup"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:25
 msgid "Bridesmaid at a marriage"
-msgstr ""
+msgstr "Brudepige ved et bryllup"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:29
 msgctxt "MALE"
 msgid "Witness at a marriage"
-msgstr ""
+msgstr "Vidne ved et bryllup"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:31
 msgctxt "FEMALE"
 msgid "Witness at a marriage"
-msgstr ""
+msgstr "Vidne ved et bryllup"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:33
 msgid "Witness at a marriage"
-msgstr ""
+msgstr "Vidne ved et bryllup"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:38
 msgctxt "MALE"
 msgid "Associate at a marriage"
-msgstr ""
+msgstr "Deltager ved et bryllup"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:40
 msgctxt "FEMALE"
 msgid "Associate at a marriage"
-msgstr ""
+msgstr "Deltager ved et bryllup"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:42
 msgid "Associate at a marriage"
-msgstr ""
+msgstr "Deltager ved et bryllup"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:57
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:64
 msgid "Baptism of a godson"
-msgstr ""
+msgstr "Gudsøns dåb"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:60
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:66
 msgid "Baptism of a goddaughter"
-msgstr ""
+msgstr "Guddatters dåb"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:68
 msgid "Baptism of a godchild"
-msgstr ""
+msgstr "Gudbarns dåb"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:85
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:92
 msgid "Christening of a godson"
-msgstr ""
+msgstr "Gudsøns dåb"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:88
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:94
 msgid "Christening of a goddaughter"
-msgstr ""
+msgstr "Guddatters dåb"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:96
 msgid "Christening of a godchild"
-msgstr ""
+msgstr "Gudbarns dåb"
