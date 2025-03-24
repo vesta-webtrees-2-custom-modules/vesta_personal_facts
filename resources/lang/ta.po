@@ -1,0 +1,373 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the vesta package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vesta 1.0\n"
+"Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
+"POT-Creation-Date: 2024-11-10 09:19+0100\n"
+"PO-Revision-Date: 2025-03-24 15:08+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11-dev\n"
+
+#. I18N: Module Configuration
+#: FunctionsFactPlace.php:62 IndividualFactsTabModuleTrait.php:133
+msgid "Google Maps"
+msgstr "கூகிள் வரைபடங்கள்"
+
+#. I18N: Module Configuration
+#: FunctionsFactPlace.php:74 IndividualFactsTabModuleTrait.php:153
+msgid "Bing Maps"
+msgstr "பிங் வரைபடங்கள்"
+
+#. I18N: Module Configuration
+#: FunctionsFactPlace.php:81 IndividualFactsTabModuleTrait.php:173
+msgid "OpenStreetMap"
+msgstr "ஓபன்ச்ட்ரீட் வரைபடம்"
+
+#. I18N: Module Configuration
+#: FunctionsFactPlace.php:93 IndividualFactsTabModuleTrait.php:230
+msgid "Custom Map Provider"
+msgstr "தனிப்பயன் வரைபட வழங்குநர்"
+
+#: FunctionsFactPlace.php:151 IndividualFactsTabModuleTrait.php:197
+msgid "Arcanum Maps"
+msgstr "ஆர்கனம் வரைபடங்கள்"
+
+#: FunctionsFactPlace.php:153
+#, php-format
+msgid "Europe in the XIX. century | %1$s"
+msgstr "XIX இல் ஐரோப்பா. நூற்றாண்டு | %1$s"
+
+#: FunctionsFactPlace.php:157
+#, php-format
+msgid "United States of America (1880-1926) | %1$s"
+msgstr "ஒன்றுபட்டது ச்டேட்ச் ஆஃப் அமெரிக்கா (1880-1926) | %1$s"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleExtended.php:279
+msgid "Facts and Events Tab UI Element Providers"
+msgstr "உண்மைகள் மற்றும் நிகழ்வுகள் தாவல் இடைமுகம் உறுப்பு வழங்குநர்கள்"
+
+#: IndividualFactsTabModuleTrait.php:27
+msgid "Replacement for the original 'Facts and events' module."
+msgstr "அசல் 'உண்மைகள் மற்றும் நிகழ்வுகள்' தொகுதிக்கு மாற்றாக."
+
+#: IndividualFactsTabModuleTrait.php:30 IndividualFactsTabModuleTrait.php:46
+msgid "Also extends facts and events on the family page."
+msgstr "குடும்பப் பக்கத்தில் உண்மைகளையும் நிகழ்வுகளையும் விரிவுபடுத்துகிறது."
+
+#: IndividualFactsTabModuleTrait.php:31 IndividualFactsTabModuleTrait.php:47
+msgid "Also provides additional map links."
+msgstr "கூடுதல் வரைபட இணைப்புகளையும் வழங்குகிறது."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:43
+msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
+msgstr ""
+"பிற தனிப்பயன் தொகுதிகளுக்கான கொக்கிகள் கொண்ட ஒரு நீட்டிக்கப்பட்ட 'உண்மைகள் மற்றும் நிகழ்வுகள்"
+"' தாவல்."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:44
+msgid "Intended as a replacement for the original 'Facts and events' module."
+msgstr "அசல் 'உண்மைகள் மற்றும் நிகழ்வுகள்' தொகுதிக்கு மாற்றாக கருதப்படுகிறது."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:76
+msgid "Initialization"
+msgstr "முன்னமைவு"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:79
+msgid "Load this tab dynamically"
+msgstr "இந்த தாவலை மாறும் வகையில் ஏற்றவும்"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:80
+msgid "Select this option in order to load the tab contents only once the tab is actually selected."
+msgstr ""
+"தாவல் உண்மையில் தேர்ந்தெடுக்கப்பட்டவுடன் மட்டுமே தாவல் உள்ளடக்கங்களை ஏற்ற இந்த விருப்பத்தைத் "
+"தேர்ந்தெடுக்கவும்."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:81
+msgid "Deselecting this option may improve the tab loading behavior, in particular in case of large images."
+msgstr ""
+"இந்த விருப்பத்தை தேர்வுசெய்தல் தாவல் ஏற்றுதல் நடத்தையை மேம்படுத்தலாம், குறிப்பாக பெரிய "
+"படங்களின் விசயத்தில்."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:93
+msgid "Only show specific facts and events"
+msgstr "குறிப்பிட்ட உண்மைகளையும் நிகழ்வுகளையும் மட்டுமே காண்பி"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:94
+msgid "If this option is checked, additional facts and events where the individual is listed as an associate are restricted to the following facts and events."
+msgstr ""
+"இந்த விருப்பம் சரிபார்க்கப்பட்டால், தனிநபர் ஒரு கூட்டாளராக பட்டியலிடப்பட்ட கூடுதல் உண்மைகள் "
+"மற்றும் நிகழ்வுகள் பின்வரும் உண்மைகள் மற்றும் நிகழ்வுகளுக்கு கட்டுப்படுத்தப்படுகின்றன."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:109
+msgid "Latitude/Longitude"
+msgstr "அட்சரேகை/தீர்க்கரேகை"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:112
+msgid "Hide coordinates, show map links after place name"
+msgstr "ஆயங்களை மறைக்கவும், இட பெயருக்குப் பிறகு வரைபட இணைப்புகளைக் காட்டவும்"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:113
+msgid "In the original tab, coordinates are shown (with map links). This tends to clutter the place display, in particular if there are additional modules providing coordinates."
+msgstr ""
+"அசல் தாவலில், ஆயத்தொகுப்புகள் காட்டப்படுகின்றன (வரைபட இணைப்புகளுடன்). இது இடக் காட்சியைக் "
+"கட்டுப்படுத்துகிறது, குறிப்பாக ஒருங்கிணைப்புகளை வழங்கும் கூடுதல் தொகுதிகள் இருந்தால்."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:122
+msgid "Open links in new browser tab"
+msgstr "புதிய உலாவி தாவலில் இணைப்புகளைத் திறக்கவும்"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:127
+msgid "Show additional info for map links"
+msgstr "வரைபட இணைப்புகளுக்கான கூடுதல் தகவலைக் காட்டு"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:128
+msgid "Display an icon with a tooltip indicating the source of the map links. This is intended mainly for debugging."
+msgstr ""
+"வரைபட இணைப்புகளின் மூலத்தைக் குறிக்கும் உதவிக்குறிப்புடன் ஒரு ஐகானைக் காண்பி. இது "
+"முக்கியமாக பிழைத்திருத்தத்திற்காக வடிவமைக்கப்பட்டுள்ளது."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:135
+msgid "Show links to Google Maps"
+msgstr "Google வரைபடங்களுக்கான இணைப்புகளைக் காண்பி"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:140 IndividualFactsTabModuleTrait.php:160
+#: IndividualFactsTabModuleTrait.php:180
+msgid "Include 'TM' in tooltip"
+msgstr "உதவிக்குறிப்பில் 'டி.எம்' சேர்க்கவும்"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:141 IndividualFactsTabModuleTrait.php:161
+#: IndividualFactsTabModuleTrait.php:181
+msgid "The original tab had the trademark sign - keep it if you like, or if you feel legally bound to."
+msgstr ""
+"அசல் தாவலில் வர்த்தக முத்திரை அடையாளம் இருந்தது - நீங்கள் விரும்பினால் அதை வைத்திருங்கள், "
+"அல்லது நீங்கள் சட்டப்பூர்வமாக பிணைக்கப்பட்டதாக உணர்ந்தால்."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:145 IndividualFactsTabModuleTrait.php:165
+#: IndividualFactsTabModuleTrait.php:190 IndividualFactsTabModuleTrait.php:206
+msgid "Zoom level of linked map"
+msgstr "இணைக்கப்பட்ட வரைபடத்தின் பெரிதாக்க நிலை"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:155
+msgid "Show links to Bing Maps"
+msgstr "பிங் வரைபடங்களுக்கான இணைப்புகளைக் காட்டு"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:175
+msgid "Show links to OpenStreetMap"
+msgstr "OpenStreetMap க்கான இணைப்புகளைக் காட்டு"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:185
+msgid "Include marker"
+msgstr "மார்க்கர் சேர்க்கவும்"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:186
+msgid "Include a marker in the linked map."
+msgstr "இணைக்கப்பட்ட வரைபடத்தில் ஒரு மார்க்கரைச் சேர்க்கவும்."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:199
+#, php-format
+msgid "%1$s (historic maps)"
+msgstr "%1$s (வரலாற்று வரைபடங்கள்)"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:201
+msgid "Show links to a historic map of Europe in the XIX. century, or the United States of America (1880-1926), if applicable"
+msgstr ""
+"XIX இல் ஐரோப்பாவின் வரலாற்று வரைபடத்திற்கான இணைப்புகளைக் காட்டு. செஞ்சுரி, அல்லது "
+"அமெரிக்கா (1880-1926), பொருந்தினால்"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:202
+msgid "The link item will not be shown for locations outside the respective boundaries of Europe and the US."
+msgstr ""
+"ஐரோப்பா மற்றும் அமெரிக்காவின் அந்தந்த எல்லைகளுக்கு வெளியே உள்ள இடங்களுக்கு இணைப்பு உருப்படி"
+" காட்டப்படாது."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:213
+msgid "Show linked map with additional options"
+msgstr "கூடுதல் விருப்பங்களுடன் இணைக்கப்பட்ட வரைபடத்தைக் காண்பி"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:214
+#, php-format
+msgid "When checked, links to the main %1$s page, where you can switch between different historical layers available for the respective location, and fade in and out of a modern map, which may additionally be configured here:"
+msgstr ""
+"சரிபார்க்கும்போது, பிரதான %1$s பக்கத்திற்கான இணைப்புகள், அங்கு நீங்கள் அந்தந்த இடத்திற்கு "
+"கிடைக்கக்கூடிய வெவ்வேறு வரலாற்று அடுக்குகளுக்கு இடையில் மாறலாம், மேலும் நவீன "
+"வரைபடத்திற்கு உள்ளேயும் வெளியேயும் மங்கிவிடலாம், இது கூடுதலாக இங்கே கட்டமைக்கப்படலாம்:"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:220
+msgid "OSM Base Map"
+msgstr "OSM அடிப்படை வரைபடம்"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:221
+msgid "Aerial Base Map"
+msgstr "வான்வழி அடிப்படை வரைபடம்"
+
+#. I18N: Module Configuration: Name of a custom map provider
+#: IndividualFactsTabModuleTrait.php:232
+msgid "Name"
+msgstr "பெயர்"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:233
+msgid "You can also configure a custom map provider. Enter its name here."
+msgstr ""
+"தனிப்பயன் வரைபட வழங்குநரையும் நீங்கள் உள்ளமைக்கலாம். அதன் பெயரை இங்கே உள்ளிடவும்."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:239
+msgid "URI template"
+msgstr "யூரி வார்ப்புரு"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:240
+#, php-format
+msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates, and optional placeholder %3$s for the place name. The zoom level should be part of the uri. Example: %4$s"
+msgstr ""
+"MAP இணைப்புகளுக்கான URI, MAP ஆயத்தொகுதிகளுக்கு பிளேச்ஓல்டர்கள் ( %1$s மற்றும் %2$s), "
+"மற்றும் இட பெயருக்கு விருப்பமான ஒதுக்கிடர் %3$s. சூம் நிலை யூரி இன் ஒரு பகுதியாக இருக்"
+"க வேண்டும். எடுத்துக்காட்டு: %4 $ s"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:247
+msgid "Link icon as data URI"
+msgstr "ஐகானை தரவு யூரி என இணைக்கவும்"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:248
+#, php-format
+msgid "Base64-encoded data URI for the link icon. Convert the icon to a data URI e.g. via %1$s. The result should start with something like %2$s. A good source of the icon image is usually the map provider's favicon image, such as %3$s. It will be displayed properly resized."
+msgstr ""
+"இணைப்பு ஐகானுக்கு BASE64-குறியிடப்பட்ட தரவு URI. ஐகானை ஒரு தரவு யூரி என மாற்றவும் "
+"எ.கா. %1$s வழியாக. இதன் விளைவாக %2$s போன்றவற்றுடன் தொடங்க வேண்டும். படவுரு படத்தின் "
+"ஒரு நல்ல சான்று பொதுவாக %3$s போன்ற வரைபட வழங்குநரின் ஃபேவிகான் படமாகும். இது சரியாக "
+"மறுஅளவாக்கப்பட்டதாகக் காட்டப்படும்."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:261
+msgid "Facts and Events List"
+msgstr "உண்மைகள் மற்றும் நிகழ்வுகள் பட்டியல்"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:265
+msgid "Place Settings"
+msgstr "அமைப்புகளை வைக்கவும்"
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:270
+msgid "Map links are also configurable via separate modules now."
+msgstr "வரைபட இணைப்புகள் இப்போது தனி தொகுதிகள் வழியாக கட்டமைக்கப்படுகின்றன."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:271
+msgid "The following options may be used alternatively or additionally."
+msgstr "பின்வரும் விருப்பங்கள் மாற்றாக அல்லது கூடுதலாக பயன்படுத்தப்படலாம்."
+
+#. I18N: Module Configuration
+#: IndividualFactsTabModuleTrait.php:272
+msgid "They are used wherever facts are displayed, i.e. also outside this module."
+msgstr ""
+"உண்மைகள் காண்பிக்கப்படும் இடங்களில் அவை பயன்படுத்தப்படுகின்றன, அதாவது இந்த தொகுதிக்கு "
+"வெளியே."
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:22
+msgid "Best man at a marriage"
+msgstr "ஒரு திருமணத்தில் சிறந்த மனிதர்"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:25
+msgid "Bridesmaid at a marriage"
+msgstr "ஒரு திருமணத்தில் துணைத்தலைவர்"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:29
+msgctxt "MALE"
+msgid "Witness at a marriage"
+msgstr "ஒரு திருமணத்தில் சான்று"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:31
+msgctxt "FEMALE"
+msgid "Witness at a marriage"
+msgstr "ஒரு திருமணத்தில் சான்று"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:33
+msgid "Witness at a marriage"
+msgstr "ஒரு திருமணத்தில் சான்று"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:38
+msgctxt "MALE"
+msgid "Associate at a marriage"
+msgstr "ஒரு திருமணத்தில் இணைந்தவர்"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:40
+msgctxt "FEMALE"
+msgid "Associate at a marriage"
+msgstr "ஒரு திருமணத்தில் இணைந்தவர்"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:42
+msgid "Associate at a marriage"
+msgstr "ஒரு திருமணத்தில் இணைந்தவர்"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:57
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:64
+msgid "Baptism of a godson"
+msgstr "ஒரு கடவுளின் ஞானச்நானம்"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:60
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:66
+msgid "Baptism of a goddaughter"
+msgstr "ஒரு கடவுளின் ஞானச்நானம்"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:68
+msgid "Baptism of a godchild"
+msgstr "ஒரு கடவுளின் ஞானச்நானம்"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:85
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:92
+msgid "Christening of a godson"
+msgstr "ஒரு கடவுளின் கிறிச்டிங்"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:88
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:94
+msgid "Christening of a goddaughter"
+msgstr "ஒரு கடவுளின் கிறிச்டிங்"
+
+#: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:96
+msgid "Christening of a godchild"
+msgstr "ஒரு காட்சைல்டின் கிறிச்டிங்"
