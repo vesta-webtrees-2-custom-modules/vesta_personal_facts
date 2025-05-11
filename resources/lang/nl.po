@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2024-11-10 09:19+0100\n"
-"PO-Revision-Date: 2024-11-15 19:00+0000\n"
+"PO-Revision-Date: 2025-05-11 08:01+0000\n"
 "Last-Translator: TheDutchJewel <thedutchjewel@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/"
 "vesta-webtrees-custom-modules/vesta-facts-and-events/nl/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9-dev\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:199
@@ -63,12 +63,12 @@ msgstr "Doop van petekind"
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:60
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:66
 msgid "Baptism of a goddaughter"
-msgstr "Doop van peetdochter"
+msgstr "Doop van een peetdochter"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:57
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:64
 msgid "Baptism of a godson"
-msgstr "Doop van peetzoon"
+msgstr "Doop van een peetzoon"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:248
@@ -87,21 +87,21 @@ msgstr "Bing Maps"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:25
 msgid "Bridesmaid at a marriage"
-msgstr "Getuige bij huwelijk"
+msgstr "Getuige bij een huwelijk"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:96
 msgid "Christening of a godchild"
-msgstr "Doop van petekind"
+msgstr "Doop van een petekind"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:88
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:94
 msgid "Christening of a goddaughter"
-msgstr "Doop van peetdochter"
+msgstr "Doop van een peetdochter"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:85
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:92
 msgid "Christening of a godson"
-msgstr "Doop van peetzoon"
+msgstr "Doop van een peetzoon"
 
 #. I18N: Module Configuration
 #: FunctionsFactPlace.php:93 IndividualFactsTabModuleTrait.php:230
