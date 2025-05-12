@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2024-11-10 09:19+0100\n"
-"PO-Revision-Date: 2023-11-20 17:02+0000\n"
+"PO-Revision-Date: 2025-05-12 10:01+0000\n"
 "Last-Translator: BernatBanyuls <bernatbanyuls@gmail.com>\n"
-"Language-Team: Catalan <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/ca/>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.2\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:199
@@ -87,7 +88,7 @@ msgstr "Padrí de boda"
 #. I18N: Module Configuration
 #: FunctionsFactPlace.php:74 IndividualFactsTabModuleTrait.php:153
 msgid "Bing Maps"
-msgstr "Bing Maps"
+msgstr "Mapes de Bing"
 
 #: patchedWebtrees/GedcomCode/GedcomCodeRela_Ext.php:25
 msgid "Bridesmaid at a marriage"
@@ -116,6 +117,8 @@ msgstr "Proveïdor de mapes personalitzats"
 #: IndividualFactsTabModuleTrait.php:81
 msgid "Deselecting this option may improve the tab loading behavior, in particular in case of large images."
 msgstr ""
+"Desmarcar aquesta opció pot millorar el comportament de càrrega de "
+"pestanyes, especialment en el cas d'imatges grans."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:128
@@ -140,7 +143,7 @@ msgstr "Pestanya de Fets i esdeveniments amb Proveïdors d'elements d'interfíci
 #. I18N: Module Configuration
 #: FunctionsFactPlace.php:62 IndividualFactsTabModuleTrait.php:133
 msgid "Google Maps"
-msgstr "Google Maps"
+msgstr "Mapes de Google"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:112
@@ -176,7 +179,7 @@ msgstr "Inclou marcador"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:76
 msgid "Initialization"
-msgstr ""
+msgstr "Inicialització"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:44
@@ -196,7 +199,7 @@ msgstr "Icona d'enllaç com a URI de dades"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:79
 msgid "Load this tab dynamically"
-msgstr ""
+msgstr "Carrega aquesta pestanya dinàmicament"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:270
@@ -226,7 +229,7 @@ msgstr "Obrir enllaços en una pestanya nova del navegador"
 #. I18N: Module Configuration
 #: FunctionsFactPlace.php:81 IndividualFactsTabModuleTrait.php:173
 msgid "OpenStreetMap"
-msgstr "OpenStreetMap"
+msgstr "Mapes d'OpenStreetMap"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:265
@@ -241,6 +244,8 @@ msgstr "Substitució del mòdul original \"Fets i esdeveniments\"."
 #: IndividualFactsTabModuleTrait.php:80
 msgid "Select this option in order to load the tab contents only once the tab is actually selected."
 msgstr ""
+"Seleccioneu aquesta opció per carregar el contingut de la pestanya només una "
+"vegada que la pestanya estigui realment seleccionada."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:127
@@ -293,6 +298,9 @@ msgstr "La pestanya original tenia el signe de marca comercial: conserveu-lo si 
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates, and optional placeholder %3$s for the place name. The zoom level should be part of the uri. Example: %4$s"
 msgstr ""
+"L'uri dels enllaços de mapes, amb marcadors de posició (%1$s i %2$s) per a "
+"les coordenades del mapa i marcador de posició opcional %3$s per al topònim. "
+"El nivell de zoom hauria de formar part de l'uri. Exemple: %4$s"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:272
