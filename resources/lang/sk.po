@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2024-11-10 09:19+0100\n"
-"PO-Revision-Date: 2022-05-13 10:18+0000\n"
+"PO-Revision-Date: 2025-06-28 16:01+0000\n"
 "Last-Translator: ro-la <lacoros@gmail.com>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/sk/>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.13-dev\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:199
@@ -116,6 +117,8 @@ msgstr "Užívateľom definovaný poskytovateľ mapy"
 #: IndividualFactsTabModuleTrait.php:81
 msgid "Deselecting this option may improve the tab loading behavior, in particular in case of large images."
 msgstr ""
+"Zrušenie tejto voľby môže zlepšiť načítavanie tejto záložky, hlavne v "
+"prípade veľkých obrázkov."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:128
@@ -176,7 +179,7 @@ msgstr "Zobraziť značku pozície"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:76
 msgid "Initialization"
-msgstr ""
+msgstr "Inicializácia"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:44
@@ -196,7 +199,7 @@ msgstr "Ikona odkazu ako dátové URI"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:79
 msgid "Load this tab dynamically"
-msgstr ""
+msgstr "Načítať túto záložku dynamicky"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:270
@@ -241,6 +244,7 @@ msgstr "Náhrada za pôvodný modul „Fakty a udalosti“."
 #: IndividualFactsTabModuleTrait.php:80
 msgid "Select this option in order to load the tab contents only once the tab is actually selected."
 msgstr ""
+"Zvoľte túto možnosť, ak sa má načítať obsah záložky len ak je naozaj zvolená."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:127
@@ -293,6 +297,9 @@ msgstr "Originálna záložka mala označenie obchodnej značky (trade mark) - p
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates, and optional placeholder %3$s for the place name. The zoom level should be part of the uri. Example: %4$s"
 msgstr ""
+"URI pre odkaz na mapu, so zástupnými symbolmi (%1$s a %2$s) pre súradnice na "
+"mape a voliteľný zástupný symbol %3$s pre názov miesta. Stupeň zoomu by mal "
+"byť súčasťou URI. Priklad: %4$s"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:272
