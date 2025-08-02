@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2024-11-10 09:19+0100\n"
-"PO-Revision-Date: 2025-08-02 11:01+0000\n"
-"Last-Translator: Holger Eisold <github@eisold.family>\n"
+"PO-Revision-Date: 2025-08-02 18:38+0000\n"
+"Last-Translator: Richard Cissée <ric@richard-cissee.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/"
 "vesta-webtrees-custom-modules/vesta-facts-and-events/de/>\n"
 "Language: de\n"
@@ -36,7 +36,9 @@ msgstr "Enthält auch zusätzliche Kartenlinks."
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:43
 msgid "An extended 'Facts and Events' tab, with hooks for other custom modules."
-msgstr "Eine erweiterte Registerkarte 'Tatsachen und Ereignisse', mit Schnittstellen (hooks) für andere benutzerdefinierte Module."
+msgstr ""
+"Eine erweiterte Registerkarte 'Tatsachen und Ereignisse', mit Schnittstellen "
+"(hooks) für andere Erweiterungsmodule."
 
 #: FunctionsFactPlace.php:151 IndividualFactsTabModuleTrait.php:197
 msgid "Arcanum Maps"
