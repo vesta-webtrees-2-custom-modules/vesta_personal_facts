@@ -3,15 +3,16 @@ msgstr ""
 "Project-Id-Version: webtrees 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2024-11-10 09:19+0100\n"
-"PO-Revision-Date: 2024-02-05 00:01+0000\n"
+"PO-Revision-Date: 2025-08-02 11:01+0000\n"
 "Last-Translator: Holger Eisold <github@eisold.family>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-facts-and-events/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:199
@@ -111,6 +112,8 @@ msgstr "Benutzerdefinierte Kartenanbieter"
 #: IndividualFactsTabModuleTrait.php:81
 msgid "Deselecting this option may improve the tab loading behavior, in particular in case of large images."
 msgstr ""
+"Die Deaktivierung dieser Option kann das Ladeverhalten der Registerkarten "
+"verbessern, insbesondere bei großen Bildern."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:128
@@ -171,7 +174,7 @@ msgstr "Marker einfügen"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:76
 msgid "Initialization"
-msgstr ""
+msgstr "Initialisierung"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:44
@@ -191,7 +194,7 @@ msgstr "Link-Symbol als Daten-URI"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:79
 msgid "Load this tab dynamically"
-msgstr ""
+msgstr "Diese Registerkarte dynamisch laden"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:270
@@ -236,6 +239,8 @@ msgstr "Ersatz für das ursprüngliche Modul 'Tatsachen und Ereignisse'."
 #: IndividualFactsTabModuleTrait.php:80
 msgid "Select this option in order to load the tab contents only once the tab is actually selected."
 msgstr ""
+"Wählen Sie diese Option, um den Inhalt der Registerkarte erst zu laden, wenn "
+"die Registerkarte tatsächlich ausgewählt ist."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:127
