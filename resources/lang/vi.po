@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
 "POT-Creation-Date: 2024-11-10 09:19+0100\n"
-"PO-Revision-Date: 2021-07-24 11:35+0200\n"
+"PO-Revision-Date: 2025-12-31 05:06+0000\n"
 "Last-Translator: ngohuuthuanfc9865b89dde4baf <ngohuuthuan@gmail.com>\n"
-"Language-Team: Vietnamese <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-facts-and-events/vi/>\n"
+"Language-Team: Vietnamese <https://hosted.weblate.org/projects/vesta-"
+"webtrees-custom-modules/vesta-facts-and-events/vi/>\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:199
@@ -27,15 +28,15 @@ msgstr "%1$s (bản đồ lịch sử)"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:221
 msgid "Aerial Base Map"
-msgstr ""
+msgstr "Bản đồ cơ sở hàng không"
 
 #: IndividualFactsTabModuleTrait.php:30 IndividualFactsTabModuleTrait.php:46
 msgid "Also extends facts and events on the family page."
-msgstr ""
+msgstr "Trang này còn bổ sung thêm thông tin và sự kiện về gia đình."
 
 #: IndividualFactsTabModuleTrait.php:31 IndividualFactsTabModuleTrait.php:47
 msgid "Also provides additional map links."
-msgstr ""
+msgstr "Cung cấp thêm các liên kết bản đồ."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:43
@@ -116,6 +117,8 @@ msgstr "Nhà cung cấp bản đồ tùy chỉnh"
 #: IndividualFactsTabModuleTrait.php:81
 msgid "Deselecting this option may improve the tab loading behavior, in particular in case of large images."
 msgstr ""
+"Việc bỏ chọn tùy chọn này có thể cải thiện hiệu suất tải tab, đặc biệt là "
+"trong trường hợp hình ảnh có kích thước lớn."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:128
@@ -176,7 +179,7 @@ msgstr "Bao gồm điểm đánh dấu"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:76
 msgid "Initialization"
-msgstr ""
+msgstr "Khởi tạo"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:44
@@ -196,12 +199,14 @@ msgstr "Biểu tượng liên kết dưới dạng URI dữ liệu"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:79
 msgid "Load this tab dynamically"
-msgstr ""
+msgstr "Tải tab động"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:270
 msgid "Map links are also configurable via separate modules now."
 msgstr ""
+"Các liên kết trên bản đồ giờ đây cũng có thể được cấu hình thông qua các mô-"
+"đun riêng biệt."
 
 #. I18N: Module Configuration: Name of a custom map provider
 #: IndividualFactsTabModuleTrait.php:232
@@ -211,7 +216,7 @@ msgstr "Tên"
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:220
 msgid "OSM Base Map"
-msgstr "OSM Base Map"
+msgstr "Bản đồ cơ sở OSM"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:93
@@ -240,7 +245,7 @@ msgstr "Thay thế cho mô-đun 'Sự kiện và số liệu' ban đầu."
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:80
 msgid "Select this option in order to load the tab contents only once the tab is actually selected."
-msgstr ""
+msgstr "Chọn tùy chọn này để chỉ tải nội dung tab khi tab đó được chọn."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:127
@@ -276,6 +281,7 @@ msgstr "Hiển thị các liên kết đến bản đồ lịch sử của Châu
 #: IndividualFactsTabModuleTrait.php:271
 msgid "The following options may be used alternatively or additionally."
 msgstr ""
+"Các tùy chọn sau đây có thể được sử dụng thay thế hoặc bổ sung cho nhau."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:202
@@ -293,11 +299,16 @@ msgstr "Tab ban đầu có dấu hiệu nhãn hiệu - hãy giữ nó nếu bạ
 #, php-format
 msgid "The uri for map links, with placeholders (%1$s and %2$s) for map coordinates, and optional placeholder %3$s for the place name. The zoom level should be part of the uri. Example: %4$s"
 msgstr ""
+"URI dành cho các liên kết bản đồ, với các ký tự giữ chỗ (%1$s và %2$s) cho "
+"tọa độ bản đồ, và ký tự giữ chỗ tùy chọn %3$s cho tên địa điểm. Mức độ thu "
+"phóng nên là một phần của URI. Ví dụ: %4$s"
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:272
 msgid "They are used wherever facts are displayed, i.e. also outside this module."
 msgstr ""
+"Chúng được sử dụng ở bất cứ nơi nào hiển thị thông tin, tức là cả bên ngoài "
+"mô-đun này."
 
 #. I18N: Module Configuration
 #: IndividualFactsTabModuleTrait.php:239
