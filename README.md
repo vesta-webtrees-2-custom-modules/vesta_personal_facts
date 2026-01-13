@@ -17,7 +17,7 @@ Mainly intended as a base for other custom modules. Some features are available 
 
 * Support for the non-standard Gedcom tag _FSFTID (FamilySearch id, e.g. 'M673-FP8'), in the tab and in the sidebar.
 
-* Links to external maps (Google, Bing, OpenStreetMap) are configurable via module administration.
+* Links to external maps (Google, Bing, OpenStreetMap) are configurable via module administration. This functionality replaces the respective webtrees modules (Google™ maps — Map link, Bing™ maps — Map link, OpenStreetMap™ — Map link), which should be disabled. 
 
 * Additional map services:
   * [Arcanum Maps](https://maps.arcanum.com/), providing a historical map of Europe in the XIX. century, and of the United States of America (1880-1926).
