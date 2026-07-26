@@ -30,13 +30,16 @@ class DefaultAssociateFactUtils implements AssociateFactUtils {
         $tag = explode(':', $fact->tag())[1];
 
         $label_persons = array();
-        if ($parent instanceof Family) {
+        if ($parent instanceof Individual) {
+            $label_persons[] = $parent;
+        } else if ($parent instanceof Family) {
             // Family event
             //we want husband + wife
             //(even if only one of them may be 'close relative')
             $label_persons = $parent->spouses();
         } else {
-            $label_persons[] = $parent;
+            //e.g. location, or some other (unexpected) top-level record
+            $label_persons = [];
         }
 
         $rela = null;
@@ -50,8 +53,9 @@ class DefaultAssociateFactUtils implements AssociateFactUtils {
         }
 
         if ($parent instanceof Family) {
-            //skip
+            //skip (due to 'multiple targets')
         } else {
+            //assuming 'single actual target' (i.e. ok for Location as well)
             if ($rela !== null) {
                 // Use the supplied relationship - inverted - as a label
                 $inverted = GedcomCodeRela_Ext::invert($rela);
@@ -126,6 +130,7 @@ class DefaultAssociateFactUtils implements AssociateFactUtils {
             if ($val != null) {
                 $main .= "<br/>";
                 $main .= $val->getMain();
+                error_log($main);
                 $script .= $val->getScript();
             }
         }

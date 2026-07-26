@@ -150,8 +150,10 @@ class IndividualFactsTabModule_2x extends IndividualFactsTabModule implements Mo
         $asso2 = $this->linked_record_service->linkedIndividuals($person, '_ASSO');
         $asso3 = $this->linked_record_service->linkedFamilies($person, 'ASSO');
         $asso4 = $this->linked_record_service->linkedFamilies($person, '_ASSO');
+        $asso5 = $this->linked_record_service->linkedLocations($person, 'ASSO');
+        $asso6 = $this->linked_record_service->linkedLocations($person, '_ASSO');
 
-        $associates = $asso1->merge($asso2)->merge($asso3)->merge($asso4);
+        $associates = $asso1->merge($asso2)->merge($asso3)->merge($asso4)->merge($asso5)->merge($asso6);
 
         //#17: remove duplicates
         $associates = $associates->unique();

@@ -153,7 +153,9 @@ class GedcomCodeRela_Ext {
             case 'nurse':
                 return null;
             case 'owner':
-                return 'slave';
+                //this seems too specific
+                //return 'slave';
+                return null;
             case 'priest':
                 return null;
             case 'rabbi':
@@ -165,7 +167,9 @@ class GedcomCodeRela_Ext {
             case 'servant':
                 return null;
             case 'slave':
-                return 'owner';
+                //this seems too specific
+                //return 'owner';
+                return null;
             case 'ward':
                 return 'guardian';
             case 'witness':
